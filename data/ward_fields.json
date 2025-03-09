@@ -1,0 +1,20 @@
+{
+    "fields": [
+        "wardname",
+        "wardcode",
+        "lganame",
+        "lgacode",
+        "statename",
+        "statecode",
+        "geometry"
+    ],
+    "dtypes": {
+        "wardname": "object",
+        "wardcode": "object",
+        "lganame": "object",
+        "lgacode": "object",
+        "statename": "object",
+        "statecode": "object",
+        "geometry": "geometry"
+    }
+}

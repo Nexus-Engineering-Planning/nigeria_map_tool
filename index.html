@@ -1,92 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigeria Map Dashboard</title>
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-    
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria Map Dashboard - Senatorial Zones</title>
 
-    <style>
-        /* General Styling */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #map { height: 100%; width: 100%; background-color: #f0f0f0; }
 
-        /* Map Container */
-        #map {
-            width: 100%;
-            height: 100vh;
-        }
+    .sidebar {
+      position: absolute;
+      top: 80px; /* Adjusted from 10px to 50px */
+      left: 10px;
+      width: 320px;
+      background-color: white;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      z-index: 1000;
+    }
 
-        /* Sidebar Styling */
-        .sidebar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 300px;
-            height: 100%;
-            background: white;
-            padding: 15px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            overflow-y: auto;
-        }
+    .sidebar select,
+    .sidebar input,
+    .sidebar button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
 
-        /* Floating Reset Button */
-        .fab {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: #3498db;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-    </style>
+    .search-suggestions {
+      max-height: 150px;
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .search-suggestion {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .search-suggestion:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="sidebar">
+    <h1></h1>
+    
+    <div id="info"></div>
 
-    <!-- Map Container -->
-    <div id="map"></div>
+    <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">
+    <div id="searchSuggestions" class="search-suggestions"></div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h3>Filters</h3>
-        <label for="state-select">State:</label>
-        <select id="state-select"><option value="">Select State</option></select>
-        
-        <label for="lga-select">LGA:</label>
-        <select id="lga-select" disabled><option value="">Select LGA</option></select>
+    <label for="state-select">Select State:</label>
+    <select id="state-select"><option value="">All States</option></select>
 
-        <label for="ward-select">Ward:</label>
-        <select id="ward-select" disabled><option value="">Select Ward</option></select>
+    <label for="senatorial-select">Select Senatorial District:</label>
+    <select id="senatorial-select" disabled><option value="">Select Senatorial District</option></select>
 
-        <button id="reset-btn">Reset</button>
-    </div>
+    <label for="lga-select">Select LGA:</label>
+    <select id="lga-select" disabled><option value="">Select LGA</option></select>
 
-    <!-- Floating Reset Button -->
-    <div class="fab" id="fab-reset">
-        <i class="fas fa-redo"></i>
-    </div>
+    <label for="ward-select">Select Ward:</label>
+    <select id="ward-select" disabled><option value="">Select Ward</option></select>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <button id="reset-btn">Reset Filters</button>
 
-    <!-- Main JS File -->
-    <script type="module" src="main.js"></script>
+    <h4>Layer Toggle</h4>
+    <input type="checkbox" id="toggle-states" checked> States<br>
+    <input type="checkbox" id="toggle-lgas" checked> LGAs<br>
+    <input type="checkbox" id="toggle-wards" checked> Wards
+  </div>
 
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script type="module">
+    import { buildDictionaries, buildReverseMappings, buildSenatorialToLga } from './js/mappings.js';
+
+    const map = L.map('map').setView([9.0820, 8.6753], 6);
+    const highlightLayer = L.geoJSON(null, { style: { color: '#FF0000', weight: 3, fillOpacity: 0.3 } }).addTo(map);
+
+    let stateLayer, lgaLayer, wardLayer;
+    let state_to_lga = {}, lga_to_ward = {}, senatorial_to_lga = {}, lga_to_state = {};
+
+    Promise.all([
+      fetch('./data/state_geojson.geojson').then(res => res.json()),
+      fetch('./data/lga_geojson.geojson').then(res => res.json()),
+      fetch('./data/ward_geojson.geojson').then(res => res.json()),
+      fetch('./data/senatorial.json').then(res => res.json())
+    ])
+    .then(([stateGeoJSON, lgaGeoJSON, wardGeoJSON, senatorialData]) => {
+      const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
+      const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
+
+      state_to_lga = mappings.state_to_lga;
+      lga_to_ward = mappings.lga_to_ward;
+      lga_to_state = reverseMappings.lga_to_state;
+
+      senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
+
+      stateLayer = L.geoJSON(stateGeoJSON, {
+        style: { color: '#003366', weight: 2, fillOpacity: 0.1 },
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip(feature.properties.statename);
+        }
+      }).addTo(map);
+
+      lgaLayer = L.geoJSON(lgaGeoJSON, {
+        style: { color: '#336699', weight: 1.5, fillOpacity: 0.1 },
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip(feature.properties.lganame);
+        }
+      }).addTo(map);
+
+      wardLayer = L.geoJSON(wardGeoJSON, {
+        style: { color: '#6699cc', weight: 1, fillOpacity: 0.1 },
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip(feature.properties.wardname);
+        }
+      }).addTo(map);
+
+      populateStateDropdown();
+      map.fitBounds(stateLayer.getBounds());
+    });
+
+    function populateStateDropdown() {
+      const stateSelect = document.getElementById('state-select');
+      stateSelect.innerHTML = '<option value="">All States</option>';
+      Object.keys(state_to_lga).forEach(state => {
+        const option = document.createElement('option');
+        option.value = state;
+        option.textContent = state;
+        stateSelect.appendChild(option);
+      });
+      stateSelect.addEventListener('change', handleStateChange);
+    }
+
+    function populateSenatorialDropdown(stateName) {
+      const senatorialSelect = document.getElementById('senatorial-select');
+      senatorialSelect.innerHTML = '<option value="">Select Senatorial District</option>';
+
+      if (!stateName) {
+        senatorialSelect.disabled = true;
+        return;
+      }
+
+      const filteredDistricts = Object.keys(senatorial_to_lga).filter(district => {
+        const lgas = senatorial_to_lga[district] || [];
+        return lgas.some(lga => lga_to_state[lga] === stateName);
+      });
+
+      filteredDistricts.forEach(district => {
+        const option = document.createElement('option');
+        option.value = district;
+        option.textContent = district;
+        senatorialSelect.appendChild(option);
+      });
+
+      senatorialSelect.disabled = filteredDistricts.length === 0;
+
+      if (filteredDistricts.length > 0) {
+        senatorialSelect.addEventListener('change', handleSenatorialChange);
+      }
+    }
+
+    function handleStateChange(e) {
+      const stateName = e.target.value;
+      highlightLayer.clearLayers();
+      if (!stateName) {
+        map.fitBounds(stateLayer.getBounds());
+        populateSenatorialDropdown(null);
+        return;
+      }
+
+      stateLayer.eachLayer(layer => {
+        if (layer.feature.properties.statename === stateName) {
+          highlightLayer.addData({
+            ...layer.feature,
+            properties:{...layer.feature.properties}
+          });
+        highlightLayer.setStyle({
+            color: '#FF9900',      // Orange border
+            weight: 0,             // No border
+            fillColor: '#FF9900',
+            fillOpacity: 0.5
+        });
+          map.fitBounds(layer.getBounds());
+        }
+      });
+
+      populateLGADropdown(stateName);
+      populateSenatorialDropdown(stateName);
+    }
+
+    function populateLGADropdown(stateName) {
+      const lgaSelect = document.getElementById('lga-select');
+      lgaSelect.innerHTML = '<option value="">Select LGA</option>';
+
+      const lgas = state_to_lga[stateName] || [];
+      lgas.forEach(lga => {
+        const option = document.createElement('option');
+        option.value = lga;
+        option.textContent = lga;
+        lgaSelect.appendChild(option);
+      });
+
+      lgaSelect.disabled = lgas.length === 0;
+      lgaSelect.addEventListener('change', handleLGAChange);
+    }
+
+    function handleLGAChange(e) {
+      const lgaName = e.target.value;
+      highlightLayer.clearLayers();
+
+      if (!lgaName) return;
+
+      lgaLayer.eachLayer(layer => {
+        if (layer.feature.properties.lganame === lgaName) {
+          highlightLayer.addData(layer.feature);
+          map.fitBounds(layer.getBounds());
+        }
+      });
+
+      populateWardDropdown(lgaName);
+    }
+
+    function populateWardDropdown(lgaName) {
+      const wardSelect = document.getElementById('ward-select');
+      wardSelect.innerHTML = '<option value="">Select Ward</option>';
+
+      const wards = lga_to_ward[lgaName] || [];
+      wards.forEach(ward => {
+        const option = document.createElement('option');
+        option.value = ward;
+        option.textContent = ward;
+        wardSelect.appendChild(option);
+      });
+
+      wardSelect.disabled = wards.length === 0;
+      wardSelect.addEventListener('change', handleWardChange);
+    }
+
+    function handleWardChange(e) {
+      const wardName = e.target.value;
+      highlightLayer.clearLayers();
+
+      if (!wardName) return;
+
+      wardLayer.eachLayer(layer => {
+        if (layer.feature.properties.wardname === wardName) {
+          highlightLayer.addData(layer.feature);
+          map.fitBounds(layer.getBounds());
+        }
+      });
+    }
+
+    function handleSenatorialChange(e) {
+      const districtName = e.target.value;
+      highlightLayer.clearLayers();
+
+      if (!districtName) return;
+
+      const lgas = senatorial_to_lga[districtName] || [];
+
+      lgaLayer.eachLayer(layer => {
+        const lgaName = layer.feature.properties.lganame;
+        if (lgas.includes(lgaName)) {
+          highlightLayer.addData(layer.feature);
+        }
+      });
+
+      if (highlightLayer.getLayers().length > 0) {
+        map.fitBounds(highlightLayer.getBounds());
+      }
+    }
+
+    document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+    function handleSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const suggestions = [];
+
+      stateLayer.eachLayer(layer => {
+        if (layer.feature.properties.statename.toLowerCase().includes(query)) {
+          suggestions.push({ name: layer.feature.properties.statename, layer });
+        }
+      });
+
+      lgaLayer.eachLayer(layer => {
+        if (layer.feature.properties.lganame.toLowerCase().includes(query)) {
+          suggestions.push({ name: layer.feature.properties.lganame, layer });
+        }
+      });
+
+      wardLayer.eachLayer(layer => {
+        if (layer.feature.properties.wardname.toLowerCase().includes(query)) {
+          suggestions.push({ name: layer.feature.properties.wardname, layer });
+        }
+      });
+
+      renderSuggestions(suggestions);
+    }
+
+    function renderSuggestions(suggestions) {
+      const suggestionBox = document.getElementById('searchSuggestions');
+      suggestionBox.innerHTML = '';
+
+      suggestions.forEach(({ name, layer }) => {
+        const div = document.createElement('div');
+        div.className = 'search-suggestion';
+        div.textContent = name;
+        div.onclick = () => {
+          highlightLayer.clearLayers();
+          highlightLayer.addData(layer.feature);
+          const bounds = layer.getBounds ? layer.getBounds() : L.latLngBounds([layer.getLatLng()]);
+          map.fitBounds(bounds);
+        };
+        suggestionBox.appendChild(div);
+      });
+    }
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      document.getElementById('state-select').value = "";
+      document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
+      document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
+      document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
+
+      document.getElementById('senatorial-select').disabled = true;
+      document.getElementById('lga-select').disabled = true;
+      document.getElementById('ward-select').disabled = true;
+
+      highlightLayer.clearLayers();
+      map.fitBounds(stateLayer.getBounds());
+    });
+
+    document.getElementById('toggle-states').addEventListener('change', (e) => {
+      if (e.target.checked) { map.addLayer(stateLayer); }
+      else { map.removeLayer(stateLayer); }
+    });
+
+    document.getElementById('toggle-lgas').addEventListener('change', (e) => {
+      if (e.target.checked) { map.addLayer(lgaLayer); }
+      else { map.removeLayer(lgaLayer); }
+    });
+
+    document.getElementById('toggle-wards').addEventListener('change', (e) => {
+      if (e.target.checked) { map.addLayer(wardLayer); }
+      else { map.removeLayer(wardLayer); }
+    });
+  </script>
 </body>
+
 </html>

@@ -13,7 +13,7 @@
 
     .sidebar {
       position: absolute;
-      top: 80px; /* Adjusted from 10px to 50px */
+      top: 80px;
       left: 10px;
       width: 320px;
       background-color: white;
@@ -87,6 +87,35 @@
     import { buildDictionaries, buildReverseMappings, buildSenatorialToLga } from './js/mappings.js';
 
     const map = L.map('map').setView([9.0820, 8.6753], 6);
+
+    // ✅ Add basemap layers
+    const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    });
+
+    const esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye'
+    });
+
+    const cartoDBPositron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      subdomains: 'abcd',
+      maxZoom: 19
+    });
+
+    // ✅ Add default basemap
+    osmStandard.addTo(map);
+
+    // ✅ Create layer control for basemaps
+    const baseMaps = {
+      "OpenStreetMap Standard": osmStandard,
+      "Esri World Imagery": esriWorldImagery,
+      "CartoDB Positron": cartoDBPositron
+    };
+
+    L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
+
     const highlightLayer = L.geoJSON(null, { style: { color: '#FF0000', weight: 3, fillOpacity: 0.3 } }).addTo(map);
 
     let stateLayer, lgaLayer, wardLayer;
@@ -184,16 +213,13 @@
 
       stateLayer.eachLayer(layer => {
         if (layer.feature.properties.statename === stateName) {
-          highlightLayer.addData({
-            ...layer.feature,
-            properties:{...layer.feature.properties}
-          });
-        highlightLayer.setStyle({
-            color: '#FF9900',      // Orange border
-            weight: 0,             // No border
+          highlightLayer.addData(layer.feature);
+          highlightLayer.setStyle({
+            color: '#FF9900',
+            weight: 0,
             fillColor: '#FF9900',
             fillOpacity: 0.5
-        });
+          });
           map.fitBounds(layer.getBounds());
         }
       });
@@ -357,6 +383,7 @@
       if (e.target.checked) { map.addLayer(wardLayer); }
       else { map.removeLayer(wardLayer); }
     });
+
   </script>
 </body>
 

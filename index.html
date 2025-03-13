@@ -8,8 +8,17 @@
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
   <style>
-    html, body { margin: 0; padding: 0; height: 100%; }
-    #map { height: 100%; width: 100%; background-color: #f0f0f0; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+      background-color: #f0f0f0;
+    }
 
     .sidebar {
       position: absolute;
@@ -48,36 +57,51 @@
     .search-suggestion:hover {
       background-color: #f0f0f0;
     }
+
+    .sidebar label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
   </style>
 </head>
 
 <body>
   <div class="sidebar">
     <h1></h1>
-    
+
     <div id="info"></div>
 
     <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">
     <div id="searchSuggestions" class="search-suggestions"></div>
 
     <label for="state-select">Select State:</label>
-    <select id="state-select"><option value="">All States</option></select>
+    <select id="state-select">
+      <option value="">All States</option>
+    </select>
 
     <label for="senatorial-select">Select Senatorial District:</label>
-    <select id="senatorial-select" disabled><option value="">Select Senatorial District</option></select>
+    <select id="senatorial-select" disabled>
+      <option value="">Select Senatorial District</option>
+    </select>
 
     <label for="lga-select">Select LGA:</label>
-    <select id="lga-select" disabled><option value="">Select LGA</option></select>
+    <select id="lga-select" disabled>
+      <option value="">Select LGA</option>
+    </select>
 
     <label for="ward-select">Select Ward:</label>
-    <select id="ward-select" disabled><option value="">Select Ward</option></select>
+    <select id="ward-select" disabled>
+      <option value="">Select Ward</option>
+    </select>
 
     <button id="reset-btn">Reset Filters</button>
 
     <h4>Layer Toggle</h4>
-    <input type="checkbox" id="toggle-states" checked> States<br>
-    <input type="checkbox" id="toggle-lgas" checked> LGAs<br>
-    <input type="checkbox" id="toggle-wards" checked> Wards
+    <label><input type="checkbox" id="toggle-states" checked> States</label>
+    <label><input type="checkbox" id="toggle-lgas" checked> LGAs</label>
+    <label><input type="checkbox" id="toggle-wards" checked> Wards</label>
   </div>
 
   <div id="map"></div>
@@ -116,7 +140,9 @@
 
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 
-    const highlightLayer = L.geoJSON(null, { style: { color: '#FF0000', weight: 3, fillOpacity: 0.3 } }).addTo(map);
+    const highlightLayer = L.geoJSON(null, {
+      style: { color: '#FF0000', weight: 3, fillOpacity: 0.3 }
+    }).addTo(map);
 
     let stateLayer, lgaLayer, wardLayer;
     let state_to_lga = {}, lga_to_ward = {}, senatorial_to_lga = {}, lga_to_state = {};
@@ -127,40 +153,40 @@
       fetch('./data/ward_geojson.geojson').then(res => res.json()),
       fetch('./data/senatorial.json').then(res => res.json())
     ])
-    .then(([stateGeoJSON, lgaGeoJSON, wardGeoJSON, senatorialData]) => {
-      const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
-      const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
+      .then(([stateGeoJSON, lgaGeoJSON, wardGeoJSON, senatorialData]) => {
+        const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
+        const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
 
-      state_to_lga = mappings.state_to_lga;
-      lga_to_ward = mappings.lga_to_ward;
-      lga_to_state = reverseMappings.lga_to_state;
+        state_to_lga = mappings.state_to_lga;
+        lga_to_ward = mappings.lga_to_ward;
+        lga_to_state = reverseMappings.lga_to_state;
 
-      senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
+        senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
 
-      stateLayer = L.geoJSON(stateGeoJSON, {
-        style: { color: '#003366', weight: 2, fillOpacity: 0.1 },
-        onEachFeature: (feature, layer) => {
-          layer.bindTooltip(feature.properties.statename);
-        }
-      }).addTo(map);
+        stateLayer = L.geoJSON(stateGeoJSON, {
+          style: { color: '#003366', weight: 2, fillOpacity: 0.1 },
+          onEachFeature: (feature, layer) => {
+            layer.bindTooltip(feature.properties.statename);
+          }
+        }).addTo(map);
 
-      lgaLayer = L.geoJSON(lgaGeoJSON, {
-        style: { color: '#336699', weight: 1.5, fillOpacity: 0.1 },
-        onEachFeature: (feature, layer) => {
-          layer.bindTooltip(feature.properties.lganame);
-        }
-      }).addTo(map);
+        lgaLayer = L.geoJSON(lgaGeoJSON, {
+          style: { color: '#336699', weight: 1.5, fillOpacity: 0.1 },
+          onEachFeature: (feature, layer) => {
+            layer.bindTooltip(feature.properties.lganame);
+          }
+        }).addTo(map);
 
-      wardLayer = L.geoJSON(wardGeoJSON, {
-        style: { color: '#6699cc', weight: 1, fillOpacity: 0.1 },
-        onEachFeature: (feature, layer) => {
-          layer.bindTooltip(feature.properties.wardname);
-        }
-      }).addTo(map);
+        wardLayer = L.geoJSON(wardGeoJSON, {
+          style: { color: '#6699cc', weight: 1, fillOpacity: 0.1 },
+          onEachFeature: (feature, layer) => {
+            layer.bindTooltip(feature.properties.wardname);
+          }
+        }).addTo(map);
 
-      populateStateDropdown();
-      map.fitBounds(stateLayer.getBounds());
-    });
+        populateStateDropdown();
+        map.fitBounds(stateLayer.getBounds());
+      });
 
     function populateStateDropdown() {
       const stateSelect = document.getElementById('state-select');
@@ -370,18 +396,27 @@
     });
 
     document.getElementById('toggle-states').addEventListener('change', (e) => {
-      if (e.target.checked) { map.addLayer(stateLayer); }
-      else { map.removeLayer(stateLayer); }
+      if (e.target.checked) {
+        map.addLayer(stateLayer);
+      } else {
+        map.removeLayer(stateLayer);
+      }
     });
 
     document.getElementById('toggle-lgas').addEventListener('change', (e) => {
-      if (e.target.checked) { map.addLayer(lgaLayer); }
-      else { map.removeLayer(lgaLayer); }
+      if (e.target.checked) {
+        map.addLayer(lgaLayer);
+      } else {
+        map.removeLayer(lgaLayer);
+      }
     });
 
     document.getElementById('toggle-wards').addEventListener('change', (e) => {
-      if (e.target.checked) { map.addLayer(wardLayer); }
-      else { map.removeLayer(wardLayer); }
+      if (e.target.checked) {
+        map.addLayer(wardLayer);
+      } else {
+        map.removeLayer(wardLayer);
+      }
     });
 
   </script>

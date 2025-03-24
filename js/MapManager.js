@@ -1,11 +1,11 @@
 class MapManager {
     constructor() {
-      // Ensure singleton pattern
+      // Singleton pattern
       if (!MapManager.instance) {
-        // Initialize the Leaflet map
+        // ✅ Initialize the Leaflet map
         this.map = L.map('map').setView([9.0820, 8.6753], 6);
   
-        // ✅ Initialize basemaps
+        // ✅ Basemap Layers
         this.osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; OpenStreetMap contributors'
@@ -24,20 +24,31 @@ class MapManager {
         // ✅ Add default basemap to map
         this.osmStandard.addTo(this.map);
   
-        // ✅ Store baseMaps in an object
+        // ✅ Store basemaps for layer control
         this.baseMaps = {
           "OpenStreetMap Standard": this.osmStandard,
           "Esri World Imagery": this.esriWorldImagery,
           "CartoDB Positron": this.cartoDBPositron
         };
   
-        // ✅ Add layer control to toggle between basemaps
+        // ✅ Layer control (top-right)
         L.control.layers(this.baseMaps, null, { position: 'topright' }).addTo(this.map);
   
-        // Placeholder for layers (data layers)
+        // ✅ Data layers (to be initialized later)
         this.stateLayer = null;
         this.lgaLayer = null;
         this.wardLayer = null;
+  
+        // ✅ Centralized Highlight Layer
+        this.highlightLayer = L.geoJSON(null, {
+          style: {
+            color: '#FF0000',
+            weight: 3,
+            fillOpacity: 0.3
+          }
+        }).addTo(this.map);
+  
+        console.log("✅ MapManager initialized!");
   
         MapManager.instance = this;
       }
@@ -50,7 +61,12 @@ class MapManager {
       return this.map;
     }
   
-    /** Initializes the data layers and adds them to the map */
+    /** Returns the highlight layer */
+    getHighlightLayer() {
+      return this.highlightLayer;
+    }
+  
+    /** Initializes data layers from GeoJSON and adds them to the map */
     initializeLayers(stateGeoJSON, lgaGeoJSON, wardGeoJSON) {
       const map = this.getMap();
   
@@ -80,11 +96,11 @@ class MapManager {
   
       console.log("✅ Map layers initialized.");
   
-      // Fit to the extent of all states
+      // ✅ Fit the map to the extent of all states (initial view)
       map.fitBounds(this.stateLayer.getBounds());
     }
   
-    /** Accessors for data layers */
+    /** Getters for data layers */
     getStateLayer() {
       return this.stateLayer;
     }
@@ -97,7 +113,7 @@ class MapManager {
       return this.wardLayer;
     }
   
-    /** Accessors for raw GeoJSON data from layers */
+    /** Returns raw GeoJSON from layers */
     getStateGeoJSON() {
       if (!this.stateLayer) {
         console.warn("⚠️ State layer not initialized.");
@@ -122,15 +138,23 @@ class MapManager {
       return this.wardLayer.toGeoJSON();
     }
   
-    /** Returns the state GeoJSON layer (for resetting map view, etc.) */
+    /** Returns the raw state layer for fitBounds/reset */
     getStateGeoJSONLayer() {
       return this.stateLayer;
     }
+  
+    /** Optional: Clear all layers from the map */
+    clearLayers() {
+      if (this.stateLayer) this.map.removeLayer(this.stateLayer);
+      if (this.lgaLayer) this.map.removeLayer(this.lgaLayer);
+      if (this.wardLayer) this.map.removeLayer(this.wardLayer);
+      if (this.highlightLayer) this.highlightLayer.clearLayers();
+    }
   }
   
-  // Singleton instance
+  // ✅ Export the singleton instance of MapManager
   const instance = new MapManager();
-  //commented out* Object.freeze(instance);
+  //Object.freeze(instance); // Enforce immutability (optional but recommended)
   
   export default instance;
   

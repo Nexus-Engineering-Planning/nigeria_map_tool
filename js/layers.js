@@ -1,21 +1,16 @@
 import mapManager from './MapManager.js';
 
+// ✅ Access the shared map instance and highlight layer from MapManager
 const map = mapManager.getMap();
-
-// Create a highlight layer (add this to MapManager if you want centralized control)
-const highlightLayer = L.geoJSON(null, {
-  style: {
-    color: '#FF0000',
-    weight: 3,
-    fillOpacity: 0.3
-  }
-}).addTo(map);
+const highlightLayer = mapManager.getHighlightLayer();
 
 /**
  * Select and highlight a State by name.
+ * @param {string} stateName - Name of the state to highlight.
  */
 function selectState(stateName) {
   const stateLayer = mapManager.getStateLayer();
+  
   if (!stateLayer) {
     console.error("❌ State Layer not initialized.");
     return;
@@ -28,19 +23,28 @@ function selectState(stateName) {
     return;
   }
 
+  let found = false;
+
   stateLayer.eachLayer(layer => {
     if (layer.feature.properties.statename === stateName) {
       highlightLayer.addData(layer.feature);
       map.fitBounds(layer.getBounds());
+      found = true;
     }
   });
+
+  if (!found) {
+    console.warn(`⚠️ No State found with the name: ${stateName}`);
+  }
 }
 
 /**
  * Select and highlight all LGAs in a State by state name.
+ * @param {string} stateName - Name of the state to highlight its LGAs.
  */
 function selectLGAsInState(stateName) {
   const lgaLayer = mapManager.getLgaLayer();
+  
   if (!lgaLayer) {
     console.error("❌ LGA Layer not initialized.");
     return;
@@ -67,9 +71,11 @@ function selectLGAsInState(stateName) {
 
 /**
  * Select and highlight all Wards in an LGA by LGA code.
+ * @param {string} lgaCode - Code of the LGA to highlight its Wards.
  */
 function selectWardsInLGA(lgaCode) {
   const wardLayer = mapManager.getWardLayer();
+
   if (!wardLayer) {
     console.error("❌ Ward Layer not initialized.");
     return;
@@ -96,9 +102,11 @@ function selectWardsInLGA(lgaCode) {
 
 /**
  * Select and highlight a Ward by ward code.
+ * @param {string} wardCode - Code of the Ward to highlight.
  */
 function selectWard(wardCode) {
   const wardLayer = mapManager.getWardLayer();
+
   if (!wardLayer) {
     console.error("❌ Ward Layer not initialized.");
     return;

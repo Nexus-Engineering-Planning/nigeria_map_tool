@@ -10,7 +10,9 @@ const map = mapManager.getMap();
 // Declare mapping variables
 let state_to_lga = {}, lga_to_ward = {}, senatorial_to_lga = {}, lga_to_state = {};
 
-// Fetch GeoJSON and JSON data then initialize layers and sidebar
+// 🔄 Show spinner during data fetch
+showSpinner();
+
 Promise.all([
   fetch('./data/state_geojson.geojson').then(res => res.json()),
   fetch('./data/lga_geojson.geojson').then(res => res.json()),
@@ -39,6 +41,9 @@ Promise.all([
 })
 .catch(err => {
   console.error('❌ Error initializing data:', err);
+})
+.finally(() => {
+  hideSpinner();
 });
 
 /* -------------------------
@@ -46,16 +51,21 @@ Promise.all([
 ------------------------- */
 
 document.getElementById('reset-btn').addEventListener('click', () => {
-  document.getElementById('state-select').value = "";
-  document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
-  document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
-  document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
+  showSpinner();
 
-  document.getElementById('senatorial-select').disabled = true;
-  document.getElementById('lga-select').disabled = true;
-  document.getElementById('ward-select').disabled = true;
+  setTimeout(() => {
+    document.getElementById('state-select').value = "";
+    document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
+    document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
+    document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
 
-  mapManager.getMap().fitBounds(mapManager.getStateLayer().getBounds());
+    document.getElementById('senatorial-select').disabled = true;
+    document.getElementById('lga-select').disabled = true;
+    document.getElementById('ward-select').disabled = true;
+
+    mapManager.getMap().fitBounds(mapManager.getStateLayer().getBounds());
+    hideSpinner();
+  }, 300); // small delay to show spinner
 });
 
 document.getElementById('toggle-states').addEventListener('change', (e) => {
@@ -81,3 +91,23 @@ document.getElementById('toggle-wards').addEventListener('change', (e) => {
     map.removeLayer(mapManager.getWardLayer());
   }
 });
+
+document.getElementById('sidebar-toggle').addEventListener('click', () => {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('collapsed');
+});
+
+
+/* -------------------------
+   Spinner Utilities
+------------------------- */
+
+function showSpinner() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) spinner.style.display = 'flex';
+}
+
+function hideSpinner() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) spinner.style.display = 'none';
+}

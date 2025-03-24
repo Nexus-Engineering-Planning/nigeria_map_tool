@@ -68,7 +68,12 @@
 </head>
 
 <body>
+  <div id="loading-spinner" class="loading-spinner" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+  
   <div class="sidebar">
+    <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
     <h1></h1>
 
     <div id="info"></div>
@@ -95,6 +100,7 @@
     <select id="ward-select" disabled>
       <option value="">Select Ward</option>
     </select>
+    <div id="feature-summary" style="margin-top: 10px; font-size: 14px; color: #555;"></div>
 
     <button id="reset-btn">Reset Filters</button>
 

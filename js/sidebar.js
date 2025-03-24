@@ -13,6 +13,8 @@ const highlightLayer = L.geoJSON(null, {
 function initializeSidebar(senatorialToLga, lgaToState) {
   console.log("🔄 Initializing sidebar...");
 
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
   const searchInput = document.getElementById("searchInput");
   const stateSelect = document.getElementById("state-select");
   const senatorialSelect = document.getElementById("senatorial-select");
@@ -20,9 +22,21 @@ function initializeSidebar(senatorialToLga, lgaToState) {
   const wardSelect = document.getElementById("ward-select");
   const resetButton = document.getElementById("reset-btn");
 
-  if (!searchInput || !stateSelect || !lgaSelect || !wardSelect || !senatorialSelect || !resetButton) {
+  if (!searchInput || !stateSelect || !lgaSelect || !wardSelect || !senatorialSelect || !resetButton || !sidebar || !sidebarToggle) {
     console.error("❌ Sidebar elements not found!");
     return;
+  }
+
+  // 🧩 Collapsible Sidebar Toggle
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+    sidebarToggle.innerHTML = sidebar.classList.contains('collapsed') ? '&#10095;' : '&#10094;';
+  });
+
+  // Auto-collapse on small screens (JS fallback to media query)
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+    sidebarToggle.innerHTML = '&#10095;';
   }
 
   // Populate State dropdown
@@ -37,6 +51,7 @@ function initializeSidebar(senatorialToLga, lgaToState) {
 
     highlightLayer.clearLayers();
     selectState(selectedState);
+    updateFeatureSummary(selectedState, null);
 
     populateSenatorialDropdown(selectedState, senatorialToLga, lgaToState);
     populateLGADropdown(selectedState);
@@ -54,7 +69,7 @@ function initializeSidebar(senatorialToLga, lgaToState) {
     if (!districtName) return;
 
     const lgas = senatorialToLga[districtName] || [];
-    const lgaGeoJSON = mapManager.getLgaGeoJSON(); // ✅ FIXED: mapManager not MapManager
+    const lgaGeoJSON = mapManager.getLgaGeoJSON();
 
     const filteredLGAs = lgaGeoJSON.features.filter(feature => lgas.includes(feature.properties.lganame));
 
@@ -64,7 +79,7 @@ function initializeSidebar(senatorialToLga, lgaToState) {
     }
 
     highlightLayer.addData(filteredLGAs);
-    mapManager.getMap().fitBounds(highlightLayer.getBounds()); // ✅ FIXED
+    mapManager.getMap().fitBounds(highlightLayer.getBounds());
   });
 
   lgaSelect.addEventListener('change', function () {
@@ -76,6 +91,7 @@ function initializeSidebar(senatorialToLga, lgaToState) {
     if (!selectedLGA) return;
 
     selectWardsInLGA(selectedLGA);
+    updateFeatureSummary(stateSelect.value, selectedLGA);
     populateWardDropdown(selectedLGA);
   });
 
@@ -84,6 +100,7 @@ function initializeSidebar(senatorialToLga, lgaToState) {
     console.log(`📌 Selected Ward: ${selectedWard}`);
 
     highlightLayer.clearLayers();
+    document.getElementById('feature-summary').textContent = '';
 
     if (!selectedWard) return;
 
@@ -242,23 +259,67 @@ function renderSuggestions(suggestions) {
   const suggestionBox = document.getElementById('searchSuggestions');
   suggestionBox.innerHTML = '';
 
+  const grouped = {
+    State: [],
+    LGA: [],
+    Ward: []
+  };
+
   suggestions.forEach(({ name, layer }) => {
-    const div = document.createElement('div');
-    div.className = 'search-suggestion';
-    div.textContent = name;
-
-    div.onclick = () => {
-      highlightLayer.clearLayers();
-      highlightLayer.addData(layer.feature);
-
-      const bounds = layer.getBounds
-        ? layer.getBounds()
-        : L.latLngBounds([layer.getLatLng()]);
-      mapManager.getMap().fitBounds(bounds);
-    };
-
-    suggestionBox.appendChild(div);
+    if (name.startsWith('State:')) grouped.State.push({ name, layer });
+    else if (name.startsWith('LGA:')) grouped.LGA.push({ name, layer });
+    else if (name.startsWith('Ward:')) grouped.Ward.push({ name, layer });
   });
+
+  Object.entries(grouped).forEach(([groupName, items]) => {
+    if (items.length === 0) return;
+
+    const groupHeader = document.createElement('div');
+    groupHeader.textContent = groupName;
+    groupHeader.style = 'font-weight: bold; margin-top: 8px; color: #3498db;';
+    suggestionBox.appendChild(groupHeader);
+
+    items.forEach(({ name, layer }) => {
+      const div = document.createElement('div');
+      div.className = 'search-suggestion';
+      div.textContent = name.replace(`${groupName}: `, '');
+      div.onclick = () => {
+        highlightLayer.clearLayers();
+        highlightLayer.addData(layer.feature);
+
+        const bounds = layer.getBounds
+          ? layer.getBounds()
+          : L.latLngBounds([layer.getLatLng()]);
+        mapManager.getMap().fitBounds(bounds);
+      };
+      suggestionBox.appendChild(div);
+    });
+  });
+}
+
+function updateFeatureSummary(stateName, selectedLgaCode) {
+  const summaryDiv = document.getElementById('feature-summary');
+  const lgaGeoJSON = mapManager.getLgaGeoJSON();
+  const wardGeoJSON = mapManager.getWardGeoJSON();
+
+  let visibleLGAs = [];
+  let visibleWards = [];
+
+  if (stateName) {
+    visibleLGAs = lgaGeoJSON.features.filter(lga => lga.properties.statename === stateName);
+  }
+
+  if (selectedLgaCode) {
+    visibleWards = wardGeoJSON.features.filter(ward => ward.properties.lgacode === selectedLgaCode);
+  }
+
+  if (stateName && selectedLgaCode) {
+    summaryDiv.textContent = `Showing ${visibleWards.length} Wards in ${visibleLGAs.find(lga => lga.properties.lgacode === selectedLgaCode)?.properties.lganame}`;
+  } else if (stateName) {
+    summaryDiv.textContent = `Showing ${visibleLGAs.length} LGAs in ${stateName}`;
+  } else {
+    summaryDiv.textContent = '';
+  }
 }
 
 export { initializeSidebar };

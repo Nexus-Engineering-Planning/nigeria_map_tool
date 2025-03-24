@@ -1,1 +1,3598 @@
-[{"Serial_Number":1,"Senatorial_District":"ABIA NORTH","   CODE":"SD\/001\/AB","LGAs":"UMUNNEOCHI","State":"ABIA","Collation_Centre":"COUNCIL HALL OHAFIA LGA HQS"},{"Serial_Number":1,"Senatorial_District":"ABIA NORTH","   CODE":"SD\/001\/AB","LGAs":"ISUKWUATO","State":"ABIA","Collation_Centre":"COUNCIL HALL OHAFIA LGA HQS"},{"Serial_Number":1,"Senatorial_District":"ABIA NORTH","   CODE":"SD\/001\/AB","LGAs":"OHAFIA","State":"ABIA","Collation_Centre":"COUNCIL HALL OHAFIA LGA HQS"},{"Serial_Number":1,"Senatorial_District":"ABIA NORTH","   CODE":"SD\/001\/AB","LGAs":"AROCHUKWU","State":"ABIA","Collation_Centre":"COUNCIL HALL OHAFIA LGA HQS"},{"Serial_Number":1,"Senatorial_District":"ABIA NORTH","   CODE":"SD\/001\/AB","LGAs":"BENDE","State":"ABIA","Collation_Centre":"COUNCIL HALL OHAFIA LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":"UMUAHIA NORTH","State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":"UMUAHIA SOUTH","State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":"IKWUANO","State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":"ISIALA NGWA NORTH","State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":"ISIALA NGWA SOUTH","State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":2,"Senatorial_District":"ABIA CENTRAL","   CODE":"SD\/002\/AB","LGAs":null,"State":"ABIA","Collation_Centre":"COUNCIL HALL UMUAHIA NORTH LGA HQS"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"ABA NORTH","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"ABA SOUTH","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"UGWUNAGBO","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"OBINGWA","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"UKWA EAST","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":3,"Senatorial_District":"ABIA SOUTH","   CODE":"SD\/003\/AB","LGAs":"UKWA WEST & OSISIOMA","State":"ABIA","Collation_Centre":"ABA TOWN HALL ABA SOUTH LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"ETINAN","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"IBESIKPO ASUTAN","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"IBIONO IBOM","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"ITU","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"NSIT ATAI","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"NSIT IBOM","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"NSIT UBIUM","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"URUAN","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":7,"Senatorial_District":"AKWA IBOM NORTH EAST","   CODE":"SD\/007\/AK","LGAs":"UYO","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE UYO LGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"ABAK","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"ESSIEN UDIM","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"ETIM EKPO","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"IKA","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"IKONO","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"IKOT EKPENE","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"INI","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"OBOT AKARA","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"ORUK ANAM","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":8,"Senatorial_District":"AKWA IBOM NORTH WEST","   CODE":"SD\/008\/AK","LGAs":"UKANAFUN","State":"AKWA IBOM","Collation_Centre":"INEC OFFICE IKOT EKPENELGA"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"EASTERN OBOLO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"EKET","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"ESIT EKET","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"IBENO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"IKOT ABASI","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"MBO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"MKPAT ENIN","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"OKOBO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"ONNA","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"ORON","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"UDUNG UKO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":9,"Senatorial_District":"AKWA IBOM SOUTH","   CODE":"SD\/009\/AK","LGAs":"URUE OFFONG\/ORUKO","State":"AKWA IBOM","Collation_Centre":"EKET LGA INEC OFFICE"},{"Serial_Number":4,"Senatorial_District":"ADAMAWA NORTH","   CODE":"SD\/004\/AD","LGAs":"MADAGALI","State":"ADAMAWA","Collation_Centre":"GSS MUBI"},{"Serial_Number":4,"Senatorial_District":"ADAMAWA NORTH","   CODE":"SD\/004\/AD","LGAs":"MAIHA","State":"ADAMAWA","Collation_Centre":"GSS MUBI"},{"Serial_Number":4,"Senatorial_District":"ADAMAWA NORTH","   CODE":"SD\/004\/AD","LGAs":"MICHIKA","State":"ADAMAWA","Collation_Centre":"GSS MUBI"},{"Serial_Number":4,"Senatorial_District":"ADAMAWA NORTH","   CODE":"SD\/004\/AD","LGAs":"MUBI NORTH","State":"ADAMAWA","Collation_Centre":"GSS MUBI"},{"Serial_Number":4,"Senatorial_District":"ADAMAWA NORTH","   CODE":"SD\/004\/AD","LGAs":"MUBI SOUTH","State":"ADAMAWA","Collation_Centre":"GSS MUBI"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"DEMSA","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"GANYE","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"GUYUK","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"JADA","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"MAYO-BELWA","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"NUMAN","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"SHELLENG","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"TOUNGO","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":5,"Senatorial_District":"ADAMAWA SOUTH","   CODE":"SD\/005\/AD","LGAs":"LAMURDE","State":"ADAMAWA","Collation_Centre":"GSS NUMAN"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"HONG","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"FUFORE","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"SONG","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"YOLA NORTH","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"YOLA SOUTH","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":6,"Senatorial_District":"ADAMAWA CENTRAL","   CODE":"SD\/006\/AD","LGAs":"GERFI","State":"ADAMAWA","Collation_Centre":"GMMC YOLA"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"ONITSHA NORTH","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"ONITSHA SOUTH","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"OYI","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"OGBARU","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"ANAMBRA EAST","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"ANAMBRA WEST","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":10,"Senatorial_District":"ANAMBRA NORTH","   CODE":"SD\/010\/AN","LGAs":"AYAMELUM","State":"ANAMBRA","Collation_Centre":"ONITHA NORTH INEC OFFICE"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"AWKA NORTH","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"AWKA SOUTH","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"NJIKOKA","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"ANAOCHA","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"IDEMILI NORTH","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"IDEMILI SOUTH","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":11,"Senatorial_District":"ANAMBRA CENTRAL","   CODE":"SD\/011\/AN","LGAs":"DUNUKOFIA","State":"ANAMBRA","Collation_Centre":"AWKA SOUTH"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"IHIALA","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"NNEWI NORTH","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"NNEWI SOUTH","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"ORUMBA SOUTH","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"ORUMBA NORTH","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"AGUATA","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":12,"Senatorial_District":"ANAMBRA SOUTH","   CODE":"SD\/012\/AN","LGAs":"EKWUSIGO","State":"ANAMBRA","Collation_Centre":"NNEWI NORTH INEC OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"ALKALERI","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"KIRFI","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"BAUCHI","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"TAFAWA BALEWA","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"BOGORO","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"DASS","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":13,"Senatorial_District":"BAUCHI SOUTH","   CODE":"SD\/013\/BA","LGAs":"TORO","State":"BAUCHI","Collation_Centre":"INEC STATE OFFICE"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"NINGI","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"WARJI","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"DARAZO","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"GANJUWA","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"MISAU","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":14,"Senatorial_District":"BAUCHI CENTRAL","   CODE":"SD\/014\/BA","LGAs":"DAMBAN","State":"BAUCHI","Collation_Centre":"DARAZO"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"ZAKI","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"GAMAWA","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"JAMA\u2019ARE","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"ITAS-GADAU","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"SHIRA","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"GIADE","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":15,"Senatorial_District":"BAUCHI NORTH","   CODE":"SD\/015\/BA","LGAs":"KATAGUM","State":"BAUCHI","Collation_Centre":"AZARE"},{"Serial_Number":16,"Senatorial_District":"BAYELSA EAST","   CODE":"SD\/016\/BY","LGAs":"BRASS","State":"BAYELSA","Collation_Centre":"INEC BRASS"},{"Serial_Number":16,"Senatorial_District":"BAYELSA EAST","   CODE":"SD\/016\/BY","LGAs":"NEMBE","State":"BAYELSA","Collation_Centre":"INEC BRASS"},{"Serial_Number":16,"Senatorial_District":"BAYELSA EAST","   CODE":"SD\/016\/BY","LGAs":"OGBIA","State":"BAYELSA","Collation_Centre":"INEC BRASS"},{"Serial_Number":17,"Senatorial_District":"BAYELSA CENTRAL","   CODE":"SD\/017\/BY","LGAs":"KOLOKUMA\/OPOKUMA","State":"BAYELSA","Collation_Centre":"COUNCIL HALL YENAGOA"},{"Serial_Number":17,"Senatorial_District":"BAYELSA CENTRAL","   CODE":"SD\/017\/BY","LGAs":"SOUTHERN IJAW","State":"BAYELSA","Collation_Centre":"COUNCIL HALL YENAGOA"},{"Serial_Number":17,"Senatorial_District":"BAYELSA CENTRAL","   CODE":"SD\/017\/BY","LGAs":"YENAGOA","State":"BAYELSA","Collation_Centre":"COUNCIL HALL YENAGOA"},{"Serial_Number":18,"Senatorial_District":"BAYELSA WEST","   CODE":"SD\/018\/BY","LGAs":"EKEREMOR","State":"BAYELSA","Collation_Centre":"INEC OFFICE SAGBAMA"},{"Serial_Number":18,"Senatorial_District":"BAYELSA WEST","   CODE":"SD\/018\/BY","LGAs":"SAGBAMA","State":"BAYELSA","Collation_Centre":"INEC OFFICE SAGBAMA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"KATSINA-ALA","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"KONSHISHA","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"KWANDE","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"LOGO","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"UKUM","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"USHONGO","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":19,"Senatorial_District":"BENUE NORTH  EAST","   CODE":"SD\/019\/BN","LGAs":"VANDEIKYA","State":"BENUE","Collation_Centre":"KATSINA-ALA"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"BURUKU","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"GBOKO","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"GUMA","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"GWER-EAST","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"GWER-WEST","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"MARKURDI","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":20,"Senatorial_District":"BENUE NORTH WEST","   CODE":"SD\/020\/BN","LGAs":"TARKA","State":"BENUE","Collation_Centre":"MARKURDI"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"ADO","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"AGATU","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"APA","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OBI","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OGBADIBO","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OHIMINI","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OJU","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OKPOKWU","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":21,"Senatorial_District":"BENUE SOUTH","   CODE":"SD\/021\/BN","LGAs":"OTUKPO","State":"BENUE","Collation_Centre":"OTUKPO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"ABADAM","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"GUBIO","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"GUZAMALA","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"KUKAWA","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"MAGUMERI","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"MARTE","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"MOBBAR","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"NGANZA","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":22,"Senatorial_District":"BORNO NORTH","   CODE":"SD\/022\/BO","LGAs":"MOGUNO","State":"BORNO","Collation_Centre":"INEC OFFICE MONGUNO"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"DIKWA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"JERE","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"KALA BALGE","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"MAFA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"METROPOLITAN","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"NGALA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"KONDUGA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"BAMA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":23,"Senatorial_District":"BORNO CENTRAL","   CODE":"SD\/023\/BO","LGAs":"KAGA","State":"BORNO","Collation_Centre":"WAZIRI HALL MADUGURI METRO COUNCIL"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"ASKIRA\/UBA","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"BAYO","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"BIU","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"CHIBOK","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"DAMABOA","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"GWOZA","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"HAWUL","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"KWAYA","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":24,"Senatorial_District":"BORNO SOUTH","   CODE":"SD\/024\/BO","LGAs":"SHANI","State":"BORNO","Collation_Centre":"BIU LG COUNCIL CHAMBER"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"BEKWARRA","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"OBANLIKU","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"OBUDU","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"OGOJA","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"YALA","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":25,"Senatorial_District":"CROSS RIVER NORTH","   CODE":"SD\/025\/CR","LGAs":"BIASE","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE OGOJA"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"ABI","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"BOKI","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"ETUNG","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"IKOM","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"OBUBRA","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":26,"Senatorial_District":"CROSS RIVER CENTRAL","   CODE":"SD\/026\/CR","LGAs":"YAKURR","State":"CROSS RIVER","Collation_Centre":"INEC OFFICE IKOM"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"CALABAR MUNICIPAL","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"CALABAR SOUTH","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"AKAMKPA","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"AKPABUYO","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"BAKASSI","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":27,"Senatorial_District":"CROSS RIVER SOUTH","   CODE":"SD\/027\/CR","LGAs":"ODUKPANI","State":"CROSS RIVER","Collation_Centre":"CALABAR INEC OFFICE"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"ETHIOPE EAST","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"ETHIOPE WEST","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"OKPE","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"SAPELE","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"UDU","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"UGHELLI NORTH","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"UGHELI SOUTH","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":28,"Senatorial_District":"DELTA CENTRAL","   CODE":"SD\/028\/DT","LGAs":"UVWIE","State":"DELTA","Collation_Centre":"TOWN HALL, UGHELLI NORTH LGA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"ANIOCHA NORTH","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"ANIOCHA SOUTH","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"IKA NORTH-EAST","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"IKA SOUTH","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"NDOKWA EAST","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"NDOKWA WEST","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"OSHIMILI NORTH","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"OSHIMILI SOUTH","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":29,"Senatorial_District":"DELTA NORTH","   CODE":"SD\/029\/DT","LGAs":"UKWUANI","State":"DELTA","Collation_Centre":"INEC STATE H\/QS ASABA"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"BOMADI","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"BURUTU","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"ISOKO NORTH","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"ISOKO SOUTH","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"PATANI","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"WARRI NORTH","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"WARRI SOUTH","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":30,"Senatorial_District":"DELTA SOUTH","   CODE":"SD\/030\/DT","LGAs":"WARRI SOUTH WEST","State":"DELTA","Collation_Centre":"ISOKO SOUTH COUNCIL HALL OLEH"},{"Serial_Number":31,"Senatorial_District":"EBONYI NORTH","   CODE":"SD\/031\/EB","LGAs":"ABAKALIKI","State":"EBONYI","Collation_Centre":"ABAKALIKI LGA COUNCIL HALL NKALIKI"},{"Serial_Number":31,"Senatorial_District":"EBONYI NORTH","   CODE":"SD\/031\/EB","LGAs":"EBONYI","State":"EBONYI","Collation_Centre":"ABAKALIKI LGA COUNCIL HALL NKALIKI"},{"Serial_Number":31,"Senatorial_District":"EBONYI NORTH","   CODE":"SD\/031\/EB","LGAs":"IZZI","State":"EBONYI","Collation_Centre":"ABAKALIKI LGA COUNCIL HALL NKALIKI"},{"Serial_Number":31,"Senatorial_District":"EBONYI NORTH","   CODE":"SD\/031\/EB","LGAs":"OHAUKWU","State":"EBONYI","Collation_Centre":"ABAKALIKI LGA COUNCIL HALL NKALIKI"},{"Serial_Number":32,"Senatorial_District":"EBONYI CENTRAL","   CODE":"SD\/032\/EB","LGAs":"EZZA NORTH","State":"EBONYI","Collation_Centre":"LG COUNCIL HALL ONUEKE EZZA SOUTH"},{"Serial_Number":32,"Senatorial_District":"EBONYI CENTRAL","   CODE":"SD\/032\/EB","LGAs":"EZZA SOUTH","State":"EBONYI","Collation_Centre":"LG COUNCIL HALL ONUEKE EZZA SOUTH"},{"Serial_Number":32,"Senatorial_District":"EBONYI CENTRAL","   CODE":"SD\/032\/EB","LGAs":"IKWO","State":"EBONYI","Collation_Centre":"LG COUNCIL HALL ONUEKE EZZA SOUTH"},{"Serial_Number":32,"Senatorial_District":"EBONYI CENTRAL","   CODE":"SD\/032\/EB","LGAs":"ISHIELU","State":"EBONYI","Collation_Centre":"LG COUNCIL HALL ONUEKE EZZA SOUTH"},{"Serial_Number":33,"Senatorial_District":"EBONYI  SOUTH","   CODE":"SD\/033\/EB","LGAs":"AFIKPO NORTH","State":"EBONYI","Collation_Centre":"AFIKPO NORTH LGA COUNCIL HALL AFIKPO"},{"Serial_Number":33,"Senatorial_District":"EBONYI  SOUTH","   CODE":"SD\/033\/EB","LGAs":"AFIKPO SOUTH","State":"EBONYI","Collation_Centre":"AFIKPO NORTH LGA COUNCIL HALL AFIKPO"},{"Serial_Number":33,"Senatorial_District":"EBONYI  SOUTH","   CODE":"SD\/033\/EB","LGAs":"IVO","State":"EBONYI","Collation_Centre":"AFIKPO NORTH LGA COUNCIL HALL AFIKPO"},{"Serial_Number":33,"Senatorial_District":"EBONYI  SOUTH","   CODE":"SD\/033\/EB","LGAs":"OHAOZARA","State":"EBONYI","Collation_Centre":"AFIKPO NORTH LGA COUNCIL HALL AFIKPO"},{"Serial_Number":33,"Senatorial_District":"EBONYI  SOUTH","   CODE":"SD\/033\/EB","LGAs":"ONICHA","State":"EBONYI","Collation_Centre":"AFIKPO NORTH LGA COUNCIL HALL AFIKPO"},{"Serial_Number":34,"Senatorial_District":"EDO CENTRAL","   CODE":"SD\/034\/ED","LGAs":"ESAN CENTRAL","State":"EDO","Collation_Centre":"SACRED HEART GIRLS\u2019S UBIAJA"},{"Serial_Number":34,"Senatorial_District":"EDO CENTRAL","   CODE":"SD\/034\/ED","LGAs":"ESAN NORTH EAST","State":"EDO","Collation_Centre":"SACRED HEART GIRLS\u2019S UBIAJA"},{"Serial_Number":34,"Senatorial_District":"EDO CENTRAL","   CODE":"SD\/034\/ED","LGAs":"ESAN SOUTH EAST","State":"EDO","Collation_Centre":"SACRED HEART GIRLS\u2019S UBIAJA"},{"Serial_Number":34,"Senatorial_District":"EDO CENTRAL","   CODE":"SD\/034\/ED","LGAs":"ESAN WEST","State":"EDO","Collation_Centre":"SACRED HEART GIRLS\u2019S UBIAJA"},{"Serial_Number":34,"Senatorial_District":"EDO CENTRAL","   CODE":"SD\/034\/ED","LGAs":"IGUEBEN","State":"EDO","Collation_Centre":"SACRED HEART GIRLS\u2019S UBIAJA"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"AKOKO EDO","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"ETSAKO EAST","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"ETSAKO CENTRAL","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"ETSAKO WEST","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"OWAN EAST","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":35,"Senatorial_District":"EDO NORTH","   CODE":"SD\/035\/ED","LGAs":"OWAN WEST","State":"EDO","Collation_Centre":"COUNCIL HALL, AUCHI"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"OREDO","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"ORHIONMWON","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"OVIA NORTH EAST","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"OVIA SOUTH WEST","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"EGOR","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"UHUNMWODE","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":36,"Senatorial_District":"EDO  SOUTH","   CODE":"SD\/036\/ED","LGAs":"IKPOBA OKHA","State":"EDO","Collation_Centre":"INEC H\/Q, BENIN CITY"},{"Serial_Number":37,"Senatorial_District":"EKITI NORTH","   CODE":"SD\/037\/EK","LGAs":"IKOLE","State":"EKITI","Collation_Centre":"ST. DAVID\u2019S ANG. PRY. SCH. IDO-EKITI"},{"Serial_Number":37,"Senatorial_District":"EKITI NORTH","   CODE":"SD\/037\/EK","LGAs":"OYE","State":"EKITI","Collation_Centre":"ST. DAVID\u2019S ANG. PRY. SCH. IDO-EKITI"},{"Serial_Number":37,"Senatorial_District":"EKITI NORTH","   CODE":"SD\/037\/EK","LGAs":"IDO\/OSI","State":"EKITI","Collation_Centre":"ST. DAVID\u2019S ANG. PRY. SCH. IDO-EKITI"},{"Serial_Number":37,"Senatorial_District":"EKITI NORTH","   CODE":"SD\/037\/EK","LGAs":"MOBA","State":"EKITI","Collation_Centre":"ST. DAVID\u2019S ANG. PRY. SCH. IDO-EKITI"},{"Serial_Number":37,"Senatorial_District":"EKITI NORTH","   CODE":"SD\/037\/EK","LGAs":"ILEJEMEJE","State":"EKITI","Collation_Centre":"ST. DAVID\u2019S ANG. PRY. SCH. IDO-EKITI"},{"Serial_Number":38,"Senatorial_District":"EKITI CENTRAL","   CODE":"SD\/038\/EK","LGAs":"ADO EKITI","State":"EKITI","Collation_Centre":"MARY IMMACULATE GIRL\u2019S GRAM. SCH. ADO"},{"Serial_Number":38,"Senatorial_District":"EKITI CENTRAL","   CODE":"SD\/038\/EK","LGAs":"IREPODUN\/IFELODUN","State":"EKITI","Collation_Centre":"MARY IMMACULATE GIRL\u2019S GRAM. SCH. ADO"},{"Serial_Number":38,"Senatorial_District":"EKITI CENTRAL","   CODE":"SD\/038\/EK","LGAs":"IJERO","State":"EKITI","Collation_Centre":"MARY IMMACULATE GIRL\u2019S GRAM. SCH. ADO"},{"Serial_Number":38,"Senatorial_District":"EKITI CENTRAL","   CODE":"SD\/038\/EK","LGAs":"EFON","State":"EKITI","Collation_Centre":"MARY IMMACULATE GIRL\u2019S GRAM. SCH. ADO"},{"Serial_Number":38,"Senatorial_District":"EKITI CENTRAL","   CODE":"SD\/038\/EK","LGAs":"EKITI WEST","State":"EKITI","Collation_Centre":"MARY IMMACULATE GIRL\u2019S GRAM. SCH. ADO"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"EKITI SOUTH WEST","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"IKERE","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"EMURE","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"ISE\/ORUN","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"GBONYIN","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":39,"Senatorial_District":"EKITI  SOUTH","   CODE":"SD\/039\/EK","LGAs":"EKITI EAST","State":"EKITI","Collation_Centre":"HOLY TRINITY PRY. SCH. ODO OJA IKERE EKITI"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"ENUGU EAST","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"ENUGU NORTH","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"ENUGU SOUTH","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"ISI-UZO","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"NKANU EAST","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":40,"Senatorial_District":"ENUGU EAST","   CODE":"SD\/040\/EN","LGAs":"NKANU WEST","State":"ENUGU","Collation_Centre":"ENUGU NORTH LG COUNCIL HALL"},{"Serial_Number":41,"Senatorial_District":"ENUGU WEST","   CODE":"SD\/041\/EN","LGAs":"ANINIRI","State":"ENUGU","Collation_Centre":"AWGU LG COUNCIL HALL"},{"Serial_Number":41,"Senatorial_District":"ENUGU WEST","   CODE":"SD\/041\/EN","LGAs":"AWGU","State":"ENUGU","Collation_Centre":"AWGU LG COUNCIL HALL"},{"Serial_Number":41,"Senatorial_District":"ENUGU WEST","   CODE":"SD\/041\/EN","LGAs":"EZEAGU","State":"ENUGU","Collation_Centre":"AWGU LG COUNCIL HALL"},{"Serial_Number":41,"Senatorial_District":"ENUGU WEST","   CODE":"SD\/041\/EN","LGAs":"OJI RIVER","State":"ENUGU","Collation_Centre":"AWGU LG COUNCIL HALL"},{"Serial_Number":41,"Senatorial_District":"ENUGU WEST","   CODE":"SD\/041\/EN","LGAs":"UDI","State":"ENUGU","Collation_Centre":"AWGU LG COUNCIL HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"IGBO-ETITI","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"IGBO-EZE NORTH","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"IGO-EZE SOUTH","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"UZO UWANI","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"UDENU","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":42,"Senatorial_District":"ENUGU  NORTH","   CODE":"SD\/042\/EN","LGAs":"NSUKKA","State":"ENUGU","Collation_Centre":"NSUKKA LG HALL"},{"Serial_Number":43,"Senatorial_District":"GOMBE CENTRAL","   CODE":"SD\/043\/GM","LGAs":"AKKO","State":"GOMBE","Collation_Centre":"GOVT. TECH. SCH. KUMO"},{"Serial_Number":43,"Senatorial_District":"GOMBE CENTRAL","   CODE":"SD\/043\/GM","LGAs":"YAMALTU\/DEBA","State":"GOMBE","Collation_Centre":"GOVT. TECH. SCH. KUMO"},{"Serial_Number":44,"Senatorial_District":"GOMBE SOUTH","   CODE":"SD\/044\/GM","LGAs":"BALANGA","State":"GOMBE","Collation_Centre":"GGASS KALTUNGO"},{"Serial_Number":44,"Senatorial_District":"GOMBE SOUTH","   CODE":"SD\/044\/GM","LGAs":"BILLIRI","State":"GOMBE","Collation_Centre":"GGASS KALTUNGO"},{"Serial_Number":44,"Senatorial_District":"GOMBE SOUTH","   CODE":"SD\/044\/GM","LGAs":"KALTUNGO","State":"GOMBE","Collation_Centre":"GGASS KALTUNGO"},{"Serial_Number":44,"Senatorial_District":"GOMBE SOUTH","   CODE":"SD\/044\/GM","LGAs":"SHONGOM","State":"GOMBE","Collation_Centre":"GGASS KALTUNGO"},{"Serial_Number":45,"Senatorial_District":"GOMBE NORTH","   CODE":"SD\/045\/GM","LGAs":"FUNAKAYE","State":"GOMBE","Collation_Centre":"GSS MALAM SIDI"},{"Serial_Number":45,"Senatorial_District":"GOMBE NORTH","   CODE":"SD\/045\/GM","LGAs":"NAFADA","State":"GOMBE","Collation_Centre":"GSS MALAM SIDI"},{"Serial_Number":45,"Senatorial_District":"GOMBE NORTH","   CODE":"SD\/045\/GM","LGAs":"GOMBE","State":"GOMBE","Collation_Centre":"GSS MALAM SIDI"},{"Serial_Number":45,"Senatorial_District":"GOMBE NORTH","   CODE":"SD\/045\/GM","LGAs":"KWAMI","State":"GOMBE","Collation_Centre":"GSS MALAM SIDI"},{"Serial_Number":45,"Senatorial_District":"GOMBE NORTH","   CODE":"SD\/045\/GM","LGAs":"DUKKU","State":"GOMBE","Collation_Centre":"GSS MALAM SIDI"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"ABOH MBAISE","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"AHIAZU MBAISE","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"EZINIHITTE","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"IKEDURU","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"MBAITOLI","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"NGOR OKPALA","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"OWERRI MUNICIPAL","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"OWERRI NORTH","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":46,"Senatorial_District":"IMO EAST","   CODE":"SD\/046\/IM","LGAs":"OWERRI WEST","State":"IMO","Collation_Centre":"OWERRI MUNICIPAL COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"IDEATO NORTH","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"IDEATO SOUTH","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"ISU","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"NJABA","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"NKWERE","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"NWANGELE","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"OGUTA","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"OHAJI\/EGBEMA","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"ORLU","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"ORSU","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"ORU WEST","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":47,"Senatorial_District":"IMO WEST","   CODE":"SD\/047\/IM","LGAs":"ORU EAST","State":"IMO","Collation_Centre":"ORLU LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"EHIME MBANO","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"IHITE\/UBOMA","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"ISIALA MBANO","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"OBOWO","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"OKIGWE","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":48,"Senatorial_District":"IMO NORTH","   CODE":"SD\/048\/IM","LGAs":"ONUIMO","State":"IMO","Collation_Centre":"OKIGWE LGA COUNCIL HALL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"BIRNIN KUDU","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"BUJI","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"DUTSE","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"GWARAM","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"KIYAWA","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"JAUN","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":49,"Senatorial_District":"JIGAWA SOUTH \u2013 WEST","   CODE":"SD\/049\/JG","LGAs":"MIGA","State":"JIGAWA","Collation_Centre":"DUTSE MUNICIPAL COUNCIL"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"AUYO","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"BIRNIWA","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"GURI","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"HADEJIA","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"KAUGAMA","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"K\/HAUSA","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"K\/KASAMMA","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":50,"Senatorial_District":"JIGAWA NORTH \u2013 EAST","   CODE":"SD\/050\/JG","LGAs":"M\/MADORI","State":"JIGAWA","Collation_Centre":"HADEJIA LG SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"BABURA","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"GAGARA","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"GARKI","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"GWIWA","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"KAZAURE","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"MAIGATAR","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"RONI","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"RINGIN","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"S\/TANKAR","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"TAURA","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"YANKWASHI","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":51,"Senatorial_District":"JIGAWA NORTH - WEST","   CODE":"SD\/051\/JG","LGAs":"GUME","State":"JIGAWA","Collation_Centre":"GUMEL LOCAL SECRETERIAT"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"KUBAU","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"IKARA","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"MAKARFI","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"SOBA","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"SABON GARI","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"ZARIA","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"LERE","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":52,"Senatorial_District":"KADUNA NORTH","   CODE":"SD\/052\/KD","LGAs":"KUDAN","State":"KADUNA","Collation_Centre":"INEC OFFICE ZARIA LGA"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"BIRNIN GWARI","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"GIWA","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"IGABI","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"KADUNA NORTH","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"KADUNA SOUTH","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"CHIKUN","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":53,"Senatorial_District":"KADUNA CENTRAL","   CODE":"SD\/053\/KD","LGAs":"KAJURU","State":"KADUNA","Collation_Centre":"KADUNA NORTH COUNCIL CHAMBER"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"JEMA\u2019A","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"JABA","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"KAURA","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"ZANGON","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"KAURA","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"KACHIA","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"KAGARKO","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":54,"Senatorial_District":"KADUNA SOUTH","   CODE":"SD\/054\/KD","LGAs":"SANGA","State":"KADUNA","Collation_Centre":"INEC OFFICE JEMA'A LGA"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"DALA","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"GWALE","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"DAWAKIN","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"GEZAWA","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"TARAUNI","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"FAGGE","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"GARUM MALLAM","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"KANO MUNICIPAL","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"KUMBOTSO","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"KURA","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"MADOBI","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"MINJIBIR","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"NASSARAWA","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"UNGOGO","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":55,"Senatorial_District":"KANO CENTRAL","   CODE":"SD\/055\/KN","LGAs":"WARAWA","State":"KANO","Collation_Centre":"KANO MUNICIPAL SECRETARIAT"},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"BICHI","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"SHANONO","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"BAGWAI","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"DANBATTA","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"MAKODA","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"DAWAKIN","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"GABASAWA","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"GWARZO","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"KABO","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"RIMI GADO","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"TOFA","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"TSANYAWA","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"KUNCHI","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":56,"Senatorial_District":"KANO NORTH","   CODE":"SD\/056\/KN","LGAs":"KARAYE","State":"KANO","Collation_Centre":"BICHI LGA SECT."},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"ALBASU","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"BEBEJI","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"BUNKURE","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"DOGUWA","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"GAYA","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"KIRU","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"RANO","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"TAKAI","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"AJINGI","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"ROGO","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"KIBIYA","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"TUDUN WADA","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"GARKO","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"WUDIL","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":57,"Senatorial_District":"KANO  SOUTH","   CODE":"SD\/057\/KN","LGAs":"SUMAILA","State":"KANO","Collation_Centre":"KANO LGA SECRETARIAT"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"DAURA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"ZANGO","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"MAIADUA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"MASHI","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"MANI","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"INGAWA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"BINDAWA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"SANDAMU","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"DUTSI","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"KANKIA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"KUSADA","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":58,"Senatorial_District":"KATSINA NORTH","   CODE":"SD\/058\/KT","LGAs":"BAURE","State":"KATSINA","Collation_Centre":"INEC OFFICE DAURA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"FUNTUA","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"FASKARI","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"DANJA","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"DANDUME","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"BAKORI","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"KANKARA","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"MALUMEFASHI","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"KAFUR","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"MUSAWA","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"MATAZU","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":59,"Senatorial_District":"KATSINA SOUTH","   CODE":"SD\/059\/KT","LGAs":"SABUWA","State":"KATSINA","Collation_Centre":"INEC OFFICE FUNTUA"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"KATSINA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"KAITA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"JIBIA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"BATSARI","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"SAFANA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"DUTSIN-MA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"KURFI","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"BATAGARAWA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"RIMI","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"CHARANCHI","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":60,"Senatorial_District":"KATSINA CENTRAL","   CODE":"SD\/060\/KT","LGAs":"DANMUSA","State":"KATSINA","Collation_Centre":"INEC OFFICE KATSINA STATE HQ"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"AREWA","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"ARGUNGU","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"AUGIE","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"BAGUDO","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"DANDI","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"SURU","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":61,"Senatorial_District":"KEBBI NORTH","   CODE":"SD\/061\/KB","LGAs":"JEGA","State":"KEBBI","Collation_Centre":"KAMBA LGA SECRETARIAT"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"ALEIRO","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"BIRNIN KEBBI","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"BUNZA","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"GWANDU","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"KALGO","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"KOKO BESSE","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":62,"Senatorial_District":"KEBBI CENTRAL","   CODE":"SD\/062\/KB","LGAs":"MAIYAMA","State":"KEBBI","Collation_Centre":"BIRNI KEBBI LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"FAKAI","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"NGASKI","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"SAKABA","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"SHANGA","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"WASAGU\/DANKO","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"YAURI","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":63,"Senatorial_District":"KEBBI SOUTH","   CODE":"SD\/063\/KB","LGAs":"ZURU","State":"KEBBI","Collation_Centre":"ZURU LGA INEC OFFICE"},{"Serial_Number":64,"Senatorial_District":"KOGI CENTRAL","   CODE":"SD\/064\/KG","LGAs":"ADAVI","State":"KOGI","Collation_Centre":"LGA SECRETARIAT OKENE"},{"Serial_Number":64,"Senatorial_District":"KOGI CENTRAL","   CODE":"SD\/064\/KG","LGAs":"AJAOKUTA","State":"KOGI","Collation_Centre":"LGA SECRETARIAT OKENE"},{"Serial_Number":64,"Senatorial_District":"KOGI CENTRAL","   CODE":"SD\/064\/KG","LGAs":"OGORI\/MAGONGO","State":"KOGI","Collation_Centre":"LGA SECRETARIAT OKENE"},{"Serial_Number":64,"Senatorial_District":"KOGI CENTRAL","   CODE":"SD\/064\/KG","LGAs":"OKEHI","State":"KOGI","Collation_Centre":"LGA SECRETARIAT OKENE"},{"Serial_Number":64,"Senatorial_District":"KOGI CENTRAL","   CODE":"SD\/064\/KG","LGAs":"OKENE","State":"KOGI","Collation_Centre":"LGA SECRETARIAT OKENE"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"ANKPA","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"BASSA","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"DEKINA","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"IBAJI","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"IDAH","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"IGALAMELA-ODOLU","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"OFU","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"OLAMABORO","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":65,"Senatorial_District":"KOGI EAST","   CODE":"SD\/065\/KG","LGAs":"OMALA","State":"KOGI","Collation_Centre":"INEC IDAH"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"IJUMU","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"KABBA","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"KOGI","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"LOKOJA","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"MOPAMURO","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"YAGBA EAST","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":66,"Senatorial_District":"KOGI WEST","   CODE":"SD\/066\/KG","LGAs":"YAGBA WEST","State":"KOGI","Collation_Centre":"INEC OFFICE LOKOJA"},{"Serial_Number":67,"Senatorial_District":"KWARA NORTH","   CODE":"SD\/067\/KW","LGAs":"BARUTEN","State":"KWARA","Collation_Centre":"MORO-LGA COUNCIL CHAMBER"},{"Serial_Number":67,"Senatorial_District":"KWARA NORTH","   CODE":"SD\/067\/KW","LGAs":"EDU","State":"KWARA","Collation_Centre":"MORO-LGA COUNCIL CHAMBER"},{"Serial_Number":67,"Senatorial_District":"KWARA NORTH","   CODE":"SD\/067\/KW","LGAs":"PATIGI","State":"KWARA","Collation_Centre":"MORO-LGA COUNCIL CHAMBER"},{"Serial_Number":67,"Senatorial_District":"KWARA NORTH","   CODE":"SD\/067\/KW","LGAs":"KAIAMA","State":"KWARA","Collation_Centre":"MORO-LGA COUNCIL CHAMBER"},{"Serial_Number":67,"Senatorial_District":"KWARA NORTH","   CODE":"SD\/067\/KW","LGAs":"MORO","State":"KWARA","Collation_Centre":"MORO-LGA COUNCIL CHAMBER"},{"Serial_Number":68,"Senatorial_District":"KWARA CENTRAL","   CODE":"SD\/068\/KW","LGAs":"ASA","State":"KWARA","Collation_Centre":"INEC OFFICE ILORIN"},{"Serial_Number":68,"Senatorial_District":"KWARA CENTRAL","   CODE":"SD\/068\/KW","LGAs":"ILORIN EAST","State":"KWARA","Collation_Centre":"INEC OFFICE ILORIN"},{"Serial_Number":68,"Senatorial_District":"KWARA CENTRAL","   CODE":"SD\/068\/KW","LGAs":"ILORIN SOUTH","State":"KWARA","Collation_Centre":"INEC OFFICE ILORIN"},{"Serial_Number":68,"Senatorial_District":"KWARA CENTRAL","   CODE":"SD\/068\/KW","LGAs":"ILORIN WEST","State":"KWARA","Collation_Centre":"INEC OFFICE ILORIN"},{"Serial_Number":68,"Senatorial_District":"KWARA CENTRAL","   CODE":"SD\/068\/KW","LGAs":"OFFA","State":"KWARA","Collation_Centre":"INEC OFFICE ILORIN"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"EKITI","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"OKE-ERO","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"IFELODUN","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"IREPODUN","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"ISIN","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":69,"Senatorial_District":"KWARA SOUTH","   CODE":"SD\/069\/KW","LGAs":"OYUN","State":"KWARA","Collation_Centre":"IRPODUN LG COUNCIL CHAMBER"},{"Serial_Number":70,"Senatorial_District":"LAGOS CENTRAL","   CODE":"SD\/070\/LA","LGAs":"LAGOS ISLAND","State":"LAGOS","Collation_Centre":"CITY HALL LAGOS ISLAND"},{"Serial_Number":70,"Senatorial_District":"LAGOS CENTRAL","   CODE":"SD\/070\/LA","LGAs":"LAGOS MAINLAND","State":"LAGOS","Collation_Centre":"CITY HALL LAGOS ISLAND"},{"Serial_Number":70,"Senatorial_District":"LAGOS CENTRAL","   CODE":"SD\/070\/LA","LGAs":"SURULERE","State":"LAGOS","Collation_Centre":"CITY HALL LAGOS ISLAND"},{"Serial_Number":70,"Senatorial_District":"LAGOS CENTRAL","   CODE":"SD\/070\/LA","LGAs":"APAPA","State":"LAGOS","Collation_Centre":"CITY HALL LAGOS ISLAND"},{"Serial_Number":70,"Senatorial_District":"LAGOS CENTRAL","   CODE":"SD\/070\/LA","LGAs":"ETI-OSA","State":"LAGOS","Collation_Centre":"CITY HALL LAGOS ISLAND"},{"Serial_Number":71,"Senatorial_District":"LAGOS EAST","   CODE":"SD\/071\/LA","LGAs":"SHOMOLU","State":"LAGOS","Collation_Centre":"COUNCIL HALL SOMOLU LG SECRETARIAT"},{"Serial_Number":71,"Senatorial_District":"LAGOS EAST","   CODE":"SD\/071\/LA","LGAs":"KOSOFE","State":"LAGOS","Collation_Centre":"COUNCIL HALL SOMOLU LG SECRETARIAT"},{"Serial_Number":71,"Senatorial_District":"LAGOS EAST","   CODE":"SD\/071\/LA","LGAs":"EPE","State":"LAGOS","Collation_Centre":"COUNCIL HALL SOMOLU LG SECRETARIAT"},{"Serial_Number":71,"Senatorial_District":"LAGOS EAST","   CODE":"SD\/071\/LA","LGAs":"IBEJU-LEKKI","State":"LAGOS","Collation_Centre":"COUNCIL HALL SOMOLU LG SECRETARIAT"},{"Serial_Number":71,"Senatorial_District":"LAGOS EAST","   CODE":"SD\/071\/LA","LGAs":"IKORODU","State":"LAGOS","Collation_Centre":"COUNCIL HALL SOMOLU LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"AGEGE","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"IFAKO-IJAYE","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"ALIMOSHO","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"BADAGRY","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"OJO","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"AJEROMI\/IFELODUN","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"AMUWO-ODOFIN","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"OSHODI\/ISOLO","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"IKEJA","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":72,"Senatorial_District":"LAGOS  WEST","   CODE":"SD\/072\/LA","LGAs":"MUSHIN","State":"LAGOS","Collation_Centre":"COUNCIL CHAMBER IKEJA LG SECRETARIAT"},{"Serial_Number":73,"Senatorial_District":"NASSARAWA NORTH","   CODE":"SD\/073\/NW","LGAs":"AKAWANGA","State":"NASSARAWA","Collation_Centre":"VIP COUCIL CHAMBERS AKWANGA"},{"Serial_Number":73,"Senatorial_District":"NASSARAWA NORTH","   CODE":"SD\/073\/NW","LGAs":"NASSARAWA EGGON","State":"NASSARAWA","Collation_Centre":"VIP COUCIL CHAMBERS AKWANGA"},{"Serial_Number":73,"Senatorial_District":"NASSARAWA NORTH","   CODE":"SD\/073\/NW","LGAs":"WAMBA","State":"NASSARAWA","Collation_Centre":"VIP COUCIL CHAMBERS AKWANGA"},{"Serial_Number":74,"Senatorial_District":"NASSARAWA WEST","   CODE":"SD\/074\/NW","LGAs":"NASSARAWA","State":"NASSARAWA","Collation_Centre":"MAIN AUDITORIUM NAS. STATE UNIVERSITY KEFFI"},{"Serial_Number":74,"Senatorial_District":"NASSARAWA WEST","   CODE":"SD\/074\/NW","LGAs":"KEFFI","State":"NASSARAWA","Collation_Centre":"MAIN AUDITORIUM NAS. STATE UNIVERSITY KEFFI"},{"Serial_Number":74,"Senatorial_District":"NASSARAWA WEST","   CODE":"SD\/074\/NW","LGAs":"KOKONA","State":"NASSARAWA","Collation_Centre":"MAIN AUDITORIUM NAS. STATE UNIVERSITY KEFFI"},{"Serial_Number":74,"Senatorial_District":"NASSARAWA WEST","   CODE":"SD\/074\/NW","LGAs":"KARU","State":"NASSARAWA","Collation_Centre":"MAIN AUDITORIUM NAS. STATE UNIVERSITY KEFFI"},{"Serial_Number":74,"Senatorial_District":"NASSARAWA WEST","   CODE":"SD\/074\/NW","LGAs":"TOTO","State":"NASSARAWA","Collation_Centre":"MAIN AUDITORIUM NAS. STATE UNIVERSITY KEFFI"},{"Serial_Number":75,"Senatorial_District":"NASSARAWA  SOUTH","   CODE":"SD\/075\/NW","LGAs":"LAFIA","State":"NASSARAWA","Collation_Centre":"IBRAHIM ABACHA YOUTH CENTRE LAFIA"},{"Serial_Number":75,"Senatorial_District":"NASSARAWA  SOUTH","   CODE":"SD\/075\/NW","LGAs":"AWE","State":"NASSARAWA","Collation_Centre":"IBRAHIM ABACHA YOUTH CENTRE LAFIA"},{"Serial_Number":75,"Senatorial_District":"NASSARAWA  SOUTH","   CODE":"SD\/075\/NW","LGAs":"DOMA","State":"NASSARAWA","Collation_Centre":"IBRAHIM ABACHA YOUTH CENTRE LAFIA"},{"Serial_Number":75,"Senatorial_District":"NASSARAWA  SOUTH","   CODE":"SD\/075\/NW","LGAs":"KEANA","State":"NASSARAWA","Collation_Centre":"IBRAHIM ABACHA YOUTH CENTRE LAFIA"},{"Serial_Number":75,"Senatorial_District":"NASSARAWA  SOUTH","   CODE":"SD\/075\/NW","LGAs":"OBI","State":"NASSARAWA","Collation_Centre":"IBRAHIM ABACHA YOUTH CENTRE LAFIA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"BOSSO","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"CHACHANGA","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"GURARA","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"PAIKORO","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"RAFI","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"SHIRORO","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"MUYA","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"SULEJA","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":76,"Senatorial_District":"NIGER EAST","   CODE":"SD\/076\/NG","LGAs":"TAFA","State":"NIGER","Collation_Centre":"COLLEG OF EDU. MUNYA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"AGWARA","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"BORGU","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"KONTOGORA","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"MARIGA","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"RIJAU","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"WUSHISHI","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":77,"Senatorial_District":"NIGER NORTH","   CODE":"SD\/077\/NG","LGAs":"MASHEGU MAGAMA","State":"NIGER","Collation_Centre":"GOVT. TECH. COLLEGE KONTAGORA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"AGAIE","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"BIDA","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"KATCHA","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"BATAGI","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"LAPAI","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"LAVUN","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"EDATI-IDATI","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":78,"Senatorial_District":"NIGER SOUTH","   CODE":"SD\/078\/NG","LGAs":"MOKWA","State":"NIGER","Collation_Centre":"GOVT. COLLEGE BIDA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"IFO","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"EWEKORO","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"OBAFEMI\/OWODE","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"ABEOKUTA NORTH","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"ABEOKUTA SOUTH","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":79,"Senatorial_District":"OGUN CENTRAL","   CODE":"SD\/079\/OG","LGAs":"ODEDA","State":"OGUN","Collation_Centre":"CENTENARY HALL AKE, ABEOKUTA"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"SAGAMU","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"IKENNE","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"REMO NORTH","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"IJEBU-ODE","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"ODOGBOLU","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"IJEBU NORTH EAST","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"IJEBU NORTH","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"IJEBU EAST","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":80,"Senatorial_District":"OGUN EAST","   CODE":"SD\/080\/OG","LGAs":"OGUN WATERSIDE","State":"OGUN","Collation_Centre":"TOWN HALL IJEBU ODE"},{"Serial_Number":81,"Senatorial_District":"OGUN WEST","   CODE":"SD\/081\/OG","LGAs":"IMEKO AFON","State":"OGUN","Collation_Centre":"ARONNA TOWN HALL ILARO"},{"Serial_Number":81,"Senatorial_District":"OGUN WEST","   CODE":"SD\/081\/OG","LGAs":"EGBADO NORTH","State":"OGUN","Collation_Centre":"ARONNA TOWN HALL ILARO"},{"Serial_Number":81,"Senatorial_District":"OGUN WEST","   CODE":"SD\/081\/OG","LGAs":"EGBADO SOUTH","State":"OGUN","Collation_Centre":"ARONNA TOWN HALL ILARO"},{"Serial_Number":81,"Senatorial_District":"OGUN WEST","   CODE":"SD\/081\/OG","LGAs":"IPOKIA","State":"OGUN","Collation_Centre":"ARONNA TOWN HALL ILARO"},{"Serial_Number":81,"Senatorial_District":"OGUN WEST","   CODE":"SD\/081\/OG","LGAs":"ADO-ODO\/OTA","State":"OGUN","Collation_Centre":"ARONNA TOWN HALL ILARO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"AKOKO NORTH EAST","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"AKOKO NORTH WEST","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"AKOKO SOUTH WEST","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"AKOKO SOUTH EAST","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"OSE","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":82,"Senatorial_District":"ONDO NORTH","   CODE":"SD\/082\/OD","LGAs":"OWO","State":"ONDO","Collation_Centre":"MAPO HALL, OWO"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"AKURE NORTH","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"AKURE SOUTH","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"IFEDORE","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"IDANRE","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"ONDO EAST","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":83,"Senatorial_District":"ONDO CENTRAL","   CODE":"SD\/083\/OD","LGAs":"ONDO WEST","State":"ONDO","Collation_Centre":"ST. PETER\u2019S UNITY SCHOOL, AKURE"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"ILEOLUJI\/OKEIGBO","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"ODIGBO","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"IRELE","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"OKITIPUPA","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"ESE-ODO","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":84,"Senatorial_District":"ONDO SOUTH","   CODE":"SD\/084\/OD","LGAs":"ILAJE","State":"ONDO","Collation_Centre":"STELLA MARIS COLLEGE OKITIPUPA"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"BORIPE","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"BOLOWADURO","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"IFELODUN","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"ILA","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"IFEDAYO","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"IREPODUN","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"OROLU","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"ODO-OTIN","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"OLORUNDA","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":85,"Senatorial_District":"OSUN CENTRAL","   CODE":"SD\/085\/OS","LGAs":"OSOGBO","State":"OSUN","Collation_Centre":"OSOGBO CITY HALL, OSOGBO"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"ATAKUNMOSA EAST","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"ATAKUNMOSA WEST","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"IFE CENTRAL","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"IFE EAST","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"IFE NORTH","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"IFE SOUTH","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"ILESA EAST","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"ILESA WEST","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"OBOKUN","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":86,"Senatorial_District":"OSUN EAST","   CODE":"SD\/086\/OS","LGAs":"ORIADE","State":"OSUN","Collation_Centre":"ILESA GRAMMER SCHOOL, ILESA"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"AYADAADE","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"AYEDIRE","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"EDE NORTH","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"EDE SOUTH","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"EGBEDORE","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"EJIGBO","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"IREWOLE","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"ISOKAN","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"IWO","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":87,"Senatorial_District":"OSUN WEST","   CODE":"SD\/087\/OS","LGAs":"OLA-OLUWA","State":"OSUN","Collation_Centre":"BAPTIST HIGH SCHOOL ADEKE IWO"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"AFIJIO","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"AKINYELE","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"EGBEDA","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"OGO OLUWA","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"SURULERE","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"LAGELU","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"OLUYOLE","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"ONA-ARA","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"OYO EAST","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"OYO WEST","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":88,"Senatorial_District":"OYO CENTRAL","   CODE":"SD\/088\/OY","LGAs":"ATIBA","State":"OYO","Collation_Centre":"INEC OFFICE AKINYELE LG SEC. MONIYA"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"SAKI WEST","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"SAKI EAST","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"ATIGBO","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"IREPO","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"OLORUNSOGO","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"KAJOLA","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"IWAJOWA","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"OGBOMOSHO NORTH","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"OGBOMOSHO SOUTH","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"ISEYIN","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"OORELOPE","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"ORIRE","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":89,"Senatorial_District":"OYO NORTH","   CODE":"SD\/089\/OY","LGAs":"ITESIWAJU","State":"OYO","Collation_Centre":"LG SEC. ISEYIN ISEYIN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBADAN NORTH","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBADAN NORTH EAST","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBADAN NORTH WEST","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBADAN SOUTH EAST","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBADAN SOUTH WEST","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBARAPA CENTRAL","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBARAPA NORTH","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IBARAPA EAST","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":90,"Senatorial_District":"OYO SOUTH","   CODE":"SD\/090\/OY","LGAs":"IDO","State":"OYO","Collation_Centre":"INEC OFFICE IBADAN NORTH LG SEC. IBADAN"},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"LANTANG NORTH","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"LANTANG SOUTH","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"MIKANG","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"QUA\u2019AN PAN","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"SHENDAM","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":91,"Senatorial_District":"PLATEAU SOUTH","   CODE":"SD\/091\/PL","LGAs":"WASE","State":"PLATEAU","Collation_Centre":"SHENDAM LG COUNCIL SEC."},{"Serial_Number":92,"Senatorial_District":"PLATEAU CENTRAL","   CODE":"SD\/092\/PL","LGAs":"BOKKOS","State":"PLATEAU","Collation_Centre":"PANKSHIN LG COUNCIL SEC."},{"Serial_Number":92,"Senatorial_District":"PLATEAU CENTRAL","   CODE":"SD\/092\/PL","LGAs":"KANKE","State":"PLATEAU","Collation_Centre":"PANKSHIN LG COUNCIL SEC."},{"Serial_Number":92,"Senatorial_District":"PLATEAU CENTRAL","   CODE":"SD\/092\/PL","LGAs":"MANGU","State":"PLATEAU","Collation_Centre":"PANKSHIN LG COUNCIL SEC."},{"Serial_Number":92,"Senatorial_District":"PLATEAU CENTRAL","   CODE":"SD\/092\/PL","LGAs":"PANKSHIN","State":"PLATEAU","Collation_Centre":"PANKSHIN LG COUNCIL SEC."},{"Serial_Number":92,"Senatorial_District":"PLATEAU CENTRAL","   CODE":"SD\/092\/PL","LGAs":"KANAM","State":"PLATEAU","Collation_Centre":"PANKSHIN LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"BARKIN LADI","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"BASSA","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"JOS EAST","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"JOS NORTH","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"JOS SOUTH","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":93,"Senatorial_District":"PLATEAU NORTH","   CODE":"SD\/093\/PL","LGAs":"RIYOM","State":"PLATEAU","Collation_Centre":"JOS NORTH LG COUNCIL SEC."},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"ETCHE","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"OMUMA","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"IKWERRE","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"OBIO AKPOR","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"PORT HARCOURT","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"OKIRIKA","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"OGU BOLO","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":94,"Senatorial_District":"RIVERS EAST","   CODE":"SD\/094\/RV","LGAs":"EMOHUA","State":"RIVERS","Collation_Centre":"PORT HARCORUT CITY COUNCIL HALL, PORT HARCOURT"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"OPOBO\/NKORO","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"ANDONI","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"OYIGBO","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"TAI","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"ELEME","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"GOKANA","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":95,"Senatorial_District":"RIVERS SOUTH EAST","   CODE":"SD\/095\/RV","LGAs":"KHANA","State":"RIVERS","Collation_Centre":"SWANU-FINIMA NWIKA CONF. HALL BORI"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"ASARI-TORU","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"AKUKU-TORU","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"DEGEMA","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"OGBA\/EGBEMA\/NDONI","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"ABUA-ODUAL","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"AHOADA EAST","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"AHOADA WEST","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":96,"Senatorial_District":"RIVERS WEST","   CODE":"SD\/096\/RV","LGAs":"BONNY","State":"RIVERS","Collation_Centre":"AHOADA EAST LOCAL GOVT. COUNCIL HALL, AHOADA"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"ISA","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"SABON BIRNI","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"WURNO","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"GORONYO","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"RABAH","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"GADA","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"ILLELA","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":97,"Senatorial_District":"SOKOTO EAST","   CODE":"SD\/097\/SO","LGAs":"GWADABAWA","State":"SOKOTO","Collation_Centre":"GWADABAWA LGA CONFERENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"TANGAZA","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"BINJI","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"SILAME","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"GUDU","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"KWARE","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"WAMAKKO","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"SOKOTO NORTH","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":98,"Senatorial_District":"SOKOTO NORTH","   CODE":"SD\/098\/SO","LGAs":"SOKOTO SOUTH","State":"SOKOTO","Collation_Centre":"SOKOTO NORTH LOCAL GOVT. COUNCIL CONFERENENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"DANGE SHUNI","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"TURETA","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"BODINGA","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"SHAGARI","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"YABO","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"TAMBUWA","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":99,"Senatorial_District":"SOKOTO SOUTH","   CODE":"SD\/099\/SO","LGAs":"KEBBE","State":"SOKOTO","Collation_Centre":"BODINGA LGA  CONFERENCE ROOM"},{"Serial_Number":100,"Senatorial_District":"TARABA SOUTH","   CODE":"SD\/100\/TR","LGAs":"WUKARI","State":"TARABA","Collation_Centre":"WUKARI RECREATION CENTRE"},{"Serial_Number":100,"Senatorial_District":"TARABA SOUTH","   CODE":"SD\/100\/TR","LGAs":"IBI","State":"TARABA","Collation_Centre":"WUKARI RECREATION CENTRE"},{"Serial_Number":100,"Senatorial_District":"TARABA SOUTH","   CODE":"SD\/100\/TR","LGAs":"DONGA","State":"TARABA","Collation_Centre":"WUKARI RECREATION CENTRE"},{"Serial_Number":100,"Senatorial_District":"TARABA SOUTH","   CODE":"SD\/100\/TR","LGAs":"USSA","State":"TARABA","Collation_Centre":"WUKARI RECREATION CENTRE"},{"Serial_Number":100,"Senatorial_District":"TARABA SOUTH","   CODE":"SD\/100\/TR","LGAs":"TAKUM","State":"TARABA","Collation_Centre":"WUKARI RECREATION CENTRE"},{"Serial_Number":101,"Senatorial_District":"TARABA CENTRAL","   CODE":"SD\/101\/TR","LGAs":"SARDAUNA","State":"TARABA","Collation_Centre":"BALI LGA SECRETARIAT"},{"Serial_Number":101,"Senatorial_District":"TARABA CENTRAL","   CODE":"SD\/101\/TR","LGAs":"KURMI","State":"TARABA","Collation_Centre":"BALI LGA SECRETARIAT"},{"Serial_Number":101,"Senatorial_District":"TARABA CENTRAL","   CODE":"SD\/101\/TR","LGAs":"BALI","State":"TARABA","Collation_Centre":"BALI LGA SECRETARIAT"},{"Serial_Number":101,"Senatorial_District":"TARABA CENTRAL","   CODE":"SD\/101\/TR","LGAs":"GASHAKA","State":"TARABA","Collation_Centre":"BALI LGA SECRETARIAT"},{"Serial_Number":101,"Senatorial_District":"TARABA CENTRAL","   CODE":"SD\/101\/TR","LGAs":"GASSOL","State":"TARABA","Collation_Centre":"BALI LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"JALINGO","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"YORRO","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"ZING","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"LAU","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"ARDO-KOLA","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":102,"Senatorial_District":"TARABA NORTH","   CODE":"SD\/102\/TR","LGAs":"KARIM-LAMIDO","State":"TARABA","Collation_Centre":"JALINGO LGA SECRETARIAT"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"BURSARI","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"GEIDAM","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"GUJBA","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"GULANI","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"TARMUWA","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":103,"Senatorial_District":"YOBE EAST","   CODE":"SD\/103\/YB","LGAs":"YUNUSARI","State":"YOBE","Collation_Centre":"FEDERAL POLYTECHNIC DAMATURU"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"BADE","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"JAKUSKO","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"MACHINA","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"KARASUWA","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"NGURU","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":104,"Senatorial_District":"YOBE NORTH","   CODE":"SD\/104\/YB","LGAs":"YUSUFARI","State":"YOBE","Collation_Centre":"COLLEGE OF EDUCATION GASHUA"},{"Serial_Number":105,"Senatorial_District":"YOBE SOUTH","   CODE":"SD\/105\/YB","LGAs":"FIKA","State":"YOBE","Collation_Centre":"FEDERAL COLLEGE OF EDUCATION"},{"Serial_Number":105,"Senatorial_District":"YOBE SOUTH","   CODE":"SD\/105\/YB","LGAs":"FUNE","State":"YOBE","Collation_Centre":"FEDERAL COLLEGE OF EDUCATION"},{"Serial_Number":105,"Senatorial_District":"YOBE SOUTH","   CODE":"SD\/105\/YB","LGAs":"NANGERE","State":"YOBE","Collation_Centre":"FEDERAL COLLEGE OF EDUCATION"},{"Serial_Number":105,"Senatorial_District":"YOBE SOUTH","   CODE":"SD\/105\/YB","LGAs":"POTISKUM","State":"YOBE","Collation_Centre":"FEDERAL COLLEGE OF EDUCATION"},{"Serial_Number":105,"Senatorial_District":"YOBE SOUTH","   CODE":"SD\/105\/YB","LGAs":"DAMATURU","State":"YOBE","Collation_Centre":"FEDERAL COLLEGE OF EDUCATION"},{"Serial_Number":106,"Senatorial_District":"ZAMFARA NORTH","   CODE":"SD\/106\/ZF","LGAs":"K\/NAMODA","State":"ZAMFARA","Collation_Centre":"INEC OFFICE KAURA NAMODA"},{"Serial_Number":106,"Senatorial_District":"ZAMFARA NORTH","   CODE":"SD\/106\/ZF","LGAs":"SHINKAFI","State":"ZAMFARA","Collation_Centre":"INEC OFFICE KAURA NAMODA"},{"Serial_Number":106,"Senatorial_District":"ZAMFARA NORTH","   CODE":"SD\/106\/ZF","LGAs":"ZURMI","State":"ZAMFARA","Collation_Centre":"INEC OFFICE KAURA NAMODA"},{"Serial_Number":106,"Senatorial_District":"ZAMFARA NORTH","   CODE":"SD\/106\/ZF","LGAs":"BIRNIN MAGAJI","State":"ZAMFARA","Collation_Centre":"INEC OFFICE KAURA NAMODA"},{"Serial_Number":106,"Senatorial_District":"ZAMFARA NORTH","   CODE":"SD\/106\/ZF","LGAs":"T\/MAFARA","State":"ZAMFARA","Collation_Centre":"INEC OFFICE KAURA NAMODA"},{"Serial_Number":107,"Senatorial_District":"ZAMFARA CENTRAL","   CODE":"SD\/107\/ZF","LGAs":"GUSAU","State":"ZAMFARA","Collation_Centre":"INEC OFFICE GUSAU"},{"Serial_Number":107,"Senatorial_District":"ZAMFARA CENTRAL","   CODE":"SD\/107\/ZF","LGAs":"TSAFE","State":"ZAMFARA","Collation_Centre":"INEC OFFICE GUSAU"},{"Serial_Number":107,"Senatorial_District":"ZAMFARA CENTRAL","   CODE":"SD\/107\/ZF","LGAs":"BUNGUDU","State":"ZAMFARA","Collation_Centre":"INEC OFFICE GUSAU"},{"Serial_Number":107,"Senatorial_District":"ZAMFARA CENTRAL","   CODE":"SD\/107\/ZF","LGAs":"MARU","State":"ZAMFARA","Collation_Centre":"INEC OFFICE GUSAU"},{"Serial_Number":108,"Senatorial_District":"ZAMFARA WEST","   CODE":"SD\/108\/ZF","LGAs":"MARADUN","State":"ZAMFARA","Collation_Centre":"INEC OFFICE TALATA MAFARA"},{"Serial_Number":108,"Senatorial_District":"ZAMFARA WEST","   CODE":"SD\/108\/ZF","LGAs":"BAKURA","State":"ZAMFARA","Collation_Centre":"INEC OFFICE TALATA MAFARA"},{"Serial_Number":108,"Senatorial_District":"ZAMFARA WEST","   CODE":"SD\/108\/ZF","LGAs":"ANKA","State":"ZAMFARA","Collation_Centre":"INEC OFFICE TALATA MAFARA"},{"Serial_Number":108,"Senatorial_District":"ZAMFARA WEST","   CODE":"SD\/108\/ZF","LGAs":"BUKKUYUM","State":"ZAMFARA","Collation_Centre":"INEC OFFICE TALATA MAFARA"},{"Serial_Number":108,"Senatorial_District":"ZAMFARA WEST","   CODE":"SD\/108\/ZF","LGAs":"GUMMI","State":"ZAMFARA","Collation_Centre":"INEC OFFICE TALATA MAFARA"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"ABAJI AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"GWAGWA AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"KUJE AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"MUNICIPAL AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"KWALI AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"},{"Serial_Number":109,"Senatorial_District":"FEDERAL CAPITAL TERRITORY","   CODE":"SD\/109\/FCT","LGAs":"BWARI AREA COUNCIL","State":"FCT","Collation_Centre":"INEC OFFICE FCT"}]
+[
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "IKWUANO"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "ISIALA NGWA NORTH"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "ISIALA NGWA SOUTH"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "Isiala-Ngwa North"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "Isiala-Ngwa South"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "UMUAHIA NORTH"
+  },
+  {
+    "Senatorial_District": "ABIA CENTRAL",
+    "LGAs": "UMUAHIA SOUTH"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "AROCHUKWU"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "BENDE"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "ISUKWUATO"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "Isuikwuato"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "OHAFIA"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "UMUNNEOCHI"
+  },
+  {
+    "Senatorial_District": "ABIA NORTH",
+    "LGAs": "Umu-Nneochi"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "ABA NORTH"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "ABA SOUTH"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "OBINGWA"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "Obi Ngwa"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "Osisioma Ngwa"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "UGWUNAGBO"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "UKWA EAST"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "UKWA WEST & OSISIOMA"
+  },
+  {
+    "Senatorial_District": "ABIA SOUTH",
+    "LGAs": "Ukwa West"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "FUFORE"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "GERFI"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "Girei"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "HONG"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "SONG"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "YOLA NORTH"
+  },
+  {
+    "Senatorial_District": "ADAMAWA CENTRAL",
+    "LGAs": "YOLA SOUTH"
+  },
+  {
+    "Senatorial_District": "ADAMAWA NORTH",
+    "LGAs": "MADAGALI"
+  },
+  {
+    "Senatorial_District": "ADAMAWA NORTH",
+    "LGAs": "MAIHA"
+  },
+  {
+    "Senatorial_District": "ADAMAWA NORTH",
+    "LGAs": "MICHIKA"
+  },
+  {
+    "Senatorial_District": "ADAMAWA NORTH",
+    "LGAs": "MUBI NORTH"
+  },
+  {
+    "Senatorial_District": "ADAMAWA NORTH",
+    "LGAs": "MUBI SOUTH"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "DEMSA"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "GANYE"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "GUYUK"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "JADA"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "LAMURDE"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "MAYO-BELWA"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "NUMAN"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "SHELLENG"
+  },
+  {
+    "Senatorial_District": "ADAMAWA SOUTH",
+    "LGAs": "TOUNGO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "ETINAN"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "IBESIKPO ASUTAN"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "IBIONO IBOM"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "ITU"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "NSIT ATAI"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "NSIT IBOM"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "NSIT UBIUM"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "URUAN"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH EAST",
+    "LGAs": "UYO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "ABAK"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "ESSIEN UDIM"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "ETIM EKPO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "IKA"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "IKONO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "IKOT EKPENE"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "INI"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "OBOT AKARA"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "ORUK ANAM"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM NORTH WEST",
+    "LGAs": "UKANAFUN"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "EASTERN OBOLO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "EKET"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "ESIT EKET"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "IBENO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "IKOT ABASI"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "MBO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "MKPAT ENIN"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "OKOBO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "ONNA"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "ORON"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "UDUNG UKO"
+  },
+  {
+    "Senatorial_District": "AKWA IBOM SOUTH",
+    "LGAs": "URUE OFFONG/ORUKO"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "ANAOCHA"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "AWKA NORTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "AWKA SOUTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "DUNUKOFIA"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "IDEMILI NORTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "IDEMILI SOUTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA CENTRAL",
+    "LGAs": "NJIKOKA"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "ANAMBRA EAST"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "ANAMBRA WEST"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "AYAMELUM"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "OGBARU"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "ONITSHA NORTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "ONITSHA SOUTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA NORTH",
+    "LGAs": "OYI"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "AGUATA"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "EKWUSIGO"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "IHIALA"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "NNEWI NORTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "NNEWI SOUTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "ORUMBA NORTH"
+  },
+  {
+    "Senatorial_District": "ANAMBRA SOUTH",
+    "LGAs": "ORUMBA SOUTH"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "DAMBAN"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "DARAZO"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "Dambam"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "GANJUWA"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "MISAU"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "NINGI"
+  },
+  {
+    "Senatorial_District": "BAUCHI CENTRAL",
+    "LGAs": "WARJI"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "GAMAWA"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "GIADE"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "ITAS-GADAU"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "Itas/Gadau"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "JAMA\u2019ARE"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "Jama'Are"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "KATAGUM"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "SHIRA"
+  },
+  {
+    "Senatorial_District": "BAUCHI NORTH",
+    "LGAs": "ZAKI"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "ALKALERI"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "BAUCHI"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "BOGORO"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "DASS"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "KIRFI"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "TAFAWA BALEWA"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "TORO"
+  },
+  {
+    "Senatorial_District": "BAUCHI SOUTH",
+    "LGAs": "Tafawa-Balewa"
+  },
+  {
+    "Senatorial_District": "BAYELSA CENTRAL",
+    "LGAs": "KOLOKUMA/OPOKUMA"
+  },
+  {
+    "Senatorial_District": "BAYELSA CENTRAL",
+    "LGAs": "SOUTHERN IJAW"
+  },
+  {
+    "Senatorial_District": "BAYELSA CENTRAL",
+    "LGAs": "YENAGOA"
+  },
+  {
+    "Senatorial_District": "BAYELSA CENTRAL",
+    "LGAs": "Yenegoa"
+  },
+  {
+    "Senatorial_District": "BAYELSA EAST",
+    "LGAs": "BRASS"
+  },
+  {
+    "Senatorial_District": "BAYELSA EAST",
+    "LGAs": "NEMBE"
+  },
+  {
+    "Senatorial_District": "BAYELSA EAST",
+    "LGAs": "OGBIA"
+  },
+  {
+    "Senatorial_District": "BAYELSA WEST",
+    "LGAs": "EKEREMOR"
+  },
+  {
+    "Senatorial_District": "BAYELSA WEST",
+    "LGAs": "SAGBAMA"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "KATSINA-ALA"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "KONSHISHA"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "KWANDE"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "LOGO"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "UKUM"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "USHONGO"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH  EAST",
+    "LGAs": "VANDEIKYA"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "BURUKU"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "GBOKO"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "GUMA"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "GWER-EAST"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "GWER-WEST"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "Gwer East"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "Gwer West"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "MARKURDI"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "Makurdi"
+  },
+  {
+    "Senatorial_District": "BENUE NORTH WEST",
+    "LGAs": "TARKA"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "ADO"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "AGATU"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "APA"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OBI"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OGBADIBO"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OHIMINI"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OJU"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OKPOKWU"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "OTUKPO"
+  },
+  {
+    "Senatorial_District": "BENUE SOUTH",
+    "LGAs": "Oturkpo"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "BAMA"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "DIKWA"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "JERE"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "KAGA"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "KALA BALGE"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "KONDUGA"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "MAFA"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "METROPOLITAN"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "Maiduguri"
+  },
+  {
+    "Senatorial_District": "BORNO CENTRAL",
+    "LGAs": "NGALA"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "ABADAM"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "GUBIO"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "GUZAMALA"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "KUKAWA"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "MAGUMERI"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "MARTE"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "MOBBAR"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "MOGUNO"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "Monguno"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "NGANZA"
+  },
+  {
+    "Senatorial_District": "BORNO NORTH",
+    "LGAs": "Nganzai"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "ASKIRA/UBA"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "Askira Uba"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "BAYO"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "BIU"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "CHIBOK"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "DAMABOA"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "Damboa"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "GWOZA"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "HAWUL"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "KWAYA"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "Kwaya Kusar"
+  },
+  {
+    "Senatorial_District": "BORNO SOUTH",
+    "LGAs": "SHANI"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "ABI"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "BOKI"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "ETUNG"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "IKOM"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "OBUBRA"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER CENTRAL",
+    "LGAs": "YAKURR"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "BEKWARRA"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "BIASE"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "OBANLIKU"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "OBUDU"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "OGOJA"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER NORTH",
+    "LGAs": "YALA"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "AKAMKPA"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "AKPABUYO"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "BAKASSI"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "CALABAR MUNICIPAL"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "CALABAR SOUTH"
+  },
+  {
+    "Senatorial_District": "CROSS RIVER SOUTH",
+    "LGAs": "ODUKPANI"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "ETHIOPE EAST"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "ETHIOPE WEST"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "OKPE"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "SAPELE"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "UDU"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "UGHELI SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "UGHELLI NORTH"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "UVWIE"
+  },
+  {
+    "Senatorial_District": "DELTA CENTRAL",
+    "LGAs": "Ughelli South"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "ANIOCHA NORTH"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "ANIOCHA SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "IKA NORTH-EAST"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "IKA SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "Ika North East"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "NDOKWA EAST"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "NDOKWA WEST"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "OSHIMILI NORTH"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "OSHIMILI SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA NORTH",
+    "LGAs": "UKWUANI"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "BOMADI"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "BURUTU"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "ISOKO NORTH"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "ISOKO SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "PATANI"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "WARRI NORTH"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "WARRI SOUTH"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "WARRI SOUTH WEST"
+  },
+  {
+    "Senatorial_District": "DELTA SOUTH",
+    "LGAs": "Warri South-West"
+  },
+  {
+    "Senatorial_District": "EBONYI  SOUTH",
+    "LGAs": "AFIKPO NORTH"
+  },
+  {
+    "Senatorial_District": "EBONYI  SOUTH",
+    "LGAs": "AFIKPO SOUTH"
+  },
+  {
+    "Senatorial_District": "EBONYI  SOUTH",
+    "LGAs": "IVO"
+  },
+  {
+    "Senatorial_District": "EBONYI  SOUTH",
+    "LGAs": "OHAOZARA"
+  },
+  {
+    "Senatorial_District": "EBONYI  SOUTH",
+    "LGAs": "ONICHA"
+  },
+  {
+    "Senatorial_District": "EBONYI CENTRAL",
+    "LGAs": "EZZA NORTH"
+  },
+  {
+    "Senatorial_District": "EBONYI CENTRAL",
+    "LGAs": "EZZA SOUTH"
+  },
+  {
+    "Senatorial_District": "EBONYI CENTRAL",
+    "LGAs": "IKWO"
+  },
+  {
+    "Senatorial_District": "EBONYI CENTRAL",
+    "LGAs": "ISHIELU"
+  },
+  {
+    "Senatorial_District": "EBONYI NORTH",
+    "LGAs": "ABAKALIKI"
+  },
+  {
+    "Senatorial_District": "EBONYI NORTH",
+    "LGAs": "EBONYI"
+  },
+  {
+    "Senatorial_District": "EBONYI NORTH",
+    "LGAs": "IZZI"
+  },
+  {
+    "Senatorial_District": "EBONYI NORTH",
+    "LGAs": "OHAUKWU"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "EGOR"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "IKPOBA OKHA"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "Ikpoba-Okha"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "OREDO"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "ORHIONMWON"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "OVIA NORTH EAST"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "OVIA SOUTH WEST"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "Ovia North-East"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "Ovia South-West"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "UHUNMWODE"
+  },
+  {
+    "Senatorial_District": "EDO  SOUTH",
+    "LGAs": "Uhunmwonde"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "ESAN CENTRAL"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "ESAN NORTH EAST"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "ESAN SOUTH EAST"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "ESAN WEST"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "Esan North-East"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "Esan South-East"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "IGUEBEN"
+  },
+  {
+    "Senatorial_District": "EDO CENTRAL",
+    "LGAs": "Iguegben"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "AKOKO EDO"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "Akoko-Edo"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "ETSAKO CENTRAL"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "ETSAKO EAST"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "ETSAKO WEST"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "OWAN EAST"
+  },
+  {
+    "Senatorial_District": "EDO NORTH",
+    "LGAs": "OWAN WEST"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "EKITI EAST"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "EKITI SOUTH WEST"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "EMURE"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "Ekiti South-West"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "GBONYIN"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "IKERE"
+  },
+  {
+    "Senatorial_District": "EKITI  SOUTH",
+    "LGAs": "ISE/ORUN"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "ADO EKITI"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "Ado-Ekiti"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "EFON"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "EKITI WEST"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "IJERO"
+  },
+  {
+    "Senatorial_District": "EKITI CENTRAL",
+    "LGAs": "IREPODUN/IFELODUN"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "IDO/OSI"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "IKOLE"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "ILEJEMEJE"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "Ido-Osi"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "MOBA"
+  },
+  {
+    "Senatorial_District": "EKITI NORTH",
+    "LGAs": "OYE"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "IGBO-ETITI"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "IGBO-EZE NORTH"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "IGO-EZE SOUTH"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "Igbo-Eze-South"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "NSUKKA"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "UDENU"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "UZO UWANI"
+  },
+  {
+    "Senatorial_District": "ENUGU  NORTH",
+    "LGAs": "Uzo-Uwani"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "ENUGU EAST"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "ENUGU NORTH"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "ENUGU SOUTH"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "ISI-UZO"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "NKANU EAST"
+  },
+  {
+    "Senatorial_District": "ENUGU EAST",
+    "LGAs": "NKANU WEST"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "ANINIRI"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "AWGU"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "Aninri"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "EZEAGU"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "OJI RIVER"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "Oji-River"
+  },
+  {
+    "Senatorial_District": "ENUGU WEST",
+    "LGAs": "UDI"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "ABAJI AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "Abaji"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "BWARI AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "Bwari"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "GWAGWA AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "Gwagwa"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "KUJE AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "KWALI AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "Kuje"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "Kwali"
+  },
+  {
+    "Senatorial_District": "FEDERAL CAPITAL TERRITORY",
+    "LGAs": "MUNICIPAL AREA COUNCIL"
+  },
+  {
+    "Senatorial_District": "GOMBE CENTRAL",
+    "LGAs": "AKKO"
+  },
+  {
+    "Senatorial_District": "GOMBE CENTRAL",
+    "LGAs": "YAMALTU/DEBA"
+  },
+  {
+    "Senatorial_District": "GOMBE NORTH",
+    "LGAs": "DUKKU"
+  },
+  {
+    "Senatorial_District": "GOMBE NORTH",
+    "LGAs": "FUNAKAYE"
+  },
+  {
+    "Senatorial_District": "GOMBE NORTH",
+    "LGAs": "GOMBE"
+  },
+  {
+    "Senatorial_District": "GOMBE NORTH",
+    "LGAs": "KWAMI"
+  },
+  {
+    "Senatorial_District": "GOMBE NORTH",
+    "LGAs": "NAFADA"
+  },
+  {
+    "Senatorial_District": "GOMBE SOUTH",
+    "LGAs": "BALANGA"
+  },
+  {
+    "Senatorial_District": "GOMBE SOUTH",
+    "LGAs": "BILLIRI"
+  },
+  {
+    "Senatorial_District": "GOMBE SOUTH",
+    "LGAs": "KALTUNGO"
+  },
+  {
+    "Senatorial_District": "GOMBE SOUTH",
+    "LGAs": "SHONGOM"
+  },
+  {
+    "Senatorial_District": "GOMBE SOUTH",
+    "LGAs": "Shomgom"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "ABOH MBAISE"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "AHIAZU MBAISE"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "Aboh-Mbaise"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "Ahiazu-Mbaise"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "EZINIHITTE"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "IKEDURU"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "MBAITOLI"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "Mbatoli"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "NGOR OKPALA"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "Ngor-Okpala"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "OWERRI MUNICIPAL"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "OWERRI NORTH"
+  },
+  {
+    "Senatorial_District": "IMO EAST",
+    "LGAs": "OWERRI WEST"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "EHIME MBANO"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "Ehime-Mbano"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "IHITE/UBOMA"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "ISIALA MBANO"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "Ihitte/Uboma"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "OBOWO"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "OKIGWE"
+  },
+  {
+    "Senatorial_District": "IMO NORTH",
+    "LGAs": "ONUIMO"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "IDEATO NORTH"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "IDEATO SOUTH"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "ISU"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "NJABA"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "NKWERE"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "NWANGELE"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "Nkwerre"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "OGUTA"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "OHAJI/EGBEMA"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "ORLU"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "ORSU"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "ORU EAST"
+  },
+  {
+    "Senatorial_District": "IMO WEST",
+    "LGAs": "ORU WEST"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "BABURA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "GAGARA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "GARKI"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "GUME"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "GWIWA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "Gagarawa"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "Gumel"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "KAZAURE"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "MAIGATAR"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "Maigatari"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "RINGIN"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "RONI"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "Ringim"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "S/TANKAR"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "Sule Tankarkar"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "TAURA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH - WEST",
+    "LGAs": "YANKWASHI"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "AUYO"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "BIRNIWA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "Biriniwa"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "GURI"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "HADEJIA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "K/HAUSA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "K/KASAMMA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "KAUGAMA"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "Kafin Hausa"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "Kiri Kasama"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "M/MADORI"
+  },
+  {
+    "Senatorial_District": "JIGAWA NORTH \u2013 EAST",
+    "LGAs": "Malam Madori"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "BIRNIN KUDU"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "BUJI"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "DUTSE"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "GWARAM"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "JAUN"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "Jahun"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "KIYAWA"
+  },
+  {
+    "Senatorial_District": "JIGAWA SOUTH \u2013 WEST",
+    "LGAs": "MIGA"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "BIRNIN GWARI"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "CHIKUN"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "GIWA"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "IGABI"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "KADUNA NORTH"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "KADUNA SOUTH"
+  },
+  {
+    "Senatorial_District": "KADUNA CENTRAL",
+    "LGAs": "KAJURU"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "IKARA"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "KUBAU"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "KUDAN"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "LERE"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "MAKARFI"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "SABON GARI"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "SOBA"
+  },
+  {
+    "Senatorial_District": "KADUNA NORTH",
+    "LGAs": "ZARIA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "JABA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "JEMA\u2019A"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "Jema'A"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "KACHIA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "KAGARKO"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "KAURA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "KAURA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "SANGA"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "ZANGON"
+  },
+  {
+    "Senatorial_District": "KADUNA SOUTH",
+    "LGAs": "Zangon Kataf"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "AJINGI"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "ALBASU"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "BEBEJI"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "BUNKURE"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "DOGUWA"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "GARKO"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "GAYA"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "KIBIYA"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "KIRU"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "RANO"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "ROGO"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "SUMAILA"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "TAKAI"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "TUDUN WADA"
+  },
+  {
+    "Senatorial_District": "KANO  SOUTH",
+    "LGAs": "WUDIL"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "DALA"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "DAWAKIN"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "Dawakin Kudu"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "FAGGE"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "GARUM MALLAM"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "GEZAWA"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "GWALE"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "Garun Mallam"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "KANO MUNICIPAL"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "KUMBOTSO"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "KURA"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "MADOBI"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "MINJIBIR"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "NASSARAWA"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "TARAUNI"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "UNGOGO"
+  },
+  {
+    "Senatorial_District": "KANO CENTRAL",
+    "LGAs": "WARAWA"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "BAGWAI"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "BICHI"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "DANBATTA"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "DAWAKIN"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "Dambatta"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "Dawakin Tofa"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "GABASAWA"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "GWARZO"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "KABO"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "KARAYE"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "KUNCHI"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "MAKODA"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "RIMI GADO"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "Rimin Gado"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "SHANONO"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "TOFA"
+  },
+  {
+    "Senatorial_District": "KANO NORTH",
+    "LGAs": "TSANYAWA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "BATAGARAWA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "BATSARI"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "CHARANCHI"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "DANMUSA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "DUTSIN-MA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "Dan Musa"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "Dutsin Ma"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "JIBIA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "KAITA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "KATSINA"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "KURFI"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "RIMI"
+  },
+  {
+    "Senatorial_District": "KATSINA CENTRAL",
+    "LGAs": "SAFANA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "BAURE"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "BINDAWA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "DAURA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "DUTSI"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "INGAWA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "KANKIA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "KUSADA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "MAIADUA"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "MANI"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "MASHI"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "Mai'Adua"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "SANDAMU"
+  },
+  {
+    "Senatorial_District": "KATSINA NORTH",
+    "LGAs": "ZANGO"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "BAKORI"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "DANDUME"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "DANJA"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "FASKARI"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "FUNTUA"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "KAFUR"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "KANKARA"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "MALUMEFASHI"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "MATAZU"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "MUSAWA"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "Malumfashi"
+  },
+  {
+    "Senatorial_District": "KATSINA SOUTH",
+    "LGAs": "SABUWA"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "ALEIRO"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "BIRNIN KEBBI"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "BUNZA"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "GWANDU"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "KALGO"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "KOKO BESSE"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "Koko-Besse"
+  },
+  {
+    "Senatorial_District": "KEBBI CENTRAL",
+    "LGAs": "MAIYAMA"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "AREWA"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "ARGUNGU"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "AUGIE"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "Arewa Dandi"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "BAGUDO"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "Bagudu"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "DANDI"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "JEGA"
+  },
+  {
+    "Senatorial_District": "KEBBI NORTH",
+    "LGAs": "SURU"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "FAKAI"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "NGASKI"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "SAKABA"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "SHANGA"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "WASAGU/DANKO"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "Wasagu-Danko"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "YAURI"
+  },
+  {
+    "Senatorial_District": "KEBBI SOUTH",
+    "LGAs": "ZURU"
+  },
+  {
+    "Senatorial_District": "KOGI CENTRAL",
+    "LGAs": "ADAVI"
+  },
+  {
+    "Senatorial_District": "KOGI CENTRAL",
+    "LGAs": "AJAOKUTA"
+  },
+  {
+    "Senatorial_District": "KOGI CENTRAL",
+    "LGAs": "OGORI/MAGONGO"
+  },
+  {
+    "Senatorial_District": "KOGI CENTRAL",
+    "LGAs": "OKEHI"
+  },
+  {
+    "Senatorial_District": "KOGI CENTRAL",
+    "LGAs": "OKENE"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "ANKPA"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "BASSA"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "DEKINA"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "IBAJI"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "IDAH"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "IGALAMELA-ODOLU"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "OFU"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "OLAMABORO"
+  },
+  {
+    "Senatorial_District": "KOGI EAST",
+    "LGAs": "OMALA"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "IJUMU"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "KABBA"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "KOGI"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "Kabba/Bunu"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "LOKOJA"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "MOPAMURO"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "Mopa-Muro"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "YAGBA EAST"
+  },
+  {
+    "Senatorial_District": "KOGI WEST",
+    "LGAs": "YAGBA WEST"
+  },
+  {
+    "Senatorial_District": "KWARA CENTRAL",
+    "LGAs": "ASA"
+  },
+  {
+    "Senatorial_District": "KWARA CENTRAL",
+    "LGAs": "ILORIN EAST"
+  },
+  {
+    "Senatorial_District": "KWARA CENTRAL",
+    "LGAs": "ILORIN SOUTH"
+  },
+  {
+    "Senatorial_District": "KWARA CENTRAL",
+    "LGAs": "ILORIN WEST"
+  },
+  {
+    "Senatorial_District": "KWARA CENTRAL",
+    "LGAs": "OFFA"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "BARUTEN"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "EDU"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "KAIAMA"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "MORO"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "PATIGI"
+  },
+  {
+    "Senatorial_District": "KWARA NORTH",
+    "LGAs": "Pategi"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "EKITI"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "IFELODUN"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "IREPODUN"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "ISIN"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "OKE-ERO"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "OYUN"
+  },
+  {
+    "Senatorial_District": "KWARA SOUTH",
+    "LGAs": "Oke Ero"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "AGEGE"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "AJEROMI/IFELODUN"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "ALIMOSHO"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "AMUWO-ODOFIN"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "Amuwo Odofin"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "BADAGRY"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "IFAKO-IJAYE"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "IKEJA"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "Ifako/Ijaye"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "MUSHIN"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "OJO"
+  },
+  {
+    "Senatorial_District": "LAGOS  WEST",
+    "LGAs": "OSHODI/ISOLO"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "APAPA"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "ETI-OSA"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "Eti Osa"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "LAGOS ISLAND"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "LAGOS MAINLAND"
+  },
+  {
+    "Senatorial_District": "LAGOS CENTRAL",
+    "LGAs": "SURULERE"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "EPE"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "IBEJU-LEKKI"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "IKORODU"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "Ibeju Lekki"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "KOSOFE"
+  },
+  {
+    "Senatorial_District": "LAGOS EAST",
+    "LGAs": "SHOMOLU"
+  },
+  {
+    "Senatorial_District": "NASSARAWA  SOUTH",
+    "LGAs": "AWE"
+  },
+  {
+    "Senatorial_District": "NASSARAWA  SOUTH",
+    "LGAs": "DOMA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA  SOUTH",
+    "LGAs": "KEANA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA  SOUTH",
+    "LGAs": "LAFIA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA  SOUTH",
+    "LGAs": "OBI"
+  },
+  {
+    "Senatorial_District": "NASSARAWA NORTH",
+    "LGAs": "AKAWANGA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA NORTH",
+    "LGAs": "Akwanga"
+  },
+  {
+    "Senatorial_District": "NASSARAWA NORTH",
+    "LGAs": "NASSARAWA EGGON"
+  },
+  {
+    "Senatorial_District": "NASSARAWA NORTH",
+    "LGAs": "Nasarawa Egon"
+  },
+  {
+    "Senatorial_District": "NASSARAWA NORTH",
+    "LGAs": "WAMBA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA WEST",
+    "LGAs": "KARU"
+  },
+  {
+    "Senatorial_District": "NASSARAWA WEST",
+    "LGAs": "KEFFI"
+  },
+  {
+    "Senatorial_District": "NASSARAWA WEST",
+    "LGAs": "KOKONA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA WEST",
+    "LGAs": "NASSARAWA"
+  },
+  {
+    "Senatorial_District": "NASSARAWA WEST",
+    "LGAs": "TOTO"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "BOSSO"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "CHACHANGA"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "Chanchaga"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "GURARA"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "MUYA"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "Munya"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "PAIKORO"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "RAFI"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "SHIRORO"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "SULEJA"
+  },
+  {
+    "Senatorial_District": "NIGER EAST",
+    "LGAs": "TAFA"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "AGWARA"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "BORGU"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "KONTOGORA"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "Kotangora"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "MARIGA"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "MASHEGU MAGAMA"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "Magama"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "Mashegu"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "RIJAU"
+  },
+  {
+    "Senatorial_District": "NIGER NORTH",
+    "LGAs": "WUSHISHI"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "AGAIE"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "BATAGI"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "BIDA"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "EDATI-IDATI"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "Edati"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "KATCHA"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "LAPAI"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "LAVUN"
+  },
+  {
+    "Senatorial_District": "NIGER SOUTH",
+    "LGAs": "MOKWA"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "ABEOKUTA NORTH"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "ABEOKUTA SOUTH"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "EWEKORO"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "IFO"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "OBAFEMI/OWODE"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "ODEDA"
+  },
+  {
+    "Senatorial_District": "OGUN CENTRAL",
+    "LGAs": "Obafemi Owode"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "IJEBU EAST"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "IJEBU NORTH"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "IJEBU NORTH EAST"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "IJEBU-ODE"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "IKENNE"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "Ijebu Ode"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "ODOGBOLU"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "OGUN WATERSIDE"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "REMO NORTH"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "SAGAMU"
+  },
+  {
+    "Senatorial_District": "OGUN EAST",
+    "LGAs": "Shagamu"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "ADO-ODO/OTA"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "Ado Odo/Ota"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "EGBADO NORTH"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "EGBADO SOUTH"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "IMEKO AFON"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "IPOKIA"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "Yewa North"
+  },
+  {
+    "Senatorial_District": "OGUN WEST",
+    "LGAs": "Yewa South"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "AKURE NORTH"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "AKURE SOUTH"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "IDANRE"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "IFEDORE"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "ONDO EAST"
+  },
+  {
+    "Senatorial_District": "ONDO CENTRAL",
+    "LGAs": "ONDO WEST"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "AKOKO NORTH EAST"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "AKOKO NORTH WEST"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "AKOKO SOUTH EAST"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "AKOKO SOUTH WEST"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "OSE"
+  },
+  {
+    "Senatorial_District": "ONDO NORTH",
+    "LGAs": "OWO"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "ESE-ODO"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "Ese Odo"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "ILAJE"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "ILEOLUJI/OKEIGBO"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "IRELE"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "Ile Oluji/Okeigbo"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "ODIGBO"
+  },
+  {
+    "Senatorial_District": "ONDO SOUTH",
+    "LGAs": "OKITIPUPA"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "BOLOWADURO"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "BORIPE"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "Boluwaduro"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "IFEDAYO"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "IFELODUN"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "ILA"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "IREPODUN"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "ODO-OTIN"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "OLORUNDA"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "OROLU"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "OSOGBO"
+  },
+  {
+    "Senatorial_District": "OSUN CENTRAL",
+    "LGAs": "Odo Otin"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "ATAKUNMOSA EAST"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "ATAKUNMOSA WEST"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "IFE CENTRAL"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "IFE EAST"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "IFE NORTH"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "IFE SOUTH"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "ILESA EAST"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "ILESA WEST"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "Ilesha East"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "Ilesha West"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "OBOKUN"
+  },
+  {
+    "Senatorial_District": "OSUN EAST",
+    "LGAs": "ORIADE"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "AYADAADE"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "AYEDIRE"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "Ayedade"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "EDE NORTH"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "EDE SOUTH"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "EGBEDORE"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "EJIGBO"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "IREWOLE"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "ISOKAN"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "IWO"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "OLA-OLUWA"
+  },
+  {
+    "Senatorial_District": "OSUN WEST",
+    "LGAs": "Ola Oluwa"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "AFIJIO"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "AKINYELE"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "ATIBA"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "EGBEDA"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "LAGELU"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "OGO OLUWA"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "OLUYOLE"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "ONA-ARA"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "OYO EAST"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "OYO WEST"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "Ona Ara"
+  },
+  {
+    "Senatorial_District": "OYO CENTRAL",
+    "LGAs": "SURULERE"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "ATIGBO"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "Atisgbo"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "IREPO"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "ISEYIN"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "ITESIWAJU"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "IWAJOWA"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "KAJOLA"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "OGBOMOSHO NORTH"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "OGBOMOSHO SOUTH"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "OLORUNSOGO"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "OORELOPE"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "ORIRE"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "Orelope"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "Ori Ire"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "SAKI EAST"
+  },
+  {
+    "Senatorial_District": "OYO NORTH",
+    "LGAs": "SAKI WEST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBADAN NORTH"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBADAN NORTH EAST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBADAN NORTH WEST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBADAN SOUTH EAST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBADAN SOUTH WEST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBARAPA CENTRAL"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBARAPA EAST"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IBARAPA NORTH"
+  },
+  {
+    "Senatorial_District": "OYO SOUTH",
+    "LGAs": "IDO"
+  },
+  {
+    "Senatorial_District": "PLATEAU CENTRAL",
+    "LGAs": "BOKKOS"
+  },
+  {
+    "Senatorial_District": "PLATEAU CENTRAL",
+    "LGAs": "KANAM"
+  },
+  {
+    "Senatorial_District": "PLATEAU CENTRAL",
+    "LGAs": "KANKE"
+  },
+  {
+    "Senatorial_District": "PLATEAU CENTRAL",
+    "LGAs": "MANGU"
+  },
+  {
+    "Senatorial_District": "PLATEAU CENTRAL",
+    "LGAs": "PANKSHIN"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "BARKIN LADI"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "BASSA"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "JOS EAST"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "JOS NORTH"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "JOS SOUTH"
+  },
+  {
+    "Senatorial_District": "PLATEAU NORTH",
+    "LGAs": "RIYOM"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "LANTANG NORTH"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "LANTANG SOUTH"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "Langtang North"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "Langtang South"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "MIKANG"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "QUA\u2019AN PAN"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "Qua'An Pan"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "SHENDAM"
+  },
+  {
+    "Senatorial_District": "PLATEAU SOUTH",
+    "LGAs": "WASE"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "EMOHUA"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "ETCHE"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "Emuoha"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "IKWERRE"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "OBIO AKPOR"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "OGU BOLO"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "OKIRIKA"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "OMUMA"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "Obio/Akpor"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "Okrika"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "Omumma"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "PORT HARCOURT"
+  },
+  {
+    "Senatorial_District": "RIVERS EAST",
+    "LGAs": "Port-Harcourt"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "ANDONI"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "ELEME"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "GOKANA"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "KHANA"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "OPOBO/NKORO"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "OYIGBO"
+  },
+  {
+    "Senatorial_District": "RIVERS SOUTH EAST",
+    "LGAs": "TAI"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "ABUA-ODUAL"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "AHOADA EAST"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "AHOADA WEST"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "AKUKU-TORU"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "ASARI-TORU"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "Abua/Odual"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "Akuku Toru"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "BONNY"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "DEGEMA"
+  },
+  {
+    "Senatorial_District": "RIVERS WEST",
+    "LGAs": "OGBA/EGBEMA/NDONI"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "GADA"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "GORONYO"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "GWADABAWA"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "ILLELA"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "ISA"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "RABAH"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "SABON BIRNI"
+  },
+  {
+    "Senatorial_District": "SOKOTO EAST",
+    "LGAs": "WURNO"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "BINJI"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "GUDU"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "KWARE"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "SILAME"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "SOKOTO NORTH"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "SOKOTO SOUTH"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "TANGAZA"
+  },
+  {
+    "Senatorial_District": "SOKOTO NORTH",
+    "LGAs": "WAMAKKO"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "BODINGA"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "DANGE SHUNI"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "KEBBE"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "SHAGARI"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "TAMBUWA"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "TURETA"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "Tambuwal"
+  },
+  {
+    "Senatorial_District": "SOKOTO SOUTH",
+    "LGAs": "YABO"
+  },
+  {
+    "Senatorial_District": "TARABA CENTRAL",
+    "LGAs": "BALI"
+  },
+  {
+    "Senatorial_District": "TARABA CENTRAL",
+    "LGAs": "GASHAKA"
+  },
+  {
+    "Senatorial_District": "TARABA CENTRAL",
+    "LGAs": "GASSOL"
+  },
+  {
+    "Senatorial_District": "TARABA CENTRAL",
+    "LGAs": "KURMI"
+  },
+  {
+    "Senatorial_District": "TARABA CENTRAL",
+    "LGAs": "SARDAUNA"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "ARDO-KOLA"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "JALINGO"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "KARIM-LAMIDO"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "Karim Lamido"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "LAU"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "YORRO"
+  },
+  {
+    "Senatorial_District": "TARABA NORTH",
+    "LGAs": "ZING"
+  },
+  {
+    "Senatorial_District": "TARABA SOUTH",
+    "LGAs": "DONGA"
+  },
+  {
+    "Senatorial_District": "TARABA SOUTH",
+    "LGAs": "IBI"
+  },
+  {
+    "Senatorial_District": "TARABA SOUTH",
+    "LGAs": "TAKUM"
+  },
+  {
+    "Senatorial_District": "TARABA SOUTH",
+    "LGAs": "USSA"
+  },
+  {
+    "Senatorial_District": "TARABA SOUTH",
+    "LGAs": "WUKARI"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "BURSARI"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "GEIDAM"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "GUJBA"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "GULANI"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "TARMUWA"
+  },
+  {
+    "Senatorial_District": "YOBE EAST",
+    "LGAs": "YUNUSARI"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "BADE"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "JAKUSKO"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "KARASUWA"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "MACHINA"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "NGURU"
+  },
+  {
+    "Senatorial_District": "YOBE NORTH",
+    "LGAs": "YUSUFARI"
+  },
+  {
+    "Senatorial_District": "YOBE SOUTH",
+    "LGAs": "DAMATURU"
+  },
+  {
+    "Senatorial_District": "YOBE SOUTH",
+    "LGAs": "FIKA"
+  },
+  {
+    "Senatorial_District": "YOBE SOUTH",
+    "LGAs": "FUNE"
+  },
+  {
+    "Senatorial_District": "YOBE SOUTH",
+    "LGAs": "NANGERE"
+  },
+  {
+    "Senatorial_District": "YOBE SOUTH",
+    "LGAs": "POTISKUM"
+  },
+  {
+    "Senatorial_District": "ZAMFARA CENTRAL",
+    "LGAs": "BUNGUDU"
+  },
+  {
+    "Senatorial_District": "ZAMFARA CENTRAL",
+    "LGAs": "GUSAU"
+  },
+  {
+    "Senatorial_District": "ZAMFARA CENTRAL",
+    "LGAs": "MARU"
+  },
+  {
+    "Senatorial_District": "ZAMFARA CENTRAL",
+    "LGAs": "TSAFE"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "BIRNIN MAGAJI"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "Birnin Magaji-Kiyaw"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "K/NAMODA"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "Kaura Namoda"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "SHINKAFI"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "T/MAFARA"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "Talata Mafara"
+  },
+  {
+    "Senatorial_District": "ZAMFARA NORTH",
+    "LGAs": "ZURMI"
+  },
+  {
+    "Senatorial_District": "ZAMFARA WEST",
+    "LGAs": "ANKA"
+  },
+  {
+    "Senatorial_District": "ZAMFARA WEST",
+    "LGAs": "BAKURA"
+  },
+  {
+    "Senatorial_District": "ZAMFARA WEST",
+    "LGAs": "BUKKUYUM"
+  },
+  {
+    "Senatorial_District": "ZAMFARA WEST",
+    "LGAs": "GUMMI"
+  },
+  {
+    "Senatorial_District": "ZAMFARA WEST",
+    "LGAs": "MARADUN"
+  }
+]

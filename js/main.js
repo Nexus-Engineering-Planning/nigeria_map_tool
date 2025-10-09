@@ -48,7 +48,7 @@ function normalize(name) {
   if (!name) return '';
   return name
     .toLowerCase()
-    .replace(/[\\s-/\\\\_]+/g, '') // Remove all whitespace, hyphens, slashes, underscores
+    .replace(/[\s-/\\_]+/g, '') // Remove all whitespace, hyphens, slashes, underscores
     .replace(/lgarea$/, '') // Remove trailing 'lgarea'
     .replace(/lga$/, '') // Remove trailing 'lga'
     .replace(/municipal$/, ''); // Remove trailing 'municipal'

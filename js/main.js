@@ -2,6 +2,9 @@
 
 import mapManager from './MapManager.js';
 
+// Development mode flag - set to false for production
+const DEBUG = false;
+
 // This will be our single source of truth after initialization.
 let nigeriaData = []; // Array of State objects: { name, feature, lgas: [ { name, code, feature, district, wards: [...] } ] }
 
@@ -35,7 +38,11 @@ mapManager.initializeLayers()
     const checkAllSourcesLoaded = () => {
       if (sourcesLoaded.states && sourcesLoaded.lgas && sourcesLoaded.wards && !dataTreeBuilt) {
         dataTreeBuilt = true; // Set flag immediately to prevent re-entry
-        console.log('All PMTiles sources loaded, building data tree...');
+        if (DEBUG) console.log('All PMTiles sources loaded, building data tree...');
+
+        // Clean up event listener to prevent memory leaks
+        map.off('sourcedata', sourcedataHandler);
+
         buildDataTree(senatorialData, lgaCorrections);
         initializeSearch();
         initializeUI();
@@ -45,23 +52,33 @@ mapManager.initializeLayers()
     };
 
     // Listen for each source to finish loading
-    map.on('sourcedata', (e) => {
+    const sourcedataHandler = (e) => {
       if (e.sourceId === 'states' && e.isSourceLoaded) {
         sourcesLoaded.states = true;
-        console.log('States source loaded');
+        if (DEBUG) console.log('States source loaded');
         checkAllSourcesLoaded();
       }
       if (e.sourceId === 'lgas' && e.isSourceLoaded) {
         sourcesLoaded.lgas = true;
-        console.log('LGAs source loaded');
+        if (DEBUG) console.log('LGAs source loaded');
         checkAllSourcesLoaded();
       }
       if (e.sourceId === 'wards' && e.isSourceLoaded) {
         sourcesLoaded.wards = true;
-        console.log('Wards source loaded');
+        if (DEBUG) console.log('Wards source loaded');
         checkAllSourcesLoaded();
       }
-    });
+    };
+
+    map.on('sourcedata', sourcedataHandler);
+
+    // Add 30-second timeout for initial load
+    setTimeout(() => {
+      if (!dataTreeBuilt) {
+        showErrorMessage('Map is taking longer than expected to load. Please check your connection and try refreshing the page.');
+        if (DEBUG) console.warn('Loading timeout: Data tree not built after 30 seconds');
+      }
+    }, 30000);
   })
   .catch(err => {
     console.error('Error initializing map:', err);
@@ -112,7 +129,7 @@ function buildDataTree(senatorialData, lgaCorrections) {
   const lgasCache = new Map(map.querySourceFeatures('lgas', { sourceLayer: sourceLayers.lgas }).map(f => [f.properties.lgacode, f]));
   const wardsCache = new Map(map.querySourceFeatures('wards', { sourceLayer: sourceLayers.wards }).map(f => [f.properties.wardcode, f]));
 
-  console.log(`Cached: ${statesCache.size} states, ${lgasCache.size} LGAs, ${wardsCache.size} wards`);
+  if (DEBUG) console.log(`Cached: ${statesCache.size} states, ${lgasCache.size} LGAs, ${wardsCache.size} wards`);
 
   // 3. Process States into a temporary map
   const statesMap = new Map();
@@ -141,7 +158,7 @@ function buildDataTree(senatorialData, lgaCorrections) {
   });
 
   // 5. Process Wards using the fast direct lookup map
-  console.log(`Processing ${wardsCache.size} wards...`);
+  if (DEBUG) console.log(`Processing ${wardsCache.size} wards...`);
   let wardsAdded = 0;
   let wardsSkipped = 0;
 
@@ -149,8 +166,7 @@ function buildDataTree(senatorialData, lgaCorrections) {
     const props = wardFeature.properties;
     const lgaCode = props.lgacode;
 
-    // Debug first ward to see properties
-    if (wardsAdded === 0 && wardsSkipped === 0) {
+    if (DEBUG && wardsAdded === 0 && wardsSkipped === 0) {
       console.log('Sample ward properties:', props);
     }
 

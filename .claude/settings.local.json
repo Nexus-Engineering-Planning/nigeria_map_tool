@@ -2,8 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(python:*)",
-      "Bash(cat:*)",
-      "Bash(curl:*)"
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

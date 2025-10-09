@@ -1,5 +1,6 @@
 // main.js - PMTiles version
 
+import { buildSenatorialToLga } from './mappings.js';
 import mapManager from './MapManager.js';
 
 // State for feature lookups
@@ -198,25 +199,121 @@ function initializeUI() {
 
   // Sidebar toggle logic
   const expandButton = document.getElementById('expand-button');
-  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebarHeader = document.querySelector('.sidebar-header');
 
   // Desktop: Collapse button
-  if (sidebarToggle) {
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.add('collapsed');
-      if (expandButton) expandButton.classList.add('show');
-    });
-  }
+  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    sidebar.classList.add('collapsed');
+    expandButton.classList.add('show');
+  });
 
   // Desktop: Expand button
-  if (expandButton) {
-    expandButton.addEventListener('click', () => {
+  expandButton.addEventListener('click', () => {
+    sidebar.classList.remove('collapsed');
+    expandButton.classList.remove('show');
+  });
+
+  // Mobile: Toggle sidebar by clicking the header
+  sidebarHeader.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.toggle('collapsed');
+    }
+  });
+
+  // "My Location" button
+  document.getElementById('locate-btn').addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        map.flyTo({
+          center: [longitude, latitude],
+          zoom: 14,
+          essential: true
+        });
+
+        // Add a marker for the user's location
+        new maplibregl.Marker({ color: '#007aff' })
+          .setLngLat([longitude, latitude])
+          .addTo(map);
+      },
+      () => {
+        alert("Unable to retrieve your location. Please ensure location services are enabled.");
+      }
+    );
+  });
+
+  // Focus Mode button
+  const focusBtn = document.getElementById('focus-btn');
+  focusBtn.addEventListener('click', () => {
+    document.body.classList.toggle('focus-mode');
+    const isFocused = document.body.classList.contains('focus-mode');
+    focusBtn.innerHTML = isFocused 
+      ? '<i class="fa-solid fa-compress"></i>' 
+      : '<i class="fa-solid fa-expand"></i>';
+    focusBtn.title = isFocused ? 'Exit Focus Mode' : 'Focus Mode';
+  });
+
+  // Dynamic Search UI for mobile
+  document.getElementById('searchInput').addEventListener('focus', () => {
+    if (window.innerWidth <= 768 && sidebar.classList.contains('collapsed')) {
       sidebar.classList.remove('collapsed');
-      expandButton.classList.remove('show');
-    });
-  }
+    }
+  });
+
+  initializeSwipeGestures();
 }
 
+/**
+ * Initializes swipe gestures for the mobile bottom sheet.
+ */
+function initializeSwipeGestures() {
+  const sidebar = document.querySelector('.sidebar');
+  let startY;
+  let startHeight;
+  let isDragging = false;
+
+  const onTouchStart = (e) => {
+    if (window.innerWidth > 768) return;
+    isDragging = true;
+    startY = e.touches ? e.touches[0].clientY : e.clientY;
+    startHeight = sidebar.clientHeight;
+    sidebar.style.transition = 'none'; // Disable transition during drag
+  };
+
+  const onTouchMove = (e) => {
+    if (!isDragging || window.innerWidth > 768) return;
+    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+    const deltaY = currentY - startY;
+    
+    // Prevent dragging beyond limits
+    if (deltaY > 0) { // Dragging down
+        sidebar.classList.add('collapsed');
+    } else { // Dragging up
+        sidebar.classList.remove('collapsed');
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (!isDragging || window.innerWidth > 768) return;
+    isDragging = false;
+    sidebar.style.transition = ''; // Re-enable transition
+  };
+
+  sidebar.addEventListener('touchstart', onTouchStart, { passive: true });
+  sidebar.addEventListener('touchmove', onTouchMove, { passive: true });
+  sidebar.addEventListener('touchend', onTouchEnd);
+  
+  // Also add mouse events for desktop debugging
+  sidebar.addEventListener('mousedown', onTouchStart);
+  sidebar.addEventListener('mousemove', onTouchMove);
+  sidebar.addEventListener('mouseup', onTouchEnd);
+  sidebar.addEventListener('mouseleave', onTouchEnd);
+}
 
 /**
  * Populate state dropdown

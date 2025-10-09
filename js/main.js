@@ -28,13 +28,39 @@ mapManager.initializeLayers()
     ]);
   })
   .then(([senatorialData, lgaCorrections]) => {
-    // Build the unified data tree once the map is ready
-    map.once('idle', () => {
-      buildDataTree(senatorialData, lgaCorrections);
-      initializeSearch(); // <-- Initialize Fuse.js search index
-      initializeUI();
-      mapManager.addOptionalLayers();
-      hideSpinner();
+    // Wait for all tile sources to finish loading before building data tree
+    let sourcesLoaded = { states: false, lgas: false, wards: false };
+    let dataTreeBuilt = false; // Flag to prevent rebuilding on every tile load
+
+    const checkAllSourcesLoaded = () => {
+      if (sourcesLoaded.states && sourcesLoaded.lgas && sourcesLoaded.wards && !dataTreeBuilt) {
+        dataTreeBuilt = true; // Set flag immediately to prevent re-entry
+        console.log('All PMTiles sources loaded, building data tree...');
+        buildDataTree(senatorialData, lgaCorrections);
+        initializeSearch();
+        initializeUI();
+        mapManager.addOptionalLayers();
+        hideSpinner();
+      }
+    };
+
+    // Listen for each source to finish loading
+    map.on('sourcedata', (e) => {
+      if (e.sourceId === 'states' && e.isSourceLoaded) {
+        sourcesLoaded.states = true;
+        console.log('States source loaded');
+        checkAllSourcesLoaded();
+      }
+      if (e.sourceId === 'lgas' && e.isSourceLoaded) {
+        sourcesLoaded.lgas = true;
+        console.log('LGAs source loaded');
+        checkAllSourcesLoaded();
+      }
+      if (e.sourceId === 'wards' && e.isSourceLoaded) {
+        sourcesLoaded.wards = true;
+        console.log('Wards source loaded');
+        checkAllSourcesLoaded();
+      }
     });
   })
   .catch(err => {
@@ -86,6 +112,8 @@ function buildDataTree(senatorialData, lgaCorrections) {
   const lgasCache = new Map(map.querySourceFeatures('lgas', { sourceLayer: sourceLayers.lgas }).map(f => [f.properties.lgacode, f]));
   const wardsCache = new Map(map.querySourceFeatures('wards', { sourceLayer: sourceLayers.wards }).map(f => [f.properties.wardcode, f]));
 
+  console.log(`Cached: ${statesCache.size} states, ${lgasCache.size} LGAs, ${wardsCache.size} wards`);
+
   // 3. Process States into a temporary map
   const statesMap = new Map();
   statesCache.forEach((feature, name) => {
@@ -113,9 +141,19 @@ function buildDataTree(senatorialData, lgaCorrections) {
   });
 
   // 5. Process Wards using the fast direct lookup map
+  console.log(`Processing ${wardsCache.size} wards...`);
+  let wardsAdded = 0;
+  let wardsSkipped = 0;
+
   wardsCache.forEach((wardFeature, wardCode) => {
     const props = wardFeature.properties;
     const lgaCode = props.lgacode;
+
+    // Debug first ward to see properties
+    if (wardsAdded === 0 && wardsSkipped === 0) {
+      console.log('Sample ward properties:', props);
+    }
+
     const parentLga = lgaCodeToLgaObjectMap.get(lgaCode); // Instant lookup
     if (parentLga) {
       const wardObject = {
@@ -125,8 +163,13 @@ function buildDataTree(senatorialData, lgaCorrections) {
       };
       parentLga.wards.push(wardObject);
       wardCodeMap.set(wardCode, wardObject); // Add to global ward lookup map
+      wardsAdded++;
+    } else {
+      wardsSkipped++;
     }
   });
+
+  console.log(`Wards added: ${wardsAdded}, skipped: ${wardsSkipped}`);
 
   // 6. Convert the map to our final sorted array and populate global LGA map
   nigeriaData = Array.from(statesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
@@ -201,6 +244,59 @@ function populateLGADropdown(state) {
   }
 }
 
+/**
+ * Lazy load wards for a specific LGA by querying visible tiles
+ */
+function loadWardsForLGA(lgaObject, lgaCode) {
+  const { sourceLayers } = mapManager.config;
+
+  // Query ALL visible wards first
+  const allWardFeatures = map.querySourceFeatures('wards', {
+    sourceLayer: sourceLayers.wards
+  });
+
+  console.log(`Total visible wards: ${allWardFeatures.length}`);
+
+  // Manually filter to only this LGA (in case MapLibre filter doesn't work)
+  const wardFeatures = allWardFeatures.filter(f => f.properties.lgacode === lgaCode);
+
+  console.log(`Filtered to ${wardFeatures.length} wards for ${lgaObject.name} (LGA code: ${lgaCode})`);
+
+  // Debug: show sample ward lgacode to verify
+  if (allWardFeatures.length > 0 && wardFeatures.length === 0) {
+    console.warn('No wards matched! Sample ward lgacodes:',
+      allWardFeatures.slice(0, 3).map(f => f.properties.lgacode));
+    console.warn('Looking for lgacode:', lgaCode);
+  }
+
+  // Clear existing wards and add new ones
+  lgaObject.wards = [];
+  const seenWardCodes = new Set(); // Deduplicate by ward code
+
+  wardFeatures.forEach(wardFeature => {
+    const props = wardFeature.properties;
+    const wardCode = props.wardcode;
+
+    // Skip duplicates
+    if (seenWardCodes.has(wardCode)) {
+      return;
+    }
+    seenWardCodes.add(wardCode);
+
+    const wardObject = {
+      name: props.wardname,
+      code: wardCode,
+      feature: wardFeature
+    };
+
+    lgaObject.wards.push(wardObject);
+    wardCodeMap.set(wardCode, wardObject);
+  });
+
+  // Now populate the dropdown
+  populateWardDropdown(lgaObject);
+}
+
 function populateWardDropdown(lga) {
   const select = document.getElementById('ward-select');
   select.innerHTML = '<option value="">Loading wards...</option>';
@@ -210,7 +306,8 @@ function populateWardDropdown(lga) {
   requestAnimationFrame(() => {
     select.innerHTML = '<option value="">Select Ward</option>';
 
-    if (lga && lga.wards) {
+    if (lga && lga.wards && lga.wards.length > 0) {
+      console.log(`Populating ${lga.wards.length} wards for LGA:`, lga.name);
       lga.wards.sort((a, b) => a.name.localeCompare(b.name));
 
       // Check for duplicate ward names to disambiguate
@@ -227,6 +324,7 @@ function populateWardDropdown(lga) {
       });
       select.disabled = false;
     } else {
+      console.log('No wards found for LGA:', lga);
       select.disabled = true;
     }
   });
@@ -266,24 +364,55 @@ function handleStateChange(e) {
   }
 }
 
+// Track which LGA is currently being loaded to prevent duplicates
+let currentLoadingLGA = null;
+
 function handleLGAChange(e) {
   const lgaCode = e.target.value;
   mapManager.clearHighlight();
 
   if (!lgaCode) {
+    currentLoadingLGA = null; // Reset
     populateWardDropdown(null);
     const stateName = document.getElementById('state-select').value;
     handleStateChange({ target: { value: stateName } }); // Revert to state view
     return;
   }
 
+  // Prevent loading same LGA multiple times
+  if (currentLoadingLGA === lgaCode) {
+    console.log(`Already loading wards for LGA ${lgaCode}, skipping duplicate request`);
+    return;
+  }
+
+  currentLoadingLGA = lgaCode;
+
   // O(1) lookup using global map instead of O(n) nested loop
   const selectedLga = lgaCodeMap.get(lgaCode);
 
   if (selectedLga) {
-    populateWardDropdown(selectedLga);
+    // Check if wards already loaded for this LGA
+    if (selectedLga.wards && selectedLga.wards.length > 0) {
+      console.log(`Using cached ${selectedLga.wards.length} wards for ${selectedLga.name}`);
+      populateWardDropdown(selectedLga);
+      map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedLga.feature] });
+      const bounds = turf.bbox(selectedLga.feature);
+      map.fitBounds(bounds, { padding: 50 });
+      return;
+    }
+
+    // Show loading state
+    populateWardDropdown(null);
+
     map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedLga.feature] });
-    map.fitBounds(turf.bbox(selectedLga.feature), { padding: 50 });
+    const bounds = turf.bbox(selectedLga.feature);
+    map.fitBounds(bounds, { padding: 50 });
+
+    // Lazy load wards for this LGA after zooming
+    map.once('idle', () => {
+      loadWardsForLGA(selectedLga, lgaCode);
+      currentLoadingLGA = null; // Reset after loading
+    });
   }
 }
 
@@ -312,8 +441,36 @@ function handleSenatorialChange(e) {
 
   const stateName = document.getElementById('state-select').value;
   const state = nigeriaData.find(s => s.name === stateName);
+
+  if (!districtName) {
+    // Reset: show all LGAs in the state
+    populateLGADropdown(state);
+    populateWardDropdown(null);
+    return;
+  }
+
   if (state && districtName) {
-    const features = state.lgas.filter(lga => lga.district === districtName).map(lga => lga.feature);
+    // Filter LGAs to only show those in the selected senatorial district
+    const lgasInDistrict = state.lgas.filter(lga => lga.district === districtName);
+
+    // Populate LGA dropdown with filtered LGAs
+    const lgaSelect = document.getElementById('lga-select');
+    lgaSelect.innerHTML = '<option value="">Select LGA</option>';
+    const nameCounts = lgasInDistrict.reduce((acc, lga) => {
+      acc[lga.name] = (acc[lga.name] || 0) + 1;
+      return acc;
+    }, {});
+    lgasInDistrict.forEach(lga => {
+      const text = nameCounts[lga.name] > 1 ? `${lga.name} [${lga.code}]` : lga.name;
+      lgaSelect.add(new Option(text, lga.code));
+    });
+    lgaSelect.disabled = false;
+
+    // Clear wards
+    populateWardDropdown(null);
+
+    // Highlight the senatorial district on map
+    const features = lgasInDistrict.map(lga => lga.feature);
     if (features.length > 0) {
       const featureCollection = { type: 'FeatureCollection', features };
       mapManager.setSenatorialHighlight(featureCollection);

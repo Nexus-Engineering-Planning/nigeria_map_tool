@@ -198,6 +198,12 @@ class MapManager {
    * Add optional layers (health, roads, population)
    */
   addOptionalLayers() {
+    // Guard: prevent adding sources multiple times
+    if (this.map.getSource('health')) {
+      console.log('Optional layers already added, skipping...');
+      return;
+    }
+
     // Health facilities
     this.map.addSource('health', {
       type: 'vector',

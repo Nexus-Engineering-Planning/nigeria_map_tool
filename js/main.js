@@ -231,16 +231,14 @@ function handleStateChange(e) {
   const stateName = e.target.value;
   mapManager.clearHighlight();
   
-  // Reset dependent dropdowns
+  // Reset senatorial dropdown
   document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
-  document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
-  document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
 
   if (!stateName) {
     map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
     document.getElementById('senatorial-select').disabled = true;
-    document.getElementById('lga-select').disabled = true;
-    document.getElementById('ward-select').disabled = true;
+    // Let the populator function handle disabling LGA/Ward dropdowns
+    populateLGADropdown(null);
     return;
   }
 
@@ -257,10 +255,9 @@ function handleStateChange(e) {
     map.fitBounds(bbox, { padding: 50 });
   }
 
-  // Populate senatorial and LGA dropdowns
+  // Populate senatorial and LGA dropdowns (which will handle the ward dropdown)
   populateSenatorialDropdown(stateName);
   populateLGADropdown(stateName);
-  document.getElementById('ward-select').disabled = true;
 }
 
 /**
@@ -299,6 +296,7 @@ function populateSenatorialDropdown(stateName) {
  */
 function handleSenatorialChange(e) {
   const districtName = e.target.value;
+  // Clear all previous highlights
   mapManager.clearHighlight();
 
   if (!districtName) return;
@@ -315,7 +313,8 @@ function handleSenatorialChange(e) {
 
   if (features.length > 0) {
     const featureCollection = { type: 'FeatureCollection', features };
-    map.getSource('highlight').setData(featureCollection);
+    // Use the new dedicated function to show the senatorial layer
+    mapManager.setSenatorialHighlight(featureCollection);
 
     const bbox = turf.bbox(featureCollection);
     map.fitBounds(bbox, { padding: 50 });
@@ -323,11 +322,16 @@ function handleSenatorialChange(e) {
 }
 
 /**
- * Populate LGA dropdown for a given state
+ * Populate LGA dropdown for a given state, and reset the ward dropdown.
  */
 function populateLGADropdown(stateName) {
   const lgaSelect = document.getElementById('lga-select');
   lgaSelect.innerHTML = '<option value="">Select LGA</option>';
+
+  // This function is now also responsible for resetting the ward dropdown
+  const wardSelect = document.getElementById('ward-select');
+  wardSelect.innerHTML = '<option value="">Select Ward</option>';
+  wardSelect.disabled = true;
 
   if (!stateName) {
     lgaSelect.disabled = true;
@@ -359,6 +363,11 @@ function populateLGADropdown(stateName) {
 function handleLGAChange(e) {
   const lgaCode = e.target.value;
   mapManager.clearHighlight();
+
+  // Always reset the ward dropdown when LGA changes
+  const wardSelect = document.getElementById('ward-select');
+  wardSelect.innerHTML = '<option value="">Select Ward</option>';
+  wardSelect.disabled = true;
 
   if (!lgaCode) {
     // If "Select LGA" is chosen, re-trigger state change to show state highlight

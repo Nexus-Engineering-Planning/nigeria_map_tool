@@ -197,182 +197,442 @@ class MapManager {
             },
           });
 
-          this.map.addLayer({
-            id: 'highlight-line',
-            type: 'line',
-            source: 'highlight',
-            paint: {
-              'line-color': '#007aff',
-              'line-width': 2.5,
-              'line-opacity': 0.9,
-            },
-          });
+                    this.map.addLayer({
 
-          // Fit to Nigeria bounds
-          this.map.fitBounds(
-            [
-              [2.68, 4.27],
-              [14.68, 13.89],
-            ],
-            { padding: 20 }
-          );
+                      id: 'highlight-line',
 
-          resolve();
-        } catch (error) {
-          reject(error);
-        }
-      });
-    });
-  }
+                      type: 'line',
 
-  /**
-   * Add optional layers (health, roads, population)
-   */
-  addOptionalLayers() {
-    // Health facilities
-    this.map.addSource('health', {
-      type: 'vector',
-      url: `pmtiles://${this.BASE_URL}/ng_health_facilities.pmtiles`,
-    });
+                      source: 'highlight',
 
-    this.map.addLayer({
-      id: 'health',
-      type: 'circle',
-      source: 'health',
-      'source-layer': this.sourceLayers.health,
-      layout: { visibility: 'none' },
-      paint: {
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 2, 10, 5, 14, 8],
-        'circle-color': '#007aff',
-        'circle-stroke-color': '#ffffff',
-        'circle-stroke-width': 1.5,
-        'circle-opacity': 0.9,
-      },
-    });
+                      paint: {
 
-    // Roads
-    this.map.addSource('roads', {
-      type: 'vector',
-      url: `pmtiles://${this.BASE_URL}/ng_roads.pmtiles`,
-    });
+                        'line-color': '#007aff',
 
-    this.map.addLayer({
-      id: 'roads',
-      type: 'line',
-      source: 'roads',
-      'source-layer': this.sourceLayers.roads,
-      layout: { visibility: 'none' },
-      paint: {
-        'line-color': '#6e6e73',
-        'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1, 14, 2],
-        'line-opacity': 0.7,
-      },
-    });
+                        'line-width': 2.5,
 
-    // Population density
-    this.map.addSource('pop', {
-      type: 'raster',
-      url: `pmtiles://${this.BASE_URL}/ng_pop_total.pmtiles`,
-      tileSize: 256,
-    });
+                        'line-opacity': 0.9,
 
-    this.map.addLayer({
-      id: 'pop',
-      type: 'raster',
-      source: 'pop',
-      layout: { visibility: 'none' },
-      paint: { 'raster-opacity': 0.6 },
-    });
+                      },
 
-    // Add click handlers for health facilities
-    this.map.on('click', 'health', (e) => {
-      if (!e.features || e.features.length === 0) {
-        return;
-      }
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      const props = e.features[0].properties;
+                    });
 
-      let description = `<strong><i class="fa-solid fa-hospital"></i> ${
-        props.facility_name || 'Health Facility'
-      }</strong>`;
-      description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
+          
 
-      if (props.facility_type_display) {
-        description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
-      }
-      if (props.ownership_display) {
-        description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
-      }
-      if (props.wardname) {
-        description += `<p><b>Ward:</b> ${props.wardname}</p>`;
-      }
-      if (props.operational_status) {
-        description += `<p><b>Status:</b> ${props.operational_status}</p>`;
-      }
-      description += `</div>`;
+                    // Add Senatorial District highlight layer
 
-      new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
-    });
+                    this.map.addSource('senatorial-highlight', {
 
-    // Change cursor on hover
-    this.map.on('mouseenter', 'health', () => {
-      this.map.getCanvas().style.cursor = 'pointer';
-    });
+                      type: 'geojson',
 
-    this.map.on('mouseleave', 'health', () => {
-      this.map.getCanvas().style.cursor = '';
-    });
-  }
+                      data: {
 
-  /**
-   * Get the map instance
-   */
-  getMap() {
-    return this.map;
-  }
+                        type: 'FeatureCollection',
 
-  /**
-   * Highlight features by filter
-   */
-  highlightFeatures(sourceLayer, filter) {
-    const features = this.map.querySourceFeatures('states', {
-      sourceLayer: sourceLayer,
-      filter: filter
-    });
+                        features: [],
 
-    if (features.length > 0) {
-      this.map.getSource('highlight').setData({
-        type: 'FeatureCollection',
-        features: features
-      });
-    }
-  }
+                      },
 
-  /**
-   * Clear highlight
-   */
-  clearHighlight() {
-    this.map.getSource('highlight').setData({
-      type: 'FeatureCollection',
-      features: []
-    });
-  }
+                    });
 
-  /**
-   * Toggle layer visibility
-   */
-  toggleLayer(layerId, visible) {
-    this.map.setLayoutProperty(layerId, 'visibility', visible ? 'visible' : 'none');
-  }
+          
 
-  /**
-   * Fit map to bounds
-   */
-  fitBounds(bounds, options = {}) {
-    this.map.fitBounds(bounds, { padding: 50, ...options });
-  }
-}
+                    this.map.addLayer({
 
-// Export singleton instance
-const instance = new MapManager();
-export default instance;
+                      id: 'senatorial-highlight-fill',
+
+                      type: 'fill',
+
+                      source: 'senatorial-highlight',
+
+                      paint: {
+
+                        'fill-color': '#8e44ad', // A distinct purple
+
+                        'fill-opacity': 0.25,
+
+                      },
+
+                    });
+
+          
+
+                    this.map.addLayer({
+
+                      id: 'senatorial-highlight-line',
+
+                      type: 'line',
+
+                      source: 'senatorial-highlight',
+
+                      paint: {
+
+                        'line-color': '#8e44ad',
+
+                        'line-width': 2,
+
+                      },
+
+                    });
+
+          
+
+                    // Fit to Nigeria bounds
+
+                    this.map.fitBounds(
+
+                      [
+
+                        [2.68, 4.27],
+
+                        [14.68, 13.89],
+
+                      ],
+
+                      { padding: 20 }
+
+                    );
+
+          
+
+                    resolve();
+
+                  } catch (error) {
+
+                    reject(error);
+
+                  }
+
+                });
+
+              });
+
+            }
+
+          
+
+            /**
+
+             * Add optional layers (health, roads, population)
+
+             */
+
+            addOptionalLayers() {
+
+              // Health facilities
+
+              this.map.addSource('health', {
+
+                type: 'vector',
+
+                url: `pmtiles://${this.BASE_URL}/ng_health_facilities.pmtiles`,
+
+              });
+
+          
+
+              this.map.addLayer({
+
+                id: 'health',
+
+                type: 'circle',
+
+                source: 'health',
+
+                'source-layer': this.sourceLayers.health,
+
+                layout: { visibility: 'none' },
+
+                paint: {
+
+                  'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 2, 10, 5, 14, 8],
+
+                  'circle-color': '#007aff',
+
+                  'circle-stroke-color': '#ffffff',
+
+                  'circle-stroke-width': 1.5,
+
+                  'circle-opacity': 0.9,
+
+                },
+
+              });
+
+          
+
+              // Roads
+
+              this.map.addSource('roads', {
+
+                type: 'vector',
+
+                url: `pmtiles://${this.BASE_URL}/ng_roads.pmtiles`,
+
+              });
+
+          
+
+              this.map.addLayer({
+
+                id: 'roads',
+
+                type: 'line',
+
+                source: 'roads',
+
+                'source-layer': this.sourceLayers.roads,
+
+                layout: { visibility: 'none' },
+
+                paint: {
+
+                  'line-color': '#6e6e73',
+
+                  'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1, 14, 2],
+
+                  'line-opacity': 0.7,
+
+                },
+
+              });
+
+          
+
+              // Population density
+
+              this.map.addSource('pop', {
+
+                type: 'raster',
+
+                url: `pmtiles://${this.BASE_URL}/ng_pop_total.pmtiles`,
+
+                tileSize: 256,
+
+              });
+
+          
+
+              this.map.addLayer({
+
+                id: 'pop',
+
+                type: 'raster',
+
+                source: 'pop',
+
+                layout: { visibility: 'none' },
+
+                paint: { 'raster-opacity': 0.6 },
+
+              });
+
+          
+
+              // Add click handlers for health facilities
+
+              this.map.on('click', 'health', (e) => {
+
+                if (!e.features || e.features.length === 0) {
+
+                  return;
+
+                }
+
+                const coordinates = e.features[0].geometry.coordinates.slice();
+
+                const props = e.features[0].properties;
+
+          
+
+                let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
+
+                description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
+
+          
+
+                if (props.facility_type_display) {
+
+                  description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
+
+                }
+
+                if (props.ownership_display) {
+
+                  description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
+
+                }
+
+                if (props.wardname) {
+
+                  description += `<p><b>Ward:</b> ${props.wardname}</p>`;
+
+                }
+
+                if (props.operational_status) {
+
+                  description += `<p><b>Status:</b> ${props.operational_status}</p>`;
+
+                }
+
+                description += `</div>`;
+
+          
+
+                new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
+
+              });
+
+          
+
+              // Change cursor on hover
+
+              this.map.on('mouseenter', 'health', () => {
+
+                this.map.getCanvas().style.cursor = 'pointer';
+
+              });
+
+          
+
+              this.map.on('mouseleave', 'health', () => {
+
+                this.map.getCanvas().style.cursor = '';
+
+              });
+
+            }
+
+          
+
+            /**
+
+             * Get the map instance
+
+             */
+
+            getMap() {
+
+              return this.map;
+
+            }
+
+          
+
+            /**
+
+             * Highlight features by filter
+
+             */
+
+            highlightFeatures(sourceLayer, filter) {
+
+              const features = this.map.querySourceFeatures('states', {
+
+                sourceLayer: sourceLayer,
+
+                filter: filter,
+
+              });
+
+          
+
+              if (features.length > 0) {
+
+                this.map.getSource('highlight').setData({
+
+                  type: 'FeatureCollection',
+
+                  features: features,
+
+                });
+
+              }
+
+            }
+
+          
+
+            /**
+
+             * Set data for the senatorial highlight layer.
+
+             * @param {object} featureCollection - A GeoJSON FeatureCollection.
+
+             */
+
+            setSenatorialHighlight(featureCollection) {
+
+              this.map.getSource('senatorial-highlight').setData(featureCollection);
+
+            }
+
+          
+
+            /**
+
+             * Clear all highlights
+
+             */
+
+            clearHighlight() {
+
+              // Clear standard highlight
+
+              this.map.getSource('highlight').setData({
+
+                type: 'FeatureCollection',
+
+                features: [],
+
+              });
+
+              // Also clear senatorial highlight
+
+              this.map.getSource('senatorial-highlight').setData({
+
+                type: 'FeatureCollection',
+
+                features: [],
+
+              });
+
+            }
+
+          
+
+            /**
+
+             * Toggle layer visibility
+
+             */
+
+            toggleLayer(layerId, visible) {
+
+              this.map.setLayoutProperty(layerId, 'visibility', visible ? 'visible' : 'none');
+
+            }
+
+          
+
+            /**
+
+             * Fit map to bounds
+
+             */
+
+            fitBounds(bounds, options = {}) {
+
+              this.map.fitBounds(bounds, { padding: 50, ...options });
+
+            }
+
+          }
+
+          
+
+          // Export singleton instance
+
+          const instance = new MapManager();
+
+          export default instance;

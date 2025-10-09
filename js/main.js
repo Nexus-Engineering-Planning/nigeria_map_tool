@@ -14,33 +14,55 @@ let state_to_lga = {}, lga_to_ward = {}, senatorial_to_lga = {}, lga_to_state = 
 showSpinner();
 
 Promise.all([
-  fetch('./data/state_geojson.geojson').then(res => res.json()),
-  fetch('./data/lga_geojson.geojson').then(res => res.json()),
-  fetch('./data/ward_geojson.geojson').then(res => res.json()),
-  fetch('./data/senatorial.json').then(res => res.json())
+  fetch('./data/state_geojson.geojson').then(res => {
+    if (!res.ok) throw new Error(`Failed to load state data (${res.status})`);
+    return res.json();
+  }),
+  fetch('./data/lga_geojson.geojson').then(res => {
+    if (!res.ok) throw new Error(`Failed to load LGA data (${res.status})`);
+    return res.json();
+  }),
+  fetch('./data/ward_geojson.geojson').then(res => {
+    if (!res.ok) throw new Error(`Failed to load ward data (${res.status})`);
+    return res.json();
+  }),
+  fetch('./data/senatorial.json').then(res => {
+    if (!res.ok) throw new Error(`Failed to load senatorial data (${res.status})`);
+    return res.json();
+  })
 ])
 .then(([stateGeoJSON, lgaGeoJSON, wardGeoJSON, senatorialData]) => {
-  // ✅ Build mappings
-  const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
-  const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
+  try {
+    // Validate data
+    if (!stateGeoJSON?.features || !lgaGeoJSON?.features || !wardGeoJSON?.features) {
+      throw new Error('Invalid GeoJSON data structure');
+    }
 
-  state_to_lga = mappings.state_to_lga;
-  lga_to_ward = mappings.lga_to_ward;
-  lga_to_state = reverseMappings.lga_to_state;
+    // Build mappings
+    const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
+    const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
 
-  senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
+    state_to_lga = mappings.state_to_lga;
+    lga_to_ward = mappings.lga_to_ward;
+    lga_to_state = reverseMappings.lga_to_state;
 
-  // ✅ Initialize layers on the map
-  mapManager.initializeLayers(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
+    senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
 
-  // ✅ Initialize the sidebar controls
-  initializeSidebar(senatorial_to_lga, lga_to_state);
+    // Initialize layers on the map
+    mapManager.initializeLayers(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
 
-  // ✅ Fit the map to the bounds of the state layer
-  map.fitBounds(mapManager.getStateLayer().getBounds());
+    // Initialize the sidebar controls
+    initializeSidebar(senatorial_to_lga, lga_to_state);
+
+    // Fit the map to the bounds of the state layer
+    map.fitBounds(mapManager.getStateLayer().getBounds());
+  } catch (err) {
+    throw new Error(`Data initialization failed: ${err.message}`);
+  }
 })
 .catch(err => {
-  console.error('❌ Error initializing data:', err);
+  console.error('Error initializing map:', err);
+  showErrorMessage(`Failed to load map data: ${err.message}. Please refresh the page.`);
 })
 .finally(() => {
   hideSpinner();
@@ -110,4 +132,42 @@ function showSpinner() {
 function hideSpinner() {
   const spinner = document.getElementById('loading-spinner');
   if (spinner) spinner.style.display = 'none';
+}
+
+/* -------------------------
+   Error Message Display
+------------------------- */
+
+function showErrorMessage(message) {
+  const errorDiv = document.createElement('div');
+  errorDiv.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #e74c3c;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 10000;
+    max-width: 500px;
+    text-align: center;
+  `;
+
+  errorDiv.innerHTML = `
+    <h3 style="color: #e74c3c; margin: 0 0 10px 0;">Error Loading Map</h3>
+    <p style="margin: 10px 0; color: #333;">${message}</p>
+    <button onclick="location.reload()" style="
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    ">Reload Page</button>
+  `;
+
+  document.body.appendChild(errorDiv);
 }

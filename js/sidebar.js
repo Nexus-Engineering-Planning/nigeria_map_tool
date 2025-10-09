@@ -11,8 +11,6 @@ const highlightLayer = L.geoJSON(null, {
  * @param {Object} lgaToState - Mapping of LGAs to their parent States
  */
 function initializeSidebar(senatorialToLga, lgaToState) {
-  console.log("🔄 Initializing sidebar...");
-
   const sidebar = document.querySelector(".sidebar");
   const sidebarToggle = document.getElementById("sidebar-toggle");
   const searchInput = document.getElementById("searchInput");
@@ -47,8 +45,6 @@ function initializeSidebar(senatorialToLga, lgaToState) {
 
   stateSelect.addEventListener('change', function () {
     const selectedState = this.value;
-    console.log(`📌 Selected State: ${selectedState}`);
-
     highlightLayer.clearLayers();
     selectState(selectedState);
     updateFeatureSummary(selectedState, null);
@@ -62,8 +58,6 @@ function initializeSidebar(senatorialToLga, lgaToState) {
 
   senatorialSelect.addEventListener('change', function () {
     const districtName = this.value;
-    console.log(`📌 Selected Senatorial District: ${districtName}`);
-
     highlightLayer.clearLayers();
 
     if (!districtName) return;
@@ -84,8 +78,6 @@ function initializeSidebar(senatorialToLga, lgaToState) {
 
   lgaSelect.addEventListener('change', function () {
     const selectedLGA = this.value;
-    console.log(`📌 Selected LGA: ${selectedLGA}`);
-
     highlightLayer.clearLayers();
 
     if (!selectedLGA) return;
@@ -97,8 +89,6 @@ function initializeSidebar(senatorialToLga, lgaToState) {
 
   wardSelect.addEventListener('change', function () {
     const selectedWard = this.value;
-    console.log(`📌 Selected Ward: ${selectedWard}`);
-
     highlightLayer.clearLayers();
     document.getElementById('feature-summary').textContent = '';
 
@@ -108,8 +98,6 @@ function initializeSidebar(senatorialToLga, lgaToState) {
   });
 
   resetButton.addEventListener('click', () => {
-    console.log("🔄 Resetting sidebar selections...");
-
     stateSelect.value = "";
     senatorialSelect.innerHTML = '<option value="">Select Senatorial District</option>';
     lgaSelect.innerHTML = '<option value="">Select LGA</option>';

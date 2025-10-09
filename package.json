@@ -1,0 +1,28 @@
+{
+  "name": "nigeria-map-tool",
+  "version": "1.0.0",
+  "description": "Interactive map application for exploring Nigeria's States, LGAs, and Wards",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "map",
+    "nigeria",
+    "leaflet",
+    "geojson",
+    "interactive-map"
+  ],
+  "author": "Olufemi Olamijulo <lamijulo99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@turf/turf": "^7.1.0",
+    "leaflet": "^1.9.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/femiolamijulo/nigeria_map_tool"
+  }
+}

@@ -58,9 +58,6 @@ function buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON) {
     }
   });
 
-  console.log('✅ state_to_lga mapping:', state_to_lga);
-  console.log('✅ lga_to_ward mapping:', lga_to_ward);
-
   return { state_to_lga, lga_to_ward };
 }
 
@@ -79,9 +76,6 @@ function buildReverseMappings(state_to_lga, lga_to_ward) {
       ward_to_lga[ward] = lga;
     });
   }
-
-  console.log('✅ lga_to_state mapping:', lga_to_state);
-  console.log('✅ ward_to_lga mapping:', ward_to_lga);
 
   return { lga_to_state, ward_to_lga };
 }
@@ -117,7 +111,6 @@ function buildSenatorialToLga(senatorialData, lgaGeoJSON) {
       const matchedLgaName = geojson_lga_names[normalizedCorrected];
 
       if (!matchedLgaName) {
-        console.warn(`⚠️ Could not match LGA "${rawLgaName}" (normalized: "${normalizedLgaName}", corrected: "${correctedName}") in district "${district}"`);
         unmatched.push(normalizedLgaName);
         return;
       }
@@ -132,9 +125,10 @@ function buildSenatorialToLga(senatorialData, lgaGeoJSON) {
     });
   });
 
-  console.log('✅ Manual corrections applied for:', [...appliedCorrections]);
-  console.log('📝 Unmatched LGA names (normalized):', [...new Set(unmatched)]);
-  console.log('✅ senatorial_to_lga mapping (fuzzy matched):', senatorial_to_lga);
+  // Log unmatched LGAs in development mode only
+  if (unmatched.length > 0 && window.location.hostname === 'localhost') {
+    console.warn('Unmatched LGA names:', [...new Set(unmatched)]);
+  }
 
   return senatorial_to_lga;
 }

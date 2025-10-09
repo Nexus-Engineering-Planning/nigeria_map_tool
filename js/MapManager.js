@@ -46,10 +46,7 @@ class MapManager {
             weight: 3,
             fillOpacity: 0.3
           }
-        }).addTo(this.map);
-  
-        console.log("✅ MapManager initialized!");
-  
+        }).addTo(this.map);  
         MapManager.instance = this;
       }
   
@@ -92,10 +89,7 @@ class MapManager {
         onEachFeature: (feature, layer) => {
           layer.bindTooltip(feature.properties.wardname);
         }
-      }).addTo(map);
-  
-      console.log("✅ Map layers initialized.");
-  
+      }).addTo(map);  
       // ✅ Fit the map to the extent of all states (initial view)
       map.fitBounds(this.stateLayer.getBounds());
     }

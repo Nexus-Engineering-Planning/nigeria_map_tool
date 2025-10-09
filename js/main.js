@@ -234,6 +234,24 @@ function initializeUI() {
     );
   });
 
+  // Focus Mode button
+  const focusBtn = document.getElementById('focus-btn');
+  focusBtn.addEventListener('click', () => {
+    document.body.classList.toggle('focus-mode');
+    const isFocused = document.body.classList.contains('focus-mode');
+    focusBtn.innerHTML = isFocused 
+      ? '<i class="fa-solid fa-compress"></i>' 
+      : '<i class="fa-solid fa-expand"></i>';
+    focusBtn.title = isFocused ? 'Exit Focus Mode' : 'Focus Mode';
+  });
+
+  // Dynamic Search UI for mobile
+  document.getElementById('searchInput').addEventListener('focus', () => {
+    if (window.innerWidth <= 768 && sidebar.classList.contains('collapsed')) {
+      sidebar.classList.remove('collapsed');
+    }
+  });
+
   initializeSwipeGestures();
 }
 
@@ -282,7 +300,6 @@ function initializeSwipeGestures() {
   sidebar.addEventListener('mousemove', onTouchMove);
   sidebar.addEventListener('mouseup', onTouchEnd);
   sidebar.addEventListener('mouseleave', onTouchEnd);
-}
 }
 
 /**

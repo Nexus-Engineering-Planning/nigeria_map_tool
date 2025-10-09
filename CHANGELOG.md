@@ -2,7 +2,16 @@
 
 ## [Unreleased] - 2025-10-08
 
-### Added
+### Second Review - Additional Fixes
+
+#### Fixed
+- **Turf.js Import Syntax** - Changed from default import to namespace import (`import * as turf`)
+- **Duplicate Highlight Layer** - sidebar.js now uses MapManager's centralized highlight layer
+- **Missing CSS Link** - Added external styles.css link to index.html
+
+### Initial Review - Major Fixes
+
+#### Added
 - `package.json` with proper dependencies (@turf/turf, leaflet)
 - Comprehensive error handling with user-friendly error messages
 - Error display modal with reload functionality

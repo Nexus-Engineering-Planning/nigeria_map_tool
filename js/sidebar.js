@@ -1,9 +1,8 @@
 import { selectState, selectLGAsInState, selectWardsInLGA, selectWard } from './layers.js';
-import mapManager from './MapManager.js'; // ✅ Import the instance correctly
+import mapManager from './MapManager.js';
 
-const highlightLayer = L.geoJSON(null, {
-  style: { color: '#FF0000', weight: 3, fillOpacity: 0.3 }
-}).addTo(mapManager.getMap());
+// Use the centralized highlight layer from MapManager
+const highlightLayer = mapManager.getHighlightLayer();
 
 /**
  * Initializes the sidebar controls.

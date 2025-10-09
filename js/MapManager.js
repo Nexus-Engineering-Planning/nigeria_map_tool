@@ -67,9 +67,20 @@ class MapManager {
       'top-right'
     );
 
-    // Error handling
+    // Error handling with user notifications
     this.map.on('error', (e) => {
       console.error('Map error:', e?.error?.message || e);
+
+      // Show user-friendly error for critical failures
+      const errorMessage = e?.error?.message || '';
+      const isCritical = errorMessage.includes('tiles') ||
+                         errorMessage.includes('source') ||
+                         errorMessage.includes('pmtiles') ||
+                         errorMessage.includes('Failed to fetch');
+
+      if (isCritical) {
+        this.showMapError('Map data failed to load. Please check your connection and refresh the page.');
+      }
     });
 
     return this.map;
@@ -316,6 +327,65 @@ class MapManager {
    */
   fitBounds(bounds, options = {}) {
     this.map.fitBounds(bounds, { padding: 50, ...options });
+  }
+
+  /**
+   * Show user-friendly map error notification
+   */
+  showMapError(message) {
+    // Prevent duplicate error messages
+    if (document.getElementById('map-error-toast')) return;
+
+    const errorDiv = document.createElement('div');
+    errorDiv.id = 'map-error-toast';
+    errorDiv.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #ff3b30, #ff6b58);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(255, 59, 48, 0.4);
+      z-index: 10001;
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-weight: 500;
+      max-width: 350px;
+      animation: slideInRight 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    `;
+
+    errorDiv.innerHTML = `
+      <i class="fa-solid fa-circle-exclamation" style="font-size: 20px;"></i>
+      <span>${message}</span>
+    `;
+
+    // Add CSS animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInRight {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    document.body.appendChild(errorDiv);
+
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      errorDiv.style.animation = 'slideInRight 0.3s ease reverse';
+      setTimeout(() => errorDiv.remove(), 300);
+    }, 5000);
   }
 }
 

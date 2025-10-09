@@ -5,6 +5,10 @@ import mapManager from './MapManager.js';
 // This will be our single source of truth after initialization.
 let nigeriaData = []; // Array of State objects: { name, feature, lgas: [ { name, code, feature, district, wards: [...] } ] }
 
+// Global lookup maps for O(1) performance
+let lgaCodeMap = new Map(); // Map<lgaCode, lgaObject>
+let wardCodeMap = new Map(); // Map<wardCode, wardObject>
+
 showSpinner();
 
 const map = mapManager.initializeMap();
@@ -114,17 +118,23 @@ function buildDataTree(senatorialData, lgaCorrections) {
     const lgaCode = props.lgacode;
     const parentLga = lgaCodeToLgaObjectMap.get(lgaCode); // Instant lookup
     if (parentLga) {
-      parentLga.wards.push({
+      const wardObject = {
         name: props.wardname,
         code: wardCode,
         feature: wardFeature
-      });
+      };
+      parentLga.wards.push(wardObject);
+      wardCodeMap.set(wardCode, wardObject); // Add to global ward lookup map
     }
   });
 
-  // 6. Convert the map to our final sorted array
+  // 6. Convert the map to our final sorted array and populate global LGA map
   nigeriaData = Array.from(statesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
-  nigeriaData.forEach(state => state.lgas.sort((a, b) => a.name.localeCompare(b.name)));
+  nigeriaData.forEach(state => {
+    state.lgas.sort((a, b) => a.name.localeCompare(b.name));
+    // Populate global LGA code map
+    state.lgas.forEach(lga => lgaCodeMap.set(lga.code, lga));
+  });
 }
 
 /**
@@ -154,6 +164,7 @@ function initializeUI() {
 
   // Search, Sidebar, and Map Controls
   document.getElementById('searchInput').addEventListener('input', handleSearch);
+  document.getElementById('searchInput').addEventListener('keydown', handleSearchKeyboard);
   initializeSidebarControls();
   initializeMapControls();
   initializeSwipeGestures();
@@ -192,16 +203,33 @@ function populateLGADropdown(state) {
 
 function populateWardDropdown(lga) {
   const select = document.getElementById('ward-select');
-  select.innerHTML = '<option value="">Select Ward</option>';
-  if (lga && lga.wards) {
-    lga.wards.sort((a, b) => a.name.localeCompare(b.name));
-    lga.wards.forEach(ward => {
-      select.add(new Option(ward.name, ward.code));
-    });
-    select.disabled = false;
-  } else {
-    select.disabled = true;
-  }
+  select.innerHTML = '<option value="">Loading wards...</option>';
+  select.disabled = true;
+
+  // Use requestAnimationFrame to prevent UI freeze for large ward lists
+  requestAnimationFrame(() => {
+    select.innerHTML = '<option value="">Select Ward</option>';
+
+    if (lga && lga.wards) {
+      lga.wards.sort((a, b) => a.name.localeCompare(b.name));
+
+      // Check for duplicate ward names to disambiguate
+      const nameCounts = lga.wards.reduce((acc, ward) => {
+        acc[ward.name] = (acc[ward.name] || 0) + 1;
+        return acc;
+      }, {});
+
+      lga.wards.forEach(ward => {
+        const text = nameCounts[ward.name] > 1
+          ? `${ward.name} [${ward.code}]`
+          : ward.name;
+        select.add(new Option(text, ward.code));
+      });
+      select.disabled = false;
+    } else {
+      select.disabled = true;
+    }
+  });
 }
 
 function populateSenatorialDropdown(state) {
@@ -249,14 +277,8 @@ function handleLGAChange(e) {
     return;
   }
 
-  let selectedLga = null;
-  for (const state of nigeriaData) {
-    const lga = state.lgas.find(l => l.code === lgaCode);
-    if (lga) {
-      selectedLga = lga;
-      break;
-    }
-  }
+  // O(1) lookup using global map instead of O(n) nested loop
+  const selectedLga = lgaCodeMap.get(lgaCode);
 
   if (selectedLga) {
     populateWardDropdown(selectedLga);
@@ -275,17 +297,8 @@ function handleWardChange(e) {
     return;
   }
 
-  let selectedWard = null;
-  for (const state of nigeriaData) {
-    for (const lga of state.lgas) {
-      const ward = lga.wards.find(w => w.code === wardCode);
-      if (ward) {
-        selectedWard = ward;
-        break;
-      }
-    }
-    if (selectedWard) break;
-  }
+  // O(1) lookup using global map instead of O(n²) nested loop
+  const selectedWard = wardCodeMap.get(wardCode);
 
   if (selectedWard) {
     map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedWard.feature] });
@@ -320,6 +333,14 @@ let fuse; // Fuse.js instance
 let searchIndex = []; // Flattened array for searching
 
 function initializeSearch() {
+  // Check if Fuse.js loaded successfully
+  if (typeof Fuse === 'undefined') {
+    console.warn('Fuse.js not loaded - search will use basic filtering');
+    const searchInput = document.getElementById('searchInput');
+    searchInput.placeholder = 'Search (fuzzy search unavailable)';
+    return; // Continue without Fuse.js
+  }
+
   // 1. Create a flattened, searchable index from the nigeriaData tree.
   searchIndex = [];
   nigeriaData.forEach(state => {
@@ -360,7 +381,7 @@ function handleSearch(e) {
   const query = e.target.value;
   const suggestionBox = document.getElementById('searchSuggestions');
   const searchInput = document.getElementById('searchInput');
-  
+
   if (query.length < 2) {
     suggestionBox.innerHTML = '';
     suggestionBox.style.display = 'none';
@@ -368,7 +389,18 @@ function handleSearch(e) {
     return;
   }
 
-  const results = fuse.search(query);
+  // Use Fuse.js if available, otherwise fallback to basic filtering
+  let results;
+  if (fuse) {
+    results = fuse.search(query);
+  } else {
+    // Fallback: basic case-insensitive substring matching
+    const lowerQuery = query.toLowerCase();
+    results = searchIndex
+      .filter(item => item.searchName.toLowerCase().includes(lowerQuery))
+      .map(item => ({ item }));
+  }
+
   renderSuggestions(results.slice(0, 15));
 }
 
@@ -402,6 +434,47 @@ function renderSuggestions(results) {
       document.getElementById('searchInput').value = '';
     };
     suggestionBox.appendChild(div);
+  });
+}
+
+/**
+ * Handle keyboard navigation for search suggestions
+ */
+function handleSearchKeyboard(e) {
+  const suggestionBox = document.getElementById('searchSuggestions');
+  const suggestions = suggestionBox.querySelectorAll('.search-suggestion');
+
+  if (suggestions.length === 0) return;
+
+  let focusedIndex = Array.from(suggestions).findIndex(s => s.classList.contains('focused'));
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    focusedIndex = focusedIndex < suggestions.length - 1 ? focusedIndex + 1 : 0;
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    focusedIndex = focusedIndex > 0 ? focusedIndex - 1 : suggestions.length - 1;
+  } else if (e.key === 'Enter' && focusedIndex >= 0) {
+    e.preventDefault();
+    suggestions[focusedIndex].click();
+    return;
+  } else if (e.key === 'Escape') {
+    suggestionBox.innerHTML = '';
+    suggestionBox.style.display = 'none';
+    document.getElementById('searchInput').setAttribute('aria-expanded', 'false');
+    return;
+  } else {
+    return; // Let other keys work normally
+  }
+
+  // Update focused state
+  suggestions.forEach((s, i) => {
+    if (i === focusedIndex) {
+      s.classList.add('focused');
+      s.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    } else {
+      s.classList.remove('focused');
+    }
   });
 }
 

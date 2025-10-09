@@ -348,7 +348,12 @@ html, body {
   color: var(--text-secondary);
 }
 .search-suggestion:last-child { border-bottom: none; }
-.search-suggestion:hover { background: var(--bg-secondary); }
+.search-suggestion:hover,
+.search-suggestion.focused {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--primary-color);
+  padding-left: 11px;
+}
 .search-suggestion strong { color: var(--text-primary); font-weight: 600; }
 
 /* ========================================

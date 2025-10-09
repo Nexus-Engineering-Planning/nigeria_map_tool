@@ -207,6 +207,33 @@ function initializeUI() {
     }
   });
 
+  // "My Location" button
+  document.getElementById('locate-btn').addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        map.flyTo({
+          center: [longitude, latitude],
+          zoom: 14,
+          essential: true
+        });
+
+        // Add a marker for the user's location
+        new maplibregl.Marker({ color: '#007aff' })
+          .setLngLat([longitude, latitude])
+          .addTo(map);
+      },
+      () => {
+        alert("Unable to retrieve your location. Please ensure location services are enabled.");
+      }
+    );
+  });
+
   initializeSwipeGestures();
 }
 

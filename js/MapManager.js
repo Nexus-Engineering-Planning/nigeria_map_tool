@@ -343,19 +343,19 @@ class MapManager {
 
                 layout: { visibility: 'none' },
 
-                paint: {
+                      paint: {
 
-                  'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 2, 10, 5, 14, 8],
+                        'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3, 10, 7, 14, 10],
 
-                  'circle-color': '#007aff',
+                        'circle-color': '#007aff',
 
-                  'circle-stroke-color': '#ffffff',
+                        'circle-stroke-color': '#ffffff',
 
-                  'circle-stroke-width': 1.5,
+                        'circle-stroke-width': 1.5,
 
-                  'circle-opacity': 0.9,
+                        'circle-opacity': 0.9,
 
-                },
+                      },
 
               });
 

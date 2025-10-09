@@ -33,18 +33,33 @@ class MapManager {
     const protocol = new pmtiles.Protocol();
     maplibregl.addProtocol('pmtiles', protocol.tile);
 
-    // Initialize map with minimal basemap style
+    // Initialize map with a custom minimal style
     this.map = new maplibregl.Map({
       container: 'map',
       style: {
         version: 8,
-        sources: {},
+        sources: {
+          osm: {
+            type: 'raster',
+            tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            tileSize: 256,
+            attribution: '&copy; OpenStreetMap Contributors'
+          }
+        },
         layers: [
           {
             id: 'background',
             type: 'background',
+            paint: { 'background-color': '#f2f2f7' }
+          },
+          {
+            id: 'osm-tiles',
+            type: 'raster',
+            source: 'osm',
             paint: {
-              'background-color': '#f5f5f5'
+              'raster-opacity': 0.5,
+              'raster-saturation': -1, // Grayscale
+              'raster-contrast': -0.1
             }
           }
         ]
@@ -99,7 +114,7 @@ class MapManager {
             source: 'states',
             'source-layer': this.sourceLayers.states,
             paint: {
-              'line-color': '#888888',
+              'line-color': '#8a8a8e',
               'line-width': 1.5,
               'line-opacity': 0.8
             }
@@ -128,7 +143,7 @@ class MapManager {
             source: 'lgas',
             'source-layer': this.sourceLayers.lgas,
             paint: {
-              'line-color': '#aaaaaa',
+              'line-color': '#d1d1d6',
               'line-width': 1,
               'line-opacity': 0.7
             }
@@ -157,7 +172,7 @@ class MapManager {
             source: 'wards',
             'source-layer': this.sourceLayers.wards,
             paint: {
-              'line-color': '#cccccc',
+              'line-color': '#e5e5ea',
               'line-width': 0.5,
               'line-opacity': 0.6
             }
@@ -177,8 +192,8 @@ class MapManager {
             type: 'fill',
             source: 'highlight',
             paint: {
-              'fill-color': '#FF9900',
-              'fill-opacity': 0.4
+              'fill-color': 'rgba(0, 122, 255, 0.2)',
+              'fill-outline-color': 'rgba(0, 122, 255, 0.8)'
             }
           });
 
@@ -187,9 +202,9 @@ class MapManager {
             type: 'line',
             source: 'highlight',
             paint: {
-              'line-color': '#FF9900',
-              'line-width': 3,
-              'line-opacity': 0.8
+              'line-color': '#007aff',
+              'line-width': 2.5,
+              'line-opacity': 0.9
             }
           });
 
@@ -221,11 +236,11 @@ class MapManager {
       'source-layer': this.sourceLayers.health,
       layout: { visibility: 'none' },
       paint: {
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 2, 10, 4, 14, 8],
-        'circle-color': '#1e88e5',
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 2, 10, 5, 14, 8],
+        'circle-color': '#007aff',
         'circle-stroke-color': '#ffffff',
-        'circle-stroke-width': 1,
-        'circle-opacity': 0.8
+        'circle-stroke-width': 1.5,
+        'circle-opacity': 0.9
       }
     });
 
@@ -242,9 +257,9 @@ class MapManager {
       'source-layer': this.sourceLayers.roads,
       layout: { visibility: 'none' },
       paint: {
-        'line-color': '#bb3333',
-        'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1.2, 14, 2.5],
-        'line-opacity': 0.8
+        'line-color': '#6e6e73',
+        'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1, 14, 2],
+        'line-opacity': 0.7
       }
     });
 
@@ -266,14 +281,24 @@ class MapManager {
     // Add click handlers for health facilities
     this.map.on('click', 'health', (e) => {
       const coordinates = e.features[0].geometry.coordinates.slice();
-      const properties = e.features[0].properties;
+      const props = e.features[0].properties;
 
-      let description = '<strong>Health Facility</strong><br>';
-      for (let key in properties) {
-        if (properties[key]) {
-          description += `<b>${key}:</b> ${properties[key]}<br>`;
-        }
+      let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
+      description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
+      
+      if (props.facility_type_display) {
+        description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
       }
+      if (props.ownership_display) {
+        description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
+      }
+      if (props.wardname) {
+        description += `<p><b>Ward:</b> ${props.wardname}</p>`;
+      }
+       if (props.operational_status) {
+        description += `<p><b>Status:</b> ${props.operational_status}</p>`;
+      }
+      description += `</div>`;
 
       new maplibregl.Popup()
         .setLngLat(coordinates)

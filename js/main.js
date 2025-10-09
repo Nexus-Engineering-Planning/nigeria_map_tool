@@ -5,14 +5,15 @@ import mapManager from './MapManager.js';
 
 // State for feature lookups
 let senatorial_to_lga = {};
-let state_to_lga = {};
-let lga_to_state = {};
-let lga_to_ward = {};
+// Mappings using unique codes
+let state_to_lga = new Map(); // Map<stateName, Array<{name, code}>>
+let lga_to_state = new Map(); // Map<lgaCode, stateName>
+let lga_to_ward = new Map(); // Map<lgaCode, Array<{name, code}>>
 
-// Feature caches
-let statesCache = new Map();
-let lgasCache = new Map();
-let wardsCache = new Map();
+// Feature caches using unique codes as keys
+let statesCache = new Map(); // Key: stateName
+let lgasCache = new Map();   // Key: lgaCode
+let wardsCache = new Map();  // Key: wardCode
 
 showSpinner();
 
@@ -88,11 +89,7 @@ function cacheFeatures() {
       const stateName = feature.properties.statename;
       if (stateName && !statesCache.has(stateName)) {
         statesCache.set(stateName, feature);
-
-        // Build state_to_lga mapping
-        if (!state_to_lga[stateName]) {
-          state_to_lga[stateName] = [];
-        }
+        state_to_lga.set(stateName, []);
       }
     });
 
@@ -102,22 +99,17 @@ function cacheFeatures() {
     });
 
     lgaFeatures.forEach(feature => {
-      const lgaName = feature.properties.lganame;
-      const stateName = feature.properties.statename;
+      const { lganame, statename, lgacode } = feature.properties;
 
-      if (lgaName && !lgasCache.has(lgaName)) {
-        lgasCache.set(lgaName, feature);
+      if (lganame && lgacode && !lgasCache.has(lgacode)) {
+        lgasCache.set(lgacode, feature);
 
         // Build mappings
-        if (stateName) {
-          if (!state_to_lga[stateName]) {
-            state_to_lga[stateName] = [];
-          }
-          if (!state_to_lga[stateName].includes(lgaName)) {
-            state_to_lga[stateName].push(lgaName);
-          }
-          lga_to_state[lgaName] = stateName;
+        if (statename && state_to_lga.has(statename)) {
+          state_to_lga.get(statename).push({ name: lganame, code: lgacode });
         }
+        lga_to_state.set(lgacode, statename);
+        lga_to_ward.set(lgacode, []);
       }
     });
 
@@ -127,20 +119,14 @@ function cacheFeatures() {
     });
 
     wardFeatures.forEach(feature => {
-      const wardName = feature.properties.wardname;
-      const lgaName = feature.properties.lganame;
+      const { wardname, lgacode, wardcode } = feature.properties;
 
-      if (wardName && !wardsCache.has(wardName)) {
-        wardsCache.set(wardName, feature);
+      if (wardname && wardcode && !wardsCache.has(wardcode)) {
+        wardsCache.set(wardcode, feature);
 
         // Build lga_to_ward mapping
-        if (lgaName) {
-          if (!lga_to_ward[lgaName]) {
-            lga_to_ward[lgaName] = [];
-          }
-          if (!lga_to_ward[lgaName].includes(wardName)) {
-            lga_to_ward[lgaName].push(wardName);
-          }
+        if (lgacode && lga_to_ward.has(lgacode)) {
+          lga_to_ward.get(lgacode).push({ name: wardname, code: wardcode });
         }
       }
     });
@@ -197,18 +183,28 @@ function initializeUI() {
   // Search
   document.getElementById('searchInput').addEventListener('input', handleSearch);
 
-  // Sidebar toggle
+  // Sidebar toggle logic
   const sidebar = document.querySelector('.sidebar');
   const expandButton = document.getElementById('expand-button');
+  const sidebarHeader = document.querySelector('.sidebar-header');
 
+  // Desktop: Collapse button
   document.getElementById('sidebar-toggle').addEventListener('click', () => {
     sidebar.classList.add('collapsed');
     expandButton.classList.add('show');
   });
 
+  // Desktop: Expand button
   expandButton.addEventListener('click', () => {
     sidebar.classList.remove('collapsed');
     expandButton.classList.remove('show');
+  });
+
+  // Mobile: Toggle sidebar by clicking the header
+  sidebarHeader.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.toggle('collapsed');
+    }
   });
 }
 
@@ -234,6 +230,11 @@ function populateStateDropdown() {
 function handleStateChange(e) {
   const stateName = e.target.value;
   mapManager.clearHighlight();
+  
+  // Reset dependent dropdowns
+  document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
+  document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
+  document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
 
   if (!stateName) {
     map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
@@ -259,6 +260,7 @@ function handleStateChange(e) {
   // Populate senatorial and LGA dropdowns
   populateSenatorialDropdown(stateName);
   populateLGADropdown(stateName);
+  document.getElementById('ward-select').disabled = true;
 }
 
 /**
@@ -273,12 +275,16 @@ function populateSenatorialDropdown(stateName) {
     return;
   }
 
+  // This logic is complex and relies on name matching. It might need adjustment
+  // if senatorial data doesn't align perfectly with LGA names.
+  const lgasInState = new Set((state_to_lga.get(stateName) || []).map(l => l.name));
+  
   const filteredDistricts = Object.keys(senatorial_to_lga).filter(district => {
-    const lgas = senatorial_to_lga[district] || [];
-    return lgas.some(lga => lga_to_state[lga] === stateName);
+    const lgasInDistrict = senatorial_to_lga[district] || [];
+    return lgasInDistrict.some(lgaName => lgasInState.has(lgaName));
   });
 
-  filteredDistricts.forEach(district => {
+  filteredDistricts.sort().forEach(district => {
     const option = document.createElement('option');
     option.value = district;
     option.textContent = district;
@@ -297,29 +303,27 @@ function handleSenatorialChange(e) {
 
   if (!districtName) return;
 
-  const lgas = senatorial_to_lga[districtName] || [];
-  const features = lgas.map(lga => lgasCache.get(lga)).filter(f => f);
+  const lgaNamesInDistrict = new Set(senatorial_to_lga[districtName] || []);
+  const features = [];
+  
+  // Find all LGA features that match the names for the selected district
+  lgasCache.forEach(feature => {
+    if (lgaNamesInDistrict.has(feature.properties.lganame)) {
+      features.push(feature);
+    }
+  });
 
   if (features.length > 0) {
-    map.getSource('highlight').setData({
-      type: 'FeatureCollection',
-      features: features
-    });
+    const featureCollection = { type: 'FeatureCollection', features };
+    map.getSource('highlight').setData(featureCollection);
 
-    // Calculate combined bounds
-    const allCoords = features.flatMap(f =>
-      f.geometry.coordinates[0].map(coord => coord)
-    );
-    const bbox = turf.bbox({
-      type: 'MultiPoint',
-      coordinates: allCoords
-    });
+    const bbox = turf.bbox(featureCollection);
     map.fitBounds(bbox, { padding: 50 });
   }
 }
 
 /**
- * Populate LGA dropdown
+ * Populate LGA dropdown for a given state
  */
 function populateLGADropdown(stateName) {
   const lgaSelect = document.getElementById('lga-select');
@@ -330,11 +334,19 @@ function populateLGADropdown(stateName) {
     return;
   }
 
-  const lgas = (state_to_lga[stateName] || []).sort();
-  lgas.forEach(lgaName => {
+  const lgas = (state_to_lga.get(stateName) || []).sort((a, b) => a.name.localeCompare(b.name));
+  
+  // Check for duplicate names to disambiguate
+  const nameCounts = lgas.reduce((acc, lga) => {
+    acc[lga.name] = (acc[lga.name] || 0) + 1;
+    return acc;
+  }, {});
+
+  lgas.forEach(lga => {
     const option = document.createElement('option');
-    option.value = lgaName;
-    option.textContent = lgaName;
+    option.value = lga.code;
+    // If name is not unique within the state, append the code to the label
+    option.textContent = nameCounts[lga.name] > 1 ? `${lga.name} [${lga.code}]` : lga.name;
     lgaSelect.appendChild(option);
   });
 
@@ -345,12 +357,17 @@ function populateLGADropdown(stateName) {
  * Handle LGA change
  */
 function handleLGAChange(e) {
-  const lgaName = e.target.value;
+  const lgaCode = e.target.value;
   mapManager.clearHighlight();
 
-  if (!lgaName) return;
+  if (!lgaCode) {
+    // If "Select LGA" is chosen, re-trigger state change to show state highlight
+    const stateSelect = document.getElementById('state-select');
+    handleStateChange({ target: { value: stateSelect.value } });
+    return;
+  }
 
-  const lgaFeature = lgasCache.get(lgaName);
+  const lgaFeature = lgasCache.get(lgaCode);
   if (lgaFeature) {
     map.getSource('highlight').setData({
       type: 'FeatureCollection',
@@ -361,26 +378,33 @@ function handleLGAChange(e) {
     map.fitBounds(bbox, { padding: 50 });
   }
 
-  populateWardDropdown(lgaName);
+  populateWardDropdown(lgaCode);
 }
 
 /**
- * Populate ward dropdown
+ * Populate ward dropdown for a given LGA
  */
-function populateWardDropdown(lgaName) {
+function populateWardDropdown(lgaCode) {
   const wardSelect = document.getElementById('ward-select');
   wardSelect.innerHTML = '<option value="">Select Ward</option>';
 
-  if (!lgaName) {
+  if (!lgaCode) {
     wardSelect.disabled = true;
     return;
   }
 
-  const wards = (lga_to_ward[lgaName] || []).sort();
-  wards.forEach(wardName => {
+  const wards = (lga_to_ward.get(lgaCode) || []).sort((a, b) => a.name.localeCompare(b.name));
+
+  // Check for duplicate names to disambiguate
+  const nameCounts = wards.reduce((acc, ward) => {
+    acc[ward.name] = (acc[ward.name] || 0) + 1;
+    return acc;
+  }, {});
+
+  wards.forEach(ward => {
     const option = document.createElement('option');
-    option.value = wardName;
-    option.textContent = wardName;
+    option.value = ward.code;
+    option.textContent = nameCounts[ward.name] > 1 ? `${ward.name} [${ward.code}]` : ward.name;
     wardSelect.appendChild(option);
   });
 
@@ -391,12 +415,17 @@ function populateWardDropdown(lgaName) {
  * Handle ward change
  */
 function handleWardChange(e) {
-  const wardName = e.target.value;
+  const wardCode = e.target.value;
   mapManager.clearHighlight();
 
-  if (!wardName) return;
+  if (!wardCode) {
+    // If "Select Ward" is chosen, re-trigger LGA change to show LGA highlight
+    const lgaSelect = document.getElementById('lga-select');
+    handleLGAChange({ target: { value: lgaSelect.value } });
+    return;
+  }
 
-  const wardFeature = wardsCache.get(wardName);
+  const wardFeature = wardsCache.get(wardCode);
   if (wardFeature) {
     map.getSource('highlight').setData({
       type: 'FeatureCollection',
@@ -409,14 +438,15 @@ function handleWardChange(e) {
 }
 
 /**
- * Handle search
+ * Handle search input
  */
 function handleSearch(e) {
   const query = e.target.value.toLowerCase();
   const suggestionBox = document.getElementById('searchSuggestions');
 
-  if (!query) {
+  if (query.length < 2) {
     suggestionBox.innerHTML = '';
+    suggestionBox.style.display = 'none';
     return;
   }
 
@@ -430,20 +460,25 @@ function handleSearch(e) {
   });
 
   // Search LGAs
-  lgasCache.forEach((feature, name) => {
-    if (name.toLowerCase().includes(query)) {
-      suggestions.push({ type: 'LGA', name, feature });
+  lgasCache.forEach((feature) => {
+    const lgaName = feature.properties.lganame;
+    if (lgaName.toLowerCase().includes(query)) {
+      const stateName = feature.properties.statename;
+      suggestions.push({ type: 'LGA', name: `${lgaName} (${stateName})`, feature });
     }
   });
 
   // Search Wards
-  wardsCache.forEach((feature, name) => {
-    if (name.toLowerCase().includes(query)) {
-      suggestions.push({ type: 'Ward', name, feature });
+  wardsCache.forEach((feature) => {
+    const wardName = feature.properties.wardname;
+    if (wardName.toLowerCase().includes(query)) {
+      const lgaName = feature.properties.lganame;
+      const stateName = lga_to_state.get(feature.properties.lgacode);
+      suggestions.push({ type: 'Ward', name: `${wardName} (${lgaName}, ${stateName})`, feature });
     }
   });
 
-  renderSuggestions(suggestions.slice(0, 10));
+  renderSuggestions(suggestions.slice(0, 15));
 }
 
 /**
@@ -451,12 +486,19 @@ function handleSearch(e) {
  */
 function renderSuggestions(suggestions) {
   const suggestionBox = document.getElementById('searchSuggestions');
+  if (suggestions.length === 0) {
+    suggestionBox.innerHTML = '';
+    suggestionBox.style.display = 'none';
+    return;
+  }
+
   suggestionBox.innerHTML = '';
+  suggestionBox.style.display = 'block';
 
   suggestions.forEach(({ type, name, feature }) => {
     const div = document.createElement('div');
     div.className = 'search-suggestion';
-    div.textContent = `${type}: ${name}`;
+    div.innerHTML = `<strong>${type}:</strong> ${name}`;
     div.onclick = () => {
       mapManager.clearHighlight();
       map.getSource('highlight').setData({
@@ -465,9 +507,10 @@ function renderSuggestions(suggestions) {
       });
 
       const bbox = turf.bbox(feature);
-      map.fitBounds(bbox, { padding: 50 });
+      map.fitBounds(bbox, { padding: 50, maxZoom: 12 });
 
       suggestionBox.innerHTML = '';
+      suggestionBox.style.display = 'none';
       document.getElementById('searchInput').value = '';
     };
     suggestionBox.appendChild(div);
@@ -543,17 +586,19 @@ const turf = {
     let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
 
     const processCoords = (coords) => {
-      if (typeof coords[0] === 'number') {
+      if (typeof coords[0] === 'number' && isFinite(coords[0]) && isFinite(coords[1])) {
         minLng = Math.min(minLng, coords[0]);
         maxLng = Math.max(maxLng, coords[0]);
         minLat = Math.min(minLat, coords[1]);
         maxLat = Math.max(maxLat, coords[1]);
-      } else {
+      } else if (Array.isArray(coords)) {
         coords.forEach(processCoords);
       }
     };
-
-    if (geojson.geometry) {
+    
+    if (geojson.type === 'FeatureCollection') {
+        geojson.features.forEach(feature => processCoords(feature.geometry.coordinates));
+    } else if (geojson.geometry) {
       processCoords(geojson.geometry.coordinates);
     } else if (geojson.coordinates) {
       processCoords(geojson.coordinates);

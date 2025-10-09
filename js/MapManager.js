@@ -33,18 +33,22 @@ class MapManager {
     const protocol = new pmtiles.Protocol();
     maplibregl.addProtocol('pmtiles', protocol.tile);
 
-    // Initialize map with a custom minimal style
+    // Initialize map with a reliable and minimal basemap from CartoDB
     this.map = new maplibregl.Map({
       container: 'map',
       style: {
         version: 8,
         sources: {
-          stadia: {
+          carto: {
             type: 'raster',
-            tiles: ['https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png'],
+            tiles: [
+              'https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+              'https://b.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+              'https://c.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'
+            ],
             tileSize: 256,
             attribution:
-              '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           },
         },
         layers: [
@@ -54,9 +58,9 @@ class MapManager {
             paint: { 'background-color': '#f2f2f7' },
           },
           {
-            id: 'stadia-tiles',
+            id: 'carto-tiles',
             type: 'raster',
-            source: 'stadia',
+            source: 'carto',
           },
         ],
       },

@@ -198,9 +198,17 @@ function initializeUI() {
   document.getElementById('searchInput').addEventListener('input', handleSearch);
 
   // Sidebar toggle
+  const sidebar = document.querySelector('.sidebar');
+  const expandButton = document.getElementById('expand-button');
+
   document.getElementById('sidebar-toggle').addEventListener('click', () => {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('collapsed');
+    sidebar.classList.add('collapsed');
+    expandButton.classList.add('show');
+  });
+
+  expandButton.addEventListener('click', () => {
+    sidebar.classList.remove('collapsed');
+    expandButton.classList.remove('show');
   });
 }
 

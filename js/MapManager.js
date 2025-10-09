@@ -99,8 +99,8 @@ class MapManager {
             source: 'states',
             'source-layer': this.sourceLayers.states,
             paint: {
-              'line-color': '#003366',
-              'line-width': 2,
+              'line-color': '#888888',
+              'line-width': 1.5,
               'line-opacity': 0.8
             }
           });
@@ -128,8 +128,8 @@ class MapManager {
             source: 'lgas',
             'source-layer': this.sourceLayers.lgas,
             paint: {
-              'line-color': '#336699',
-              'line-width': 1.2,
+              'line-color': '#aaaaaa',
+              'line-width': 1,
               'line-opacity': 0.7
             }
           });
@@ -157,9 +157,9 @@ class MapManager {
             source: 'wards',
             'source-layer': this.sourceLayers.wards,
             paint: {
-              'line-color': '#6699cc',
+              'line-color': '#cccccc',
               'line-width': 0.5,
-              'line-opacity': 0.5
+              'line-opacity': 0.6
             }
           });
 

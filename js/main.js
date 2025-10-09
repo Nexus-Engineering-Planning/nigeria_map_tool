@@ -140,6 +140,20 @@ function cacheFeatures() {
  * Initialize UI event listeners
  */
 function initializeUI() {
+  const sidebar = document.querySelector('.sidebar');
+  
+  // Ensure sidebar is in the correct state on mobile load
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+  }
+
+  // Unify map controls by moving custom buttons into the MapLibre container
+  const maplibreCtrlContainer = document.querySelector('.maplibregl-ctrl-top-right');
+  const customControls = document.querySelector('.map-controls');
+  if (maplibreCtrlContainer && customControls) {
+    maplibreCtrlContainer.appendChild(customControls);
+  }
+
   // State selection
   document.getElementById('state-select').addEventListener('change', handleStateChange);
 

@@ -382,11 +382,8 @@ body.focus-mode .map-controls {
 /* ========================================
    Floating Map Controls
    ======================================== */
+/* This container is now a simple wrapper, positioning will be handled by the parent */
 .map-controls {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 998;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -411,6 +408,13 @@ body.focus-mode .map-controls {
 .map-controls button:hover {
   transform: scale(1.1);
   background: var(--bg-secondary);
+}
+
+/* Make the MapLibre container a flex column to stack all controls */
+.maplibregl-ctrl-top-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 /* Adjust existing MapLibre controls to align */

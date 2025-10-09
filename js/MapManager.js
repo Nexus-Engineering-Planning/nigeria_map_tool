@@ -33,30 +33,19 @@ class MapManager {
     const protocol = new pmtiles.Protocol();
     maplibregl.addProtocol('pmtiles', protocol.tile);
 
-    // Initialize map
+    // Initialize map with minimal basemap style
     this.map = new maplibregl.Map({
       container: 'map',
       style: {
         version: 8,
-        sources: {
-          osm: {
-            type: 'raster',
-            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-            tileSize: 256,
-            maxzoom: 19,
-            attribution: '&copy; OpenStreetMap contributors'
-          }
-        },
+        sources: {},
         layers: [
           {
-            id: 'bg',
+            id: 'background',
             type: 'background',
-            paint: { 'background-color': '#f0f0f0' }
-          },
-          {
-            id: 'osm',
-            type: 'raster',
-            source: 'osm'
+            paint: {
+              'background-color': '#f5f5f5'
+            }
           }
         ]
       },

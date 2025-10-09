@@ -12,121 +12,34 @@
   <link rel="stylesheet" href="./styles/styles.css">
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    #map {
-      height: 100%;
-      width: 100%;
-    }
-
-    .sidebar {
-      position: absolute;
-      top: 80px;
-      left: 10px;
-      width: 320px;
-      background-color: white;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
-      z-index: 1000;
-      max-height: calc(100vh - 100px);
-      overflow-y: auto;
-    }
-
-    .sidebar h3 {
-      margin: 0 0 15px 0;
-      font-size: 18px;
-      color: #333;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 8px;
-    }
-
-    .sidebar select,
-    .sidebar input,
-    .sidebar button {
-      width: 100%;
-      margin: 8px 0;
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    .sidebar button {
-      background-color: #3498db;
-      color: white;
+    /* Expand Button (when sidebar collapsed) */
+    .expand-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
       border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
       cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .sidebar button:hover {
-      background-color: #2980b9;
-    }
-
-    .search-suggestions {
-      max-height: 150px;
-      overflow-y: auto;
-      background: #fff;
-      border: 1px solid #ddd;
-      margin-top: -8px;
-    }
-
-    .search-suggestion {
-      padding: 8px;
-      cursor: pointer;
-      border-bottom: 1px solid #eee;
-    }
-
-    .search-suggestion:hover {
-      background-color: #f0f0f0;
-    }
-
-    .sidebar label {
-      display: flex;
+      box-shadow: var(--shadow-lg);
+      transition: all var(--transition-normal);
+      z-index: 999;
+      display: none;
       align-items: center;
-      gap: 8px;
-      margin: 8px 0;
-      font-size: 14px;
+      justify-content: center;
     }
 
-    .layer-toggle-section {
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px solid #ddd;
+    .expand-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .layer-toggle-section h4 {
-      margin: 0 0 10px 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-    #feature-summary {
-      margin-top: 10px;
-      font-size: 13px;
-      color: #666;
-      padding: 8px;
-      background: #f8f9fa;
-      border-radius: 4px;
-    }
-
-    .maplibregl-popup-content {
-      padding: 12px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      max-width: 300px;
-    }
-
-    .maplibregl-popup-content strong {
-      color: #3498db;
-      display: block;
-      margin-bottom: 5px;
+    .expand-button.show {
+      display: flex;
     }
   </style>
 </head>
@@ -137,11 +50,13 @@
     <div class="spinner"></div>
   </div>
 
+  <!-- Expand Button (shown when sidebar collapsed) -->
+  <button id="expand-button" class="expand-button" title="Expand Sidebar">&#9776;</button>
+
   <!-- Sidebar Controls -->
   <div class="sidebar">
-    <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
-
     <h3>Nigeria Map Explorer</h3>
+    <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
 
     <!-- Search -->
     <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">

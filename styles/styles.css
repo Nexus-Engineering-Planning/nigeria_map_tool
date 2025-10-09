@@ -116,15 +116,15 @@ html, body {
    ======================================== */
 .sidebar-toggle {
   position: absolute;
-  top: 24px;
-  right: -20px;
-  width: 40px;
-  height: 40px;
+  top: 28px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   border: none;
   border-radius: 50%;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);

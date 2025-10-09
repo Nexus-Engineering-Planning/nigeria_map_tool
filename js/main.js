@@ -198,7 +198,6 @@ function initializeUI() {
   document.getElementById('searchInput').addEventListener('input', handleSearch);
 
   // Sidebar toggle logic
-  const sidebar = document.querySelector('.sidebar');
   const expandButton = document.getElementById('expand-button');
   const sidebarHeader = document.querySelector('.sidebar-header');
 

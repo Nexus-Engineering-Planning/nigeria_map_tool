@@ -155,11 +155,10 @@ function populateStateDropdown() {
   });
 }
 
-function populateLGADropdown(stateName) {
+function populateLGADropdown(state) {
   const select = document.getElementById('lga-select');
   select.innerHTML = '<option value="">Select LGA</option>';
-  const state = nigeriaData.find(s => s.name === stateName);
-  if (state) {
+  if (state && state.lgas) {
     const nameCounts = state.lgas.reduce((acc, lga) => {
       acc[lga.name] = (acc[lga.name] || 0) + 1;
       return acc;
@@ -174,32 +173,24 @@ function populateLGADropdown(stateName) {
   }
 }
 
-function populateWardDropdown(lgaCode) {
+function populateWardDropdown(lga) {
   const select = document.getElementById('ward-select');
   select.innerHTML = '<option value="">Select Ward</option>';
-  const stateName = document.getElementById('state-select').value;
-  const state = nigeriaData.find(s => s.name === stateName);
-  if (state) {
-    const lga = state.lgas.find(l => l.code === lgaCode);
-    if (lga) {
-      lga.wards.sort((a, b) => a.name.localeCompare(b.name));
-      lga.wards.forEach(ward => {
-        select.add(new Option(ward.name, ward.code));
-      });
-      select.disabled = false;
-    } else {
-      select.disabled = true;
-    }
+  if (lga && lga.wards) {
+    lga.wards.sort((a, b) => a.name.localeCompare(b.name));
+    lga.wards.forEach(ward => {
+      select.add(new Option(ward.name, ward.code));
+    });
+    select.disabled = false;
   } else {
     select.disabled = true;
   }
 }
 
-function populateSenatorialDropdown(stateName) {
+function populateSenatorialDropdown(state) {
   const select = document.getElementById('senatorial-select');
   select.innerHTML = '<option value="">Select Senatorial District</option>';
-  const state = nigeriaData.find(s => s.name === stateName);
-  if (state) {
+  if (state && state.lgas) {
     const districts = [...new Set(state.lgas.map(lga => lga.district))].sort();
     districts.forEach(district => {
       select.add(new Option(district, district));
@@ -216,11 +207,12 @@ function handleStateChange(e) {
   const stateName = e.target.value;
   mapManager.clearHighlight();
   
-  populateLGADropdown(stateName);
-  populateSenatorialDropdown(stateName);
+  const state = nigeriaData.find(s => s.name === stateName);
+
+  populateLGADropdown(state);
+  populateSenatorialDropdown(state);
   populateWardDropdown(null); // Reset wards
 
-  const state = nigeriaData.find(s => s.name === stateName);
   if (state) {
     map.getSource('highlight').setData({ type: 'FeatureCollection', features: [state.feature] });
     map.fitBounds(turf.bbox(state.feature), { padding: 50 });
@@ -232,18 +224,27 @@ function handleStateChange(e) {
 function handleLGAChange(e) {
   const lgaCode = e.target.value;
   mapManager.clearHighlight();
-  populateWardDropdown(lgaCode);
 
-  const stateName = document.getElementById('state-select').value;
-  const state = nigeriaData.find(s => s.name === stateName);
-  if (state) {
+  if (!lgaCode) {
+    populateWardDropdown(null);
+    const stateName = document.getElementById('state-select').value;
+    handleStateChange({ target: { value: stateName } }); // Revert to state view
+    return;
+  }
+
+  let selectedLga = null;
+  for (const state of nigeriaData) {
     const lga = state.lgas.find(l => l.code === lgaCode);
     if (lga) {
-      map.getSource('highlight').setData({ type: 'FeatureCollection', features: [lga.feature] });
-      map.fitBounds(turf.bbox(lga.feature), { padding: 50 });
-    } else {
-      handleStateChange({ target: { value: stateName } }); // Revert to state view
+      selectedLga = lga;
+      break;
     }
+  }
+
+  if (selectedLga) {
+    populateWardDropdown(selectedLga);
+    map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedLga.feature] });
+    map.fitBounds(turf.bbox(selectedLga.feature), { padding: 50 });
   }
 }
 
@@ -251,20 +252,27 @@ function handleWardChange(e) {
   const wardCode = e.target.value;
   mapManager.clearHighlight();
 
-  const stateName = document.getElementById('state-select').value;
   const lgaCode = document.getElementById('lga-select').value;
-  const state = nigeriaData.find(s => s.name === stateName);
-  if (state) {
-    const lga = state.lgas.find(l => l.code === lgaCode);
-    if (lga) {
+  if (!wardCode) {
+    handleLGAChange({ target: { value: lgaCode } }); // Revert to LGA view
+    return;
+  }
+
+  let selectedWard = null;
+  for (const state of nigeriaData) {
+    for (const lga of state.lgas) {
       const ward = lga.wards.find(w => w.code === wardCode);
       if (ward) {
-        map.getSource('highlight').setData({ type: 'FeatureCollection', features: [ward.feature] });
-        map.fitBounds(turf.bbox(ward.feature), { padding: 50 });
-      } else {
-        handleLGAChange({ target: { value: lgaCode } }); // Revert to LGA view
+        selectedWard = ward;
+        break;
       }
     }
+    if (selectedWard) break;
+  }
+
+  if (selectedWard) {
+    map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedWard.feature] });
+    map.fitBounds(turf.bbox(selectedWard.feature), { padding: 50 });
   }
 }
 

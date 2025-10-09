@@ -1,128 +1,489 @@
-// main.js
+// main.js - PMTiles version
 
-import { buildDictionaries, buildReverseMappings, buildSenatorialToLga } from './mappings.js';
-import { initializeSidebar } from './sidebar.js';
+import { buildSenatorialToLga } from './mappings.js';
 import mapManager from './MapManager.js';
 
-// ✅ Use the singleton map instance
-const map = mapManager.getMap();
+// State for feature lookups
+let senatorial_to_lga = {};
+let state_to_lga = {};
+let lga_to_state = {};
+let lga_to_ward = {};
 
-// Declare mapping variables
-let state_to_lga = {}, lga_to_ward = {}, senatorial_to_lga = {}, lga_to_state = {};
+// Feature caches
+let statesCache = new Map();
+let lgasCache = new Map();
+let wardsCache = new Map();
 
-// 🔄 Show spinner during data fetch
 showSpinner();
 
-Promise.all([
-  fetch('./data/state_geojson.geojson').then(res => {
-    if (!res.ok) throw new Error(`Failed to load state data (${res.status})`);
-    return res.json();
-  }),
-  fetch('./data/lga_geojson.geojson').then(res => {
-    if (!res.ok) throw new Error(`Failed to load LGA data (${res.status})`);
-    return res.json();
-  }),
-  fetch('./data/ward_geojson.geojson').then(res => {
-    if (!res.ok) throw new Error(`Failed to load ward data (${res.status})`);
-    return res.json();
-  }),
-  fetch('./data/senatorial.json').then(res => {
-    if (!res.ok) throw new Error(`Failed to load senatorial data (${res.status})`);
-    return res.json();
+// Initialize map
+const map = mapManager.initializeMap();
+
+// Wait for map to load, then initialize layers
+mapManager.initializeLayers()
+  .then(() => {
+    // Load senatorial data
+    return fetch('./data/senatorial.json').then(res => {
+      if (!res.ok) throw new Error(`Failed to load senatorial data (${res.status})`);
+      return res.json();
+    });
   })
-])
-.then(([stateGeoJSON, lgaGeoJSON, wardGeoJSON, senatorialData]) => {
-  try {
-    // Validate data
-    if (!stateGeoJSON?.features || !lgaGeoJSON?.features || !wardGeoJSON?.features) {
-      throw new Error('Invalid GeoJSON data structure');
+  .then((senatorialData) => {
+    // Build senatorial mappings
+    senatorial_to_lga = buildSenatorialMappings(senatorialData);
+
+    // Add optional layers (health, roads, population)
+    mapManager.addOptionalLayers();
+
+    // Cache features for search and dropdowns
+    cacheFeatures();
+
+    // Initialize UI
+    initializeUI();
+
+    hideSpinner();
+  })
+  .catch(err => {
+    console.error('Error initializing map:', err);
+    showErrorMessage(`Failed to load map: ${err.message}. Please refresh the page.`);
+    hideSpinner();
+  });
+
+/**
+ * Build senatorial mappings from JSON data
+ */
+function buildSenatorialMappings(senatorialData) {
+  const senatorial_to_lga = {};
+
+  senatorialData.forEach(record => {
+    const district = record['Senatorial_District'] || record['district'];
+    const lga = record['LGAs'] || record['lga'];
+
+    if (!district || !lga) return;
+
+    if (!senatorial_to_lga[district]) {
+      senatorial_to_lga[district] = [];
     }
 
-    // Build mappings
-    const mappings = buildDictionaries(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
-    const reverseMappings = buildReverseMappings(mappings.state_to_lga, mappings.lga_to_ward);
+    if (!senatorial_to_lga[district].includes(lga)) {
+      senatorial_to_lga[district].push(lga);
+    }
+  });
 
-    state_to_lga = mappings.state_to_lga;
-    lga_to_ward = mappings.lga_to_ward;
-    lga_to_state = reverseMappings.lga_to_state;
+  return senatorial_to_lga;
+}
 
-    senatorial_to_lga = buildSenatorialToLga(senatorialData, lgaGeoJSON);
+/**
+ * Cache features from PMTiles for search and selection
+ */
+function cacheFeatures() {
+  // Query features when map is idle
+  map.once('idle', () => {
+    // Cache states
+    const stateFeatures = map.querySourceFeatures('states', {
+      sourceLayer: mapManager.sourceLayers.states
+    });
 
-    // Initialize layers on the map
-    mapManager.initializeLayers(stateGeoJSON, lgaGeoJSON, wardGeoJSON);
+    stateFeatures.forEach(feature => {
+      const stateName = feature.properties.statename;
+      if (stateName && !statesCache.has(stateName)) {
+        statesCache.set(stateName, feature);
 
-    // Initialize the sidebar controls
-    initializeSidebar(senatorial_to_lga, lga_to_state);
+        // Build state_to_lga mapping
+        if (!state_to_lga[stateName]) {
+          state_to_lga[stateName] = [];
+        }
+      }
+    });
 
-    // Fit the map to the bounds of the state layer
-    map.fitBounds(mapManager.getStateLayer().getBounds());
-  } catch (err) {
-    throw new Error(`Data initialization failed: ${err.message}`);
-  }
-})
-.catch(err => {
-  console.error('Error initializing map:', err);
-  showErrorMessage(`Failed to load map data: ${err.message}. Please refresh the page.`);
-})
-.finally(() => {
-  hideSpinner();
-});
+    // Cache LGAs
+    const lgaFeatures = map.querySourceFeatures('lgas', {
+      sourceLayer: mapManager.sourceLayers.lgas
+    });
 
-/* -------------------------
-   UI Event Listeners
-------------------------- */
+    lgaFeatures.forEach(feature => {
+      const lgaName = feature.properties.lganame;
+      const stateName = feature.properties.statename;
 
-document.getElementById('reset-btn').addEventListener('click', () => {
-  showSpinner();
+      if (lgaName && !lgasCache.has(lgaName)) {
+        lgasCache.set(lgaName, feature);
 
-  setTimeout(() => {
-    document.getElementById('state-select').value = "";
-    document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
-    document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
-    document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
+        // Build mappings
+        if (stateName) {
+          if (!state_to_lga[stateName]) {
+            state_to_lga[stateName] = [];
+          }
+          if (!state_to_lga[stateName].includes(lgaName)) {
+            state_to_lga[stateName].push(lgaName);
+          }
+          lga_to_state[lgaName] = stateName;
+        }
+      }
+    });
 
+    // Cache Wards
+    const wardFeatures = map.querySourceFeatures('wards', {
+      sourceLayer: mapManager.sourceLayers.wards
+    });
+
+    wardFeatures.forEach(feature => {
+      const wardName = feature.properties.wardname;
+      const lgaName = feature.properties.lganame;
+
+      if (wardName && !wardsCache.has(wardName)) {
+        wardsCache.set(wardName, feature);
+
+        // Build lga_to_ward mapping
+        if (lgaName) {
+          if (!lga_to_ward[lgaName]) {
+            lga_to_ward[lgaName] = [];
+          }
+          if (!lga_to_ward[lgaName].includes(wardName)) {
+            lga_to_ward[lgaName].push(wardName);
+          }
+        }
+      }
+    });
+
+    // Populate state dropdown
+    populateStateDropdown();
+  });
+}
+
+/**
+ * Initialize UI event listeners
+ */
+function initializeUI() {
+  // State selection
+  document.getElementById('state-select').addEventListener('change', handleStateChange);
+
+  // Senatorial selection
+  document.getElementById('senatorial-select').addEventListener('change', handleSenatorialChange);
+
+  // LGA selection
+  document.getElementById('lga-select').addEventListener('change', handleLGAChange);
+
+  // Ward selection
+  document.getElementById('ward-select').addEventListener('change', handleWardChange);
+
+  // Reset button
+  document.getElementById('reset-btn').addEventListener('click', handleReset);
+
+  // Layer toggles
+  document.getElementById('toggle-states').addEventListener('change', (e) => {
+    mapManager.toggleLayer('states-line', e.target.checked);
+  });
+
+  document.getElementById('toggle-lgas').addEventListener('change', (e) => {
+    mapManager.toggleLayer('lgas-line', e.target.checked);
+  });
+
+  document.getElementById('toggle-wards').addEventListener('change', (e) => {
+    mapManager.toggleLayer('wards-line', e.target.checked);
+  });
+
+  document.getElementById('toggle-health').addEventListener('change', (e) => {
+    mapManager.toggleLayer('health', e.target.checked);
+  });
+
+  document.getElementById('toggle-roads').addEventListener('change', (e) => {
+    mapManager.toggleLayer('roads', e.target.checked);
+  });
+
+  document.getElementById('toggle-pop').addEventListener('change', (e) => {
+    mapManager.toggleLayer('pop', e.target.checked);
+  });
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+  // Sidebar toggle
+  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('collapsed');
+  });
+}
+
+/**
+ * Populate state dropdown
+ */
+function populateStateDropdown() {
+  const stateSelect = document.getElementById('state-select');
+  stateSelect.innerHTML = '<option value="">All States</option>';
+
+  const states = Array.from(statesCache.keys()).sort();
+  states.forEach(stateName => {
+    const option = document.createElement('option');
+    option.value = stateName;
+    option.textContent = stateName;
+    stateSelect.appendChild(option);
+  });
+}
+
+/**
+ * Handle state change
+ */
+function handleStateChange(e) {
+  const stateName = e.target.value;
+  mapManager.clearHighlight();
+
+  if (!stateName) {
+    map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
     document.getElementById('senatorial-select').disabled = true;
     document.getElementById('lga-select').disabled = true;
     document.getElementById('ward-select').disabled = true;
-
-    mapManager.getMap().fitBounds(mapManager.getStateLayer().getBounds());
-    hideSpinner();
-  }, 300); // small delay to show spinner
-});
-
-document.getElementById('toggle-states').addEventListener('change', (e) => {
-  if (e.target.checked) {
-    map.addLayer(mapManager.getStateLayer());
-  } else {
-    map.removeLayer(mapManager.getStateLayer());
+    return;
   }
-});
 
-document.getElementById('toggle-lgas').addEventListener('change', (e) => {
-  if (e.target.checked) {
-    map.addLayer(mapManager.getLgaLayer());
-  } else {
-    map.removeLayer(mapManager.getLgaLayer());
+  // Highlight state
+  const stateFeature = statesCache.get(stateName);
+  if (stateFeature) {
+    map.getSource('highlight').setData({
+      type: 'FeatureCollection',
+      features: [stateFeature]
+    });
+
+    // Fit to state bounds
+    const bbox = turf.bbox(stateFeature);
+    map.fitBounds(bbox, { padding: 50 });
   }
-});
 
-document.getElementById('toggle-wards').addEventListener('change', (e) => {
-  if (e.target.checked) {
-    map.addLayer(mapManager.getWardLayer());
-  } else {
-    map.removeLayer(mapManager.getWardLayer());
+  // Populate senatorial and LGA dropdowns
+  populateSenatorialDropdown(stateName);
+  populateLGADropdown(stateName);
+}
+
+/**
+ * Populate senatorial dropdown
+ */
+function populateSenatorialDropdown(stateName) {
+  const senatorialSelect = document.getElementById('senatorial-select');
+  senatorialSelect.innerHTML = '<option value="">Select Senatorial District</option>';
+
+  if (!stateName) {
+    senatorialSelect.disabled = true;
+    return;
   }
-});
 
-document.getElementById('sidebar-toggle').addEventListener('click', () => {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.toggle('collapsed');
-});
+  const filteredDistricts = Object.keys(senatorial_to_lga).filter(district => {
+    const lgas = senatorial_to_lga[district] || [];
+    return lgas.some(lga => lga_to_state[lga] === stateName);
+  });
 
+  filteredDistricts.forEach(district => {
+    const option = document.createElement('option');
+    option.value = district;
+    option.textContent = district;
+    senatorialSelect.appendChild(option);
+  });
 
-/* -------------------------
-   Spinner Utilities
-------------------------- */
+  senatorialSelect.disabled = filteredDistricts.length === 0;
+}
+
+/**
+ * Handle senatorial change
+ */
+function handleSenatorialChange(e) {
+  const districtName = e.target.value;
+  mapManager.clearHighlight();
+
+  if (!districtName) return;
+
+  const lgas = senatorial_to_lga[districtName] || [];
+  const features = lgas.map(lga => lgasCache.get(lga)).filter(f => f);
+
+  if (features.length > 0) {
+    map.getSource('highlight').setData({
+      type: 'FeatureCollection',
+      features: features
+    });
+
+    // Calculate combined bounds
+    const allCoords = features.flatMap(f =>
+      f.geometry.coordinates[0].map(coord => coord)
+    );
+    const bbox = turf.bbox({
+      type: 'MultiPoint',
+      coordinates: allCoords
+    });
+    map.fitBounds(bbox, { padding: 50 });
+  }
+}
+
+/**
+ * Populate LGA dropdown
+ */
+function populateLGADropdown(stateName) {
+  const lgaSelect = document.getElementById('lga-select');
+  lgaSelect.innerHTML = '<option value="">Select LGA</option>';
+
+  if (!stateName) {
+    lgaSelect.disabled = true;
+    return;
+  }
+
+  const lgas = (state_to_lga[stateName] || []).sort();
+  lgas.forEach(lgaName => {
+    const option = document.createElement('option');
+    option.value = lgaName;
+    option.textContent = lgaName;
+    lgaSelect.appendChild(option);
+  });
+
+  lgaSelect.disabled = lgas.length === 0;
+}
+
+/**
+ * Handle LGA change
+ */
+function handleLGAChange(e) {
+  const lgaName = e.target.value;
+  mapManager.clearHighlight();
+
+  if (!lgaName) return;
+
+  const lgaFeature = lgasCache.get(lgaName);
+  if (lgaFeature) {
+    map.getSource('highlight').setData({
+      type: 'FeatureCollection',
+      features: [lgaFeature]
+    });
+
+    const bbox = turf.bbox(lgaFeature);
+    map.fitBounds(bbox, { padding: 50 });
+  }
+
+  populateWardDropdown(lgaName);
+}
+
+/**
+ * Populate ward dropdown
+ */
+function populateWardDropdown(lgaName) {
+  const wardSelect = document.getElementById('ward-select');
+  wardSelect.innerHTML = '<option value="">Select Ward</option>';
+
+  if (!lgaName) {
+    wardSelect.disabled = true;
+    return;
+  }
+
+  const wards = (lga_to_ward[lgaName] || []).sort();
+  wards.forEach(wardName => {
+    const option = document.createElement('option');
+    option.value = wardName;
+    option.textContent = wardName;
+    wardSelect.appendChild(option);
+  });
+
+  wardSelect.disabled = wards.length === 0;
+}
+
+/**
+ * Handle ward change
+ */
+function handleWardChange(e) {
+  const wardName = e.target.value;
+  mapManager.clearHighlight();
+
+  if (!wardName) return;
+
+  const wardFeature = wardsCache.get(wardName);
+  if (wardFeature) {
+    map.getSource('highlight').setData({
+      type: 'FeatureCollection',
+      features: [wardFeature]
+    });
+
+    const bbox = turf.bbox(wardFeature);
+    map.fitBounds(bbox, { padding: 50 });
+  }
+}
+
+/**
+ * Handle search
+ */
+function handleSearch(e) {
+  const query = e.target.value.toLowerCase();
+  const suggestionBox = document.getElementById('searchSuggestions');
+
+  if (!query) {
+    suggestionBox.innerHTML = '';
+    return;
+  }
+
+  const suggestions = [];
+
+  // Search states
+  statesCache.forEach((feature, name) => {
+    if (name.toLowerCase().includes(query)) {
+      suggestions.push({ type: 'State', name, feature });
+    }
+  });
+
+  // Search LGAs
+  lgasCache.forEach((feature, name) => {
+    if (name.toLowerCase().includes(query)) {
+      suggestions.push({ type: 'LGA', name, feature });
+    }
+  });
+
+  // Search Wards
+  wardsCache.forEach((feature, name) => {
+    if (name.toLowerCase().includes(query)) {
+      suggestions.push({ type: 'Ward', name, feature });
+    }
+  });
+
+  renderSuggestions(suggestions.slice(0, 10));
+}
+
+/**
+ * Render search suggestions
+ */
+function renderSuggestions(suggestions) {
+  const suggestionBox = document.getElementById('searchSuggestions');
+  suggestionBox.innerHTML = '';
+
+  suggestions.forEach(({ type, name, feature }) => {
+    const div = document.createElement('div');
+    div.className = 'search-suggestion';
+    div.textContent = `${type}: ${name}`;
+    div.onclick = () => {
+      mapManager.clearHighlight();
+      map.getSource('highlight').setData({
+        type: 'FeatureCollection',
+        features: [feature]
+      });
+
+      const bbox = turf.bbox(feature);
+      map.fitBounds(bbox, { padding: 50 });
+
+      suggestionBox.innerHTML = '';
+      document.getElementById('searchInput').value = '';
+    };
+    suggestionBox.appendChild(div);
+  });
+}
+
+/**
+ * Handle reset
+ */
+function handleReset() {
+  document.getElementById('state-select').value = '';
+  document.getElementById('senatorial-select').innerHTML = '<option value="">Select Senatorial District</option>';
+  document.getElementById('lga-select').innerHTML = '<option value="">Select LGA</option>';
+  document.getElementById('ward-select').innerHTML = '<option value="">Select Ward</option>';
+
+  document.getElementById('senatorial-select').disabled = true;
+  document.getElementById('lga-select').disabled = true;
+  document.getElementById('ward-select').disabled = true;
+
+  mapManager.clearHighlight();
+  map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
+}
+
+/* Utility Functions */
 
 function showSpinner() {
   const spinner = document.getElementById('loading-spinner');
@@ -133,10 +494,6 @@ function hideSpinner() {
   const spinner = document.getElementById('loading-spinner');
   if (spinner) spinner.style.display = 'none';
 }
-
-/* -------------------------
-   Error Message Display
-------------------------- */
 
 function showErrorMessage(message) {
   const errorDiv = document.createElement('div');
@@ -171,3 +528,29 @@ function showErrorMessage(message) {
 
   document.body.appendChild(errorDiv);
 }
+
+// Add Turf.js for bbox calculations
+const turf = {
+  bbox: (geojson) => {
+    let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+
+    const processCoords = (coords) => {
+      if (typeof coords[0] === 'number') {
+        minLng = Math.min(minLng, coords[0]);
+        maxLng = Math.max(maxLng, coords[0]);
+        minLat = Math.min(minLat, coords[1]);
+        maxLat = Math.max(maxLat, coords[1]);
+      } else {
+        coords.forEach(processCoords);
+      }
+    };
+
+    if (geojson.geometry) {
+      processCoords(geojson.geometry.coordinates);
+    } else if (geojson.coordinates) {
+      processCoords(geojson.coordinates);
+    }
+
+    return [[minLng, minLat], [maxLng, maxLat]];
+  }
+};

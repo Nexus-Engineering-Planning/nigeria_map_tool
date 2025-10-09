@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria Map Dashboard - Senatorial Zones</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+      background-color: #f0f0f0;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 80px;
+      left: 10px;
+      width: 320px;
+      background-color: white;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .sidebar select,
+    .sidebar input,
+    .sidebar button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .search-suggestions {
+      max-height: 150px;
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .search-suggestion {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .search-suggestion:hover {
+      background-color: #f0f0f0;
+    }
+
+    .sidebar label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-spinner" class="loading-spinner" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+  
+  <div class="sidebar">
+    <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
+    <h1></h1>
+
+    <div id="info"></div>
+
+    <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">
+    <div id="searchSuggestions" class="search-suggestions"></div>
+
+    <label for="state-select">Select State:</label>
+    <select id="state-select">
+      <option value="">All States</option>
+    </select>
+
+    <label for="senatorial-select">Select Senatorial District:</label>
+    <select id="senatorial-select" disabled>
+      <option value="">Select Senatorial District</option>
+    </select>
+
+    <label for="lga-select">Select LGA:</label>
+    <select id="lga-select" disabled>
+      <option value="">Select LGA</option>
+    </select>
+
+    <label for="ward-select">Select Ward:</label>
+    <select id="ward-select" disabled>
+      <option value="">Select Ward</option>
+    </select>
+    <div id="feature-summary" style="margin-top: 10px; font-size: 14px; color: #555;"></div>
+
+    <button id="reset-btn">Reset Filters</button>
+
+    <h4>Layer Toggle</h4>
+    <label><input type="checkbox" id="toggle-states" checked> States</label>
+    <label><input type="checkbox" id="toggle-lgas" checked> LGAs</label>
+    <label><input type="checkbox" id="toggle-wards" checked> Wards</label>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

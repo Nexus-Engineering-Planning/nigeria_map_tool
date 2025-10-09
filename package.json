@@ -1,7 +1,7 @@
 {
   "name": "nigeria-map-tool",
-  "version": "1.0.0",
-  "description": "Interactive map application for exploring Nigeria's States, LGAs, and Wards",
+  "version": "2.0.0",
+  "description": "Interactive map application for exploring Nigeria using PMTiles and MapLibre GL",
   "type": "module",
   "scripts": {
     "dev": "python -m http.server 8000",
@@ -10,19 +10,26 @@
   "keywords": [
     "map",
     "nigeria",
-    "leaflet",
+    "maplibre-gl",
+    "pmtiles",
     "geojson",
-    "interactive-map"
+    "interactive-map",
+    "vector-tiles"
   ],
   "author": "Olufemi Olamijulo <lamijulo99@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@turf/turf": "^7.1.0",
-    "leaflet": "^1.9.3"
+    "maplibre-gl": "^3.6.2",
+    "pmtiles": "^4.3.0"
   },
   "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/femiolamijulo/nigeria_map_tool"
+  },
+  "notes": {
+    "migration": "Migrated from Leaflet + GeoJSON to MapLibre GL + PMTiles for better performance",
+    "data-source": "PMTiles hosted at https://tiles.staygis.com",
+    "backup": "Previous version backed up in index.html.backup and js_backup/"
   }
 }

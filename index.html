@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nigeria Map Dashboard - Senatorial Zones</title>
+  <title>Nigeria Map Dashboard - PMTiles</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+  <!-- MapLibre GL CSS -->
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet"/>
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="./styles/styles.css">
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
     }
 
     #map {
       height: 100%;
       width: 100%;
-      background-color: #f0f0f0;
     }
 
     .sidebar {
@@ -31,6 +34,16 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
       z-index: 1000;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
     }
 
     .sidebar select,
@@ -41,6 +54,19 @@
       padding: 8px;
       border-radius: 4px;
       border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .sidebar button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar button:hover {
+      background-color: #2980b9;
     }
 
     .search-suggestions {
@@ -48,11 +74,13 @@
       overflow-y: auto;
       background: #fff;
       border: 1px solid #ddd;
+      margin-top: -8px;
     }
 
     .search-suggestion {
       padding: 8px;
       cursor: pointer;
+      border-bottom: 1px solid #eee;
     }
 
     .search-suggestion:hover {
@@ -63,58 +91,116 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .layer-toggle-section {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .layer-toggle-section h4 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    #feature-summary {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+      padding: 8px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+
+    .maplibregl-popup-content {
+      padding: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      max-width: 300px;
+    }
+
+    .maplibregl-popup-content strong {
+      color: #3498db;
+      display: block;
       margin-bottom: 5px;
     }
   </style>
 </head>
 
 <body>
-  <div id="loading-spinner" class="loading-spinner" style="display: none;">
+  <!-- Loading Spinner -->
+  <div id="loading-spinner" class="loading-spinner" style="display: flex;">
     <div class="spinner"></div>
   </div>
-  
+
+  <!-- Sidebar Controls -->
   <div class="sidebar">
     <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
-    <h1></h1>
 
-    <div id="info"></div>
+    <h3>Nigeria Map Explorer</h3>
 
+    <!-- Search -->
     <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">
     <div id="searchSuggestions" class="search-suggestions"></div>
 
+    <!-- State Selection -->
     <label for="state-select">Select State:</label>
     <select id="state-select">
       <option value="">All States</option>
     </select>
 
-    <label for="senatorial-select">Select Senatorial District:</label>
+    <!-- Senatorial District Selection -->
+    <label for="senatorial-select">Senatorial District:</label>
     <select id="senatorial-select" disabled>
       <option value="">Select Senatorial District</option>
     </select>
 
+    <!-- LGA Selection -->
     <label for="lga-select">Select LGA:</label>
     <select id="lga-select" disabled>
       <option value="">Select LGA</option>
     </select>
 
+    <!-- Ward Selection -->
     <label for="ward-select">Select Ward:</label>
     <select id="ward-select" disabled>
       <option value="">Select Ward</option>
     </select>
-    <div id="feature-summary" style="margin-top: 10px; font-size: 14px; color: #555;"></div>
 
+    <!-- Feature Summary -->
+    <div id="feature-summary"></div>
+
+    <!-- Reset Button -->
     <button id="reset-btn">Reset Filters</button>
 
-    <h4>Layer Toggle</h4>
-    <label><input type="checkbox" id="toggle-states" checked> States</label>
-    <label><input type="checkbox" id="toggle-lgas" checked> LGAs</label>
-    <label><input type="checkbox" id="toggle-wards" checked> Wards</label>
+    <!-- Layer Toggles -->
+    <div class="layer-toggle-section">
+      <h4>Boundary Layers</h4>
+      <label><input type="checkbox" id="toggle-states" checked> States</label>
+      <label><input type="checkbox" id="toggle-lgas" checked> LGAs</label>
+      <label><input type="checkbox" id="toggle-wards" checked> Wards</label>
+    </div>
+
+    <div class="layer-toggle-section">
+      <h4>Additional Layers</h4>
+      <label><input type="checkbox" id="toggle-health"> Health Facilities</label>
+      <label><input type="checkbox" id="toggle-roads"> Roads</label>
+      <label><input type="checkbox" id="toggle-pop"> Population Density</label>
+    </div>
   </div>
 
+  <!-- Map Container -->
   <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- MapLibre GL JS -->
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <!-- PMTiles Protocol -->
+  <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+  <!-- Main Application -->
   <script type="module" src="./js/main.js"></script>
 </body>
-
 </html>

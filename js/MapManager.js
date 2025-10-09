@@ -1,24 +1,15 @@
+import { config } from './config.js';
+
 /**
  * MapManager - Singleton class for managing MapLibre GL map instance with PMTiles
  */
 class MapManager {
   constructor() {
     if (!MapManager.instance) {
-      this.BASE_URL = 'https://tiles.staygis.com';
       this.map = null;
-      this.sourceLayers = {
-        states: 'grid3_nga_boundary_vaccstates',
-        lgas: 'grid3_nga_boundary_vacclgas',
-        wards: 'grid3_nga_boundary_vaccwards',
-        health: 'GRID3_NGA_health_facilities_v2_0',
-        roads: 'roads'
-      };
-
-      // Feature caches for search and selection
-      this.statesData = [];
-      this.lgasData = [];
-      this.wardsData = [];
-
+      // The config object is now the single source of truth for settings.
+      this.config = config;
+      
       MapManager.instance = this;
     }
 
@@ -64,10 +55,10 @@ class MapManager {
           },
         ],
       },
-      center: [8.68, 9.08],
-      zoom: 6,
-      minZoom: 4,
-      maxZoom: 16,
+      center: this.config.map.center,
+      zoom: this.config.map.zoom,
+      minZoom: this.config.map.minZoom,
+      maxZoom: this.config.map.maxZoom,
     });
 
     // Add navigation control
@@ -94,545 +85,240 @@ class MapManager {
           // Add States layer
           this.map.addSource('states', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_states.pmtiles`,
+            url: `pmtiles://${this.config.BASE_URL}/ng_states.pmtiles`,
           });
 
           this.map.addLayer({
-            id: 'states-fill',
+            id: this.config.layerIds.states.fill,
             type: 'fill',
             source: 'states',
-            'source-layer': this.sourceLayers.states,
-            paint: {
-              'fill-color': 'transparent',
-              'fill-opacity': 0,
-            },
+            'source-layer': this.config.sourceLayers.states,
+            paint: this.config.layerStyles.states.fill,
           });
 
           this.map.addLayer({
-            id: 'states-line',
+            id: this.config.layerIds.states.line,
             type: 'line',
             source: 'states',
-            'source-layer': this.sourceLayers.states,
-            paint: {
-              'line-color': '#8a8a8e',
-              'line-width': 1.5,
-              'line-opacity': 0.8,
-            },
+            'source-layer': this.config.sourceLayers.states,
+            paint: this.config.layerStyles.states.line,
           });
 
           // Add LGAs layer
           this.map.addSource('lgas', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_lgas.pmtiles`,
+            url: `pmtiles://${this.config.BASE_URL}/ng_lgas.pmtiles`,
           });
 
           this.map.addLayer({
-            id: 'lgas-fill',
-            type: 'fill',
-            source: 'lgas',
-            'source-layer': this.sourceLayers.lgas,
-            paint: {
-              'fill-color': 'transparent',
-              'fill-opacity': 0,
-            },
-          });
-
-          this.map.addLayer({
-            id: 'lgas-line',
+            id: this.config.layerIds.lgas.line,
             type: 'line',
             source: 'lgas',
-            'source-layer': this.sourceLayers.lgas,
-            paint: {
-              'line-color': '#d1d1d6',
-              'line-width': 1,
-              'line-opacity': 0.7,
-            },
+            'source-layer': this.config.sourceLayers.lgas,
+            paint: this.config.layerStyles.lgas.line,
           });
 
           // Add Wards layer
           this.map.addSource('wards', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_wards.pmtiles`,
+            url: `pmtiles://${this.config.BASE_URL}/ng_wards.pmtiles`,
           });
 
           this.map.addLayer({
-            id: 'wards-fill',
-            type: 'fill',
-            source: 'wards',
-            'source-layer': this.sourceLayers.wards,
-            paint: {
-              'fill-color': 'transparent',
-              'fill-opacity': 0,
-            },
-          });
-
-          this.map.addLayer({
-            id: 'wards-line',
+            id: this.config.layerIds.wards.line,
             type: 'line',
             source: 'wards',
-            'source-layer': this.sourceLayers.wards,
-            paint: {
-              'line-color': '#e5e5ea',
-              'line-width': 0.5,
-              'line-opacity': 0.6,
-            },
+            'source-layer': this.config.sourceLayers.wards,
+            paint: this.config.layerStyles.wards.line,
           });
 
           // Add highlight layer for selections
           this.map.addSource('highlight', {
             type: 'geojson',
-            data: {
-              type: 'FeatureCollection',
-              features: [],
-            },
+            data: { type: 'FeatureCollection', features: [] },
           });
 
           this.map.addLayer({
-            id: 'highlight-fill',
+            id: this.config.layerIds.highlight.fill,
             type: 'fill',
             source: 'highlight',
-            paint: {
-              'fill-color': 'rgba(0, 122, 255, 0.2)',
-              'fill-outline-color': 'rgba(0, 122, 255, 0.8)',
-            },
+            paint: this.config.layerStyles.highlight.fill,
           });
 
-                    this.map.addLayer({
-
-                      id: 'highlight-line',
-
-                      type: 'line',
-
-                      source: 'highlight',
-
-                      paint: {
-
-                        'line-color': '#007aff',
-
-                        'line-width': 2.5,
-
-                        'line-opacity': 0.9,
-
-                      },
-
-                    });
-
-          
-
-                    // Add Senatorial District highlight layer
-
-                    this.map.addSource('senatorial-highlight', {
-
-                      type: 'geojson',
-
-                      data: {
-
-                        type: 'FeatureCollection',
-
-                        features: [],
-
-                      },
-
-                    });
-
-          
-
-                    this.map.addLayer({
-
-                      id: 'senatorial-highlight-fill',
-
-                      type: 'fill',
-
-                      source: 'senatorial-highlight',
-
-                      paint: {
-
-                        'fill-color': '#8e44ad', // A distinct purple
-
-                        'fill-opacity': 0.25,
-
-                      },
-
-                    });
-
-          
-
-                    this.map.addLayer({
-
-                      id: 'senatorial-highlight-line',
-
-                      type: 'line',
-
-                      source: 'senatorial-highlight',
-
-                      paint: {
-
-                        'line-color': '#8e44ad',
-
-                        'line-width': 2,
-
-                      },
-
-                    });
-
-          
-
-                    // Fit to Nigeria bounds
-
-                    this.map.fitBounds(
-
-                      [
-
-                        [2.68, 4.27],
-
-                        [14.68, 13.89],
-
-                      ],
-
-                      { padding: 20 }
-
-                    );
-
-          
-
-                    resolve();
-
-                  } catch (error) {
-
-                    reject(error);
-
-                  }
-
-                });
-
-              });
-
-            }
-
-          
-
-            /**
-
-             * Add optional layers (health, roads, population)
-
-             */
-
-            addOptionalLayers() {
-
-              // Health facilities
-
-              this.map.addSource('health', {
-
-                type: 'vector',
-
-                url: `pmtiles://${this.BASE_URL}/ng_health_facilities.pmtiles`,
-
-              });
-
-          
-
-              this.map.addLayer({
-
-                id: 'health',
-
-                type: 'circle',
-
-                source: 'health',
-
-                'source-layer': this.sourceLayers.health,
-
-                layout: { visibility: 'none' },
-
-                      paint: {
-
-                        'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3, 10, 7, 14, 10],
-
-                        'circle-color': '#007aff',
-
-                        'circle-stroke-color': '#ffffff',
-
-                        'circle-stroke-width': 1.5,
-
-                        'circle-opacity': 0.9,
-
-                      },
-
-              });
-
-          
-
-              // Roads
-
-              this.map.addSource('roads', {
-
-                type: 'vector',
-
-                url: `pmtiles://${this.BASE_URL}/ng_roads.pmtiles`,
-
-              });
-
-          
-
-              this.map.addLayer({
-
-                id: 'roads',
-
-                type: 'line',
-
-                source: 'roads',
-
-                'source-layer': this.sourceLayers.roads,
-
-                layout: { visibility: 'none' },
-
-                paint: {
-
-                  'line-color': '#6e6e73',
-
-                  'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1, 14, 2],
-
-                  'line-opacity': 0.7,
-
-                },
-
-              });
-
-          
-
-              // Population density
-
-              this.map.addSource('pop', {
-
-                type: 'raster',
-
-                url: `pmtiles://${this.BASE_URL}/ng_pop_total.pmtiles`,
-
-                tileSize: 256,
-
-              });
-
-          
-
-              this.map.addLayer({
-
-                id: 'pop',
-
-                type: 'raster',
-
-                source: 'pop',
-
-                layout: { visibility: 'none' },
-
-                paint: { 'raster-opacity': 0.6 },
-
-              });
-
-          
-
-              // Add click handlers for health facilities
-
-              this.map.on('click', 'health', (e) => {
-
-                if (!e.features || e.features.length === 0) {
-
-                  return;
-
-                }
-
-                const coordinates = e.features[0].geometry.coordinates.slice();
-
-                const props = e.features[0].properties;
-
-          
-
-                let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
-
-                description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
-
-          
-
-                if (props.facility_type_display) {
-
-                  description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
-
-                }
-
-                if (props.ownership_display) {
-
-                  description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
-
-                }
-
-                if (props.wardname) {
-
-                  description += `<p><b>Ward:</b> ${props.wardname}</p>`;
-
-                }
-
-                if (props.operational_status) {
-
-                  description += `<p><b>Status:</b> ${props.operational_status}</p>`;
-
-                }
-
-                description += `</div>`;
-
-          
-
-                new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
-
-              });
-
-          
-
-              // Change cursor on hover
-
-              this.map.on('mouseenter', 'health', () => {
-
-                this.map.getCanvas().style.cursor = 'pointer';
-
-              });
-
-          
-
-              this.map.on('mouseleave', 'health', () => {
-
-                this.map.getCanvas().style.cursor = '';
-
-              });
-
-            }
-
-          
-
-            /**
-
-             * Get the map instance
-
-             */
-
-            getMap() {
-
-              return this.map;
-
-            }
-
-          
-
-            /**
-
-             * Highlight features by filter
-
-             */
-
-            highlightFeatures(sourceLayer, filter) {
-
-              const features = this.map.querySourceFeatures('states', {
-
-                sourceLayer: sourceLayer,
-
-                filter: filter,
-
-              });
-
-          
-
-              if (features.length > 0) {
-
-                this.map.getSource('highlight').setData({
-
-                  type: 'FeatureCollection',
-
-                  features: features,
-
-                });
-
-              }
-
-            }
-
-          
-
-            /**
-
-             * Set data for the senatorial highlight layer.
-
-             * @param {object} featureCollection - A GeoJSON FeatureCollection.
-
-             */
-
-            setSenatorialHighlight(featureCollection) {
-
-              this.map.getSource('senatorial-highlight').setData(featureCollection);
-
-            }
-
-          
-
-            /**
-
-             * Clear all highlights
-
-             */
-
-            clearHighlight() {
-
-              // Clear standard highlight
-
-              this.map.getSource('highlight').setData({
-
-                type: 'FeatureCollection',
-
-                features: [],
-
-              });
-
-              // Also clear senatorial highlight
-
-              this.map.getSource('senatorial-highlight').setData({
-
-                type: 'FeatureCollection',
-
-                features: [],
-
-              });
-
-            }
-
-          
-
-            /**
-
-             * Toggle layer visibility
-
-             */
-
-            toggleLayer(layerId, visible) {
-
-              this.map.setLayoutProperty(layerId, 'visibility', visible ? 'visible' : 'none');
-
-            }
-
-          
-
-            /**
-
-             * Fit map to bounds
-
-             */
-
-            fitBounds(bounds, options = {}) {
-
-              this.map.fitBounds(bounds, { padding: 50, ...options });
-
-            }
-
-          }
-
-          
-
-          // Export singleton instance
-
-          const instance = new MapManager();
-
-          export default instance;
+          this.map.addLayer({
+            id: this.config.layerIds.highlight.line,
+            type: 'line',
+            source: 'highlight',
+            paint: this.config.layerStyles.highlight.line,
+          });
+
+          // Add Senatorial District highlight layer
+          this.map.addSource('senatorial-highlight', {
+            type: 'geojson',
+            data: { type: 'FeatureCollection', features: [] },
+          });
+
+          this.map.addLayer({
+            id: this.config.layerIds.senatorialHighlight.fill,
+            type: 'fill',
+            source: 'senatorial-highlight',
+            paint: this.config.layerStyles.senatorialHighlight.fill,
+          });
+
+          this.map.addLayer({
+            id: this.config.layerIds.senatorialHighlight.line,
+            type: 'line',
+            source: 'senatorial-highlight',
+            paint: this.config.layerStyles.senatorialHighlight.line,
+          });
+
+          // Fit to Nigeria bounds
+          this.map.fitBounds(this.config.map.bounds, { padding: 20 });
+
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+  }
+
+  /**
+   * Add optional layers (health, roads, population)
+   */
+  addOptionalLayers() {
+    // Health facilities
+    this.map.addSource('health', {
+      type: 'vector',
+      url: `pmtiles://${this.config.BASE_URL}/ng_health_facilities.pmtiles`,
+    });
+
+    this.map.addLayer({
+      id: this.config.layerIds.health,
+      type: 'circle',
+      source: 'health',
+      'source-layer': this.config.sourceLayers.health,
+      layout: { visibility: 'none' },
+      paint: this.config.layerStyles.health.paint,
+    });
+
+    // Roads
+    this.map.addSource('roads', {
+      type: 'vector',
+      url: `pmtiles://${this.config.BASE_URL}/ng_roads.pmtiles`,
+    });
+
+    this.map.addLayer({
+      id: this.config.layerIds.roads,
+      type: 'line',
+      source: 'roads',
+      'source-layer': this.config.sourceLayers.roads,
+      layout: { visibility: 'none' },
+      paint: this.config.layerStyles.roads.paint,
+    });
+
+    // Population density
+    this.map.addSource('pop', {
+      type: 'raster',
+      url: `pmtiles://${this.config.BASE_URL}/ng_pop_total.pmtiles`,
+      tileSize: 256,
+    });
+
+    this.map.addLayer({
+      id: this.config.layerIds.population,
+      type: 'raster',
+      source: 'pop',
+      layout: { visibility: 'none' },
+      paint: this.config.layerStyles.population.paint,
+    });
+
+    // Add click handlers for health facilities
+    this.map.on('click', this.config.layerIds.health, (e) => {
+      if (!e.features || e.features.length === 0) {
+        return;
+      }
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      const props = e.features[0].properties;
+
+      let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
+      description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
+
+      if (props.facility_type_display) {
+        description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
+      }
+      if (props.ownership_display) {
+        description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
+      }
+      if (props.wardname) {
+        description += `<p><b>Ward:</b> ${props.wardname}</p>`;
+      }
+      if (props.operational_status) {
+        description += `<p><b>Status:</b> ${props.operational_status}</p>`;
+      }
+      description += `</div>`;
+
+      new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
+    });
+
+    // Change cursor on hover
+    this.map.on('mouseenter', this.config.layerIds.health, () => {
+      this.map.getCanvas().style.cursor = 'pointer';
+    });
+
+    this.map.on('mouseleave', this.config.layerIds.health, () => {
+      this.map.getCanvas().style.cursor = '';
+    });
+  }
+
+  /**
+   * Get the map instance
+   */
+  getMap() {
+    return this.map;
+  }
+
+  /**
+   * Set data for the senatorial highlight layer.
+   * @param {object} featureCollection - A GeoJSON FeatureCollection.
+   */
+  setSenatorialHighlight(featureCollection) {
+    this.map.getSource('senatorial-highlight').setData(featureCollection);
+  }
+
+  /**
+   * Clear all highlights
+   */
+  clearHighlight() {
+    // Clear standard highlight
+    this.map.getSource('highlight').setData({
+      type: 'FeatureCollection',
+      features: [],
+    });
+    // Also clear senatorial highlight
+    this.map.getSource('senatorial-highlight').setData({
+      type: 'FeatureCollection',
+      features: [],
+    });
+  }
+
+  /**
+   * Toggle layer visibility
+   */
+  toggleLayer(layerId, visible) {
+    const mapLayerId = this.config.layerIds[layerId]?.line || this.config.layerIds[layerId];
+    if (mapLayerId) {
+        this.map.setLayoutProperty(mapLayerId, 'visibility', visible ? 'visible' : 'none');
+    }
+  }
+
+  /**
+   * Fit map to bounds
+   */
+  fitBounds(bounds, options = {}) {
+    this.map.fitBounds(bounds, { padding: 50, ...options });
+  }
+}
+
+// Export singleton instance
+const instance = new MapManager();
+export default instance;

@@ -10,15 +10,24 @@ showSpinner();
 const map = mapManager.initializeMap();
 
 mapManager.initializeLayers()
-  .then(() => fetch('./data/senatorial.json'))
-  .then(res => {
-    if (!res.ok) throw new Error(`Failed to load senatorial data (${res.status})`);
-    return res.json();
+  .then(() => {
+    // Fetch all necessary data files in parallel for faster loading.
+    return Promise.all([
+      fetch('./data/senatorial.json').then(res => {
+        if (!res.ok) throw new Error(`Failed to load senatorial data (${res.status})`);
+        return res.json();
+      }),
+      fetch('./data/manualLgaCorrections.json').then(res => {
+        if (!res.ok) throw new Error(`Failed to load LGA corrections (${res.status})`);
+        return res.json();
+      })
+    ]);
   })
-  .then(senatorialData => {
+  .then(([senatorialData, lgaCorrections]) => {
     // Build the unified data tree once the map is ready
     map.once('idle', () => {
-      buildDataTree(senatorialData);
+      buildDataTree(senatorialData, lgaCorrections);
+      initializeSearch(); // <-- Initialize Fuse.js search index
       initializeUI();
       mapManager.addOptionalLayers();
       hideSpinner();
@@ -26,7 +35,7 @@ mapManager.initializeLayers()
   })
   .catch(err => {
     console.error('Error initializing map:', err);
-    showErrorMessage(`Failed to load map: ${err.message}. Please refresh the page.`);
+    showErrorMessage(`Failed to load map: ${err.message}. Please check your connection and refresh the page.`);
     hideSpinner();
   });
 
@@ -49,22 +58,29 @@ function normalize(name) {
  * Builds the unified nigeriaData tree from the flat feature caches.
  * This is the core of the new "bottom-up" architecture.
  * @param {Array} senatorialData The raw senatorial district data.
+ * @param {Object} lgaCorrections The manual LGA name corrections.
  */
-function buildDataTree(senatorialData) {
-  // 1. Create a reverse mapping from normalized LGA name to Senatorial District
+function buildDataTree(senatorialData, lgaCorrections) {
+  // 1. Create a reverse mapping from normalized LGA name to Senatorial District, applying corrections.
   const lgaToDistrictMap = new Map();
   senatorialData.forEach(record => {
     const district = record['Senatorial_District'] || record['district'];
     const lga = record['LGAs'] || record['lga'];
     if (district && lga) {
-      lgaToDistrictMap.set(normalize(lga), district);
+      const normalizedLga = normalize(lga);
+      // Apply correction if it exists
+      const correctedLga = lgaCorrections[normalizedLga] || normalizedLga;
+      // Since a correction can map to multiple LGAs, handle arrays
+      const lgasToMap = Array.isArray(correctedLga) ? correctedLga : [correctedLga];
+      lgasToMap.forEach(l => lgaToDistrictMap.set(normalize(l), district));
     }
   });
 
   // 2. Cache all features from the map
-  const statesCache = new Map(map.querySourceFeatures('states', { sourceLayer: mapManager.sourceLayers.states }).map(f => [f.properties.statename, f]));
-  const lgasCache = new Map(map.querySourceFeatures('lgas', { sourceLayer: mapManager.sourceLayers.lgas }).map(f => [f.properties.lgacode, f]));
-  const wardsCache = new Map(map.querySourceFeatures('wards', { sourceLayer: mapManager.sourceLayers.wards }).map(f => [f.properties.wardcode, f]));
+  const { sourceLayers } = mapManager.config;
+  const statesCache = new Map(map.querySourceFeatures('states', { sourceLayer: sourceLayers.states }).map(f => [f.properties.statename, f]));
+  const lgasCache = new Map(map.querySourceFeatures('lgas', { sourceLayer: sourceLayers.lgas }).map(f => [f.properties.lgacode, f]));
+  const wardsCache = new Map(map.querySourceFeatures('wards', { sourceLayer: sourceLayers.wards }).map(f => [f.properties.wardcode, f]));
 
   // 3. Process States into a temporary map
   const statesMap = new Map();
@@ -129,12 +145,12 @@ function initializeUI() {
   document.getElementById('reset-btn').addEventListener('click', handleReset);
 
   // Layer Toggles
-  document.getElementById('toggle-states').addEventListener('change', e => mapManager.toggleLayer('states-line', e.target.checked));
-  document.getElementById('toggle-lgas').addEventListener('change', e => mapManager.toggleLayer('lgas-line', e.target.checked));
-  document.getElementById('toggle-wards').addEventListener('change', e => mapManager.toggleLayer('wards-line', e.target.checked));
+  document.getElementById('toggle-states').addEventListener('change', e => mapManager.toggleLayer('states', e.target.checked));
+  document.getElementById('toggle-lgas').addEventListener('change', e => mapManager.toggleLayer('lgas', e.target.checked));
+  document.getElementById('toggle-wards').addEventListener('change', e => mapManager.toggleLayer('wards', e.target.checked));
   document.getElementById('toggle-health').addEventListener('change', e => mapManager.toggleLayer('health', e.target.checked));
   document.getElementById('toggle-roads').addEventListener('change', e => mapManager.toggleLayer('roads', e.target.checked));
-  document.getElementById('toggle-pop').addEventListener('change', e => mapManager.toggleLayer('pop', e.target.checked));
+  document.getElementById('toggle-pop').addEventListener('change', e => mapManager.toggleLayer('population', e.target.checked));
 
   // Search, Sidebar, and Map Controls
   document.getElementById('searchInput').addEventListener('input', handleSearch);
@@ -218,7 +234,7 @@ function handleStateChange(e) {
     map.getSource('highlight').setData({ type: 'FeatureCollection', features: [state.feature] });
     map.fitBounds(turf.bbox(state.feature), { padding: 50 });
   } else {
-    map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
+    map.fitBounds(mapManager.config.map.bounds, { padding: 20 });
   }
 }
 
@@ -300,47 +316,81 @@ function handleReset() {
 
 // --- SEARCH ---
 
-function handleSearch(e) {
-  const query = e.target.value.toLowerCase();
-  const suggestionBox = document.getElementById('searchSuggestions');
-  if (query.length < 2) {
-    suggestionBox.innerHTML = '';
-    suggestionBox.style.display = 'none';
-    return;
-  }
+let fuse; // Fuse.js instance
+let searchIndex = []; // Flattened array for searching
 
-  const suggestions = [];
+function initializeSearch() {
+  // 1. Create a flattened, searchable index from the nigeriaData tree.
+  searchIndex = [];
   nigeriaData.forEach(state => {
-    if (state.name.toLowerCase().includes(query)) {
-      suggestions.push({ name: state.name, type: 'State', feature: state.feature });
-    }
+    searchIndex.push({
+      name: state.name,
+      type: 'State',
+      feature: state.feature,
+      searchName: state.name // Field for Fuse to search on
+    });
     state.lgas.forEach(lga => {
-      if (lga.name.toLowerCase().includes(query)) {
-        suggestions.push({ name: `${lga.name} (${state.name})`, type: 'LGA', feature: lga.feature });
-      }
+      searchIndex.push({
+        name: `${lga.name} (${state.name})`,
+        type: 'LGA',
+        feature: lga.feature,
+        searchName: lga.name // Field for Fuse to search on
+      });
       lga.wards.forEach(ward => {
-        if (ward.name.toLowerCase().includes(query)) {
-          suggestions.push({ name: `${ward.name} (${lga.name})`, type: 'Ward', feature: ward.feature });
-        }
+        searchIndex.push({
+          name: `${ward.name} (${lga.name})`,
+          type: 'Ward',
+          feature: ward.feature,
+          searchName: ward.name // Field for Fuse to search on
+        });
       });
     });
   });
 
-  renderSuggestions(suggestions.slice(0, 15));
+  // 2. Initialize Fuse.js
+  const options = {
+    keys: ['searchName'],
+    includeScore: true,
+    threshold: 0.4, // Adjust for more/less strict matching
+  };
+  fuse = new Fuse(searchIndex, options);
 }
 
-function renderSuggestions(suggestions) {
+function handleSearch(e) {
+  const query = e.target.value;
   const suggestionBox = document.getElementById('searchSuggestions');
-  suggestionBox.innerHTML = '';
-  if (suggestions.length === 0) {
+  const searchInput = document.getElementById('searchInput');
+  
+  if (query.length < 2) {
+    suggestionBox.innerHTML = '';
     suggestionBox.style.display = 'none';
+    searchInput.setAttribute('aria-expanded', 'false');
     return;
   }
-  suggestionBox.style.display = 'block';
 
-  suggestions.forEach(({ name, type, feature }) => {
+  const results = fuse.search(query);
+  renderSuggestions(results.slice(0, 15));
+}
+
+function renderSuggestions(results) {
+  const suggestionBox = document.getElementById('searchSuggestions');
+  const searchInput = document.getElementById('searchInput');
+  suggestionBox.innerHTML = '';
+
+  if (results.length === 0) {
+    suggestionBox.style.display = 'none';
+    searchInput.setAttribute('aria-expanded', 'false');
+    return;
+  }
+  
+  suggestionBox.style.display = 'block';
+  searchInput.setAttribute('aria-expanded', 'true');
+
+  results.forEach(result => {
+    const { name, type, feature } = result.item;
     const div = document.createElement('div');
     div.className = 'search-suggestion';
+    div.setAttribute('role', 'option');
     div.innerHTML = `<strong>${type}:</strong> ${name}`;
     div.onclick = () => {
       mapManager.clearHighlight();
@@ -348,6 +398,7 @@ function renderSuggestions(suggestions) {
       map.fitBounds(turf.bbox(feature), { padding: 50, maxZoom: 12 });
       suggestionBox.innerHTML = '';
       suggestionBox.style.display = 'none';
+      searchInput.setAttribute('aria-expanded', 'false');
       document.getElementById('searchInput').value = '';
     };
     suggestionBox.appendChild(div);
@@ -359,25 +410,34 @@ function renderSuggestions(suggestions) {
 function initializeSidebarControls() {
   const sidebar = document.querySelector('.sidebar');
   const expandButton = document.getElementById('expand-button');
+  const toggleButton = document.getElementById('sidebar-toggle');
   const sidebarHeader = document.querySelector('.sidebar-header');
 
-  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+  toggleButton.addEventListener('click', () => {
     sidebar.classList.add('collapsed');
     expandButton.classList.add('show');
+    toggleButton.setAttribute('aria-expanded', 'false');
+    expandButton.setAttribute('aria-expanded', 'true');
   });
 
   expandButton.addEventListener('click', () => {
     sidebar.classList.remove('collapsed');
     expandButton.classList.remove('show');
+    toggleButton.setAttribute('aria-expanded', 'true');
+    expandButton.setAttribute('aria-expanded', 'false');
   });
 
   sidebarHeader.addEventListener('click', () => {
-    if (window.innerWidth <= 768) sidebar.classList.toggle('collapsed');
+    if (window.innerWidth <= 768) {
+      const isCollapsed = sidebar.classList.toggle('collapsed');
+      toggleButton.setAttribute('aria-expanded', String(!isCollapsed));
+    }
   });
 
   document.getElementById('searchInput').addEventListener('focus', () => {
     if (window.innerWidth <= 768 && sidebar.classList.contains('collapsed')) {
       sidebar.classList.remove('collapsed');
+      toggleButton.setAttribute('aria-expanded', 'true');
     }
   });
 }
@@ -437,17 +497,26 @@ function initializeSwipeGestures() {
 
 function showSpinner() {
   const spinner = document.getElementById('loading-spinner');
-  if (spinner) spinner.style.display = 'flex';
+  if (spinner) {
+    spinner.style.display = 'flex';
+    spinner.setAttribute('aria-hidden', 'false');
+  }
 }
 
 function hideSpinner() {
   const spinner = document.getElementById('loading-spinner');
-  if (spinner) spinner.style.display = 'none';
+  if (spinner) {
+    spinner.style.display = 'none';
+    spinner.setAttribute('aria-hidden', 'true');
+  }
 }
 
 function showErrorMessage(message) {
   const spinner = document.getElementById('loading-spinner');
-  if (spinner) spinner.innerHTML = `<p style="color: white; text-align: center;">${message}</p>`;
+  if (spinner) {
+    spinner.innerHTML = `<p style="color: white; text-align: center;">${message}</p>`;
+    spinner.setAttribute('aria-hidden', 'false');
+  }
 }
 
 const turf = {

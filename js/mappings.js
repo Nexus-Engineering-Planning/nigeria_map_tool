@@ -1,5 +1,3 @@
-import manualLgaCorrections from './manualLgaCorrections.js';
-
 /**
  * Normalize LGA names for better matching.
  * @param {String} name - The LGA name to normalize.
@@ -80,7 +78,7 @@ function buildReverseMappings(state_to_lga, lga_to_ward) {
   return { lga_to_state, ward_to_lga };
 }
 
-function buildSenatorialToLga(senatorialData, lgaGeoJSON) {
+function buildSenatorialToLga(senatorialData, lgaGeoJSON, manualLgaCorrections) {
   const senatorial_to_lga = {};
   const geojson_lga_names = {};
   const appliedCorrections = new Set();

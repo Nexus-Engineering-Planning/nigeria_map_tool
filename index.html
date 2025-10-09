@@ -54,45 +54,47 @@
 
 <body>
   <!-- Loading Spinner -->
-  <div id="loading-spinner" class="loading-spinner" style="display: flex;">
+  <div id="loading-spinner" class="loading-spinner" style="display: flex;" role="status" aria-live="polite">
     <div class="spinner"></div>
+    <span class="sr-only">Loading map...</span>
   </div>
 
   <!-- Expand Button (shown when sidebar collapsed) -->
-  <button id="expand-button" class="expand-button" title="Expand Sidebar">&#9776;</button>
+  <button id="expand-button" class="expand-button" title="Expand Sidebar" aria-label="Expand Sidebar" aria-expanded="false">&#9776;</button>
 
   <!-- Sidebar Controls -->
-  <div class="sidebar">
+  <div class="sidebar" role="navigation" aria-label="Map Controls">
     <div class="sidebar-header">
-      <h3><i class="fa-solid fa-map-marker-alt"></i> Nigeria Map Explorer</h3>
-      <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar">&#10094;</button>
+      <h3><i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i> Nigeria Map Explorer</h3>
+      <button id="sidebar-toggle" class="sidebar-toggle" title="Collapse Sidebar" aria-label="Collapse Sidebar" aria-expanded="true">&#10094;</button>
     </div>
 
     <!-- Search -->
-    <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward">
-    <div id="searchSuggestions" class="search-suggestions"></div>
+    <label for="searchInput" class="sr-only">Search for a location</label>
+    <input type="text" id="searchInput" placeholder="Search State, LGA, or Ward" aria-label="Search for a location" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+    <div id="searchSuggestions" class="search-suggestions" role="listbox" aria-live="polite"></div>
 
     <!-- State Selection -->
     <label for="state-select">Select State:</label>
-    <select id="state-select">
+    <select id="state-select" aria-label="Select a State">
       <option value="">All States</option>
     </select>
 
     <!-- Senatorial District Selection -->
     <label for="senatorial-select">Senatorial District:</label>
-    <select id="senatorial-select" disabled>
+    <select id="senatorial-select" disabled aria-label="Select a Senatorial District">
       <option value="">Select Senatorial District</option>
     </select>
 
     <!-- LGA Selection -->
     <label for="lga-select">Select LGA:</label>
-    <select id="lga-select" disabled>
+    <select id="lga-select" disabled aria-label="Select a Local Government Area">
       <option value="">Select LGA</option>
     </select>
 
     <!-- Ward Selection -->
     <label for="ward-select">Select Ward:</label>
-    <select id="ward-select" disabled>
+    <select id="ward-select" disabled aria-label="Select a Ward">
       <option value="">Select Ward</option>
     </select>
 
@@ -103,15 +105,15 @@
     <button id="reset-btn">Reset Filters</button>
 
     <!-- Layer Toggles -->
-    <div class="layer-toggle-section">
-      <h4>Boundary Layers</h4>
+    <div class="layer-toggle-section" role="group" aria-labelledby="boundary-layers-heading">
+      <h4 id="boundary-layers-heading">Boundary Layers</h4>
       <label><input type="checkbox" id="toggle-states" checked> States</label>
       <label><input type="checkbox" id="toggle-lgas" checked> LGAs</label>
       <label><input type="checkbox" id="toggle-wards" checked> Wards</label>
     </div>
 
-    <div class="layer-toggle-section">
-      <h4>Additional Layers</h4>
+    <div class="layer-toggle-section" role="group" aria-labelledby="additional-layers-heading">
+      <h4 id="additional-layers-heading">Additional Layers</h4>
       <label><input type="checkbox" id="toggle-health"> Health Facilities</label>
       <label><input type="checkbox" id="toggle-roads"> Roads</label>
       <label><input type="checkbox" id="toggle-pop"> Population Density</label>
@@ -119,18 +121,20 @@
   </div>
 
   <!-- Map Container -->
-  <div id="map"></div>
+  <div id="map" role="application"></div>
 
   <!-- Floating Map Controls -->
   <div class="map-controls">
-    <button id="locate-btn" title="My Location"><i class="fa-solid fa-location-arrow"></i></button>
-    <button id="focus-btn" title="Focus Mode"><i class="fa-solid fa-expand"></i></button>
+    <button id="locate-btn" title="My Location" aria-label="Find my location"><i class="fa-solid fa-location-arrow" aria-hidden="true"></i></button>
+    <button id="focus-btn" title="Focus Mode" aria-label="Toggle Focus Mode"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
   </div>
 
   <!-- MapLibre GL JS -->
   <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
   <!-- PMTiles Protocol -->
   <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+  <!-- Fuse.js for fuzzy search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
   <!-- Main Application -->
   <script type="module" src="./js/main.js"></script>
 </body>

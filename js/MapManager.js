@@ -39,35 +39,31 @@ class MapManager {
       style: {
         version: 8,
         sources: {
-          osm: {
+          stadia: {
             type: 'raster',
-            tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            tiles: ['https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png'],
             tileSize: 256,
-            attribution: '&copy; OpenStreetMap Contributors'
-          }
+            attribution:
+              '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+          },
         },
         layers: [
           {
             id: 'background',
             type: 'background',
-            paint: { 'background-color': '#f2f2f7' }
+            paint: { 'background-color': '#f2f2f7' },
           },
           {
-            id: 'osm-tiles',
+            id: 'stadia-tiles',
             type: 'raster',
-            source: 'osm',
-            paint: {
-              'raster-opacity': 0.5,
-              'raster-saturation': -1, // Grayscale
-              'raster-contrast': -0.1
-            }
-          }
-        ]
+            source: 'stadia',
+          },
+        ],
       },
       center: [8.68, 9.08],
       zoom: 6,
       minZoom: 4,
-      maxZoom: 16
+      maxZoom: 16,
     });
 
     // Add navigation control
@@ -94,7 +90,7 @@ class MapManager {
           // Add States layer
           this.map.addSource('states', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_states.pmtiles`
+            url: `pmtiles://${this.BASE_URL}/ng_states.pmtiles`,
           });
 
           this.map.addLayer({
@@ -104,8 +100,8 @@ class MapManager {
             'source-layer': this.sourceLayers.states,
             paint: {
               'fill-color': 'transparent',
-              'fill-opacity': 0
-            }
+              'fill-opacity': 0,
+            },
           });
 
           this.map.addLayer({
@@ -116,14 +112,14 @@ class MapManager {
             paint: {
               'line-color': '#8a8a8e',
               'line-width': 1.5,
-              'line-opacity': 0.8
-            }
+              'line-opacity': 0.8,
+            },
           });
 
           // Add LGAs layer
           this.map.addSource('lgas', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_lgas.pmtiles`
+            url: `pmtiles://${this.BASE_URL}/ng_lgas.pmtiles`,
           });
 
           this.map.addLayer({
@@ -133,8 +129,8 @@ class MapManager {
             'source-layer': this.sourceLayers.lgas,
             paint: {
               'fill-color': 'transparent',
-              'fill-opacity': 0
-            }
+              'fill-opacity': 0,
+            },
           });
 
           this.map.addLayer({
@@ -145,14 +141,14 @@ class MapManager {
             paint: {
               'line-color': '#d1d1d6',
               'line-width': 1,
-              'line-opacity': 0.7
-            }
+              'line-opacity': 0.7,
+            },
           });
 
           // Add Wards layer
           this.map.addSource('wards', {
             type: 'vector',
-            url: `pmtiles://${this.BASE_URL}/ng_wards.pmtiles`
+            url: `pmtiles://${this.BASE_URL}/ng_wards.pmtiles`,
           });
 
           this.map.addLayer({
@@ -162,8 +158,8 @@ class MapManager {
             'source-layer': this.sourceLayers.wards,
             paint: {
               'fill-color': 'transparent',
-              'fill-opacity': 0
-            }
+              'fill-opacity': 0,
+            },
           });
 
           this.map.addLayer({
@@ -174,8 +170,8 @@ class MapManager {
             paint: {
               'line-color': '#e5e5ea',
               'line-width': 0.5,
-              'line-opacity': 0.6
-            }
+              'line-opacity': 0.6,
+            },
           });
 
           // Add highlight layer for selections
@@ -183,8 +179,8 @@ class MapManager {
             type: 'geojson',
             data: {
               type: 'FeatureCollection',
-              features: []
-            }
+              features: [],
+            },
           });
 
           this.map.addLayer({
@@ -193,8 +189,8 @@ class MapManager {
             source: 'highlight',
             paint: {
               'fill-color': 'rgba(0, 122, 255, 0.2)',
-              'fill-outline-color': 'rgba(0, 122, 255, 0.8)'
-            }
+              'fill-outline-color': 'rgba(0, 122, 255, 0.8)',
+            },
           });
 
           this.map.addLayer({
@@ -204,12 +200,18 @@ class MapManager {
             paint: {
               'line-color': '#007aff',
               'line-width': 2.5,
-              'line-opacity': 0.9
-            }
+              'line-opacity': 0.9,
+            },
           });
 
           // Fit to Nigeria bounds
-          this.map.fitBounds([[2.68, 4.27], [14.68, 13.89]], { padding: 20 });
+          this.map.fitBounds(
+            [
+              [2.68, 4.27],
+              [14.68, 13.89],
+            ],
+            { padding: 20 }
+          );
 
           resolve();
         } catch (error) {
@@ -226,7 +228,7 @@ class MapManager {
     // Health facilities
     this.map.addSource('health', {
       type: 'vector',
-      url: `pmtiles://${this.BASE_URL}/ng_health_facilities.pmtiles`
+      url: `pmtiles://${this.BASE_URL}/ng_health_facilities.pmtiles`,
     });
 
     this.map.addLayer({
@@ -240,14 +242,14 @@ class MapManager {
         'circle-color': '#007aff',
         'circle-stroke-color': '#ffffff',
         'circle-stroke-width': 1.5,
-        'circle-opacity': 0.9
-      }
+        'circle-opacity': 0.9,
+      },
     });
 
     // Roads
     this.map.addSource('roads', {
       type: 'vector',
-      url: `pmtiles://${this.BASE_URL}/ng_roads.pmtiles`
+      url: `pmtiles://${this.BASE_URL}/ng_roads.pmtiles`,
     });
 
     this.map.addLayer({
@@ -259,15 +261,15 @@ class MapManager {
       paint: {
         'line-color': '#6e6e73',
         'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 10, 1, 14, 2],
-        'line-opacity': 0.7
-      }
+        'line-opacity': 0.7,
+      },
     });
 
     // Population density
     this.map.addSource('pop', {
       type: 'raster',
       url: `pmtiles://${this.BASE_URL}/ng_pop_total.pmtiles`,
-      tileSize: 256
+      tileSize: 256,
     });
 
     this.map.addLayer({
@@ -275,17 +277,22 @@ class MapManager {
       type: 'raster',
       source: 'pop',
       layout: { visibility: 'none' },
-      paint: { 'raster-opacity': 0.6 }
+      paint: { 'raster-opacity': 0.6 },
     });
 
     // Add click handlers for health facilities
     this.map.on('click', 'health', (e) => {
+      if (!e.features || e.features.length === 0) {
+        return;
+      }
       const coordinates = e.features[0].geometry.coordinates.slice();
       const props = e.features[0].properties;
 
-      let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
+      let description = `<strong><i class="fa-solid fa-hospital"></i> ${
+        props.facility_name || 'Health Facility'
+      }</strong>`;
       description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
-      
+
       if (props.facility_type_display) {
         description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
       }
@@ -295,15 +302,12 @@ class MapManager {
       if (props.wardname) {
         description += `<p><b>Ward:</b> ${props.wardname}</p>`;
       }
-       if (props.operational_status) {
+      if (props.operational_status) {
         description += `<p><b>Status:</b> ${props.operational_status}</p>`;
       }
       description += `</div>`;
 
-      new maplibregl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(this.map);
+      new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
     });
 
     // Change cursor on hover

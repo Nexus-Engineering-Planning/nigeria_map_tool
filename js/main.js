@@ -206,6 +206,56 @@ function initializeUI() {
       sidebar.classList.toggle('collapsed');
     }
   });
+
+  initializeSwipeGestures();
+}
+
+/**
+ * Initializes swipe gestures for the mobile bottom sheet.
+ */
+function initializeSwipeGestures() {
+  const sidebar = document.querySelector('.sidebar');
+  let startY;
+  let startHeight;
+  let isDragging = false;
+
+  const onTouchStart = (e) => {
+    if (window.innerWidth > 768) return;
+    isDragging = true;
+    startY = e.touches ? e.touches[0].clientY : e.clientY;
+    startHeight = sidebar.clientHeight;
+    sidebar.style.transition = 'none'; // Disable transition during drag
+  };
+
+  const onTouchMove = (e) => {
+    if (!isDragging || window.innerWidth > 768) return;
+    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+    const deltaY = currentY - startY;
+    
+    // Prevent dragging beyond limits
+    if (deltaY > 0) { // Dragging down
+        sidebar.classList.add('collapsed');
+    } else { // Dragging up
+        sidebar.classList.remove('collapsed');
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (!isDragging || window.innerWidth > 768) return;
+    isDragging = false;
+    sidebar.style.transition = ''; // Re-enable transition
+  };
+
+  sidebar.addEventListener('touchstart', onTouchStart, { passive: true });
+  sidebar.addEventListener('touchmove', onTouchMove, { passive: true });
+  sidebar.addEventListener('touchend', onTouchEnd);
+  
+  // Also add mouse events for desktop debugging
+  sidebar.addEventListener('mousedown', onTouchStart);
+  sidebar.addEventListener('mousemove', onTouchMove);
+  sidebar.addEventListener('mouseup', onTouchEnd);
+  sidebar.addEventListener('mouseleave', onTouchEnd);
+}
 }
 
 /**

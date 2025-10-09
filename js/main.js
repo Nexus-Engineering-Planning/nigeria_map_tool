@@ -368,7 +368,22 @@ function handleStateChange(e) {
 }
 
 /**
- * Populate senatorial dropdown
+ * A robust normalization function for LGA names.
+ * @param {string} name The name to normalize.
+ * @returns {string} The normalized name.
+ */
+function normalize(name) {
+  if (!name) return '';
+  return name
+    .toLowerCase()
+    .replace(/[\s-/\\_]+/g, '') // Remove all whitespace, hyphens, slashes, underscores
+    .replace(/lgarea$/, '') // Remove trailing 'lgarea'
+    .replace(/lga$/, '') // Remove trailing 'lga'
+    .replace(/municipal$/, ''); // Remove trailing 'municipal'
+}
+
+/**
+ * Populate senatorial dropdown with robust name matching.
  */
 function populateSenatorialDropdown(stateName) {
   const senatorialSelect = document.getElementById('senatorial-select');
@@ -379,23 +394,35 @@ function populateSenatorialDropdown(stateName) {
     return;
   }
 
-  // This logic is complex and relies on name matching. It might need adjustment
-  // if senatorial data doesn't align perfectly with LGA names.
-  const lgasInState = new Set((state_to_lga.get(stateName) || []).map(l => l.name));
-  
-  const filteredDistricts = Object.keys(senatorial_to_lga).filter(district => {
-    const lgasInDistrict = senatorial_to_lga[district] || [];
-    return lgasInDistrict.some(lgaName => lgasInState.has(lgaName));
-  });
+  // Get a set of normalized LGA names for the selected state from our cache
+  const normalizedLgasInState = new Set(
+    (state_to_lga.get(stateName) || []).map(lga => normalize(lga.name))
+  );
 
-  filteredDistricts.sort().forEach(district => {
+  const filteredDistricts = new Set();
+
+  // Iterate through all senatorial districts
+  for (const district in senatorial_to_lga) {
+    const lgasInDistrict = senatorial_to_lga[district] || [];
+    // Check if any normalized LGA name from the district exists in our state's set
+    for (const lgaName of lgasInDistrict) {
+      if (normalizedLgasInState.has(normalize(lgaName))) {
+        filteredDistricts.add(district);
+        break; // Found a match, no need to check other LGAs in this district
+      }
+    }
+  }
+
+  const sortedDistricts = Array.from(filteredDistricts).sort();
+
+  sortedDistricts.forEach(district => {
     const option = document.createElement('option');
     option.value = district;
     option.textContent = district;
     senatorialSelect.appendChild(option);
   });
 
-  senatorialSelect.disabled = filteredDistricts.length === 0;
+  senatorialSelect.disabled = sortedDistricts.length === 0;
 }
 
 /**

@@ -37,8 +37,12 @@ mapManager.initializeLayers()
  */
 function normalize(name) {
   if (!name) return '';
-  return name.toLowerCase().replace(/[
-\s-/\\_]+/g, '').replace(/lgarea|lga|municipal$/, '');
+  return name
+    .toLowerCase()
+    .replace(/[\\s-/\\\\_]+/g, '') // Remove all whitespace, hyphens, slashes, underscores
+    .replace(/lgarea$/, '') // Remove trailing 'lgarea'
+    .replace(/lga$/, '') // Remove trailing 'lga'
+    .replace(/municipal$/, ''); // Remove trailing 'municipal'
 }
 
 /**
@@ -62,50 +66,47 @@ function buildDataTree(senatorialData) {
   const lgasCache = new Map(map.querySourceFeatures('lgas', { sourceLayer: mapManager.sourceLayers.lgas }).map(f => [f.properties.lgacode, f]));
   const wardsCache = new Map(map.querySourceFeatures('wards', { sourceLayer: mapManager.sourceLayers.wards }).map(f => [f.properties.wardcode, f]));
 
-  // 3. Process LGAs: Create LGA objects and assign them to states
+  // 3. Process States into a temporary map
   const statesMap = new Map();
+  statesCache.forEach((feature, name) => {
+    statesMap.set(name, { name, feature, lgas: [] });
+  });
+
+  // 4. Process LGAs and create a direct lookup map for performance
+  const lgaCodeToLgaObjectMap = new Map();
   lgasCache.forEach((lgaFeature, lgaCode) => {
     const props = lgaFeature.properties;
     const stateName = props.statename;
+    const state = statesMap.get(stateName);
 
-    if (!statesMap.has(stateName)) {
-      statesMap.set(stateName, {
-        name: stateName,
-        feature: statesCache.get(stateName),
-        lgas: []
-      });
+    if (state) {
+      const lgaObject = {
+        name: props.lganame,
+        code: lgaCode,
+        feature: lgaFeature,
+        district: lgaToDistrictMap.get(normalize(props.lganame)) || 'Unknown',
+        wards: []
+      };
+      state.lgas.push(lgaObject);
+      lgaCodeToLgaObjectMap.set(lgaCode, lgaObject); // Add to direct lookup map
     }
-
-    const lgaObject = {
-      name: props.lganame,
-      code: lgaCode,
-      feature: lgaFeature,
-      district: lgaToDistrictMap.get(normalize(props.lganame)) || 'Unknown',
-      wards: []
-    };
-    statesMap.get(stateName).lgas.push(lgaObject);
   });
 
-  // 4. Process Wards: Assign wards to their parent LGA in the tree
+  // 5. Process Wards using the fast direct lookup map
   wardsCache.forEach((wardFeature, wardCode) => {
     const props = wardFeature.properties;
     const lgaCode = props.lgacode;
-    const stateName = props.statename;
-
-    if (statesMap.has(stateName)) {
-      const state = statesMap.get(stateName);
-      const lga = state.lgas.find(l => l.code === lgaCode);
-      if (lga) {
-        lga.wards.push({
-          name: props.wardname,
-          code: wardCode,
-          feature: wardFeature
-        });
-      }
+    const parentLga = lgaCodeToLgaObjectMap.get(lgaCode); // Instant lookup
+    if (parentLga) {
+      parentLga.wards.push({
+        name: props.wardname,
+        code: wardCode,
+        feature: wardFeature
+      });
     }
   });
 
-  // 5. Convert the map to our final sorted array
+  // 6. Convert the map to our final sorted array
   nigeriaData = Array.from(statesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
   nigeriaData.forEach(state => state.lgas.sort((a, b) => a.name.localeCompare(b.name)));
 }

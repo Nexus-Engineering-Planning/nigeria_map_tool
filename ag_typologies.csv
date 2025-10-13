@@ -1,0 +1,776 @@
+gadm36_2,Area Name,country_name,Country ISO3,Typology Class,Priority,Efficiency,Potential
+NGA.14.13_1,Nsukka,Nigeria,NGA,Critical with moderate agricultural opportunities,52,0.051029,85453
+NGA.18.12_1,Gwiwa,Nigeria,NGA,Critical with moderate agricultural opportunities,69,0.704665,73759
+NGA.18.14_1,Jahun,Nigeria,NGA,Critical with moderate agricultural opportunities,72,0.717014,91745
+NGA.18.15_1,KafinHau,Nigeria,NGA,Critical with moderate agricultural opportunities,50,0.558918,74815
+NGA.18.16_1,Kaugama,Nigeria,NGA,Critical with moderate agricultural opportunities,66,0.725943,73451
+NGA.18.19_1,Kiyawa,Nigeria,NGA,Critical with moderate agricultural opportunities,60,0.722374,89661
+NGA.18.1_1,Auyo,Nigeria,NGA,Critical with moderate agricultural opportunities,61,0.733868,96114
+NGA.18.20_1,Maigatari,Nigeria,NGA,Critical with moderate agricultural opportunities,56,0.743321,58975
+NGA.18.21_1,MalamMad,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.349081,72704
+NGA.18.22_1,Miga,Nigeria,NGA,Critical with moderate agricultural opportunities,69,0.736179,97876
+NGA.18.23_1,Ringim,Nigeria,NGA,Critical with moderate agricultural opportunities,54,0.291985,78205
+NGA.18.24_1,Roni,Nigeria,NGA,Critical with moderate agricultural opportunities,71,0.727406,82800
+NGA.18.25_1,Sule-Tan,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.781207,61098
+NGA.18.26_1,Taura,Nigeria,NGA,Critical with moderate agricultural opportunities,68,0.714695,91068
+NGA.18.27_1,Yankwashi,Nigeria,NGA,Critical with moderate agricultural opportunities,64,0.728346,81076
+NGA.18.2_1,Babura,Nigeria,NGA,Critical with moderate agricultural opportunities,58,0.72355,88131
+NGA.18.3_1,Biriniwa,Nigeria,NGA,Critical with moderate agricultural opportunities,49,0.743383,56438
+NGA.18.5_1,Buji,Nigeria,NGA,Critical with moderate agricultural opportunities,43,0.722903,91204
+NGA.18.6_1,Dutse,Nigeria,NGA,Critical with moderate agricultural opportunities,59,0.7193,92056
+NGA.18.7_1,Gagarawa,Nigeria,NGA,Critical with moderate agricultural opportunities,66,0.77965,61287
+NGA.18.8_1,Garki,Nigeria,NGA,Critical with moderate agricultural opportunities,58,0.725726,83440
+NGA.18.9_1,Gumel,Nigeria,NGA,Critical with moderate agricultural opportunities,56,0.737867,65585
+NGA.2.6_1,Guyuk,Nigeria,NGA,Critical with moderate agricultural opportunities,47,0.631092,96395
+NGA.20.16_1,Gaya,Nigeria,NGA,Critical with moderate agricultural opportunities,48,0.651713,88199
+NGA.20.19_1,Gwarzo,Nigeria,NGA,Critical with moderate agricultural opportunities,63,0.619368,96729
+NGA.20.1_1,Ajingi,Nigeria,NGA,Critical with moderate agricultural opportunities,47,0.657131,82600
+NGA.20.20_1,Kabo,Nigeria,NGA,Critical with moderate agricultural opportunities,48,0.373263,88336
+NGA.20.22_1,Karaye,Nigeria,NGA,Critical with moderate agricultural opportunities,43,0.614289,68380
+NGA.20.26_1,Kunchi,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.670593,73894
+NGA.20.29_1,Makoda,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.757398,77607
+NGA.20.32_1,Rano,Nigeria,NGA,Critical with moderate agricultural opportunities,42,0.661146,80915
+NGA.20.33_1,RiminGad,Nigeria,NGA,Critical with moderate agricultural opportunities,43,0.664571,97511
+NGA.20.34_1,Rogo,Nigeria,NGA,Critical with moderate agricultural opportunities,54,0.642936,94299
+NGA.20.35_1,Shanono,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.659078,81693
+NGA.20.3_1,Bagwai,Nigeria,NGA,Critical with moderate agricultural opportunities,50,0.661959,82218
+NGA.20.40_1,Tsanyawa,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.647516,77918
+NGA.20.4_1,Bebeji,Nigeria,NGA,Critical with moderate agricultural opportunities,52,0.642322,94300
+NGA.20.5_1,Bichi,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.666934,80156
+NGA.20.8_1,Dambatta,Nigeria,NGA,Critical with moderate agricultural opportunities,54,0.667275,77934
+NGA.21.10_1,Daura,Nigeria,NGA,Critical with moderate agricultural opportunities,51,0.699515,62839
+NGA.21.11_1,Dutsi,Nigeria,NGA,Critical with moderate agricultural opportunities,59,0.715114,65663
+NGA.21.15_1,Ingawa,Nigeria,NGA,Critical with moderate agricultural opportunities,63,0.695319,73698
+NGA.21.16_1,Jibia,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.753075,62703
+NGA.21.18_1,Kaita,Nigeria,NGA,Critical with moderate agricultural opportunities,71,0.711454,73150
+NGA.21.19_1,Kankara,Nigeria,NGA,Critical with moderate agricultural opportunities,72,0.681883,88263
+NGA.21.22_1,Kurfi,Nigeria,NGA,Critical with moderate agricultural opportunities,46,0.710346,69140
+NGA.21.23_1,Kusada,Nigeria,NGA,Critical with moderate agricultural opportunities,54,0.698718,77337
+NGA.21.24_1,Mai'Adua,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.716574,64156
+NGA.21.25_1,Malumfashi,Nigeria,NGA,Critical with moderate agricultural opportunities,58,0.73038,90339
+NGA.21.26_1,Mani,Nigeria,NGA,Critical with moderate agricultural opportunities,65,0.725225,80050
+NGA.21.27_1,Mashi,Nigeria,NGA,Critical with moderate agricultural opportunities,60,0.715659,63389
+NGA.21.28_1,Matazu,Nigeria,NGA,Critical with moderate agricultural opportunities,42,0.601027,76222
+NGA.21.29_1,Musawa,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.694701,79482
+NGA.21.2_1,Batagarawa,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.714873,70551
+NGA.21.30_1,Rimi,Nigeria,NGA,Critical with moderate agricultural opportunities,69,0.717577,66842
+NGA.21.33_1,Sandamu,Nigeria,NGA,Critical with moderate agricultural opportunities,58,0.716901,66312
+NGA.21.34_1,Zango,Nigeria,NGA,Critical with moderate agricultural opportunities,56,0.739941,68926
+NGA.21.3_1,Batsari,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.719122,73447
+NGA.21.4_1,Baure,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.70605,70461
+NGA.21.5_1,Bindawa,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.701859,77524
+NGA.21.6_1,Charanchi,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.705671,73494
+NGA.21.9_1,Danmusa,Nigeria,NGA,Critical with moderate agricultural opportunities,68,0.683697,86038
+NGA.3.26_1,Oruk-Ana,Nigeria,NGA,Critical with moderate agricultural opportunities,44,0.740039,88063
+NGA.3.2_1,Eastern Obolo,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.35857,83317
+NGA.33.14_1,Khana,Nigeria,NGA,Critical with moderate agricultural opportunities,44,0.395395,94122
+NGA.33.17_1,Ogu/Bolo,Nigeria,NGA,Critical with moderate agricultural opportunities,64,0.420208,85428
+NGA.33.18_1,Okrika,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.420898,84529
+NGA.33.23_1,Tai,Nigeria,NGA,Critical with moderate agricultural opportunities,59,0.561218,95420
+NGA.36.10_1,Karasuwa,Nigeria,NGA,Critical with moderate agricultural opportunities,56,0.806774,48881
+NGA.36.11_1,Machina,Nigeria,NGA,Critical with moderate agricultural opportunities,51,0.762987,47371
+NGA.36.12_1,Nangere,Nigeria,NGA,Critical with moderate agricultural opportunities,64,0.411742,62781
+NGA.36.14_1,Potiskum,Nigeria,NGA,Critical with moderate agricultural opportunities,56,0.0165,56802
+NGA.36.15_1,Tarmuwa,Nigeria,NGA,Critical with moderate agricultural opportunities,46,0.76142,57356
+NGA.36.16_1,Yunusari,Nigeria,NGA,Critical with moderate agricultural opportunities,59,0.760263,46484
+NGA.36.17_1,Yusufari,Nigeria,NGA,Critical with moderate agricultural opportunities,51,0.764861,43528
+NGA.36.1_1,Bade,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.743663,64119
+NGA.36.2_1,Borsari,Nigeria,NGA,Critical with moderate agricultural opportunities,53,0.76431,48924
+NGA.36.4_1,Fika,Nigeria,NGA,Critical with moderate agricultural opportunities,61,0.747137,85581
+NGA.36.5_1,Fune,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.815214,54670
+NGA.36.6_1,Geidam,Nigeria,NGA,Critical with moderate agricultural opportunities,57,0.696801,53554
+NGA.36.7_1,Gujba,Nigeria,NGA,Critical with moderate agricultural opportunities,48,0.400066,96964
+NGA.36.9_1,Jakusko,Nigeria,NGA,Critical with moderate agricultural opportunities,64,0.753364,60935
+NGA.37.8_1,Kaura-Na,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.677568,89043
+NGA.5.12_1,Katagum,Nigeria,NGA,Critical with moderate agricultural opportunities,42,0.772004,73526
+NGA.5.16_1,Shira,Nigeria,NGA,Critical with moderate agricultural opportunities,51,0.708808,82392
+NGA.5.19_1,Warji,Nigeria,NGA,Critical with moderate agricultural opportunities,53,0.757701,94527
+NGA.5.20_1,Zaki,Nigeria,NGA,Critical with moderate agricultural opportunities,55,0.760655,66025
+NGA.5.4_1,Damban,Nigeria,NGA,Critical with moderate agricultural opportunities,59,0.795847,80983
+NGA.5.7_1,Gamawa,Nigeria,NGA,Critical with moderate agricultural opportunities,62,0.869188,63008
+NGA.6.4_1,Nembe,Nigeria,NGA,Critical with moderate agricultural opportunities,43,0.518448,93777
+NGA.8.24_1,Mobbar,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.687691,69478
+NGA.9.15_1,Odukpani,Nigeria,NGA,Critical with moderate agricultural opportunities,45,0.021173,81310
+NGA.9.4_1,Bakassi,Nigeria,NGA,Critical with moderate agricultural opportunities,44,0.463344,73775
+NGA.9.9_1,Calabar South,Nigeria,NGA,Critical with moderate agricultural opportunities,43,0.517923,68665
+NGA.10.10_1,IsokoSou,Nigeria,NGA,High performance,11,0.753115,117714
+NGA.10.11_1,Ndokwa East,Nigeria,NGA,High performance,8,0.699584,108331
+NGA.10.15_1,Oshimili South,Nigeria,NGA,High performance,7,0.710999,103770
+NGA.10.16_1,Patani,Nigeria,NGA,High performance,8,0.695637,120885
+NGA.10.17_1,Sapele,Nigeria,NGA,High performance,10,0.699013,126100
+NGA.10.19_1,Ughelli North,Nigeria,NGA,High performance,10,0.688027,124960
+NGA.10.20_1,Ughelli South,Nigeria,NGA,High performance,12,0.700911,112717
+NGA.10.21_1,Ukwuani,Nigeria,NGA,High performance,4,0.678817,135698
+NGA.10.25_1,Warri South-West,Nigeria,NGA,High performance,26,0.692315,110668
+NGA.10.3_1,Bomadi,Nigeria,NGA,High performance,17,0.701226,107819
+NGA.10.4_1,Burutu,Nigeria,NGA,High performance,29,0.687069,111833
+NGA.10.6_1,EthiopeE,Nigeria,NGA,High performance,12,0.694569,118401
+NGA.10.9_1,IsokoNor,Nigeria,NGA,High performance,8,0.692878,122774
+NGA.12.16_1,Owan East,Nigeria,NGA,High performance,31,0.790258,129679
+NGA.12.18_1,Uhunmwonde,Nigeria,NGA,High performance,15,0.701774,130225
+NGA.13.9_1,Ijero,Nigeria,NGA,High performance,13,0.716987,200214
+NGA.14.17_1,Uzo-Uwani,Nigeria,NGA,High performance,37,0.725416,130148
+NGA.15.5_1,Kuje,Nigeria,NGA,High performance,25,0.715457,171988
+NGA.15.6_1,Kwali,Nigeria,NGA,High performance,24,0.770996,186884
+NGA.16.10_1,Shomgom,Nigeria,NGA,High performance,16,0.778613,145532
+NGA.16.11_1,Yamaltu,Nigeria,NGA,High performance,23,0.748833,119383
+NGA.16.1_1,Akko,Nigeria,NGA,High performance,19,0.710209,127393
+NGA.16.3_1,Billiri,Nigeria,NGA,High performance,13,0.767823,108382
+NGA.16.4_1,Dukku,Nigeria,NGA,High performance,39,0.693118,146783
+NGA.16.5_1,Funakaye,Nigeria,NGA,High performance,30,0.709855,116129
+NGA.16.7_1,Kaltungo,Nigeria,NGA,High performance,23,0.688574,149130
+NGA.16.8_1,Kwami,Nigeria,NGA,High performance,15,0.721752,150703
+NGA.19.13_1,Kaura,Nigeria,NGA,High performance,33,0.739056,162970
+NGA.19.3_1,Giwa,Nigeria,NGA,High performance,37,0.725836,117540
+NGA.22.12_1,Jega,Nigeria,NGA,High performance,31,0.740283,101810
+NGA.23.11_1,Kotonkar,Nigeria,NGA,High performance,7,0.706669,141408
+NGA.24.11_1,Kaiama,Nigeria,NGA,High performance,41,0.773026,126100
+NGA.24.12_1,Moro,Nigeria,NGA,High performance,26,0.698115,137477
+NGA.24.15_1,Oyun,Nigeria,NGA,High performance,18,0.701405,132142
+NGA.24.16_1,Pategi,Nigeria,NGA,High performance,22,0.742081,123308
+NGA.24.1_1,Asa,Nigeria,NGA,High performance,28,0.695646,141046
+NGA.24.3_1,Edu,Nigeria,NGA,High performance,20,0.799951,150639
+NGA.24.6_1,Ilorin East,Nigeria,NGA,High performance,18,0.771794,142983
+NGA.24.7_1,Ilorin South,Nigeria,NGA,High performance,17,0.688353,129449
+NGA.27.10_1,Katcha,Nigeria,NGA,High performance,17,0.753071,176300
+NGA.27.12_1,Lapai,Nigeria,NGA,High performance,23,0.754774,141901
+NGA.27.13_1,Lavun,Nigeria,NGA,High performance,10,0.77046,133441
+NGA.27.16_1,Mashegu,Nigeria,NGA,High performance,33,0.69675,137713
+NGA.27.17_1,Mokwa,Nigeria,NGA,High performance,21,0.743709,153596
+NGA.27.19_1,Paikoro,Nigeria,NGA,High performance,37,0.744141,199014
+NGA.27.1_1,Agaie,Nigeria,NGA,High performance,17,0.757895,160976
+NGA.27.21_1,Rijau,Nigeria,NGA,High performance,31,0.73928,160830
+NGA.27.23_1,Suleja,Nigeria,NGA,High performance,6,0.751869,226672
+NGA.27.24_1,Tafa,Nigeria,NGA,High performance,6,0.76411,184268
+NGA.27.25_1,Wushishi,Nigeria,NGA,High performance,12,0.743311,190567
+NGA.27.3_1,Bida,Nigeria,NGA,High performance,2,0.71887,139840
+NGA.27.5_1,Bosso,Nigeria,NGA,High performance,17,0.753306,178163
+NGA.27.6_1,Chanchaga,Nigeria,NGA,High performance,17,0.786769,118985
+NGA.27.7_1,Edati,Nigeria,NGA,High performance,6,0.751535,152507
+NGA.27.8_1,Gbako,Nigeria,NGA,High performance,9,0.715331,123766
+NGA.27.9_1,Gurara,Nigeria,NGA,High performance,23,0.716471,255806
+NGA.28.16_1,Odeda,Nigeria,NGA,High performance,32,0.748329,162341
+NGA.29.11_1,IleOluji/Okeigbo,Nigeria,NGA,High performance,25,0.820851,196259
+NGA.29.12_1,Irele,Nigeria,NGA,High performance,15,0.754061,132791
+NGA.29.13_1,Odigbo,Nigeria,NGA,High performance,14,0.802986,118685
+NGA.29.15_1,Ondo East,Nigeria,NGA,High performance,20,0.772208,179550
+NGA.29.17_1,Ose,Nigeria,NGA,High performance,16,0.747844,147454
+NGA.29.18_1,Owo,Nigeria,NGA,High performance,18,0.7386,164416
+NGA.29.2_1,Akoko South-East,Nigeria,NGA,High performance,13,0.742924,151821
+NGA.29.3_1,Akoko South-West,Nigeria,NGA,High performance,16,0.75336,139578
+NGA.29.4_1,AkokoNorthWest,Nigeria,NGA,High performance,9,0.745061,146094
+NGA.29.6_1,Akure South,Nigeria,NGA,High performance,10,0.71769,207211
+NGA.29.7_1,Ese-Odo,Nigeria,NGA,High performance,22,0.762284,114199
+NGA.29.8_1,Idanre,Nigeria,NGA,High performance,18,0.768036,195127
+NGA.29.9_1,Ifedore,Nigeria,NGA,High performance,13,0.724241,183834
+NGA.30.20_1,Irepodun,Nigeria,NGA,High performance,35,0.813195,139160
+NGA.31.12_1,Ibarapa East,Nigeria,NGA,High performance,35,0.758907,182584
+NGA.31.14_1,Ido,Nigeria,NGA,High performance,27,0.714319,184225
+NGA.31.16_1,Iseyin,Nigeria,NGA,High performance,37,0.819866,178699
+NGA.31.17_1,Itesiwaju,Nigeria,NGA,High performance,31,0.706131,178950
+NGA.31.18_1,Iwajowa,Nigeria,NGA,High performance,41,0.740725,110054
+NGA.31.19_1,Kajola,Nigeria,NGA,High performance,34,0.703457,183144
+NGA.31.1_1,Afijio,Nigeria,NGA,High performance,20,0.731184,137887
+NGA.31.24_1,Olorunsogo,Nigeria,NGA,High performance,41,0.73338,125060
+NGA.31.25_1,Oluyole,Nigeria,NGA,High performance,21,0.740489,119328
+NGA.31.27_1,Orelope,Nigeria,NGA,High performance,39,0.737455,118128
+NGA.31.29_1,Oyo East,Nigeria,NGA,High performance,31,0.718121,170601
+NGA.31.30_1,Oyo West,Nigeria,NGA,High performance,28,0.724508,155243
+NGA.31.31_1,Saki East,Nigeria,NGA,High performance,21,0.737372,122006
+NGA.31.32_1,Saki West,Nigeria,NGA,High performance,32,0.737434,121921
+NGA.31.4_1,Atisbo,Nigeria,NGA,High performance,31,0.739989,110533
+NGA.32.15_1,Riyom,Nigeria,NGA,High performance,30,0.738175,180364
+NGA.32.1_1,Barkin Ladi,Nigeria,NGA,High performance,24,0.740811,177984
+NGA.32.4_1,Jos East,Nigeria,NGA,High performance,39,0.713184,260595
+NGA.32.5_1,Jos North,Nigeria,NGA,High performance,35,0.692795,170917
+NGA.32.6_1,Jos South,Nigeria,NGA,High performance,35,0.751779,163890
+NGA.34.18_1,Tambawal,Nigeria,NGA,High performance,37,0.680461,136539
+NGA.37.2_1,Bakura,Nigeria,NGA,High performance,40,0.68007,139307
+NGA.4.10_1,Idemili North,Nigeria,NGA,High performance,5,0.709202,138900
+NGA.4.11_1,Idemili South,Nigeria,NGA,High performance,5,0.712005,130682
+NGA.4.13_1,Njikoka,Nigeria,NGA,High performance,5,0.714103,130528
+NGA.4.14_1,NnewiNort,Nigeria,NGA,High performance,4,0.722393,118792
+NGA.4.15_1,NnewiSou,Nigeria,NGA,High performance,7,0.715339,127777
+NGA.4.18_1,Onitsha South,Nigeria,NGA,High performance,5,0.696241,152060
+NGA.4.1_1,Aguata,Nigeria,NGA,High performance,5,0.72557,117613
+NGA.4.3_1,Anambra West,Nigeria,NGA,High performance,28,0.67357,176256
+NGA.4.4_1,Anaocha,Nigeria,NGA,High performance,5,0.726448,115230
+NGA.4.6_1,AwkaSout,Nigeria,NGA,High performance,4,0.695729,151817
+NGA.4.7_1,Ayamelum,Nigeria,NGA,High performance,28,0.835714,194979
+NGA.4.9_1,Ekwusigo,Nigeria,NGA,High performance,8,0.699446,143402
+NGA.5.13_1,Kirfi,Nigeria,NGA,High performance,41,0.777711,100209
+NGA.7.4_1,Buruku,Nigeria,NGA,High performance,41,0.700076,190920
+NGA.11.10_1,Izzi,Nigeria,NGA,High priority,78,0.136233,229546
+NGA.11.11_1,Ohaozara,Nigeria,NGA,High priority,84,0.134708,227171
+NGA.11.12_1,Ohaukwu,Nigeria,NGA,High priority,86,0.150561,249542
+NGA.11.13_1,Onicha,Nigeria,NGA,High priority,81,0.032604,238858
+NGA.11.1_1,Abakalik,Nigeria,NGA,High priority,86,0.242612,181386
+NGA.11.2_1,Afikpo,Nigeria,NGA,High priority,75,0.12652,204630
+NGA.11.3_1,AfikpoSo,Nigeria,NGA,High priority,50,0.124014,248822
+NGA.11.4_1,Ebonyi,Nigeria,NGA,High priority,65,0.13195,216658
+NGA.11.5_1,Ezza North,Nigeria,NGA,High priority,84,0.039222,221151
+NGA.11.6_1,Ezza South,Nigeria,NGA,High priority,90,0.028306,248152
+NGA.11.7_1,Ikwo,Nigeria,NGA,High priority,91,0.123399,250492
+NGA.11.8_1,Ishielu,Nigeria,NGA,High priority,68,0.143149,217178
+NGA.11.9_1,Ivo,Nigeria,NGA,High priority,58,0.342067,268106
+NGA.14.10_1,Isi-Uzo,Nigeria,NGA,High priority,73,0.063794,154427
+NGA.14.11_1,Nkanu East,Nigeria,NGA,High priority,53,0.508064,161280
+NGA.14.15_1,Udenu,Nigeria,NGA,High priority,55,0.414907,147422
+NGA.14.1_1,Aninri,Nigeria,NGA,High priority,65,0.377818,191028
+NGA.14.2_1,Awgu,Nigeria,NGA,High priority,42,0.089257,128030
+NGA.14.7_1,Igbo-Eti,Nigeria,NGA,High priority,52,0.437629,133195
+NGA.14.8_1,Igbo-eze North,Nigeria,NGA,High priority,45,0.335199,132822
+NGA.14.9_1,Igbo-eze South,Nigeria,NGA,High priority,51,0.471411,114213
+NGA.16.2_1,Balanga,Nigeria,NGA,High priority,44,0.616795,151842
+NGA.16.9_1,Nafada,Nigeria,NGA,High priority,47,0.621518,120887
+NGA.18.10_1,Guri,Nigeria,NGA,High priority,56,0.689469,111692
+NGA.18.11_1,Gwaram,Nigeria,NGA,High priority,52,0.700246,116151
+NGA.18.13_1,Hadejia,Nigeria,NGA,High priority,42,0.701771,98558
+NGA.18.17_1,Kazaure,Nigeria,NGA,High priority,68,0.752969,115513
+NGA.18.18_1,KiriKasa,Nigeria,NGA,High priority,52,0.681997,125441
+NGA.19.12_1,Kajuru,Nigeria,NGA,High priority,46,0.523859,232718
+NGA.19.14_1,Kauru,Nigeria,NGA,High priority,45,0.575038,160999
+NGA.19.15_1,Kubau,Nigeria,NGA,High priority,50,0.607013,134620
+NGA.19.17_1,Lere,Nigeria,NGA,High priority,47,0.698119,160098
+NGA.19.18_1,Makarfi,Nigeria,NGA,High priority,45,0.681305,102081
+NGA.19.1_1,Birnin-G,Nigeria,NGA,High priority,45,0.565701,161803
+NGA.19.2_1,Chikun,Nigeria,NGA,High priority,42,0.556594,160000
+NGA.19.5_1,Ikara,Nigeria,NGA,High priority,58,0.616529,101899
+NGA.19.8_1,Kachia,Nigeria,NGA,High priority,44,0.604471,136079
+NGA.2.10_1,Madagali,Nigeria,NGA,High priority,52,0.188467,123019
+NGA.2.12_1,Mayo-Bel,Nigeria,NGA,High priority,60,0.676705,165876
+NGA.2.13_1,Michika,Nigeria,NGA,High priority,61,0.390039,120588
+NGA.2.14_1,Mubi North,Nigeria,NGA,High priority,49,0.593974,136037
+NGA.2.16_1,Numan,Nigeria,NGA,High priority,74,0.586142,128243
+NGA.2.17_1,Shelleng,Nigeria,NGA,High priority,59,0.592641,129845
+NGA.2.18_1,Song,Nigeria,NGA,High priority,58,0.37852,192052
+NGA.2.19_1,Teungo,Nigeria,NGA,High priority,52,0.759634,129986
+NGA.2.1_1,Demsa,Nigeria,NGA,High priority,66,0.606536,123165
+NGA.2.21_1,Yola South,Nigeria,NGA,High priority,42,0.546794,131758
+NGA.2.2_1,Fufore,Nigeria,NGA,High priority,49,0.559049,164398
+NGA.2.3_1,Ganye,Nigeria,NGA,High priority,50,0.643547,122074
+NGA.2.4_1,Girie,Nigeria,NGA,High priority,69,0.495244,135907
+NGA.2.5_1,Gombi,Nigeria,NGA,High priority,51,0.49897,131708
+NGA.2.7_1,Hong,Nigeria,NGA,High priority,57,0.703603,130003
+NGA.2.8_1,Jada,Nigeria,NGA,High priority,47,0.542503,184805
+NGA.2.9_1,Lamurde,Nigeria,NGA,High priority,67,0.579674,141927
+NGA.20.11_1,Doguwa,Nigeria,NGA,High priority,52,0.549665,169685
+NGA.20.15_1,Garum Mallam,Nigeria,NGA,High priority,43,0.638785,99616
+NGA.20.24_1,Kiru,Nigeria,NGA,High priority,54,0.56493,99950
+NGA.20.36_1,Sumaila,Nigeria,NGA,High priority,52,0.622663,105858
+NGA.20.41_1,Tundun Wada,Nigeria,NGA,High priority,60,0.711498,114438
+NGA.21.13_1,Faskari,Nigeria,NGA,High priority,61,0.670328,103820
+NGA.21.14_1,Funtua,Nigeria,NGA,High priority,59,0.667854,115946
+NGA.21.17_1,Kafur,Nigeria,NGA,High priority,57,0.678524,97957
+NGA.21.1_1,Bakori,Nigeria,NGA,High priority,64,0.680553,100417
+NGA.21.31_1,Sabuwa,Nigeria,NGA,High priority,50,0.659837,119885
+NGA.21.7_1,Dandume,Nigeria,NGA,High priority,62,0.670108,112034
+NGA.21.8_1,Danja,Nigeria,NGA,High priority,49,0.776143,106488
+NGA.22.10_1,Fakai,Nigeria,NGA,High priority,46,0.584327,151984
+NGA.22.17_1,Sakaba,Nigeria,NGA,High priority,43,0.594969,145212
+NGA.22.18_1,Shanga,Nigeria,NGA,High priority,46,0.590344,147710
+NGA.22.9_1,Danko Wasagu,Nigeria,NGA,High priority,51,0.604734,136288
+NGA.24.2_1,Baruten,Nigeria,NGA,High priority,51,0.845813,136181
+NGA.26.8_1,Lafia,Nigeria,NGA,High priority,42,0.587924,157622
+NGA.27.11_1,Kontogur,Nigeria,NGA,High priority,53,0.380675,178104
+NGA.27.14_1,Magama,Nigeria,NGA,High priority,42,0.739885,157401
+NGA.27.15_1,Mariga,Nigeria,NGA,High priority,53,0.782078,185155
+NGA.27.18_1,Muya,Nigeria,NGA,High priority,43,0.747473,167434
+NGA.27.22_1,Shiroro,Nigeria,NGA,High priority,42,0.725539,204460
+NGA.27.4_1,Borgu,Nigeria,NGA,High priority,48,0.749776,134985
+NGA.28.19_1,Remo-North,Nigeria,NGA,High priority,42,0.487883,124079
+NGA.3.18_1,Mkpat Enin,Nigeria,NGA,High priority,46,0.06587,98128
+NGA.3.19_1,Nsit Atai,Nigeria,NGA,High priority,42,0.059647,133722
+NGA.30.10_1,Ejigbo,Nigeria,NGA,High priority,43,0.141893,144399
+NGA.30.7_1,Ede North,Nigeria,NGA,High priority,48,0.543309,154268
+NGA.30.9_1,Egbedore,Nigeria,NGA,High priority,45,0.109427,140021
+NGA.31.15_1,Irepo,Nigeria,NGA,High priority,45,0.823606,122199
+NGA.31.22_1,Ogbomosho South,Nigeria,NGA,High priority,46,0.714756,179716
+NGA.31.23_1,Ogo-Oluw,Nigeria,NGA,High priority,47,0.436458,155398
+NGA.31.28_1,Ori-Ire,Nigeria,NGA,High priority,45,0.853367,145332
+NGA.31.33_1,Surulere,Nigeria,NGA,High priority,47,0.719743,155366
+NGA.31.3_1,Atiba,Nigeria,NGA,High priority,45,0.741252,106507
+NGA.32.10_1,Langtang South,Nigeria,NGA,High priority,52,0.739223,207595
+NGA.32.12_1,Mikang,Nigeria,NGA,High priority,55,0.73875,183254
+NGA.32.14_1,Qua'anpa,Nigeria,NGA,High priority,42,0.737746,169045
+NGA.32.16_1,Shendam,Nigeria,NGA,High priority,44,0.663686,202969
+NGA.32.17_1,Wase,Nigeria,NGA,High priority,55,0.7991,235695
+NGA.32.2_1,Bassa,Nigeria,NGA,High priority,48,0.721086,195719
+NGA.32.3_1,Bokkos,Nigeria,NGA,High priority,48,0.739713,160200
+NGA.32.7_1,Kanam,Nigeria,NGA,High priority,43,0.727193,186734
+NGA.32.8_1,Kanke,Nigeria,NGA,High priority,48,0.729053,182444
+NGA.32.9_1,Langtang North,Nigeria,NGA,High priority,65,0.693904,157793
+NGA.33.9_1,Eleme,Nigeria,NGA,High priority,43,0.371969,105524
+NGA.35.10_1,Lau,Nigeria,NGA,High priority,50,0.562964,178434
+NGA.35.11_1,Sardauna,Nigeria,NGA,High priority,55,0.120707,149317
+NGA.35.12_1,Takum,Nigeria,NGA,High priority,53,0.624588,173905
+NGA.35.13_1,Ussa,Nigeria,NGA,High priority,49,0.562477,170647
+NGA.35.14_1,Wukari,Nigeria,NGA,High priority,43,0.543147,197231
+NGA.35.15_1,Yorro,Nigeria,NGA,High priority,50,0.603477,132790
+NGA.35.16_1,Zing,Nigeria,NGA,High priority,49,0.451515,158227
+NGA.35.1_1,Ardo-Kola,Nigeria,NGA,High priority,73,0.732255,126919
+NGA.35.2_1,Bali,Nigeria,NGA,High priority,47,0.576841,147755
+NGA.35.3_1,Donga,Nigeria,NGA,High priority,45,0.569466,163130
+NGA.35.4_1,Gashaka,Nigeria,NGA,High priority,54,0.509975,200811
+NGA.35.5_1,Gassol,Nigeria,NGA,High priority,65,0.699981,173670
+NGA.35.6_1,Ibi,Nigeria,NGA,High priority,42,0.447013,187129
+NGA.35.7_1,Jalingo,Nigeria,NGA,High priority,46,0.704314,148815
+NGA.35.8_1,Karim-La,Nigeria,NGA,High priority,50,0.302706,186022
+NGA.35.9_1,Kurmi,Nigeria,NGA,High priority,49,0.367723,198610
+NGA.37.10_1,Maru,Nigeria,NGA,High priority,50,0.515855,189034
+NGA.37.12_1,Talata-Mafara,Nigeria,NGA,High priority,55,0.701744,105770
+NGA.37.13_1,Tsafe,Nigeria,NGA,High priority,57,0.751985,129254
+NGA.37.14_1,Zurmi,Nigeria,NGA,High priority,49,0.696318,102172
+NGA.37.1_1,Anka,Nigeria,NGA,High priority,55,0.654873,171984
+NGA.37.3_1,Birnin-Magaji/Kiyaw,Nigeria,NGA,High priority,54,0.678419,132925
+NGA.37.4_1,Bukkuyum,Nigeria,NGA,High priority,48,0.671222,153513
+NGA.37.5_1,Bungudu,Nigeria,NGA,High priority,59,0.694079,120494
+NGA.37.7_1,Gusau,Nigeria,NGA,High priority,51,0.66927,153578
+NGA.37.9_1,Maradun,Nigeria,NGA,High priority,44,0.681256,118084
+NGA.5.15_1,Ningi,Nigeria,NGA,High priority,47,0.729766,142790
+NGA.5.17_1,Tafawa-B,Nigeria,NGA,High priority,46,0.636117,130782
+NGA.5.18_1,Toro,Nigeria,NGA,High priority,52,0.713357,202113
+NGA.5.1_1,Alkaleri,Nigeria,NGA,High priority,47,0.743069,131560
+NGA.5.3_1,Bogoro,Nigeria,NGA,High priority,50,0.438567,98814
+NGA.5.5_1,Darazo,Nigeria,NGA,High priority,44,0.787629,110760
+NGA.5.6_1,Dass,Nigeria,NGA,High priority,45,0.720663,213276
+NGA.5.8_1,Gamjuwa,Nigeria,NGA,High priority,50,0.783085,119317
+NGA.7.10_1,Konshish,Nigeria,NGA,High priority,50,0.469071,203374
+NGA.7.11_1,Kwande,Nigeria,NGA,High priority,50,0.09696,180057
+NGA.7.14_1,Obi,Nigeria,NGA,High priority,42,0.44401,229561
+NGA.7.15_1,Ogbadibo,Nigeria,NGA,High priority,47,0.333612,141127
+NGA.7.17_1,Oju,Nigeria,NGA,High priority,56,0.296096,289854
+NGA.7.18_1,Okpokwu,Nigeria,NGA,High priority,56,0.247921,170350
+NGA.7.1_1,Ado,Nigeria,NGA,High priority,79,0.557173,159361
+NGA.7.21_1,Ukum,Nigeria,NGA,High priority,46,0.674121,198171
+NGA.7.22_1,Ushongo,Nigeria,NGA,High priority,52,0.477859,200026
+NGA.7.23_1,Vandeiky,Nigeria,NGA,High priority,56,0.412695,192649
+NGA.7.5_1,Gboko,Nigeria,NGA,High priority,44,0.200726,203574
+NGA.7.8_1,GwerWest,Nigeria,NGA,High priority,42,0.559016,235756
+NGA.7.9_1,Katsina (Benue),Nigeria,NGA,High priority,50,0.675375,226519
+NGA.8.12_1,Hawul,Nigeria,NGA,High priority,50,0.62867,158818
+NGA.8.28_1,Shani,Nigeria,NGA,High priority,49,0.79418,130083
+NGA.8.2_1,Askira/U,Nigeria,NGA,High priority,56,0.636996,141993
+NGA.8.6_1,Chibok,Nigeria,NGA,High priority,55,0.644846,135479
+NGA.8.7_1,Damboa,Nigeria,NGA,High priority,53,0.613854,152770
+NGA.9.10_1,Etung,Nigeria,NGA,High priority,55,0.592497,171987
+NGA.9.11_1,Ikom,Nigeria,NGA,High priority,57,0.342755,118081
+NGA.9.12_1,Obanliku,Nigeria,NGA,High priority,60,0.321116,128204
+NGA.9.13_1,Obubra,Nigeria,NGA,High priority,67,0.199957,159598
+NGA.9.14_1,Obudu,Nigeria,NGA,High priority,50,0.232364,192258
+NGA.9.16_1,Ogoja,Nigeria,NGA,High priority,52,0.264869,168174
+NGA.9.18_1,Yala Cross,Nigeria,NGA,High priority,59,0.168782,149059
+NGA.9.1_1,Abi,Nigeria,NGA,High priority,71,0.297868,133712
+NGA.9.2_1,Akamkpa,Nigeria,NGA,High priority,46,0.379537,100660
+NGA.9.5_1,Bekwarra,Nigeria,NGA,High priority,47,0.052466,204836
+NGA.9.7_1,Boki,Nigeria,NGA,High priority,57,0.248651,177005
+NGA.1.11_1,Osisioma Ngwa,Nigeria,NGA,Low priority,9,0.282747,82385
+NGA.1.12_1,Ugwunagbo,Nigeria,NGA,Low priority,17,0.100798,97645
+NGA.1.1_1,Aba North,Nigeria,NGA,Low priority,2,0.47053,39792
+NGA.1.2_1,Aba South,Nigeria,NGA,Low priority,9,0.022641,50982
+NGA.1.9_1,Oboma Ngwa,Nigeria,NGA,Low priority,16,0.41837,84527
+NGA.10.18_1,Udu,Nigeria,NGA,Low priority,5,0.803416,88159
+NGA.10.22_1,Uvwie,Nigeria,NGA,Low priority,2,0.125479,81016
+NGA.17.11_1,Mbaitoli,Nigeria,NGA,Low priority,12,0.539839,85897
+NGA.17.12_1,Ngor-Okp,Nigeria,NGA,Low priority,14,0.424791,97314
+NGA.17.13_1,Njaba,Nigeria,NGA,Low priority,13,0.121862,74031
+NGA.17.16_1,Obowo,Nigeria,NGA,Low priority,16,0.122675,84069
+NGA.17.1_1,Aboh-Mba,Nigeria,NGA,Low priority,16,0.111355,85654
+NGA.17.20_1,Orlu,Nigeria,NGA,Low priority,15,0.467181,83677
+NGA.17.21_1,Orsu,Nigeria,NGA,Low priority,6,0.733911,89093
+NGA.17.22_1,Oru East,Nigeria,NGA,Low priority,12,0.463813,83850
+NGA.17.23_1,Oru West,Nigeria,NGA,Low priority,14,0.465205,84832
+NGA.17.24_1,Owerri Municipal,Nigeria,NGA,Low priority,2,0.583905,51383
+NGA.17.25_1,Owerri North,Nigeria,NGA,Low priority,6,0.008788,83207
+NGA.17.2_1,Ahizu-Mb,Nigeria,NGA,Low priority,21,0.439467,76469
+NGA.17.4_1,Ezinihit,Nigeria,NGA,Low priority,16,0.430329,96962
+NGA.19.10_1,Kaduna South,Nigeria,NGA,Low priority,7,0.716524,64839
+NGA.19.19_1,Sabon-Ga,Nigeria,NGA,Low priority,9,0.066016,80818
+NGA.19.23_1,Zaria,Nigeria,NGA,Low priority,12,0.666633,96900
+NGA.19.9_1,Kaduna North,Nigeria,NGA,Low priority,13,0.034012,90617
+NGA.20.12_1,Fagge,Nigeria,NGA,Low priority,0,0.657394,53743
+NGA.20.17_1,Gezawa,Nigeria,NGA,Low priority,17,0.66674,83464
+NGA.20.18_1,Gwale,Nigeria,NGA,Low priority,7,0.708832,64315
+NGA.20.21_1,Kano,Nigeria,NGA,Low priority,7,0.689589,76121
+NGA.20.25_1,Kumbotso,Nigeria,NGA,Low priority,21,0.662011,87704
+NGA.20.31_1,Nassaraw,Nigeria,NGA,Low priority,0,0.758157,33520
+NGA.20.38_1,Tarauni,Nigeria,NGA,Low priority,3,0.708315,62573
+NGA.20.42_1,Ungogo,Nigeria,NGA,Low priority,5,0.677251,80590
+NGA.20.43_1,Warawa,Nigeria,NGA,Low priority,17,0.658521,86377
+NGA.20.7_1,Dala,Nigeria,NGA,Low priority,4,0.688009,76806
+NGA.21.12_1,Dutsin-M,Nigeria,NGA,Low priority,14,0.075461,67580
+NGA.22.6_1,BirninKe,Nigeria,NGA,Low priority,20,0.187447,75103
+NGA.24.14_1,Oke-Ero,Nigeria,NGA,Low priority,11,0.574642,79789
+NGA.25.10_1,Ifako/Ijaye,Nigeria,NGA,Low priority,5,0.322145,46333
+NGA.25.11_1,Ikeja,Nigeria,NGA,Low priority,3,0.345904,41202
+NGA.25.12_1,Ikorodu,Nigeria,NGA,Low priority,5,0.173114,92239
+NGA.25.13_1,Kosofe,Nigeria,NGA,Low priority,3,0.255109,58783
+NGA.25.14_1,LagosIsland,Nigeria,NGA,Low priority,12,0.306551,47606
+NGA.25.15_1,Mainland,Nigeria,NGA,Low priority,5,0.38476,35050
+NGA.25.16_1,Mushin,Nigeria,NGA,Low priority,4,0.396032,34093
+NGA.25.18_1,Oshodi/Isolo,Nigeria,NGA,Low priority,3,0.686768,57690
+NGA.25.19_1,Shomolu,Nigeria,NGA,Low priority,7,0.382267,36351
+NGA.25.1_1,Agege,Nigeria,NGA,Low priority,4,0.374061,35938
+NGA.25.20_1,Surulere,Nigeria,NGA,Low priority,5,0.414361,32661
+NGA.25.2_1,Ajeromi/Ifelodun,Nigeria,NGA,Low priority,4,0.364651,40324
+NGA.25.3_1,Alimosho,Nigeria,NGA,Low priority,4,0.20482,79477
+NGA.25.4_1,Amuwo Odofin,Nigeria,NGA,Low priority,15,0.176982,92161
+NGA.25.5_1,Apapa,Nigeria,NGA,Low priority,7,0.358466,40595
+NGA.25.7_1,Epe,Nigeria,NGA,Low priority,19,0.222763,66333
+NGA.25.8_1,Eti-Osa,Nigeria,NGA,Low priority,4,0.257681,62281
+NGA.28.18_1,OgunWaterside,Nigeria,NGA,Low priority,16,0.555573,89265
+NGA.28.1_1,Abeokuta South,Nigeria,NGA,Low priority,12,0.572822,92277
+NGA.29.10_1,IlajeEseodo,Nigeria,NGA,Low priority,12,0.788155,82134
+NGA.3.31_1,Uyo,Nigeria,NGA,Low priority,18,0.394021,75533
+NGA.3.3_1,Eket,Nigeria,NGA,Low priority,20,0.393768,77683
+NGA.31.10_1,IbadanSouth-West,Nigeria,NGA,Low priority,6,0.793376,59648
+NGA.31.6_1,IbadanNorth,Nigeria,NGA,Low priority,5,0.006616,55305
+NGA.31.7_1,IbadanNorth-East,Nigeria,NGA,Low priority,5,0.411539,35248
+NGA.31.8_1,IbadanNorth-West,Nigeria,NGA,Low priority,6,0.79463,53121
+NGA.31.9_1,IbadanSouth-East,Nigeria,NGA,Low priority,5,0.793131,61871
+NGA.33.15_1,Obio/Akp,Nigeria,NGA,Low priority,5,0.462794,71627
+NGA.33.19_1,Omumma,Nigeria,NGA,Low priority,13,0.392354,97138
+NGA.33.22_1,Port Harcourt,Nigeria,NGA,Low priority,13,0.473289,72587
+NGA.33.5_1,Andoni/O,Nigeria,NGA,Low priority,21,0.428824,80179
+NGA.33.7_1,Bonny,Nigeria,NGA,Low priority,17,0.441524,74398
+NGA.34.11_1,Kware,Nigeria,NGA,Low priority,7,0.663301,95880
+NGA.34.15_1,Silame,Nigeria,NGA,Low priority,19,0.669175,92453
+NGA.34.16_1,Sokoto North,Nigeria,NGA,Low priority,1,0.669369,96512
+NGA.34.19_1,Tangazar,Nigeria,NGA,Low priority,14,0.696028,68208
+NGA.34.1_1,Binji,Nigeria,NGA,Low priority,20,0.666438,90893
+NGA.34.21_1,Wamakko,Nigeria,NGA,Low priority,6,0.483001,90989
+NGA.34.22_1,Wurno,Nigeria,NGA,Low priority,12,0.681124,80031
+NGA.34.2_1,Bodinga,Nigeria,NGA,Low priority,12,0.580065,89893
+NGA.34.7_1,Gwadabaw,Nigeria,NGA,Low priority,15,0.666606,91558
+NGA.4.17_1,Onitsha North,Nigeria,NGA,Low priority,2,0.048861,81244
+NGA.6.3_1,Kolokuma/Opokuma,Nigeria,NGA,Low priority,15,0.536222,92334
+NGA.6.6_1,Sagbama,Nigeria,NGA,Low priority,19,0.570768,93930
+NGA.6.8_1,Yenegoa,Nigeria,NGA,Low priority,6,0.756274,93596
+NGA.8.17_1,Kukawa,Nigeria,NGA,Low priority,18,0.69914,63184
+NGA.8.22_1,Maidugur,Nigeria,NGA,Low priority,8,0.569569,93679
+NGA.8.25_1,Monguno,Nigeria,NGA,Low priority,21,0.666562,85979
+NGA.9.8_1,Calabar,Nigeria,NGA,Low priority,20,0.014031,58220
+NGA.1.14_1,Ukwa West,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.228165,101394
+NGA.1.16_1,Umuahia North,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.046762,102991
+NGA.1.17_1,Umuahia South,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.176271,135518
+NGA.1.3_1,Arochukw,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.184576,125915
+NGA.1.4_1,Bende,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.096275,163125
+NGA.1.5_1,Ikwuano,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.121199,107498
+NGA.1.6_1,Isiala Ngwa North,Nigeria,NGA,Low priority with high agricultural opportunities,12,0.155603,154543
+NGA.1.7_1,Isiala Ngwa South,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.563036,100718
+NGA.1.8_1,Isuikwua,Nigeria,NGA,Low priority with high agricultural opportunities,21,0.09324,159370
+NGA.10.12_1,Ndokwa West,Nigeria,NGA,Low priority with high agricultural opportunities,5,0.398757,132889
+NGA.10.13_1,Okpe,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.153954,121736
+NGA.10.14_1,Oshimili North,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.638068,171771
+NGA.10.1_1,AniochaN,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.665237,166163
+NGA.10.23_1,Warri North,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.667962,129613
+NGA.10.2_1,AniochaS,Nigeria,NGA,Low priority with high agricultural opportunities,8,0.238118,181793
+NGA.10.5_1,Ethiope West,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.323001,132554
+NGA.10.7_1,IkaNorth,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.363112,208114
+NGA.10.8_1,IkaSouth,Nigeria,NGA,Low priority with high agricultural opportunities,5,0.572278,189366
+NGA.12.10_1,Igueben,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.605541,124780
+NGA.12.11_1,Ikpoba-Okha,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.660272,125560
+NGA.12.13_1,Orhionmw,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.58828,137368
+NGA.12.14_1,OviaNort,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.334615,148431
+NGA.12.15_1,OviaSouth-West,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.112229,147458
+NGA.12.17_1,OwanWest,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.585527,144300
+NGA.12.2_1,Egor,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.64802,106182
+NGA.12.3_1,EsanCent,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.280344,121719
+NGA.12.4_1,EsanNort,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.633118,108135
+NGA.12.5_1,EsanSout,Nigeria,NGA,Low priority with high agricultural opportunities,15,0.587083,138712
+NGA.12.6_1,EsanWest,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.617744,117496
+NGA.13.10_1,Ikere,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.172602,215367
+NGA.13.11_1,Ikole,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.043498,168820
+NGA.13.12_1,Ilejemeje,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.512824,157204
+NGA.13.13_1,Irepodun/Ifelodun,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.412021,182099
+NGA.13.14_1,Ise/Orun,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.373741,210196
+NGA.13.15_1,Moba,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.031188,159287
+NGA.13.16_1,Oye,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.554398,146797
+NGA.13.1_1,Ado-Ekiti,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.421282,179576
+NGA.13.2_1,Efon,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.384822,198685
+NGA.13.3_1,EkitiEas,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.133573,190406
+NGA.13.4_1,EkitiSouth-West,Nigeria,NGA,Low priority with high agricultural opportunities,15,0.375965,205632
+NGA.13.5_1,EkitiWest,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.39201,191633
+NGA.13.6_1,Emure/Ise/Orun,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.427961,158655
+NGA.13.7_1,Gboyin,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.443051,195664
+NGA.13.8_1,Ido/Osi,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.422575,149522
+NGA.15.2_1,AbujaMun,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.1169,182200
+NGA.15.3_1,Bwari,Nigeria,NGA,Low priority with high agricultural opportunities,12,0.032238,182682
+NGA.16.6_1,Gombe,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.377616,144935
+NGA.17.17_1,Oguta,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.409385,103393
+NGA.17.18_1,Ohaji/Eg,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.41332,100133
+NGA.17.26_1,Owerri West,Nigeria,NGA,Low priority with high agricultural opportunities,8,0.419976,102194
+NGA.17.7_1,Ihitte/U,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.121399,101266
+NGA.19.6_1,Jaba,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.609429,135321
+NGA.23.10_1,Kabba/Bu,Nigeria,NGA,Low priority with high agricultural opportunities,21,0.597338,140750
+NGA.23.13_1,Mopa-Muro,Nigeria,NGA,Low priority with high agricultural opportunities,15,0.316207,163428
+NGA.23.15_1,Ogori/Magongo,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.60797,141441
+NGA.23.16_1,Okehi,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.635044,126194
+NGA.23.1_1,Adavi,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.612532,132789
+NGA.23.4_1,Bassa,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.591037,146039
+NGA.23.5_1,Dekina,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.620954,121967
+NGA.23.7_1,Idah,Nigeria,NGA,Low priority with high agricultural opportunities,21,0.637192,118684
+NGA.23.9_1,Ijumu,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.592654,145688
+NGA.24.10_1,Isin,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.625075,114557
+NGA.24.13_1,Offa,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.236276,116906
+NGA.24.4_1,Ekiti,Nigeria,NGA,Low priority with high agricultural opportunities,12,0.197013,120804
+NGA.24.8_1,IlorinWe,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.453739,108811
+NGA.24.9_1,Irepodun,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.606766,119257
+NGA.25.17_1,Ojo,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.156291,99157
+NGA.25.6_1,Badagary,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.127804,120676
+NGA.25.9_1,Ibeju/Lekki,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.155172,102264
+NGA.26.12_1,Toto,Nigeria,NGA,Low priority with high agricultural opportunities,21,0.592234,146163
+NGA.26.4_1,Karu,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.339026,190065
+NGA.28.14_1,Ipokia,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.435155,149905
+NGA.28.20_1,Shagamu,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.183578,99576
+NGA.28.3_1,AdoOdo/Ota,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.44763,147818
+NGA.28.5_1,EgbadoSouth,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.02056,228733
+NGA.28.7_1,Ifo,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.499176,125678
+NGA.28.9_1,IjebuEast,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.515331,107860
+NGA.29.14_1,Okitipupa,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.592915,122056
+NGA.29.1_1,Akoko North-East,Nigeria,NGA,Low priority with high agricultural opportunities,12,0.350146,141387
+NGA.29.5_1,Akure North,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.621248,203867
+NGA.30.11_1,Ife East,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.469893,202937
+NGA.30.13_1,Ife South,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.503655,171626
+NGA.30.14_1,IfeCentral,Nigeria,NGA,Low priority with high agricultural opportunities,18,0.505692,183217
+NGA.30.15_1,Ifedayo,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.604091,141924
+NGA.30.16_1,Ifelodun,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.532655,134560
+NGA.30.17_1,Ila,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.546704,145271
+NGA.30.18_1,Ilesha East,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.51693,156384
+NGA.30.19_1,Ilesha West,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.575292,131586
+NGA.30.1_1,Atakumosa East,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.506834,173862
+NGA.30.21_1,Irewole,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.554745,137931
+NGA.30.22_1,Isokan,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.561442,133545
+NGA.30.24_1,Obokun,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.543367,148494
+NGA.30.25_1,Odo0tin,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.544652,147315
+NGA.30.28_1,Oriade,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.419778,164638
+NGA.30.2_1,Atakumosa West,Nigeria,NGA,Low priority with high agricultural opportunities,19,0.493367,184342
+NGA.30.3_1,Ayedaade,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.570108,128043
+NGA.30.5_1,Boluwaduro,Nigeria,NGA,Low priority with high agricultural opportunities,16,0.264321,141729
+NGA.30.6_1,Boripe,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.568494,135451
+NGA.31.20_1,Lagelu,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.07366,154301
+NGA.31.26_1,Ona-Ara,Nigeria,NGA,Low priority with high agricultural opportunities,11,0.089741,112397
+NGA.31.2_1,Akinyele,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.245841,156851
+NGA.31.5_1,Egbeda,Nigeria,NGA,Low priority with high agricultural opportunities,7,0.607875,136469
+NGA.33.10_1,Emuoha,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.318347,126167
+NGA.33.11_1,Etche,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.345737,117150
+NGA.33.13_1,Ikwerre,Nigeria,NGA,Low priority with high agricultural opportunities,15,0.464546,122400
+NGA.33.16_1,Ogba/Egbe,Nigeria,NGA,Low priority with high agricultural opportunities,2,0.363952,105956
+NGA.33.1_1,Abua/Odu,Nigeria,NGA,Low priority with high agricultural opportunities,9,0.261788,158573
+NGA.33.2_1,Ahoada East,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.311711,131568
+NGA.33.3_1,Ahoada West,Nigeria,NGA,Low priority with high agricultural opportunities,5,0.39474,118576
+NGA.33.6_1,Asari-To,Nigeria,NGA,Low priority with high agricultural opportunities,8,0.02937,142093
+NGA.34.17_1,Sokoto South,Nigeria,NGA,Low priority with high agricultural opportunities,3,0.662037,106610
+NGA.34.3_1,Dange-Shuni,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.653463,99441
+NGA.4.12_1,Ihiala,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.182932,127801
+NGA.4.16_1,Ogbaru,Nigeria,NGA,Low priority with high agricultural opportunities,10,0.03951,151240
+NGA.4.19_1,OrumbaNo,Nigeria,NGA,Low priority with high agricultural opportunities,13,0.104713,172059
+NGA.4.21_1,Oyi,Nigeria,NGA,Low priority with high agricultural opportunities,6,0.080561,136596
+NGA.4.2_1,Anambra East,Nigeria,NGA,Low priority with high agricultural opportunities,17,0.614398,165875
+NGA.4.5_1,AwkaNort,Nigeria,NGA,Low priority with high agricultural opportunities,14,0.21759,181495
+NGA.4.8_1,Dunukofia,Nigeria,NGA,Low priority with high agricultural opportunities,8,0.127497,153831
+NGA.6.5_1,Ogbia,Nigeria,NGA,Low priority with high agricultural opportunities,15,0.104687,106942
+NGA.8.13_1,Jere,Nigeria,NGA,Low priority with high agricultural opportunities,20,0.669531,100483
+NGA.1.10_1,Ohafia Abia,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.106977,145629
+NGA.1.13_1,Ukwa East,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.112377,129223
+NGA.1.15_1,Umu-Nneochi,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.056952,152918
+NGA.12.12_1,Oredo Edo,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.620096,132957
+NGA.12.1_1,Akoko-Ed,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.125786,136443
+NGA.12.7_1,Etsako Central,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.318231,131471
+NGA.12.8_1,EtsakoEa,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.399285,133268
+NGA.12.9_1,EtsakoWe,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.105921,143204
+NGA.14.12_1,Nkanu West,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.412891,148292
+NGA.14.14_1,Oji-River,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.427191,141009
+NGA.14.16_1,Udi,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.136658,104338
+NGA.14.3_1,Enugu East,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.543666,150266
+NGA.14.4_1,Enugu North,Nigeria,NGA,Medium priority with high agricultural opportunities,25,0.489227,113428
+NGA.14.5_1,EnuguSou,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.047064,128466
+NGA.14.6_1,Ezeagu,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.107894,147907
+NGA.15.1_1,Abaji,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.134869,166319
+NGA.15.4_1,Gwagwala,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.549775,233517
+NGA.17.19_1,Okigwe,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.397156,107783
+NGA.17.27_1,Unuimo,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.285719,105374
+NGA.17.5_1,Ideato South,Nigeria,NGA,Medium priority with high agricultural opportunities,29,0.418302,101032
+NGA.17.6_1,IdeatoNo,Nigeria,NGA,Medium priority with high agricultural opportunities,25,0.169564,114020
+NGA.19.11_1,Kagarko,Nigeria,NGA,Medium priority with high agricultural opportunities,28,0.620996,129886
+NGA.19.16_1,Kudan,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.601914,100035
+NGA.19.20_1,Sanga,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.40416,130819
+NGA.19.21_1,Soba,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.627603,127210
+NGA.19.22_1,ZangonKa,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.222486,177130
+NGA.19.4_1,Igabi,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.610167,137376
+NGA.19.7_1,Jema'a,Nigeria,NGA,Medium priority with high agricultural opportunities,31,0.601256,155063
+NGA.2.11_1,Maiha,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.50313,146221
+NGA.2.15_1,Mubi South,Nigeria,NGA,Medium priority with high agricultural opportunities,38,0.169515,180368
+NGA.2.20_1,Yola North,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.069803,105139
+NGA.20.27_1,Kura,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.658282,117044
+NGA.20.6_1,Bunkure,Nigeria,NGA,Medium priority with high agricultural opportunities,38,0.629466,107953
+NGA.22.16_1,Ngaski,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.60664,126552
+NGA.22.20_1,Yauri,Nigeria,NGA,Medium priority with high agricultural opportunities,29,0.596299,140962
+NGA.22.21_1,Zuru,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.621114,115455
+NGA.22.5_1,Bagudo,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.597344,144111
+NGA.22.7_1,Bunza,Nigeria,NGA,Medium priority with high agricultural opportunities,30,0.625754,101050
+NGA.22.8_1,Dandi,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.612391,110911
+NGA.23.12_1,Lokoja,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.594504,146591
+NGA.23.14_1,Ofu,Nigeria,NGA,Medium priority with high agricultural opportunities,25,0.631159,115188
+NGA.23.17_1,Okene,Nigeria,NGA,Medium priority with high agricultural opportunities,30,0.610786,135860
+NGA.23.18_1,Olamabor,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.628116,119193
+NGA.23.19_1,Omala,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.590923,144546
+NGA.23.20_1,Yagba East,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.240635,136374
+NGA.23.21_1,Yagba West,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.612415,128475
+NGA.23.2_1,Ajaokuta,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.627658,122134
+NGA.23.3_1,Ankpa,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.618632,150278
+NGA.23.6_1,Ibaji,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.61555,128452
+NGA.23.8_1,Igalamela-Odolu,Nigeria,NGA,Medium priority with high agricultural opportunities,31,0.638947,110598
+NGA.24.5_1,Ifelodun,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.278785,125380
+NGA.26.10_1,Nassarawa Egon,Nigeria,NGA,Medium priority with high agricultural opportunities,32,0.552882,189352
+NGA.26.11_1,Obi,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.549763,195897
+NGA.26.13_1,Wamba,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.570787,169960
+NGA.26.1_1,Akwanga,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.534179,197895
+NGA.26.2_1,Awe,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.526369,210004
+NGA.26.3_1,Doma,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.646219,194737
+NGA.26.5_1,Keana,Nigeria,NGA,Medium priority with high agricultural opportunities,38,0.515993,216978
+NGA.26.6_1,Keffi,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.580341,175516
+NGA.26.7_1,Kokona,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.531263,209235
+NGA.26.9_1,Nasarawa,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.541448,195199
+NGA.27.20_1,Rafi,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.546445,212903
+NGA.27.2_1,Agwara,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.656851,144451
+NGA.28.10_1,IjebuNorth,Nigeria,NGA,Medium priority with high agricultural opportunities,28,0.498797,118614
+NGA.28.11_1,IjebuOde,Nigeria,NGA,Medium priority with high agricultural opportunities,25,0.659351,101661
+NGA.28.12_1,Ikenne,Nigeria,NGA,Medium priority with high agricultural opportunities,32,0.442228,133805
+NGA.28.13_1,Imeko-Afon,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.462631,133049
+NGA.28.15_1,Obafemi-Owode,Nigeria,NGA,Medium priority with high agricultural opportunities,30,0.156541,167507
+NGA.28.17_1,Odogbolu,Nigeria,NGA,Medium priority with high agricultural opportunities,29,0.499911,120669
+NGA.28.2_1,AbeokutaNorth,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.538887,135025
+NGA.28.4_1,EgbadoNorth,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.382971,187625
+NGA.28.6_1,Ewekoro,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.290969,236882
+NGA.28.8_1,Ijebu North-East,Nigeria,NGA,Medium priority with high agricultural opportunities,27,0.523979,108827
+NGA.29.16_1,Ondo West,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.202344,164179
+NGA.3.15_1,Ini,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.298808,110025
+NGA.3.21_1,Nsit Ubium,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.297867,112728
+NGA.3.23_1,Okobo,Nigeria,NGA,Medium priority with high agricultural opportunities,37,0.065349,108784
+NGA.3.28_1,Ukanafun,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.311708,103038
+NGA.3.29_1,Uruan,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.284961,106518
+NGA.3.9_1,Ibesikpo Asutan,Nigeria,NGA,Medium priority with high agricultural opportunities,37,0.279428,111115
+NGA.30.12_1,Ife North,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.533757,151446
+NGA.30.23_1,Iwo,Nigeria,NGA,Medium priority with high agricultural opportunities,22,0.542516,148856
+NGA.30.26_1,Ola-Oluwa,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.532109,154035
+NGA.30.27_1,Olorunda,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.617761,108205
+NGA.30.29_1,Orolu,Nigeria,NGA,Medium priority with high agricultural opportunities,32,0.576504,129401
+NGA.30.30_1,Osogbo,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.181968,175628
+NGA.30.4_1,Ayedire,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.541409,147430
+NGA.30.8_1,Ede South,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.533286,154460
+NGA.31.11_1,Ibarapa Central,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.460262,148876
+NGA.31.13_1,Ibarapa North,Nigeria,NGA,Medium priority with high agricultural opportunities,37,0.620641,128415
+NGA.31.21_1,Ogbomosho North,Nigeria,NGA,Medium priority with high agricultural opportunities,39,0.226695,196741
+NGA.32.11_1,Mangu,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.536375,173707
+NGA.32.13_1,Pankshin,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.598875,212851
+NGA.33.21_1,Oyigbo,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.352794,113542
+NGA.33.4_1,Akukutor,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.286769,135583
+NGA.33.8_1,Degema,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.369425,100597
+NGA.34.10_1,Kebbe,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.571808,177106
+NGA.34.12_1,Rabah,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.643814,106049
+NGA.34.14_1,Shagari,Nigeria,NGA,Medium priority with high agricultural opportunities,30,0.628112,125370
+NGA.34.20_1,Tureta,Nigeria,NGA,Medium priority with high agricultural opportunities,33,0.615614,132513
+NGA.34.9_1,Isa,Nigeria,NGA,Medium priority with high agricultural opportunities,31,0.638054,112767
+NGA.37.6_1,Gummi,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.633974,167185
+NGA.4.20_1,OrumbaSo,Nigeria,NGA,Medium priority with high agricultural opportunities,24,0.189591,163169
+NGA.5.2_1,Bauchi,Nigeria,NGA,Medium priority with high agricultural opportunities,37,0.389567,156447
+NGA.7.12_1,Logo,Nigeria,NGA,Medium priority with high agricultural opportunities,40,0.461181,211022
+NGA.7.13_1,Makurdi,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.139349,199820
+NGA.7.16_1,Ohimini,Nigeria,NGA,Medium priority with high agricultural opportunities,27,0.618813,171443
+NGA.7.19_1,Oturkpo,Nigeria,NGA,Medium priority with high agricultural opportunities,25,0.47642,183398
+NGA.7.20_1,Tarka,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.479428,201189
+NGA.7.2_1,Agatu,Nigeria,NGA,Medium priority with high agricultural opportunities,36,0.388912,195233
+NGA.7.3_1,Apa,Nigeria,NGA,Medium priority with high agricultural opportunities,28,0.477391,196577
+NGA.7.6_1,Guma,Nigeria,NGA,Medium priority with high agricultural opportunities,38,0.4558,219341
+NGA.7.7_1,Gwer East,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.445824,232242
+NGA.8.11_1,Gwoza,Nigeria,NGA,Medium priority with high agricultural opportunities,34,0.608801,144099
+NGA.8.14_1,Kaga,Nigeria,NGA,Medium priority with high agricultural opportunities,38,0.653312,114333
+NGA.8.16_1,Konduga,Nigeria,NGA,Medium priority with high agricultural opportunities,23,0.635015,125409
+NGA.8.18_1,Kwaya Kusar,Nigeria,NGA,Medium priority with high agricultural opportunities,28,0.663315,127084
+NGA.8.19_1,Lake Chad,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.589093,158906
+NGA.8.20_1,Mafa,Nigeria,NGA,Medium priority with high agricultural opportunities,27,0.647801,106719
+NGA.8.3_1,Bama,Nigeria,NGA,Medium priority with high agricultural opportunities,26,0.625896,117742
+NGA.8.4_1,Bayo,Nigeria,NGA,Medium priority with high agricultural opportunities,27,0.657248,128497
+NGA.8.5_1,Biu,Nigeria,NGA,Medium priority with high agricultural opportunities,35,0.035493,131010
+NGA.8.8_1,Dikwa,Nigeria,NGA,Medium priority with high agricultural opportunities,28,0.647616,103456
+NGA.9.17_1,Yakurr,Nigeria,NGA,Medium priority with high agricultural opportunities,41,0.194624,128326
+NGA.10.24_1,Warri South,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.719573,96683
+NGA.17.10_1,Isu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,23,0.379684,85678
+NGA.17.14_1,Nkwerre,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.426883,97406
+NGA.17.15_1,Nwangele,Nigeria,NGA,Medium priority with moderate agricultural opportunities,23,0.14007,97543
+NGA.17.3_1,Ehime-Mb,Nigeria,NGA,Medium priority with moderate agricultural opportunities,22,0.435516,93728
+NGA.17.8_1,Ikeduru,Nigeria,NGA,Medium priority with moderate agricultural opportunities,25,0.174647,83240
+NGA.17.9_1,IsialaMb,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.445399,89641
+NGA.18.4_1,BirninKu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.714494,95969
+NGA.20.10_1,DawakinT,Nigeria,NGA,Medium priority with moderate agricultural opportunities,32,0.492497,88787
+NGA.20.13_1,Gabasawa,Nigeria,NGA,Medium priority with moderate agricultural opportunities,38,0.667053,78784
+NGA.20.14_1,Garko,Nigeria,NGA,Medium priority with moderate agricultural opportunities,37,0.621948,97691
+NGA.20.23_1,Kibiya,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.638664,97665
+NGA.20.28_1,Madobi,Nigeria,NGA,Medium priority with moderate agricultural opportunities,41,0.694502,89761
+NGA.20.2_1,Albasu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,37,0.64864,87988
+NGA.20.30_1,Minjibir,Nigeria,NGA,Medium priority with moderate agricultural opportunities,30,0.662628,84594
+NGA.20.37_1,Takai,Nigeria,NGA,Medium priority with moderate agricultural opportunities,28,0.643972,91101
+NGA.20.39_1,Tofa,Nigeria,NGA,Medium priority with moderate agricultural opportunities,37,0.652807,91642
+NGA.20.44_1,Wudil,Nigeria,NGA,Medium priority with moderate agricultural opportunities,31,0.644349,93326
+NGA.20.9_1,DawakinK,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.533214,92421
+NGA.21.20_1,Kankiya,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.699799,77032
+NGA.21.21_1,Katsina (K),Nigeria,NGA,Medium priority with moderate agricultural opportunities,30,0.31926,64404
+NGA.21.32_1,Safana,Nigeria,NGA,Medium priority with moderate agricultural opportunities,39,0.524835,91252
+NGA.22.11_1,Gwandu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,39,0.644128,81944
+NGA.22.13_1,Kalgo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.654652,80225
+NGA.22.14_1,Koko/Bes,Nigeria,NGA,Medium priority with moderate agricultural opportunities,27,0.634477,97105
+NGA.22.15_1,Maiyama,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.524752,80116
+NGA.22.19_1,Suru,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.703559,94519
+NGA.22.1_1,Aleiro,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.136904,77896
+NGA.22.2_1,Arewa,Nigeria,NGA,Medium priority with moderate agricultural opportunities,34,0.670694,70811
+NGA.22.3_1,Argungu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.660049,75831
+NGA.22.4_1,Augie,Nigeria,NGA,Medium priority with moderate agricultural opportunities,33,0.663627,73821
+NGA.3.10_1,Ibiono Ibom,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.34534,66337
+NGA.3.11_1,Ika,Nigeria,NGA,Medium priority with moderate agricultural opportunities,26,0.393377,76064
+NGA.3.12_1,Ikono,Nigeria,NGA,Medium priority with moderate agricultural opportunities,32,0.355689,88142
+NGA.3.13_1,Ikot-Aba,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.622732,26377
+NGA.3.14_1,Ikot-Ekp,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.084364,81078
+NGA.3.16_1,Itu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,25,0.369259,84735
+NGA.3.17_1,Mbo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,36,0.358225,68010
+NGA.3.1_1,Abak,Nigeria,NGA,Medium priority with moderate agricultural opportunities,23,0.159408,75177
+NGA.3.20_1,Nsit Ibom,Nigeria,NGA,Medium priority with moderate agricultural opportunities,25,0.467006,91873
+NGA.3.22_1,Obot Akara,Nigeria,NGA,Medium priority with moderate agricultural opportunities,27,0.650123,92842
+NGA.3.24_1,Onna,Nigeria,NGA,Medium priority with moderate agricultural opportunities,41,0.386749,78873
+NGA.3.25_1,Oron,Nigeria,NGA,Medium priority with moderate agricultural opportunities,35,0.411136,71171
+NGA.3.27_1,Udung Uko,Nigeria,NGA,Medium priority with moderate agricultural opportunities,27,0.251025,91090
+NGA.3.30_1,UrueOffo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,31,0.366446,84949
+NGA.3.4_1,Esit Eket,Nigeria,NGA,Medium priority with moderate agricultural opportunities,25,0.373764,81522
+NGA.3.5_1,Essien-U,Nigeria,NGA,Medium priority with moderate agricultural opportunities,31,0.185685,79581
+NGA.3.6_1,EtimEkpo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,30,0.480408,82977
+NGA.3.7_1,Etinan,Nigeria,NGA,Medium priority with moderate agricultural opportunities,36,0.342408,91952
+NGA.3.8_1,Ibeno,Nigeria,NGA,Medium priority with moderate agricultural opportunities,28,0.044641,96156
+NGA.33.12_1,Gokana,Nigeria,NGA,Medium priority with moderate agricultural opportunities,38,0.643517,77687
+NGA.33.20_1,Opobo/Nkoro,Nigeria,NGA,Medium priority with moderate agricultural opportunities,33,0.441412,77734
+NGA.34.13_1,Sabon Birni,Nigeria,NGA,Medium priority with moderate agricultural opportunities,24,0.649394,84269
+NGA.34.23_1,Yabo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,25,0.643499,94617
+NGA.34.4_1,Gada,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.738084,81208
+NGA.34.5_1,Goronyo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,22,0.689065,72181
+NGA.34.6_1,Gudu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,33,0.675466,82981
+NGA.34.8_1,Illela,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.674632,81297
+NGA.36.13_1,Nguru,Nigeria,NGA,Medium priority with moderate agricultural opportunities,37,0.553396,59423
+NGA.36.3_1,Damaturu,Nigeria,NGA,Medium priority with moderate agricultural opportunities,39,0.764306,61699
+NGA.36.8_1,Gulani,Nigeria,NGA,Medium priority with moderate agricultural opportunities,37,0.742181,88598
+NGA.37.11_1,Shinkafi,Nigeria,NGA,Medium priority with moderate agricultural opportunities,39,0.43602,94023
+NGA.5.10_1,Itas/Gad,Nigeria,NGA,Medium priority with moderate agricultural opportunities,31,0.770697,79579
+NGA.5.11_1,Jama'are,Nigeria,NGA,Medium priority with moderate agricultural opportunities,30,0.725825,80319
+NGA.5.14_1,Misau,Nigeria,NGA,Medium priority with moderate agricultural opportunities,32,0.391775,79596
+NGA.5.9_1,Giade,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.674019,78511
+NGA.6.1_1,Brass,Nigeria,NGA,Medium priority with moderate agricultural opportunities,34,0.492074,96681
+NGA.6.2_1,Ekeremor,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.19164,88100
+NGA.6.7_1,Southern Ijaw,Nigeria,NGA,Medium priority with moderate agricultural opportunities,39,0.322552,76567
+NGA.8.10_1,Guzamala,Nigeria,NGA,Medium priority with moderate agricultural opportunities,32,0.693269,65760
+NGA.8.15_1,Kala/Balge,Nigeria,NGA,Medium priority with moderate agricultural opportunities,33,0.663263,87528
+NGA.8.1_1,Abadam,Nigeria,NGA,Medium priority with moderate agricultural opportunities,40,0.7032,57024
+NGA.8.21_1,Magumeri,Nigeria,NGA,Medium priority with moderate agricultural opportunities,29,0.690684,81477
+NGA.8.23_1,Marte,Nigeria,NGA,Medium priority with moderate agricultural opportunities,36,0.667075,89603
+NGA.8.26_1,Ngala,Nigeria,NGA,Medium priority with moderate agricultural opportunities,36,0.67932,81035
+NGA.8.27_1,Nganzai,Nigeria,NGA,Medium priority with moderate agricultural opportunities,23,0.683807,79819
+NGA.8.9_1,Gubio,Nigeria,NGA,Medium priority with moderate agricultural opportunities,36,0.690388,72729
+NGA.9.3_1,Akpabuyo,Nigeria,NGA,Medium priority with moderate agricultural opportunities,38,0.486728,68087
+NGA.9.6_1,Biase,Nigeria,NGA,Medium priority with moderate agricultural opportunities,32,0.403435,92509

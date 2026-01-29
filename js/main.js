@@ -225,6 +225,14 @@ function initializeUI() {
   document.getElementById('searchInput').addEventListener('input', handleSearch);
   document.getElementById('searchInput').addEventListener('keydown', handleSearchKeyboard);
 
+  // On mobile, move search suggestions to body so they escape sidebar's
+  // overflow clipping and transform stacking context
+  if (window.innerWidth <= 768) {
+    const suggestionBox = document.getElementById('searchSuggestions');
+    document.body.appendChild(suggestionBox);
+    suggestionBox.classList.add('mobile-detached');
+  }
+
   // Close search suggestions when clicking outside
   document.addEventListener('click', (e) => {
     const searchInput = document.getElementById('searchInput');

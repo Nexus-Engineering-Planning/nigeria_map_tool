@@ -731,31 +731,34 @@ function initializeMapControls() {
 
 function initializeSwipeGestures() {
   const sidebar = document.querySelector('.sidebar');
+  const sidebarHeader = document.querySelector('.sidebar-header');
   let startY, isDragging = false;
+  const SWIPE_THRESHOLD = 30; // Minimum pixels to trigger collapse/expand
 
+  // Only attach swipe to the header area to avoid conflicting with content scrolling
   const onTouchStart = (e) => {
     if (window.innerWidth > 768) return;
     isDragging = true;
-    startY = e.touches ? e.touches[0].clientY : e.clientY;
-    sidebar.style.transition = 'none';
+    startY = e.touches[0].clientY;
   };
 
-  const onTouchMove = (e) => {
-    if (!isDragging) return;
-    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
-    if (currentY - startY > 0) sidebar.classList.add('collapsed');
-    else sidebar.classList.remove('collapsed');
-  };
-
-  const onTouchEnd = () => {
+  const onTouchEnd = (e) => {
     if (!isDragging) return;
     isDragging = false;
-    sidebar.style.transition = '';
+    const endY = e.changedTouches[0].clientY;
+    const deltaY = endY - startY;
+
+    if (Math.abs(deltaY) < SWIPE_THRESHOLD) return; // Ignore small movements
+
+    if (deltaY > 0) {
+      sidebar.classList.add('collapsed');
+    } else {
+      sidebar.classList.remove('collapsed');
+    }
   };
 
-  sidebar.addEventListener('touchstart', onTouchStart, { passive: true });
-  sidebar.addEventListener('touchmove', onTouchMove, { passive: true });
-  sidebar.addEventListener('touchend', onTouchEnd);
+  sidebarHeader.addEventListener('touchstart', onTouchStart, { passive: true });
+  sidebarHeader.addEventListener('touchend', onTouchEnd, { passive: true });
 }
 
 // --- UTILITY FUNCTIONS ---
@@ -779,9 +782,10 @@ function hideSpinner() {
 function showErrorMessage(message) {
   const spinner = document.getElementById('loading-spinner');
   if (spinner) {
+    spinner.style.background = 'rgba(0, 0, 0, 0.85)';
     spinner.innerHTML = '';
     const p = document.createElement('p');
-    p.style.cssText = 'color: white; text-align: center;';
+    p.style.cssText = 'color: white; text-align: center; padding: 0 24px; max-width: 400px; line-height: 1.5;';
     p.textContent = message;
     spinner.appendChild(p);
     spinner.setAttribute('aria-hidden', 'false');

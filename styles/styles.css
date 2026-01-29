@@ -388,11 +388,26 @@ html, body {
    Focus Mode
    ======================================== */
 body.focus-mode .sidebar,
-body.focus-mode .expand-button,
+body.focus-mode .expand-button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
 body.focus-mode .map-controls {
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-fast);
+}
+
+/* Keep the focus/exit button visible so users can exit focus mode */
+body.focus-mode #focus-btn {
+  opacity: 0.6;
+  pointer-events: auto;
+}
+
+body.focus-mode #focus-btn:hover {
+  opacity: 1;
 }
 
 /* ========================================
@@ -453,6 +468,7 @@ body.focus-mode .map-controls {
     border-radius: 24px 24px 0 0;
     transform: translateY(0);
     transition: transform var(--transition-normal);
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   }
 
   .sidebar.collapsed {
@@ -488,5 +504,16 @@ body.focus-mode .map-controls {
   .expand-button {
     top: 10px;
     left: 10px;
+  }
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

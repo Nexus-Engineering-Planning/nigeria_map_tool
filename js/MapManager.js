@@ -200,7 +200,7 @@ class MapManager {
   addOptionalLayers() {
     // Guard: prevent adding sources multiple times
     if (this.map.getSource('health')) {
-      console.log('Optional layers already added, skipping...');
+      // Optional layers already added, skipping
       return;
     }
 
@@ -257,24 +257,37 @@ class MapManager {
       const coordinates = e.features[0].geometry.coordinates.slice();
       const props = e.features[0].properties;
 
-      let description = `<strong><i class="fa-solid fa-hospital"></i> ${props.facility_name || 'Health Facility'}</strong>`;
-      description += `<div style="max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;">`;
+      const popup = document.createElement('div');
 
-      if (props.facility_type_display) {
-        description += `<p><b>Type:</b> ${props.facility_type_display}</p>`;
-      }
-      if (props.ownership_display) {
-        description += `<p><b>Ownership:</b> ${props.ownership_display}</p>`;
-      }
-      if (props.wardname) {
-        description += `<p><b>Ward:</b> ${props.wardname}</p>`;
-      }
-      if (props.operational_status) {
-        description += `<p><b>Status:</b> ${props.operational_status}</p>`;
-      }
-      description += `</div>`;
+      const header = document.createElement('strong');
+      const icon = document.createElement('i');
+      icon.className = 'fa-solid fa-hospital';
+      header.appendChild(icon);
+      header.append(` ${props.facility_name || 'Health Facility'}`);
+      popup.appendChild(header);
 
-      new maplibregl.Popup().setLngLat(coordinates).setHTML(description).addTo(this.map);
+      const details = document.createElement('div');
+      details.style.cssText = 'max-height: 150px; overflow-y: auto; margin-top: 8px; font-size: 13px;';
+
+      const fields = [
+        ['Type', props.facility_type_display],
+        ['Ownership', props.ownership_display],
+        ['Ward', props.wardname],
+        ['Status', props.operational_status],
+      ];
+      fields.forEach(([label, value]) => {
+        if (value) {
+          const p = document.createElement('p');
+          const b = document.createElement('b');
+          b.textContent = `${label}: `;
+          p.appendChild(b);
+          p.append(value);
+          details.appendChild(p);
+        }
+      });
+
+      popup.appendChild(details);
+      new maplibregl.Popup().setLngLat(coordinates).setDOMContent(popup).addTo(this.map);
     });
 
     // Change cursor on hover
@@ -364,26 +377,26 @@ class MapManager {
       gap: 12px;
     `;
 
-    errorDiv.innerHTML = `
-      <i class="fa-solid fa-circle-exclamation" style="font-size: 20px;"></i>
-      <span>${message}</span>
-    `;
+    const icon = document.createElement('i');
+    icon.className = 'fa-solid fa-circle-exclamation';
+    icon.style.fontSize = '20px';
+    const span = document.createElement('span');
+    span.textContent = message;
+    errorDiv.appendChild(icon);
+    errorDiv.appendChild(span);
 
-    // Add CSS animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes slideInRight {
-        from {
-          transform: translateX(400px);
-          opacity: 0;
+    // Add CSS animation (only once)
+    if (!document.getElementById('map-error-style')) {
+      const style = document.createElement('style');
+      style.id = 'map-error-style';
+      style.textContent = `
+        @keyframes slideInRight {
+          from { transform: translateX(400px); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
         }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-    `;
-    document.head.appendChild(style);
+      `;
+      document.head.appendChild(style);
+    }
 
     document.body.appendChild(errorDiv);
 

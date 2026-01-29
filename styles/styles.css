@@ -1,6 +1,5 @@
 /* ========================================
-   Nigeria Map Tool - v3.0 "Clarity" Design System
-   Designer: Gemini AI (with 30 years of experience)
+   Nigeria Map Tool - v2.0 "Clarity" Design System
    ======================================== */
 
 /* CSS Variables for Theming */
@@ -452,7 +451,7 @@ body.focus-mode .map-controls {
     bottom: 0;
     left: 0;
     border-radius: 24px 24px 0 0;
-    transform: translateY(100%);
+    transform: translateY(0);
     transition: transform var(--transition-normal);
   }
 

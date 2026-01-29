@@ -1,4 +1,4 @@
-// main.js - v3.0 "Single Source of Truth" Architecture
+// main.js - v2.0 "Single Source of Truth" Architecture
 
 import mapManager from './MapManager.js';
 
@@ -185,7 +185,7 @@ function buildDataTree(senatorialData, lgaCorrections) {
     }
   });
 
-  console.log(`Wards added: ${wardsAdded}, skipped: ${wardsSkipped}`);
+  if (DEBUG) console.log(`Wards added: ${wardsAdded}, skipped: ${wardsSkipped}`);
 
   // 6. Convert the map to our final sorted array and populate global LGA map
   nigeriaData = Array.from(statesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
@@ -224,6 +224,18 @@ function initializeUI() {
   // Search, Sidebar, and Map Controls
   document.getElementById('searchInput').addEventListener('input', handleSearch);
   document.getElementById('searchInput').addEventListener('keydown', handleSearchKeyboard);
+
+  // Close search suggestions when clicking outside
+  document.addEventListener('click', (e) => {
+    const searchInput = document.getElementById('searchInput');
+    const suggestionBox = document.getElementById('searchSuggestions');
+    if (!searchInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+      suggestionBox.innerHTML = '';
+      suggestionBox.style.display = 'none';
+      searchInput.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   initializeSidebarControls();
   initializeMapControls();
   initializeSwipeGestures();
@@ -271,15 +283,14 @@ function loadWardsForLGA(lgaObject, lgaCode) {
     sourceLayer: sourceLayers.wards
   });
 
-  console.log(`Total visible wards: ${allWardFeatures.length}`);
+  if (DEBUG) console.log(`Total visible wards: ${allWardFeatures.length}`);
 
   // Manually filter to only this LGA (in case MapLibre filter doesn't work)
   const wardFeatures = allWardFeatures.filter(f => f.properties.lgacode === lgaCode);
 
-  console.log(`Filtered to ${wardFeatures.length} wards for ${lgaObject.name} (LGA code: ${lgaCode})`);
+  if (DEBUG) console.log(`Filtered to ${wardFeatures.length} wards for ${lgaObject.name} (LGA code: ${lgaCode})`);
 
-  // Debug: show sample ward lgacode to verify
-  if (allWardFeatures.length > 0 && wardFeatures.length === 0) {
+  if (DEBUG && allWardFeatures.length > 0 && wardFeatures.length === 0) {
     console.warn('No wards matched! Sample ward lgacodes:',
       allWardFeatures.slice(0, 3).map(f => f.properties.lgacode));
     console.warn('Looking for lgacode:', lgaCode);
@@ -323,7 +334,7 @@ function populateWardDropdown(lga) {
     select.innerHTML = '<option value="">Select Ward</option>';
 
     if (lga && lga.wards && lga.wards.length > 0) {
-      console.log(`Populating ${lga.wards.length} wards for LGA:`, lga.name);
+      if (DEBUG) console.log(`Populating ${lga.wards.length} wards for LGA:`, lga.name);
       lga.wards.sort((a, b) => a.name.localeCompare(b.name));
 
       // Check for duplicate ward names to disambiguate
@@ -340,7 +351,7 @@ function populateWardDropdown(lga) {
       });
       select.disabled = false;
     } else {
-      console.log('No wards found for LGA:', lga);
+      if (DEBUG) console.log('No wards found for LGA:', lga);
       select.disabled = true;
     }
   });
@@ -397,7 +408,7 @@ function handleLGAChange(e) {
 
   // Prevent loading same LGA multiple times
   if (currentLoadingLGA === lgaCode) {
-    console.log(`Already loading wards for LGA ${lgaCode}, skipping duplicate request`);
+    if (DEBUG) console.log(`Already loading wards for LGA ${lgaCode}, skipping duplicate request`);
     return;
   }
 
@@ -409,7 +420,7 @@ function handleLGAChange(e) {
   if (selectedLga) {
     // Check if wards already loaded for this LGA
     if (selectedLga.wards && selectedLga.wards.length > 0) {
-      console.log(`Using cached ${selectedLga.wards.length} wards for ${selectedLga.name}`);
+      if (DEBUG) console.log(`Using cached ${selectedLga.wards.length} wards for ${selectedLga.name}`);
       populateWardDropdown(selectedLga);
       map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedLga.feature] });
       const bounds = turf.bbox(selectedLga.feature);
@@ -760,7 +771,11 @@ function hideSpinner() {
 function showErrorMessage(message) {
   const spinner = document.getElementById('loading-spinner');
   if (spinner) {
-    spinner.innerHTML = `<p style="color: white; text-align: center;">${message}</p>`;
+    spinner.innerHTML = '';
+    const p = document.createElement('p');
+    p.style.cssText = 'color: white; text-align: center;';
+    p.textContent = message;
+    spinner.appendChild(p);
     spinner.setAttribute('aria-hidden', 'false');
   }
 }
@@ -779,9 +794,17 @@ const turf = {
       }
     };
     if (geojson.type === 'FeatureCollection') {
-      geojson.features.forEach(feature => processCoords(feature.geometry.coordinates));
-    } else if (geojson.geometry) {
+      geojson.features.forEach(feature => {
+        if (feature.geometry && feature.geometry.coordinates) {
+          processCoords(feature.geometry.coordinates);
+        }
+      });
+    } else if (geojson.geometry && geojson.geometry.coordinates) {
       processCoords(geojson.geometry.coordinates);
+    }
+    // Return Nigeria's default bounds if no valid coordinates were found
+    if (!isFinite(minLng)) {
+      return [[2.68, 4.27], [14.68, 13.89]];
     }
     return [[minLng, minLat], [maxLng, maxLat]];
   }

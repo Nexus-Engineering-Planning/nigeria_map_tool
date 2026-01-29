@@ -19,6 +19,7 @@
   "author": "Olufemi Olamijulo <lamijulo99@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "fuse.js": "^7.0.0",
     "maplibre-gl": "^3.6.2",
     "pmtiles": "^4.3.0"
   },

@@ -32,11 +32,13 @@ nigeria_map_tool/
 ├── js/                       # JavaScript modules
 │   ├── main.js              # Application entry point (PMTiles version)
 │   ├── MapManager.js        # MapLibre GL singleton manager
-│   ├── mappings.js          # Data mapping utilities
-│   └── manualLgaCorrections.js  # LGA name correction mappings
+│   └── config.js            # Centralized configuration settings
 │
 ├── data/                     # Data files
-│   └── senatorial.json      # Senatorial district mappings
+│   ├── senatorial.json      # Senatorial district mappings
+│   ├── manualLgaCorrections.json  # LGA name normalization mappings
+│   ├── ag_typologies.csv    # Agricultural typology classifications
+│   └── ward_fields.json     # Ward field metadata
 │
 ├── styles/
 │   └── styles.css           # Application styles
@@ -173,10 +175,10 @@ Tile hosting: StayGIS (https://tiles.staygis.com)
 
 ### Map Configuration
 
-Edit `js/MapManager.js` to customize:
-- Initial map center and zoom (line 63-65)
-- Layer styles and colors (lines 112-175)
-- PMTiles base URL (line 7)
+Edit `js/config.js` to customize:
+- Initial map center and zoom (`map.center`, `map.zoom`)
+- Layer styles and colors (`layerStyles`)
+- PMTiles base URL (`BASE_URL`)
 
 ### Adding Custom Layers
 
@@ -184,7 +186,7 @@ Edit `js/MapManager.js` to customize:
 // In MapManager.js, add to addOptionalLayers()
 this.map.addSource('custom', {
   type: 'vector',
-  url: `pmtiles://${this.BASE_URL}/custom.pmtiles`
+  url: `pmtiles://${this.config.BASE_URL}/custom.pmtiles`
 });
 
 this.map.addLayer({

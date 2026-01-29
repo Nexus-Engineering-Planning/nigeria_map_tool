@@ -464,6 +464,7 @@ function handleWardChange(e) {
 
 function handleSenatorialChange(e) {
   const districtName = e.target.value;
+  currentLoadingLGA = null;
   mapManager.clearHighlight();
 
   const stateName = document.getElementById('state-select').value;
@@ -507,6 +508,7 @@ function handleSenatorialChange(e) {
 }
 
 function handleReset() {
+  currentLoadingLGA = null;
   document.getElementById('state-select').value = '';
   handleStateChange({ target: { value: '' } });
 }
@@ -607,7 +609,10 @@ function renderSuggestions(results) {
     const div = document.createElement('div');
     div.className = 'search-suggestion';
     div.setAttribute('role', 'option');
-    div.innerHTML = `<strong>${type}:</strong> ${name}`;
+    const strong = document.createElement('strong');
+    strong.textContent = `${type}: `;
+    div.appendChild(strong);
+    div.append(name);
     div.onclick = () => {
       mapManager.clearHighlight();
       map.getSource('highlight').setData({ type: 'FeatureCollection', features: [feature] });
@@ -700,13 +705,16 @@ function initializeSidebarControls() {
 }
 
 function initializeMapControls() {
+  let locationMarker = null;
+
   document.getElementById('locate-btn').addEventListener('click', () => {
     if (!navigator.geolocation) return alert("Geolocation is not supported.");
     navigator.geolocation.getCurrentPosition(
       pos => {
         const coords = [pos.coords.longitude, pos.coords.latitude];
         map.flyTo({ center: coords, zoom: 14 });
-        new maplibregl.Marker({ color: '#007aff' }).setLngLat(coords).addTo(map);
+        if (locationMarker) locationMarker.remove();
+        locationMarker = new maplibregl.Marker({ color: '#007aff' }).setLngLat(coords).addTo(map);
       },
       () => alert("Unable to retrieve your location.")
     );

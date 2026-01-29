@@ -332,12 +332,23 @@ class MapManager {
   }
 
   /**
-   * Toggle layer visibility
+   * Toggle layer visibility (handles both fill and line sublayers)
    */
   toggleLayer(layerId, visible) {
-    const mapLayerId = this.config.layerIds[layerId]?.line || this.config.layerIds[layerId];
-    if (mapLayerId) {
-        this.map.setLayoutProperty(mapLayerId, 'visibility', visible ? 'visible' : 'none');
+    const layerConfig = this.config.layerIds[layerId];
+    const visibility = visible ? 'visible' : 'none';
+
+    if (typeof layerConfig === 'string') {
+      // Simple layer (health, roads, population)
+      this.map.setLayoutProperty(layerConfig, 'visibility', visibility);
+    } else if (layerConfig) {
+      // Compound layer with fill/line sublayers
+      if (layerConfig.fill && this.map.getLayer(layerConfig.fill)) {
+        this.map.setLayoutProperty(layerConfig.fill, 'visibility', visibility);
+      }
+      if (layerConfig.line && this.map.getLayer(layerConfig.line)) {
+        this.map.setLayoutProperty(layerConfig.line, 'visibility', visibility);
+      }
     }
   }
 

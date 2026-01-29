@@ -32,8 +32,7 @@ nigeria_map_tool/
 ├── js/                       # JavaScript modules
 │   ├── main.js              # Application entry point (PMTiles version)
 │   ├── MapManager.js        # MapLibre GL singleton manager
-│   ├── config.js            # Centralized configuration settings
-│   └── mappings.js          # Data mapping utilities
+│   └── config.js            # Centralized configuration settings
 │
 ├── data/                     # Data files
 │   ├── senatorial.json      # Senatorial district mappings

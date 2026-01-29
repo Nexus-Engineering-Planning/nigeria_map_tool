@@ -32,11 +32,9 @@ export const config = {
       line: 'states-line',
     },
     lgas: {
-      fill: 'lgas-fill',
       line: 'lgas-line',
     },
     wards: {
-      fill: 'wards-fill',
       line: 'wards-line',
     },
     health: 'health',

@@ -708,7 +708,7 @@ function initializeMapControls() {
   let locationMarker = null;
 
   document.getElementById('locate-btn').addEventListener('click', () => {
-    if (!navigator.geolocation) return alert("Geolocation is not supported.");
+    if (!navigator.geolocation) return mapManager.showMapError("Geolocation is not supported by your browser.");
     navigator.geolocation.getCurrentPosition(
       pos => {
         const coords = [pos.coords.longitude, pos.coords.latitude];
@@ -716,7 +716,7 @@ function initializeMapControls() {
         if (locationMarker) locationMarker.remove();
         locationMarker = new maplibregl.Marker({ color: '#007aff' }).setLngLat(coords).addTo(map);
       },
-      () => alert("Unable to retrieve your location.")
+      () => mapManager.showMapError("Unable to retrieve your location.")
     );
   });
 

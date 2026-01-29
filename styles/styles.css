@@ -500,7 +500,21 @@ body.focus-mode #focus-btn:hover {
   }
 
   .sidebar-toggle { display: none; } /* Hide desktop toggle */
-  
+
+  /* Search suggestions: moved to body on mobile via JS to escape
+     sidebar overflow clipping and transform stacking context */
+  .search-suggestions.mobile-detached {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    bottom: 50vh;
+    max-height: 35vh;
+    margin-top: 0;
+    border-radius: 12px;
+    z-index: 1001;
+    box-shadow: var(--shadow-lg);
+  }
+
   .expand-button {
     top: 10px;
     left: 10px;

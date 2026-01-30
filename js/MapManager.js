@@ -186,10 +186,79 @@ class MapManager {
           // Fit to Nigeria bounds
           this.map.fitBounds(this.config.map.bounds, { padding: 20 });
 
+          // Add click popups for boundary layers
+          this.initializeBoundaryPopups();
+
           resolve();
         } catch (error) {
           reject(error);
         }
+      });
+    });
+  }
+
+  /**
+   * Add click popups for boundary layers (states, LGAs, wards)
+   */
+  initializeBoundaryPopups() {
+    const boundaryLayers = [
+      {
+        layerId: this.config.layerIds.states.fill,
+        fields: [
+          ['State', 'statename'],
+          ['State Code', 'statecode'],
+        ]
+      },
+      {
+        layerId: this.config.layerIds.lgas.line,
+        fields: [
+          ['LGA', 'lganame'],
+          ['LGA Code', 'lgacode'],
+          ['State', 'statename'],
+        ]
+      },
+      {
+        layerId: this.config.layerIds.wards.line,
+        fields: [
+          ['Ward', 'wardname'],
+          ['Ward Code', 'wardcode'],
+          ['LGA', 'lganame'],
+          ['LGA Code', 'lgacode'],
+        ]
+      },
+    ];
+
+    boundaryLayers.forEach(({ layerId, fields }) => {
+      this.map.on('click', layerId, (e) => {
+        if (!e.features || e.features.length === 0) return;
+        const props = e.features[0].properties;
+
+        const popup = document.createElement('div');
+        popup.style.cssText = 'font-size: 13px; line-height: 1.6;';
+
+        fields.forEach(([label, key]) => {
+          if (props[key]) {
+            const p = document.createElement('p');
+            p.style.margin = '0';
+            const b = document.createElement('b');
+            b.textContent = `${label}: `;
+            p.appendChild(b);
+            p.append(props[key]);
+            popup.appendChild(p);
+          }
+        });
+
+        new maplibregl.Popup({ maxWidth: '250px' })
+          .setLngLat(e.lngLat)
+          .setDOMContent(popup)
+          .addTo(this.map);
+      });
+
+      this.map.on('mouseenter', layerId, () => {
+        this.map.getCanvas().style.cursor = 'pointer';
+      });
+      this.map.on('mouseleave', layerId, () => {
+        this.map.getCanvas().style.cursor = '';
       });
     });
   }

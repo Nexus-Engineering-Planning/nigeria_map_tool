@@ -20,7 +20,9 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="./styles/styles.css">
 
-  <!-- Expand button styles defined in styles/styles.css -->
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#007aff">
 </head>
 
 <body>
@@ -114,5 +116,11 @@
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
   <!-- Main Application -->
   <script type="module" src="./js/main.js"></script>
+  <!-- Register Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>

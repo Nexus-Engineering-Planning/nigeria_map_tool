@@ -1,6 +1,7 @@
 // main.js - v2.0 "Single Source of Truth" Architecture
 
 import mapManager from './MapManager.js';
+import { normalize, bbox, buildLgaToDistrictMap } from './utils.js';
 
 // Development mode flag - set to false for production
 const DEBUG = false;
@@ -47,6 +48,7 @@ mapManager.initializeLayers()
         initializeSearch();
         initializeUI();
         mapManager.addOptionalLayers();
+        restoreFromUrlHash();
         hideSpinner();
       }
     };
@@ -87,21 +89,6 @@ mapManager.initializeLayers()
   });
 
 /**
- * Normalizes a name for robust matching.
- * @param {string} name The name to normalize.
- * @returns {string} The normalized name.
- */
-function normalize(name) {
-  if (!name) return '';
-  return name
-    .toLowerCase()
-    .replace(/[\s-/\\_]+/g, '') // Remove all whitespace, hyphens, slashes, underscores
-    .replace(/lgarea$/, '') // Remove trailing 'lgarea'
-    .replace(/lga$/, '') // Remove trailing 'lga'
-    .replace(/municipal$/, ''); // Remove trailing 'municipal'
-}
-
-/**
  * Builds the unified nigeriaData tree from the flat feature caches.
  * This is the core of the new "bottom-up" architecture.
  * @param {Array} senatorialData The raw senatorial district data.
@@ -109,19 +96,7 @@ function normalize(name) {
  */
 function buildDataTree(senatorialData, lgaCorrections) {
   // 1. Create a reverse mapping from normalized LGA name to Senatorial District, applying corrections.
-  const lgaToDistrictMap = new Map();
-  senatorialData.forEach(record => {
-    const district = record['Senatorial_District'] || record['district'];
-    const lga = record['LGAs'] || record['lga'];
-    if (district && lga) {
-      const normalizedLga = normalize(lga);
-      // Apply correction if it exists
-      const correctedLga = lgaCorrections[normalizedLga] || normalizedLga;
-      // Since a correction can map to multiple LGAs, handle arrays
-      const lgasToMap = Array.isArray(correctedLga) ? correctedLga : [correctedLga];
-      lgasToMap.forEach(l => lgaToDistrictMap.set(normalize(l), district));
-    }
-  });
+  const lgaToDistrictMap = buildLgaToDistrictMap(senatorialData, lgaCorrections);
 
   // 2. Cache all features from the map
   const { sourceLayers } = mapManager.config;
@@ -280,10 +255,26 @@ function populateLGADropdown(state) {
   }
 }
 
+// Minimum zoom level at which ward tile data is reliably available
+const WARD_MIN_ZOOM = 8;
+
 /**
- * Lazy load wards for a specific LGA by querying visible tiles
+ * Lazy load wards for a specific LGA by querying visible tiles.
+ * If the current zoom is too low for reliable ward data, zoom in first.
  */
 function loadWardsForLGA(lgaObject, lgaCode) {
+  const currentZoom = map.getZoom();
+
+  if (currentZoom < WARD_MIN_ZOOM) {
+    // Zoom is too low — ward tiles may not be loaded yet.
+    // fitBounds in handleLGAChange should have zoomed us in, but if
+    // the LGA is very large we might still be below threshold.
+    // Wait for map to settle at a better zoom, then retry.
+    if (DEBUG) console.log(`Zoom ${currentZoom.toFixed(1)} too low for wards, waiting for idle at higher zoom...`);
+    map.once('idle', () => loadWardsForLGA(lgaObject, lgaCode));
+    return;
+  }
+
   const { sourceLayers } = mapManager.config;
 
   // Query ALL visible wards first
@@ -327,6 +318,11 @@ function loadWardsForLGA(lgaObject, lgaCode) {
     lgaObject.wards.push(wardObject);
     wardCodeMap.set(wardCode, wardObject);
   });
+
+  // Warn if no wards found despite adequate zoom
+  if (lgaObject.wards.length === 0 && currentZoom >= WARD_MIN_ZOOM) {
+    mapManager.showMapError(`No ward data found for ${lgaObject.name}. Try zooming in further.`);
+  }
 
   // Now populate the dropdown
   populateWardDropdown(lgaObject);
@@ -384,7 +380,7 @@ function populateSenatorialDropdown(state) {
 function handleStateChange(e) {
   const stateName = e.target.value;
   mapManager.clearHighlight();
-  
+
   const state = nigeriaData.find(s => s.name === stateName);
 
   populateLGADropdown(state);
@@ -397,6 +393,7 @@ function handleStateChange(e) {
   } else {
     map.fitBounds(mapManager.config.map.bounds, { padding: 20 });
   }
+  updateUrlHash();
 }
 
 // Track which LGA is currently being loaded to prevent duplicates
@@ -433,6 +430,7 @@ function handleLGAChange(e) {
       map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedLga.feature] });
       const bounds = turf.bbox(selectedLga.feature);
       map.fitBounds(bounds, { padding: 50 });
+      updateUrlHash();
       return;
     }
 
@@ -449,6 +447,7 @@ function handleLGAChange(e) {
       currentLoadingLGA = null; // Reset after loading
     });
   }
+  updateUrlHash();
 }
 
 function handleWardChange(e) {
@@ -468,6 +467,7 @@ function handleWardChange(e) {
     map.getSource('highlight').setData({ type: 'FeatureCollection', features: [selectedWard.feature] });
     map.fitBounds(turf.bbox(selectedWard.feature), { padding: 50 });
   }
+  updateUrlHash();
 }
 
 function handleSenatorialChange(e) {
@@ -513,12 +513,14 @@ function handleSenatorialChange(e) {
       map.fitBounds(turf.bbox(featureCollection), { padding: 50 });
     }
   }
+  updateUrlHash();
 }
 
 function handleReset() {
   currentLoadingLGA = null;
   document.getElementById('state-select').value = '';
   handleStateChange({ target: { value: '' } });
+  updateUrlHash();
 }
 
 // --- SEARCH ---
@@ -536,27 +538,29 @@ function initializeSearch() {
   }
 
   // 1. Create a flattened, searchable index from the nigeriaData tree.
+  // Only store names and lookup keys — resolve geometry on demand to avoid
+  // duplicating every feature's coordinates in memory (~50-100 MB saving).
   searchIndex = [];
   nigeriaData.forEach(state => {
     searchIndex.push({
       name: state.name,
       type: 'State',
-      feature: state.feature,
-      searchName: state.name // Field for Fuse to search on
+      key: state.name, // lookup key into nigeriaData
+      searchName: state.name
     });
     state.lgas.forEach(lga => {
       searchIndex.push({
         name: `${lga.name} (${state.name})`,
         type: 'LGA',
-        feature: lga.feature,
-        searchName: lga.name // Field for Fuse to search on
+        key: lga.code, // lookup key into lgaCodeMap
+        searchName: lga.name
       });
       lga.wards.forEach(ward => {
         searchIndex.push({
           name: `${ward.name} (${lga.name})`,
           type: 'Ward',
-          feature: ward.feature,
-          searchName: ward.name // Field for Fuse to search on
+          key: ward.code, // lookup key into wardCodeMap
+          searchName: ward.name
         });
       });
     });
@@ -613,25 +617,48 @@ function renderSuggestions(results) {
   searchInput.setAttribute('aria-expanded', 'true');
 
   results.forEach(result => {
-    const { name, type, feature } = result.item;
+    const { name, type, key } = result.item;
     const div = document.createElement('div');
     div.className = 'search-suggestion';
     div.setAttribute('role', 'option');
+    div.setAttribute('tabindex', '-1');
     const strong = document.createElement('strong');
     strong.textContent = `${type}: `;
     div.appendChild(strong);
     div.append(name);
     div.onclick = () => {
+      // Resolve feature on demand from lookup maps instead of storing geometry
+      const feature = resolveFeature(type, key);
+      if (!feature) return;
       mapManager.clearHighlight();
       map.getSource('highlight').setData({ type: 'FeatureCollection', features: [feature] });
       map.fitBounds(turf.bbox(feature), { padding: 50, maxZoom: 12 });
       suggestionBox.innerHTML = '';
       suggestionBox.style.display = 'none';
       searchInput.setAttribute('aria-expanded', 'false');
-      document.getElementById('searchInput').value = '';
+      searchInput.value = '';
+      searchInput.focus();
     };
     suggestionBox.appendChild(div);
   });
+}
+
+/**
+ * Resolve a feature from lookup maps by type and key.
+ * Avoids storing full geometry in the search index.
+ */
+function resolveFeature(type, key) {
+  if (type === 'State') {
+    const state = nigeriaData.find(s => s.name === key);
+    return state ? state.feature : null;
+  } else if (type === 'LGA') {
+    const lga = lgaCodeMap.get(key);
+    return lga ? lga.feature : null;
+  } else if (type === 'Ward') {
+    const ward = wardCodeMap.get(key);
+    return ward ? ward.feature : null;
+  }
+  return null;
 }
 
 /**
@@ -639,6 +666,7 @@ function renderSuggestions(results) {
  */
 function handleSearchKeyboard(e) {
   const suggestionBox = document.getElementById('searchSuggestions');
+  const searchInput = document.getElementById('searchInput');
   const suggestions = suggestionBox.querySelectorAll('.search-suggestion');
 
   if (suggestions.length === 0) return;
@@ -651,28 +679,34 @@ function handleSearchKeyboard(e) {
   } else if (e.key === 'ArrowUp') {
     e.preventDefault();
     focusedIndex = focusedIndex > 0 ? focusedIndex - 1 : suggestions.length - 1;
-  } else if (e.key === 'Enter' && focusedIndex >= 0) {
-    e.preventDefault();
-    suggestions[focusedIndex].click();
+  } else if (e.key === 'Enter') {
+    if (focusedIndex >= 0) {
+      e.preventDefault();
+      suggestions[focusedIndex].click();
+    }
     return;
-  } else if (e.key === 'Escape') {
+  } else if (e.key === 'Escape' || e.key === 'Tab') {
+    // Both Escape and Tab close the dropdown; Tab continues normal focus flow
     suggestionBox.innerHTML = '';
     suggestionBox.style.display = 'none';
-    document.getElementById('searchInput').setAttribute('aria-expanded', 'false');
+    searchInput.setAttribute('aria-expanded', 'false');
     return;
   } else {
     return; // Let other keys work normally
   }
 
-  // Update focused state
+  // Update focused state and ARIA active-descendant
   suggestions.forEach((s, i) => {
     if (i === focusedIndex) {
       s.classList.add('focused');
+      s.id = 'suggestion-active';
       s.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     } else {
       s.classList.remove('focused');
+      s.removeAttribute('id');
     }
   });
+  searchInput.setAttribute('aria-activedescendant', focusedIndex >= 0 ? 'suggestion-active' : '');
 }
 
 // --- UI INITIALIZERS ---
@@ -769,6 +803,69 @@ function initializeSwipeGestures() {
   sidebarHeader.addEventListener('touchend', onTouchEnd, { passive: true });
 }
 
+// --- URL HASH STATE ---
+
+/**
+ * Encode current selection into the URL hash for sharing/bookmarking.
+ */
+function updateUrlHash() {
+  const params = new URLSearchParams();
+  const state = document.getElementById('state-select').value;
+  const senatorial = document.getElementById('senatorial-select').value;
+  const lga = document.getElementById('lga-select').value;
+  const ward = document.getElementById('ward-select').value;
+
+  if (state) params.set('state', state);
+  if (senatorial) params.set('senatorial', senatorial);
+  if (lga) params.set('lga', lga);
+  if (ward) params.set('ward', ward);
+
+  const hash = params.toString();
+  history.replaceState(null, '', hash ? `#${hash}` : window.location.pathname);
+}
+
+/**
+ * Restore selection from URL hash on initial load.
+ * Called after data tree is built and UI is initialized.
+ */
+function restoreFromUrlHash() {
+  const hash = window.location.hash.slice(1); // Remove '#'
+  if (!hash) return;
+
+  const params = new URLSearchParams(hash);
+  const stateName = params.get('state');
+  const senatorialName = params.get('senatorial');
+  const lgaCode = params.get('lga');
+  const wardCode = params.get('ward');
+
+  if (stateName) {
+    const stateSelect = document.getElementById('state-select');
+    stateSelect.value = stateName;
+    handleStateChange({ target: stateSelect });
+
+    if (senatorialName) {
+      const senSelect = document.getElementById('senatorial-select');
+      senSelect.value = senatorialName;
+      handleSenatorialChange({ target: senSelect });
+    }
+
+    if (lgaCode) {
+      const lgaSelect = document.getElementById('lga-select');
+      lgaSelect.value = lgaCode;
+      handleLGAChange({ target: lgaSelect });
+
+      if (wardCode) {
+        // Wards load lazily after map idle, so defer ward selection
+        map.once('idle', () => {
+          const wardSelect = document.getElementById('ward-select');
+          wardSelect.value = wardCode;
+          handleWardChange({ target: wardSelect });
+        });
+      }
+    }
+  }
+}
+
 // --- UTILITY FUNCTIONS ---
 
 function showSpinner() {
@@ -800,32 +897,5 @@ function showErrorMessage(message) {
   }
 }
 
-const turf = {
-  bbox: (geojson) => {
-    let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
-    const processCoords = (coords) => {
-      if (typeof coords[0] === 'number' && isFinite(coords[0]) && isFinite(coords[1])) {
-        minLng = Math.min(minLng, coords[0]);
-        maxLng = Math.max(maxLng, coords[0]);
-        minLat = Math.min(minLat, coords[1]);
-        maxLat = Math.max(maxLat, coords[1]);
-      } else if (Array.isArray(coords)) {
-        coords.forEach(processCoords);
-      }
-    };
-    if (geojson.type === 'FeatureCollection') {
-      geojson.features.forEach(feature => {
-        if (feature.geometry && feature.geometry.coordinates) {
-          processCoords(feature.geometry.coordinates);
-        }
-      });
-    } else if (geojson.geometry && geojson.geometry.coordinates) {
-      processCoords(geojson.geometry.coordinates);
-    }
-    // Return Nigeria's default bounds if no valid coordinates were found
-    if (!isFinite(minLng)) {
-      return [[2.68, 4.27], [14.68, 13.89]];
-    }
-    return [[minLng, minLat], [maxLng, maxLat]];
-  }
-};
+// Re-export bbox under turf namespace for compatibility with existing call sites
+const turf = { bbox };
